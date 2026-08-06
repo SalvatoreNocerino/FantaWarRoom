@@ -1,0 +1,6 @@
+{
+  "name": "FantaWarRoom AI",
+  "description": "App Fantacalcio PWA con War Room per Asta Live e AI Copilot per strategie, budget e suggerimenti in tempo reale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
