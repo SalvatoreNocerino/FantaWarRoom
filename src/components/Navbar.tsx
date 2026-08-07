@@ -120,8 +120,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Auth & Live Roster Status Indicator */}
-        <div className="hidden lg:flex items-center space-x-3 text-xs bg-slate-950 border border-slate-800 px-3.5 py-1.5 rounded-xl font-mono">
-          {/* Cloud Firebase Auth Badge */}
+        <div className="hidden md:flex items-center space-x-3 text-xs bg-slate-950 border border-slate-800 px-3.5 py-1.5 rounded-xl font-mono">
+          {/* Cloud Auth Badge */}
           {currentUser ? (
             <div className="flex items-center space-x-2 border-r border-slate-800 pr-3">
               {currentUser.photoURL ? (
@@ -134,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   {currentUser.displayName || 'Utente Cloud'}
                 </span>
                 <span className="text-[9px] text-slate-500 font-mono block">
-                  {isCloudSyncing ? 'Syncing...' : 'Firestore OK'}
+                  {isCloudSyncing ? 'Syncing...' : 'Cloud Sync OK'}
                 </span>
               </div>
               <button
