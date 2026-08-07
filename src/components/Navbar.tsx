@@ -1,6 +1,6 @@
 import React from 'react';
 import { Settings, Sliders, Database, Users, ShieldAlert, Bot, RotateCcw, LogIn, LogOut, CloudCheck, Cloud } from 'lucide-react';
-import { User as FirebaseUser } from 'firebase/auth';
+import { AppUser } from '../lib/supabase';
 
 export type ActiveTab = 'league' | 'strategy' | 'database' | 'teams' | 'warroom' | 'copilot';
 
@@ -11,7 +11,7 @@ interface NavbarProps {
   mySlotsNeeded: number;
   leagueName: string;
   onResetData: () => void;
-  currentUser: FirebaseUser | null;
+  currentUser: AppUser | null;
   onLogin: () => void;
   onLogout: () => void;
   isCloudSyncing?: boolean;

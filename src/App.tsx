@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { User as FirebaseUser } from 'firebase/auth';
 import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
 import { INITIAL_SERIE_A_PLAYERS } from './data/initialPlayers';
@@ -12,12 +11,13 @@ import { WarRoomAuctionConsole } from './components/WarRoomAuctionConsole';
 import { AiCopilotView } from './components/AiCopilotView';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
 import {
+  AppUser,
   subscribeToAuth,
   signInWithGoogle,
   logoutUser,
-  saveUserDataToFirestore,
-  loadUserDataFromFirestore,
-} from './lib/firebase';
+  saveUserDataToSupabase,
+  loadUserDataFromSupabase,
+} from './lib/supabase';
 
 export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
@@ -25,18 +25,18 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('league');
   const [copilotPlayerContext, setCopilotPlayerContext] = useState<Player | null>(null);
 
-  // Firebase Auth state
-  const [currentUser, setCurrentUser] = useState<FirebaseUser | null>(null);
+  // Supabase Auth state
+  const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
   const [isCloudSyncing, setIsCloudSyncing] = useState<boolean>(false);
 
-  // Subscribe to Firebase Auth changes
+  // Subscribe to Supabase Auth changes
   useEffect(() => {
     const unsubscribe = subscribeToAuth(async (user) => {
       setCurrentUser(user);
       if (user) {
         setIsCloudSyncing(true);
         try {
-          const cloudData = await loadUserDataFromFirestore(user.uid);
+          const cloudData = await loadUserDataFromSupabase(user.uid);
           if (cloudData && cloudData.league) {
             setAppData((prev) => ({
               league: { ...prev.league, ...(cloudData.league || {}) },
@@ -45,11 +45,11 @@ export default function App() {
               auctionHistory: cloudData.auctionHistory || [],
             }));
           } else {
-            // First time cloud user: seed Firestore with current appData
-            await saveUserDataToFirestore(user.uid, appData);
+            // First time cloud user: seed Supabase with current appData
+            await saveUserDataToSupabase(user.uid, appData);
           }
         } catch (e) {
-          console.error('Error loading Firestore user data:', e);
+          console.error('Error loading Supabase user data:', e);
         } finally {
           setIsCloudSyncing(false);
         }
@@ -59,12 +59,12 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Save to localStorage AND Firestore on state changes
+  // Save to localStorage AND Supabase on state changes
   useEffect(() => {
     saveAppData(appData);
     if (currentUser) {
       setIsCloudSyncing(true);
-      saveUserDataToFirestore(currentUser.uid, appData).finally(() => {
+      saveUserDataToSupabase(currentUser.uid, appData).finally(() => {
         setIsCloudSyncing(false);
       });
     }
