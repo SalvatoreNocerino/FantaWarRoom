@@ -1,0 +1,15 @@
+dim=A2:AG45 max_col=33 max_row=45
+row1: [None, None, None, None, None, None, None, None]
+row2: ['NapoletanaGas', None, None, None, 'Napoli 1926', None, None, None]
+row3: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', 'Ruolo', 'Calciatore', 'Squadra', 'Costo']
+row4: ['P', 'Leali', 'Gen', '5', 'P', 'Meret', 'Nap', '80']
+row5: ['P', 'Audero', 'Cre', '1', 'P', 'Milinkovic-Savic V.', 'Nap', '42']
+row6: ['P', 'Di Gregorio', 'Juv', '90', 'P', 'Caprile', 'Cag', '12']
+row7: ['D', 'Buongiorno', 'Nap', '26', 'D', 'Angelino', 'Rom', '32']
+row8: ['D', 'Mina', 'Cag', '1', 'D', 'Valenti', 'Par', '7']
+row9: ['D', 'Hermoso', 'Rom', '1', 'D', 'Vasquez', 'Gen', '11']
+... ultima riga:
+row42: [None, 'Orban G.', None, 105, None, 'Vitinha', None, 1]
+row43: [None, 'Kilicsoy', None, 167, None, 'Borrelli', None, 50]
+row44: [None, None, None, None, None, None, None, None]
+row45: [None, None, None, None, None, None, None, None]

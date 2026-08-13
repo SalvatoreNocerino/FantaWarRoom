@@ -40,23 +40,9 @@ export const DEFAULT_LEAGUE_SETTINGS: LeagueSettings = {
   ],
   defensiveModifier: {
     enabled: true,
-    tiers: [
-      { minScore: 6.0, maxScore: 6.24, bonus: 1 },
-      { minScore: 6.25, maxScore: 6.49, bonus: 2 },
-      { minScore: 6.5, maxScore: 6.74, bonus: 3 },
-      { minScore: 6.75, maxScore: 6.99, bonus: 4 },
-      { minScore: 7.0, maxScore: 10.0, bonus: 6 },
-    ],
   },
   midfieldModifier: {
     enabled: false,
-    tiers: [
-      { minScore: 6.0, maxScore: 6.24, bonus: 1 },
-      { minScore: 6.25, maxScore: 6.49, bonus: 2 },
-      { minScore: 6.5, maxScore: 6.74, bonus: 3 },
-      { minScore: 6.75, maxScore: 6.99, bonus: 4 },
-      { minScore: 7.0, maxScore: 10.0, bonus: 6 },
-    ],
   },
   auctionRules: {
     callOrderRule: 'free',
@@ -78,11 +64,14 @@ export const DEFAULT_LEAGUE_SETTINGS: LeagueSettings = {
 export const DEFAULT_STRATEGY_SETTINGS: StrategySettings = {
   preferredFormation: '3-4-3',
   aggressionScore: 50,
+  // Calibrato su aste reali (10 squadre-stagione, Rose_fantalba 2023+2025):
+  // vedi src/engine/modelParams.ts > DEFAULT_ROLE_BUDGET_PCT. Resta un campo
+  // modificabile dall'utente, questo è solo il punto di partenza consigliato.
   budgetAllocationPct: {
-    P: 8,
-    D: 15,
-    C: 27,
-    A: 50,
+    P: 9.3,
+    D: 11.6,
+    C: 27.8,
+    A: 51.5,
   },
   wishlistIds: ['p_lautaro', 'p_pulisic', 'p_dimarco', 'p_sommer'],
   blacklistIds: [],

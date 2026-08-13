@@ -100,17 +100,7 @@ export const AssignmentHistoryPanel: React.FC<Props> = ({
                   }`}
                 >
                   <div className="flex items-center space-x-2 min-w-0">
-                    <span
-                      className={`w-6 h-6 rounded inline-flex items-center justify-center font-mono font-bold text-xs text-white shrink-0 ${
-                        player?.role === 'P'
-                          ? 'bg-amber-600'
-                          : player?.role === 'D'
-                          ? 'bg-emerald-600'
-                          : player?.role === 'C'
-                          ? 'bg-blue-600'
-                          : 'bg-red-600'
-                      }`}
-                    >
+                    <span className="w-6 h-6 rounded inline-flex items-center justify-center font-mono font-bold text-xs text-white shrink-0 bg-slate-700">
                       {player?.role || '?'}
                     </span>
                     <div className="min-w-0">

@@ -1,0 +1,5 @@
+dim=A1:R665
+row1: ['Statistiche reali Fantacalcio.it — Stagione 2025/26 (fonte: fantacalcio.it/statistiche-serie-a)', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+row2: ['Id', 'R', 'Rm', 'Nome', 'Squadra', 'Pv', 'Mv', 'Fm', 'Gf', 'Gs', 'Rp', 'Rc', 'R+', 'R-', 'Ass', 'Amm', 'Esp', 'Au']
+row3: [4431, 'P', 'Por', 'Carnesecchi', 'Atalanta', 37, 6.36, 5.58, 0, 35, 2, 0, 0, 0, 0, 0, 0, 0]
+row4: [2170, 'P', 'Por', 'Milinkovic-Savic V.', 'Napoli', 27, 6.2, 5.65, 0, 24, 3, 0, 0, 0, 0, 0, 0, 0]

@@ -8,7 +8,6 @@ import { StrategySettingsView } from './components/StrategySettingsView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
 import { AllTeamsView } from './components/AllTeamsView';
 import { WarRoomAuctionConsole } from './components/WarRoomAuctionConsole';
-import { AiCopilotView } from './components/AiCopilotView';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
 import {
   AppUser,
@@ -23,7 +22,6 @@ export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
   // Start UX at 'league' settings as requested by user
   const [activeTab, setActiveTab] = useState<ActiveTab>('league');
-  const [copilotPlayerContext, setCopilotPlayerContext] = useState<Player | null>(null);
 
   // Supabase Auth state
   const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
@@ -218,11 +216,6 @@ export default function App() {
     setAppData(fresh);
   };
 
-  const handleOpenCopilotWithPlayer = (player: Player) => {
-    setCopilotPlayerContext(player);
-    setActiveTab('copilot');
-  };
-
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950 pb-12">
       <Navbar
@@ -288,17 +281,6 @@ export default function App() {
             onUndoLastAssignment={handleUndoLastAssignment}
             onUpdateAssignment={handleUpdateAssignment}
             onDeleteAssignment={handleDeleteAssignment}
-            onOpenCopilotWithPlayer={handleOpenCopilotWithPlayer}
-          />
-        )}
-
-        {activeTab === 'copilot' && (
-          <AiCopilotView
-            allPlayers={allPlayers}
-            league={appData.league}
-            strategy={appData.strategy}
-            auctionHistory={appData.auctionHistory}
-            initialPlayerContext={copilotPlayerContext}
           />
         )}
       </main>

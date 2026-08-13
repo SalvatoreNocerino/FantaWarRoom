@@ -1,0 +1,8 @@
+Strategia A: FVM medio=930.2 mediana=878.5 sd=315.5 win%=26.6 complete%=100.0 residuo_medio=214.6 FVM/credito=1.160  (n=1000)
+Strategia B: FVM medio=933.9 mediana=881.5 sd=319.3 win%=27.1 complete%=100.0 residuo_medio=213.8 FVM/credito=1.163  (n=1000)
+Strategia C: FVM medio=1034.4 mediana=994.5 sd=339.2 win%=39.3 complete%=100.0 residuo_medio=158.6 FVM/credito=1.208  (n=1000)
+Strategia D: FVM medio=1031.2 mediana=992.5 sd=338.3 win%=39.0 complete%=100.0 residuo_medio=160.7 FVM/credito=1.208  (n=1000)
+Strategia E: FVM medio=1055.6 mediana=1021.0 sd=310.7 win%=40.8 complete%=100.0 residuo_medio=72.1 FVM/credito=1.131  (n=1000)
+Strategia F: FVM medio=807.4 mediana=771.5 sd=228.3 win%=12.2 complete%=100.0 residuo_medio=42.3 FVM/credito=0.843  (n=1000)
+
+Tempo totale: 179.4s per 1000 aste x 6 strategie = 6000 run totali

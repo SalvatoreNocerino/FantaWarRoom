@@ -1,0 +1,31 @@
+sheets: ['Tutti', 'Portieri', 'Difensori', 'Centrocampisti', 'Attaccanti', 'Ceduti']
+sheet Tutti dim=A1:M534
+  row1: ['Quotazioni Fantacalcio Stagione 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [4431, 'P', 'Por', 'Carnesecchi', 'Atalanta', 18, 14, 4, 18, 14, 4, 80, 80]
+  row4: [2170, 'P', 'Por', 'Milinkovic-Savic V.', 'Napoli', 17, 4, 13, 17, 4, 13, 37, 37]
+sheet Portieri dim=A1:M69
+  row1: ['Quotazioni Fantacalcio Stagione 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [4431, 'P', 'Por', 'Carnesecchi', 'Atalanta', 18, 14, 4, 18, 14, 4, 80, 80]
+  row4: [2170, 'P', 'Por', 'Milinkovic-Savic V.', 'Napoli', 17, 4, 13, 17, 4, 13, 37, 37]
+sheet Difensori dim=A1:M186
+  row1: ['Quotazioni Fantacalcio Stagione 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [254, 'D', 'E', 'Dimarco', 'Inter', 30, 19, 11, 30, 18, 12, 320, 320]
+  row4: [2788, 'D', 'Dc', 'Bremer', 'Juventus', 20, 13, 7, 20, 13, 7, 74, 74]
+sheet Centrocampisti dim=A1:M180
+  row1: ['Quotazioni Fantacalcio Stagione 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [6875, 'C', 'T;A', 'Paz N.', 'Como', 26, 20, 6, 26, 20, 6, 245, 245]
+  row4: [4777, 'C', 'C;T', 'McTominay', 'Napoli', 25, 26, -1, 25, 26, -1, 215, 215]
+sheet Attaccanti dim=A1:M105
+  row1: ['Quotazioni Fantacalcio Stagione 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [2764, 'A', 'Pc', 'Martinez L.', 'Inter', 33, 34, -1, 33, 34, -1, 315, 315]
+  row4: [4871, 'A', 'Pc', 'Thuram', 'Inter', 32, 29, 3, 32, 29, 3, 270, 270]
+sheet Ceduti dim=A1:M133
+  row1: ['Calciatori Ceduti 2025 26', None, None, None, None, None, None, None, None, None, None, None, None]
+  row2: ['Id', 'R', 'RM', 'Nome', 'Squadra', 'Qt.A', 'Qt.I', 'Diff.', 'Qt.A M', 'Qt.I M', 'Diff.M', 'FVM', 'FVM M']
+  row3: [5135, 'P', 'Por', 'Guaita', 'Parma', 3, 5, -2, 3, 5, -2, 1, 1]
+  row4: [3, 'P', 'Por', 'Radunovic', 'Cagliari', 1, 1, 0, 1, 1, 0, 1, 1]

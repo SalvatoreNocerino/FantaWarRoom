@@ -1,0 +1,71 @@
+Squadre 2025 (8): ['NapoletanaGas', 'Napoli 1926', 'Aurora Ercolanese', 'PeppeNight', 'Oktoberfest Team', 'San Lorenzo', 'MYTHOS', 'eRasmus']
+  NapoletanaGas: 28 giocatori, costo totale=757
+  Napoli 1926: 28 giocatori, costo totale=1027
+  Aurora Ercolanese: 26 giocatori, costo totale=1001
+  PeppeNight: 27 giocatori, costo totale=995
+  Oktoberfest Team: 28 giocatori, costo totale=832
+  San Lorenzo: 28 giocatori, costo totale=1002
+  MYTHOS: 26 giocatori, costo totale=887
+  eRasmus: 26 giocatori, costo totale=960
+Squadre 2023 (2): ['NapoletanaGas', 'Napoli 1926']
+  NapoletanaGas: 23 giocatori, costo totale=922
+  Napoli 1926: 20 giocatori, costo totale=625
+
+--- Match rate 2025 (8 squadre): 197/217 (91%) ---
+
+--- Multiplo prezzo/FVM per ruolo (2025, 8 squadre) ---
+  Portieri: N=23 costo_medio=32.4 fvm_medio=29.6 multiplo_medio=1.44 multiplo_mediano=1.00
+  Difensori: N=76 costo_medio=10.9 fvm_medio=26.1 multiplo_medio=0.59 multiplo_mediano=0.24
+  Centrocampisti: N=58 costo_medio=38.3 fvm_medio=45.3 multiplo_medio=1.04 multiplo_mediano=0.50
+  Attaccanti: N=40 costo_medio=79.1 fvm_medio=68.3 multiplo_medio=2.33 multiplo_mediano=0.89
+
+--- Top 15 CASI PREZZO >> FVM (2025, 8 squadre) ---
+  A Ferguson E.            Napoli 1926          costo=191   fvm=12    multiplo=15.92
+  A Openda                 MYTHOS               costo=81    fvm=8     multiplo=10.12
+  A Dovbyk                 Aurora Ercolanese    costo=73    fvm=8     multiplo=9.12
+  A David                  MYTHOS               costo=226   fvm=28    multiplo=8.07
+  A Gimenez                San Lorenzo          costo=91    fvm=12    multiplo=7.58
+  A Kean                   eRasmus              costo=295   fvm=40    multiplo=7.38
+  C Zaccagni               Aurora Ercolanese    costo=170   fvm=25    multiplo=6.80
+  A Morata                 Aurora Ercolanese    costo=68    fvm=10    multiplo=6.80
+  D Estupinan              MYTHOS               costo=41    fvm=8     multiplo=5.12
+  P Leali                  NapoletanaGas        costo=5     fvm=1     multiplo=5.00
+  C Zhegrova               MYTHOS               costo=59    fvm=12    multiplo=4.92
+  P Provedel               MYTHOS               costo=70    fvm=15    multiplo=4.67
+  D Angelino               Napoli 1926          costo=32    fvm=7     multiplo=4.57
+  P Meret                  Napoli 1926          costo=80    fvm=20    multiplo=4.00
+  C Odgaard                eRasmus              costo=54    fvm=14    multiplo=3.86
+
+--- Top 15 CASI PREZZO << FVM (2025, 8 squadre) ---
+  D Kalulu                 MYTHOS               costo=1     fvm=68    multiplo=0.01
+  C Mandragora             Oktoberfest Team     costo=1     fvm=60    multiplo=0.02
+  D Mancini                MYTHOS               costo=1     fvm=54    multiplo=0.02
+  D N'Dicka                Aurora Ercolanese    costo=1     fvm=51    multiplo=0.02
+  C Baturina               eRasmus              costo=2     fvm=95    multiplo=0.02
+  D Bisseck                San Lorenzo          costo=1     fvm=41    multiplo=0.02
+  D Palestra               Aurora Ercolanese    costo=2     fvm=75    multiplo=0.03
+  A Vardy                  San Lorenzo          costo=1     fvm=32    multiplo=0.03
+  C Ederson D.S.           San Lorenzo          costo=1     fvm=30    multiplo=0.03
+  A Rodriguez Je.          Oktoberfest Team     costo=1     fvm=27    multiplo=0.04
+  D Hermoso                NapoletanaGas        costo=1     fvm=25    multiplo=0.04
+  D Miranda J.             San Lorenzo          costo=1     fvm=25    multiplo=0.04
+  A Simeone                NapoletanaGas        costo=4     fvm=99    multiplo=0.04
+  P Butez                  eRasmus              costo=4     fvm=95    multiplo=0.04
+  C Zaniolo                NapoletanaGas        costo=5     fvm=100   multiplo=0.05
+
+--- % budget per ruolo ---
+Solo 2025 (8 squadre): totale=7461
+  P: 0.1003
+  D: 0.1123
+  C: 0.3069
+  A: 0.4805
+Solo 2023 (2 squadre): totale=1547
+  P: 0.0666
+  D: 0.0562
+  C: 0.2353
+  A: 0.6419
+Combinato 2023+2025 (10 squadre-stagione): totale=9008
+  P: 0.0945
+  D: 0.1027
+  C: 0.2946
+  A: 0.5082

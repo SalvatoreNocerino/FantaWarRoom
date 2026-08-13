@@ -1,0 +1,13 @@
+dim=A1:I15 merged=[<MergedCellRange A2:F2>, <MergedCellRange A14:F14>, <MergedCellRange A1:F1>, <MergedCellRange A15:F15>]
+A1: SIMULAZIONI — confronto strategie (struttura pronta per il simulatore Python)
+A2: Obiettivo della simulazione: massimizzare il FVM TOTALE della rosa finale, non minimizzare l'errore di previsione dei prezzi. Esegui il simulatore Python (100-1000 aste, avversari con strategie divers
+A4: Strategia
+A5: Strategia A
+A6: Strategia B
+A7: Strategia C
+A8: Strategia D
+A9: Strategia E
+A10: Strategia F
+A13: Come si esegue
+A14: Simulatore Python (Excel_Only/_sim4/sim3.py + build_rose2.py), eseguito su 60 aste virtuali x 8 squadre x 491 giocatori per Strategia A e F (confrontate sulla stessa sequenza di chiamate per ogni seed
+A15: Nota: Strategie B/C/D/E non eseguite in questa sessione (richiedono implementare le rispettive variabili nel simulatore). A e F confermano la direzione attesa: il modello completo (titolari/riserve + 

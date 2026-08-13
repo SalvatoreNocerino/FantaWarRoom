@@ -1,0 +1,28 @@
+Errori: 0
+
+Stato Asta per ruolo (Ruolo, TitolariResidui, RiserveResidue, RapportoQualitaTit, PressioneAsta, RapportoRiserve, PressioneRiserve):
+  ['P', 8.0, 16.0, 2.25, '🟢 Puoi aspettare', 0.375, '🔴 Riserve scarse']
+  ['D', 24.0, 40.0, 2.2916666666666665, '🟢 Puoi aspettare', 2.325, '🟢 Riserve abbondanti']
+  ['C', 32.0, 32.0, 1.71875, '🟡 Attesa rischiosa', 3.125, '🟢 Riserve abbondanti']
+  ['A', 24.0, 24.0, 1.0833333333333333, '🟡 Attesa rischiosa', 2.125, '🟢 Riserve abbondanti']
+
+Pressione Competitiva (Ruolo, Bisognose, CandidateReali, ValoreAtteso, PressioneCandReali):
+  ['P', 7.0, 7.0, 81.84, '🔴 Molto Alta']
+  ['D', 7.0, 7.0, 32.86666666666667, '🔴 Molto Alta']
+  ['C', 7.0, 7.0, 66.02499999999999, '🔴 Molto Alta']
+  ['A', 7.0, 7.0, 159.65, '🔴 Molto Alta']
+
+Parametri Modello G/H/I 57:60 (Ruolo, TitResidui, RisResidue, ValoreAtteso):
+  ['P', 8.0, 16.0, 81.84]
+  ['D', 24.0, 40.0, 32.86666666666667]
+  ['C', 32.0, 32.0, 66.02499999999999]
+  ['A', 24.0, 24.0, 159.65]
+
+Output Utente esempio AE2:AF6 (Pressione Ruolo, Titolare/Riserva):
+  ['A', 'Martinez L.', '🟡 Attesa rischiosa', 'Titolare']
+  ['A', 'Malen', '🟡 Attesa rischiosa', 'Titolare']
+  ['A', 'Thuram', '🟡 Attesa rischiosa', 'Titolare']
+  ['A', 'Hojlund', '🟡 Attesa rischiosa', 'Titolare']
+  ['D', 'Dimarco', '🟢 Puoi aspettare', 'Titolare']
+
+Salvato OK.

@@ -1,0 +1,58 @@
+DIM A1:E74
+A1 'GIOCATORI ANCORA DA CHIAMARE — per ruolo e fascia'
+A2 "Se lasci andare questo giocatore, quali alternative avrai piu' avanti? Solo giocatori non assegnati e con Qt.A>1."
+A4 'TOP'
+B5 'Portieri'
+C5 'Difensori'
+D5 'Centrocampisti'
+E5 'Attaccanti'
+A6 1
+B6 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|1",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C6 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|1",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D6 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|1",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E6 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|1",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A7 2
+B7 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|2",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C7 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|2",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D7 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|2",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E7 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|2",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A8 3
+B8 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|3",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C8 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|3",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D8 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|3",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E8 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|3",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A9 4
+B9 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|4",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C9 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|4",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D9 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|4",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E9 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|4",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A10 5
+B10 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|5",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C10 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|5",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D10 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|5",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E10 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|5",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A11 6
+B11 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|6",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C11 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|6",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D11 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|6",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E11 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|6",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A12 7
+B12 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|7",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C12 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|7",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D12 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|7",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E12 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|7",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A13 8
+B13 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|8",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C13 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|8",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D13 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|8",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E13 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|8",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A14 9
+B14 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|9",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C14 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|9",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D14 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|9",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E14 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|9",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+A15 10
+B15 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("P|Top|10",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+C15 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("D|Top|10",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+D15 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("C|Top|10",\'Output Utente\'!$AL$2:$AL$492,0)),"")'
+E15 '=IFERROR(INDEX(\'Output Utente\'!$C$2:$C$492,MATCH("A|Top|10",\'Output Utente\'!$AL$2:$AL$492,0)),"")'

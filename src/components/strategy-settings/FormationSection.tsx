@@ -38,8 +38,8 @@ export const FormationSection: React.FC<FormationSectionProps> = ({
 
         <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 text-slate-300 text-xs flex items-center">
           <p>
-            L'AI Copilot e la Live War Room adatteranno le raccomandazioni in base al modulo {preferredFormation}{' '}
-            (es. spingendo sui titolari difensivi per un 3-5-2 o sugli esterni per un 4-3-3).
+            Il motore di pricing della Console Live userà il modulo {preferredFormation} per calcolare quanti
+            titolari per ruolo servono in lega (es. più difensori titolari con un 3-5-2, più attaccanti con un 4-3-3).
           </p>
         </div>
       </div>

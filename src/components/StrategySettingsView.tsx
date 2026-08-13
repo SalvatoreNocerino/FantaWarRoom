@@ -5,7 +5,6 @@ import { FormationSection } from './strategy-settings/FormationSection';
 import { AggressivenessSection } from './strategy-settings/AggressivenessSection';
 import { BudgetAllocationSection } from './strategy-settings/BudgetAllocationSection';
 import { WishlistSection } from './strategy-settings/WishlistSection';
-import { PreAuctionAiChat } from './strategy-settings/PreAuctionAiChat';
 
 interface StrategySettingsViewProps {
   strategy: StrategySettings;
@@ -33,7 +32,9 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
     formData.budgetAllocationPct.D +
     formData.budgetAllocationPct.C +
     formData.budgetAllocationPct.A;
-  const isAllocationValid = Math.abs(totalAllocationPct - 100) < 0.1;
+  // Tolleranza 0.25 invece di 0.1: lo split calibrato di default (9.3/11.6/27.8/51.5,
+  // vedi src/engine/modelParams.ts) somma 100.2 per via degli arrotondamenti sui dati reali.
+  const isAllocationValid = Math.abs(totalAllocationPct - 100) < 0.25;
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,9 +48,10 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   };
 
   const autoBalanceAllocation = () => {
+    // Split calibrato su aste reali — vedi src/engine/modelParams.ts > DEFAULT_ROLE_BUDGET_PCT.
     setFormData((prev) => ({
       ...prev,
-      budgetAllocationPct: { P: 8, D: 15, C: 27, A: 50 },
+      budgetAllocationPct: { P: 9.3, D: 11.6, C: 27.8, A: 51.5 },
     }));
   };
 
@@ -58,11 +60,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
       .map((id) => allPlayers.find((p) => p.id === id))
       .filter((p): p is Player => p !== undefined);
   }, [formData.wishlistIds, allPlayers]);
-
-  const wishlistNames = useMemo(
-    () => wishlistPlayers.map((p) => `${p.name} (${p.role})`).join(', '),
-    [wishlistPlayers]
-  );
 
   const handleAddPlayerToWishlist = (playerId: string) => {
     if (!playerId) return;
@@ -139,11 +136,10 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
             <span className="w-6 h-6 rounded bg-cyan-950 text-cyan-400 font-mono text-xs font-bold flex items-center justify-center">
               2.4
             </span>
-            <span>Wishlist Obiettivi Asta & Assistente AI Pre-Asta</span>
+            <span>Wishlist Obiettivi Asta</span>
           </h2>
           <p className="text-slate-400 text-xs mt-1">
-            2.4.1 Seleziona i giocatori obiettivo dal menu e ordinali per ruolo. 2.4.2 Chatta con l'AI per preparare
-            la tua strategia pre-asta.
+            Seleziona i giocatori obiettivo dal menu e ordinali per ruolo.
           </p>
         </div>
 
@@ -154,13 +150,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
           playerSearchSelect={playerSearchSelect}
           onAddPlayer={handleAddPlayerToWishlist}
           onRemovePlayer={handleRemoveFromWishlist}
-        />
-
-        <PreAuctionAiChat
-          preferredFormation={formData.preferredFormation}
-          aggressionScore={formData.aggressionScore}
-          totalBudget={totalBudget}
-          wishlistNames={wishlistNames}
         />
       </section>
 

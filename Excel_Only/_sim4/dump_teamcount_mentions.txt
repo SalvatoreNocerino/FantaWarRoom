@@ -1,0 +1,54 @@
+Guida A5: • Info Lega: dati della tua lega (budget, rosa, regole, nomi squadre). 'La Mia Squadra' (B28) identifica la tua squadra.
+Guida A26: • Quando un giocatore viene acquistato, inserisci Squadra Assegnata e Prezzo Pagato: la scarsita' e i dati della rosa si aggiornano.
+Guida A39: • Pressione Competitiva + TeamDetail: stima, per ruolo, quante squadre avversarie cercano ancora un titolare e con quanto budget. E' informativa: NON moltiplica il FVM.
+Dashboard Asta I3: Budget medio residuo squadre attive
+Output Utente D1: Squadra Assegnata
+Stato Asta A5: Budget medio residuo squadre attive
+Info Lega A9: Nome Squadra 1
+Info Lega A10: Nome Squadra 2
+Info Lega A11: Nome Squadra 3
+Info Lega A12: Nome Squadra 4
+Info Lega A13: Nome Squadra 5
+Info Lega A14: Nome Squadra 6
+Info Lega A15: Nome Squadra 7
+Info Lega A16: Nome Squadra 8
+Info Lega A17: Nome Squadra 9
+Info Lega A18: Nome Squadra 10
+Info Lega A19: Nome Squadra 11
+Info Lega A20: Nome Squadra 12
+Info Lega A21: Nome Squadra 13
+Info Lega A22: Nome Squadra 14
+Info Lega A23: Nome Squadra 15
+Info Lega A24: Nome Squadra 16
+Info Lega A28: La Mia Squadra
+Info Lega C28: Seleziona il tuo nome squadra dalla lista sopra (B9:B24)
+Parametri Modello C48: Fonte: Rose_fantalba 2023 e 2025 (dati reali, 8 squadre, 16 aste-ruolo). Sostituisce la distribuzione derivata dal solo FVM, che sovrastimava i difensori (18%->reale 11.6%) e sottostimava portieri e attaccanti.
+Parametri Modello C55: Nelle aste reali l'85-96% del budget di ruolo va ai 'titolari' (i migliori N per FVM, N = squadre x titolari-per-ruolo dal modulo preferito). Le riserve costano quasi niente indipendentemente dal loro FVM. Sostituisce la distribuzione proporzionale unica.
+Parametri Modello B56: Titolari per Squadra
+Parametri Modello C71: Stima quante squadre avversarie hanno ancora bisogno di un TITOLARE in quel ruolo e quanto budget hanno disponibile. Vedi foglio 'Pressione Competitiva'.
+Parametri Modello B72: Titolari Standard Assunti per Squadre Avversarie
+Parametri Modello C73: Fisso: ogni squadra gioca 1 portiere titolare a giornata.
+Parametri Modello A78: Soglia N Squadre Bisognose per Pressione ALTA (>=)
+Parametri Modello C78: 2+ squadre ancora a caccia di un titolare nello stesso ruolo = pressione competitiva concreta.
+Parametri Modello A79: Soglia Budget Medio Disponibile (di quelle squadre) per MOLTO ALTA (>=, crediti)
+Parametri Modello C79: Se le squadre bisognose hanno anche molto budget, la pressione sale a MOLTO ALTA.
+Pressione Competitiva C2: N Squadre Bisognose (titolare, escl. te)
+Pressione Competitiva G3: =IF($C3=0,"Nessuna avversaria (attiva) sembra ancora a caccia di un titolare "&$B3&".",$C3&" squadr"&IF($C3=1,"a","e")&" cerca"&IF($C3=1,"","no")&" ancora un titolare "&$B3&", con "&$D3&" crediti disponibili in totale (media "&$E3&"/squadra).")
+Pressione Competitiva G4: =IF($C4=0,"Nessuna avversaria (attiva) sembra ancora a caccia di un titolare "&$B4&".",$C4&" squadr"&IF($C4=1,"a","e")&" cerca"&IF($C4=1,"","no")&" ancora un titolare "&$B4&", con "&$D4&" crediti disponibili in totale (media "&$E4&"/squadra).")
+Pressione Competitiva G5: =IF($C5=0,"Nessuna avversaria (attiva) sembra ancora a caccia di un titolare "&$B5&".",$C5&" squadr"&IF($C5=1,"a","e")&" cerca"&IF($C5=1,"","no")&" ancora un titolare "&$B5&", con "&$D5&" crediti disponibili in totale (media "&$E5&"/squadra).")
+Pressione Competitiva G6: =IF($C6=0,"Nessuna avversaria (attiva) sembra ancora a caccia di un titolare "&$B6&".",$C6&" squadr"&IF($C6=1,"a","e")&" cerca"&IF($C6=1,"","no")&" ancora un titolare "&$B6&", con "&$D6&" crediti disponibili in totale (media "&$E6&"/squadra).")
+TeamDetail C1: Nome Squadra
+Giocatori Liberi E3: Squadra Serie A
+La Mia Rosa E3: Squadra Serie A
+La Mia Rosa N3: Squadra
+Input Giocatori 2026_27 D2: Squadra
+Input Statistiche 2025_26 E2: Squadra
+Analisi Asta Reale 2025 A1: ANALISI ASTA REALE 2025 — benchmark empirico (4 squadre, lega FantAlba)
+Analisi Asta Reale 2025 A2: Fonte: Excel_Only/Dati/Rose_fantalba-2025.xlsx (prezzi reali pagati) incrociato con Quotazioni_Fantacalcio_Stagione_2025_26 (listone pre-stagione, stesso periodo, per evitare look-ahead bias). 186 giocatori su 200 abbinati per nome (93%). Questi numeri NON sono usati per forzare i prezzi del motore:
+Analisi Asta Reale 2025 A11: Lettura: Portieri vicino a 1x (mercato liquido). Difensori e Centrocampisti fortemente sotto 1x sulla mediana (molti difensori costano 1 credito, pochi ne costano tanti: distribuzione a coda lunga). Attaccanti: media 2.3x ma mediana 0.9x — cioe' META' degli attaccanti si paga circa il FVM, ma una mi
+Analisi Asta Reale 2025 C14: Squadra Fantacalcio
+Analisi Asta Reale 2025 C30: Squadra Fantacalcio
+Analisi Asta Reale 2025 A45: Limiti di questa analisi: (1) il file di quotazioni usato come FVM di riferimento e' uno snapshot che puo' essere leggermente successivo al giorno reale dell'asta, quindi alcuni FVM potrebbero essersi mossi nel frattempo (es. dopo un mercato dell'ultima ora) - alcuni multipli estremi (es. 8-16x) van
+Simulazioni F5: Eseguita: 15 aste x 8 squadre (motore v3, seed 1000-1014), con meccanismo 'brucia budget' di fine asta (i crediti non spesi sono persi, quindi ogni squadra tende a spendere quasi tutto il budget entro l'ultimo slot). Spesa media 98.2% del budget (min 84.2%). Range FVM 280-1555.
+Simulazioni F10: Eseguita: 15 aste x 8 squadre (motore v3 completo: titolari/riserve pianificati per ruolo + scarsita' dinamica + 'brucia budget' di fine asta). Spesa media 96.6% del budget (min 74.6%). Range FVM 414-1832. +8.6% FVM medio e meno varianza (nessun 'disastro' con FVM sotto 400) rispetto a Strategia A.
+Simulazioni A14: Il simulatore Python (usato per la calibrazione v10/v11 su 15 sessioni / 8 squadre / 491 giocatori) va esteso per eseguire le 6 varianti sopra su 100-1000 aste virtuali ciascuna, con avversari che seguono strategie diverse (alcuni FVM puro, alcuni euristiche 'da manuale'), e registrare per ognuna: F

@@ -1,0 +1,62 @@
+{
+  "A": {
+    "fvm_medio": 962.097,
+    "fvm_mediana": 960.0,
+    "fvm_sd": 298.06869273877123,
+    "win_pct": 31.5,
+    "complete_pct": 100.0,
+    "resid_medio": 89.454,
+    "fvm_per_credito": 1.0404156384608032,
+    "n": 1000
+  },
+  "B": {
+    "fvm_medio": 970.697,
+    "fvm_mediana": 970.5,
+    "fvm_sd": 300.2226593563517,
+    "win_pct": 32.2,
+    "complete_pct": 100.0,
+    "resid_medio": 87.755,
+    "fvm_per_credito": 1.0478455568101899,
+    "n": 1000
+  },
+  "C": {
+    "fvm_medio": 970.697,
+    "fvm_mediana": 970.5,
+    "fvm_sd": 300.2226593563517,
+    "win_pct": 32.2,
+    "complete_pct": 100.0,
+    "resid_medio": 87.755,
+    "fvm_per_credito": 1.0478455568101899,
+    "n": 1000
+  },
+  "D": {
+    "fvm_medio": 982.89,
+    "fvm_mediana": 976.0,
+    "fvm_sd": 306.30279120504275,
+    "win_pct": 32.9,
+    "complete_pct": 100.0,
+    "resid_medio": 85.931,
+    "fvm_per_credito": 1.0586449411574659,
+    "n": 1000
+  },
+  "E": {
+    "fvm_medio": 767.125,
+    "fvm_mediana": 673.0,
+    "fvm_sd": 321.36957443883824,
+    "win_pct": 15.4,
+    "complete_pct": 100.0,
+    "resid_medio": 120.391,
+    "fvm_per_credito": 0.8534826958588133,
+    "n": 1000
+  },
+  "F": {
+    "fvm_medio": 751.048,
+    "fvm_mediana": 695.0,
+    "fvm_sd": 299.1188019767397,
+    "win_pct": 12.8,
+    "complete_pct": 100.0,
+    "resid_medio": 42.811,
+    "fvm_per_credito": 0.7792256885877166,
+    "n": 1000
+  }
+}

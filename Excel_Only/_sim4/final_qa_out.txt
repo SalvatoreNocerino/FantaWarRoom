@@ -1,0 +1,17 @@
+Fogli: ['Guida', 'Dashboard Asta', 'Decisione Live', 'Output Utente', 'Stato Asta', 'Info Lega', 'Info Strategia', 'Parametri Modello', 'Pressione Competitiva', 'TeamDetail', 'Giocatori Da Chiamare', 'Giocatori Liberi', 'La Mia Rosa', 'Input Giocatori 2026_27', 'Input Statistiche 2025_26', 'Validazione Dati', 'Analisi Asta Reale 2025', 'Simulazioni']
+Errori: 0
+
+Stato Asta C5 (budget medio residuo, array formula): '=AVERAGE(IF(\'Info Lega\'!$D$9:$D$24="Si",\'Info Lega\'!$B$4-SUMIF(\'Output Utente\'!$D$2:$D$492,\'Info Lega\'!$B$9:$B$24,\'Output Utente\'!$M$2:$M$492)))'
+Stato Asta M8:P12 headers+valori:
+  ['Titolari Residui (Lega)', 'Riserve Residue (Lega)', 'Rapporto Riserve (Media+Scommesse / Riserve Residue)', 'Pressione Riserve']
+  [8.0, 16.0, 0.375, '🔴 Riserve scarse']
+  [24.0, 40.0, 2.325, '🟢 Riserve abbondanti']
+  [32.0, 32.0, 3.125, '🟢 Riserve abbondanti']
+  [24.0, 24.0, 2.125, '🟢 Riserve abbondanti']
+
+Simulazioni riga 5 (A): ['Strategia A', 'FVM puro', 964.0, 929.0, 329.9, 31.6, 100.0, 100.6, 1.052]
+Simulazioni riga 10 (F): ['Strategia F', '+ Competition Pressure (gated sulle riserve)', 738.2, 679.0, 287.8, 11.4, 100.0, 39.5, 0.764]
+
+Analisi Asta Reale 2025 A1: ANALISI ASTA REALE 2025 — benchmark empirico (8 squadre, lega FantAlba)
+
+OK - QA finale completata sul file consegnato.

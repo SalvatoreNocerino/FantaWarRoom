@@ -21,6 +21,16 @@ export interface Player {
   isCustom?: boolean;
   lastYearStats?: PlayerLastYearStats;
   fairValueBracket?: string; // es. "35-50 FM", "15-25 FM", "1-5 FM"
+  // --- Campi opzionali per il motore di pricing deterministico (src/engine) ---
+  // Popolati quando il listone importato li contiene (es. export fantacalcio.it
+  // con FVM + statistiche); se assenti il motore applica i rami "nessuno storico"
+  // esattamente come nel foglio Excel di riferimento.
+  fvm?: number; // FVM/1000 dal listone — è il valore su cui si basa il prezzo del motore
+  presenze?: number; // Pv — presenze stagione precedente
+  mv?: number; // Media voto stagione precedente
+  fm?: number; // Fantamedia stagione precedente
+  goals?: number;
+  assists?: number;
 }
 
 export interface BonusRule {
@@ -29,20 +39,6 @@ export interface BonusRule {
   value: number;
   enabled: boolean;
   category: 'bonus' | 'malus';
-}
-
-export interface ModifierTier {
-  minScore: number;
-  maxScore: number;
-  bonus: number;
-}
-
-export interface MidfieldTier {
-  minScore?: number;
-  maxScore?: number;
-  minDiff?: number;
-  maxDiff?: number;
-  bonus: number;
 }
 
 export type CallOrderRule = 'free' | 'alphabetical' | 'valuation' | 'sealed_bid';
@@ -68,11 +64,9 @@ export interface LeagueSettings {
   bonusRules: BonusRule[];
   defensiveModifier: {
     enabled: boolean;
-    tiers: ModifierTier[];
   };
   midfieldModifier: {
     enabled: boolean;
-    tiers: MidfieldTier[];
   };
   auctionRules: {
     callOrderRule: CallOrderRule;
@@ -109,16 +103,3 @@ export interface AppData {
   auctionHistory: RosterPlayer[];
 }
 
-export interface CopilotMessage {
-  id: string;
-  sender: 'user' | 'ai';
-  text: string;
-  timestamp: number;
-}
-
-export interface AIRecommendation {
-  maxBid: number;
-  verdict: 'SUPER_MUST_HAVE' | 'GOOD_BUY' | 'OVERPRICED_RISK' | 'SKIP' | 'BARGAIN';
-  reasoning: string;
-  strategicNote: string;
-}

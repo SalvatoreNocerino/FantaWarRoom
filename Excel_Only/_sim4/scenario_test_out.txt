@@ -1,0 +1,24 @@
+Errori dopo assegnazioni: 0
+
+Max Bid Dinamica > Budget Spendibile: 0 casi
+Prezzi negativi: 0 casi
+
+Stato Asta dopo assegnazioni (Ruolo, TopRim, BuoniRim, TitResidui, RisResidue, QualityScarcity, PressioneAsta, PressioneRiserve):
+  ['P', 6.0, 11.0, 7.0, 16.0, 2.4285714285714284, '🟢 Puoi aspettare', '🔴 Riserve scarse']
+  ['D', 16.0, 37.0, 22.0, 40.0, 2.409090909090909, '🟢 Puoi aspettare', '🟢 Riserve abbondanti']
+  ['C', 3.0, 37.0, 17.0, 32.0, 2.3529411764705883, '🟢 Puoi aspettare', '🟢 Riserve abbondanti']
+  ['A', 0.0, 4.0, 2.0, 24.0, 2.0, '🟢 Puoi aspettare', '🟢 Riserve abbondanti']
+
+Pressione Competitiva dopo assegnazioni (Ruolo, Bisognose, CandidateReali):
+  ['P', 6.0, 6.0]
+  ['D', 7.0, 7.0]
+  ['C', 6.0, 6.0]
+  ['A', 3.0, 3.0]
+
+La Mia Rosa - Budget Residuo (S2), Slot Residui (S3), FVM Totale (R6):
+  408.0 20.0 904.0
+
+Dashboard Asta riga A (Titolari Residui K10, Riserve Residue L10, Candidate Reali M10):
+  2.0 24.0 3.0
+
+OK, nessun salvataggio del file di test (scenario scartato).

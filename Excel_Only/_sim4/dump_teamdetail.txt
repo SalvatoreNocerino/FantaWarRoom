@@ -1,0 +1,154 @@
+DIM A1:I17
+A1 '#'
+B1 'Slot Residui Tot.'
+C1 'Nome Squadra'
+D1 'Attiva'
+E1 'Budget Residuo'
+F1 'Mancanti P (titolare)'
+G1 'Mancanti D (titolare)'
+H1 'Mancanti C (titolare)'
+I1 'Mancanti A (titolare)'
+A2 1
+B2 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C2 "='Info Lega'!$B$9"
+D2 "='Info Lega'!$D$9"
+E2 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C2)"
+F2 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G2 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H2 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I2 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C2,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A3 2
+B3 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C3 "='Info Lega'!$B$10"
+D3 "='Info Lega'!$D$10"
+E3 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C3)"
+F3 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G3 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H3 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I3 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C3,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A4 3
+B4 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C4 "='Info Lega'!$B$11"
+D4 "='Info Lega'!$D$11"
+E4 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C4)"
+F4 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G4 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H4 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I4 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C4,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A5 4
+B5 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C5 "='Info Lega'!$B$12"
+D5 "='Info Lega'!$D$12"
+E5 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C5)"
+F5 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G5 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H5 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I5 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C5,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A6 5
+B6 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C6 "='Info Lega'!$B$13"
+D6 "='Info Lega'!$D$13"
+E6 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C6)"
+F6 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G6 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H6 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I6 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C6,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A7 6
+B7 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C7 "='Info Lega'!$B$14"
+D7 "='Info Lega'!$D$14"
+E7 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C7)"
+F7 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G7 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H7 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I7 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C7,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A8 7
+B8 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C8 "='Info Lega'!$B$15"
+D8 "='Info Lega'!$D$15"
+E8 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C8)"
+F8 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G8 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H8 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I8 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C8,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A9 8
+B9 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$D$
+C9 "='Info Lega'!$B$16"
+D9 "='Info Lega'!$D$16"
+E9 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C9)"
+F9 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G9 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H9 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I9 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C9,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A10 9
+B10 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C10 "='Info Lega'!$B$17"
+D10 "='Info Lega'!$D$17"
+E10 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C10)"
+F10 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G10 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H10 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I10 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C10,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A11 10
+B11 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C11 "='Info Lega'!$B$18"
+D11 "='Info Lega'!$D$18"
+E11 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C11)"
+F11 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G11 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H11 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I11 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C11,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A12 11
+B12 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C12 "='Info Lega'!$B$19"
+D12 "='Info Lega'!$D$19"
+E12 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C12)"
+F12 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G12 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H12 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I12 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C12,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A13 12
+B13 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C13 "='Info Lega'!$B$20"
+D13 "='Info Lega'!$D$20"
+E13 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C13)"
+F13 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G13 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H13 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I13 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C13,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A14 13
+B14 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C14 "='Info Lega'!$B$21"
+D14 "='Info Lega'!$D$21"
+E14 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C14)"
+F14 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G14 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H14 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I14 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C14,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A15 14
+B15 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C15 "='Info Lega'!$B$22"
+D15 "='Info Lega'!$D$22"
+E15 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C15)"
+F15 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G15 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H15 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I15 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C15,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A16 15
+B16 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C16 "='Info Lega'!$B$23"
+D16 "='Info Lega'!$D$23"
+E16 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C16)"
+F16 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G16 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H16 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I16 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C16,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+A17 16
+B17 '=(\'Info Lega\'!$B$5-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"P"))+(\'Info Lega\'!$B$6-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"D"))+(\'Info Lega\'!$B$7-COUNTIFS(\'Output Utente\'!$
+C17 "='Info Lega'!$B$24"
+D17 "='Info Lega'!$D$24"
+E17 "='Info Lega'!$B$4-SUMIFS('Output Utente'!$M$2:$M$492,'Output Utente'!$D$2:$D$492,$C17)"
+F17 '=MAX(0,\'Parametri Modello\'!$B$73-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+G17 '=MAX(0,\'Parametri Modello\'!$B$74-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+H17 '=MAX(0,\'Parametri Modello\'!$B$75-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'
+I17 '=MAX(0,\'Parametri Modello\'!$B$76-COUNTIFS(\'Output Utente\'!$D$2:$D$492,$C17,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$AF$2:$AF$492,"Titolare"))'

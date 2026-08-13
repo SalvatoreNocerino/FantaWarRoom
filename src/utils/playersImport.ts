@@ -25,6 +25,14 @@ const FIELD_ALIASES: Record<string, string[]> = {
   team: ['squadra', 'team', 'club'],
   price: ['quotazione', 'qta', 'prezzo', 'price'],
   fairValue: ['fvm', 'fairvalue'],
+  // Colonne di storico stagione precedente — presenti solo in alcuni export
+  // (es. fantacalcio.it "statistiche"). Se assenti, il motore di pricing
+  // applica il ramo "nessuno storico" esattamente come nel foglio Excel.
+  presenze: ['pv', 'presenze'],
+  mv: ['mv', 'mediavoto'],
+  fm: ['fm', 'fantamedia'],
+  goals: ['gf', 'gol', 'reti'],
+  assists: ['ass', 'assist'],
 };
 
 interface ResolvedColumns {
@@ -33,6 +41,11 @@ interface ResolvedColumns {
   team: number;
   price: number;
   fairValue: number;
+  presenze: number;
+  mv: number;
+  fm: number;
+  goals: number;
+  assists: number;
 }
 
 function resolveColumns(headers: unknown[]): ResolvedColumns {
@@ -50,6 +63,11 @@ function resolveColumns(headers: unknown[]): ResolvedColumns {
     team: findFirst(FIELD_ALIASES.team),
     price: findFirst(FIELD_ALIASES.price),
     fairValue: findFirst(FIELD_ALIASES.fairValue),
+    presenze: findFirst(FIELD_ALIASES.presenze),
+    mv: findFirst(FIELD_ALIASES.mv),
+    fm: findFirst(FIELD_ALIASES.fm),
+    goals: findFirst(FIELD_ALIASES.goals),
+    assists: findFirst(FIELD_ALIASES.assists),
   };
 }
 
@@ -110,6 +128,16 @@ function assignTiersByRole(players: Player[]): Player[] {
   return players;
 }
 
+function readHistoricalStats(cols: ResolvedColumns, get: (idx: number) => unknown): HistoricalStats {
+  return {
+    presenze: cols.presenze !== -1 ? toNumber(get(cols.presenze)) : null,
+    mv: cols.mv !== -1 ? toNumber(get(cols.mv)) : null,
+    fm: cols.fm !== -1 ? toNumber(get(cols.fm)) : null,
+    goals: cols.goals !== -1 ? toNumber(get(cols.goals)) : null,
+    assists: cols.assists !== -1 ? toNumber(get(cols.assists)) : null,
+  };
+}
+
 function buildFairValueBracket(price: number, fvm: number | null): string {
   if (fvm !== null && fvm > 0) {
     const min = Math.max(1, Math.round(fvm * 0.85));
@@ -120,13 +148,22 @@ function buildFairValueBracket(price: number, fvm: number | null): string {
   return `${Math.round(price * 3)}-${Math.round(price * 4)} FM`;
 }
 
+interface HistoricalStats {
+  presenze: number | null;
+  mv: number | null;
+  fm: number | null;
+  goals: number | null;
+  assists: number | null;
+}
+
 function buildPlayer(
   index: number,
   name: string,
   role: PlayerRole,
   team: string,
   price: number,
-  fvm: number | null
+  fvm: number | null,
+  historical?: HistoricalStats
 ): Player {
   return {
     id: `imp_${index}_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
@@ -139,6 +176,12 @@ function buildPlayer(
     tier: 3, // sovrascritto da assignTiersByRole
     notes: 'Caricato da listone importato',
     fairValueBracket: buildFairValueBracket(price, fvm),
+    fvm: fvm ?? undefined,
+    presenze: historical?.presenze ?? undefined,
+    mv: historical?.mv ?? undefined,
+    fm: historical?.fm ?? undefined,
+    goals: historical?.goals ?? undefined,
+    assists: historical?.assists ?? undefined,
   };
 }
 
@@ -179,7 +222,7 @@ export function parsePlayersCsv(text: string): Player[] {
     ? resolveColumns(firstCols)
     : // Nessun header riconoscibile: assume il vecchio ordine posizionale
       // (Nome, Ruolo, Squadra, Quotazione) per compatibilità con file "grezzi".
-      { name: 0, role: 1, team: 2, price: 3, fairValue: -1 };
+      { name: 0, role: 1, team: 2, price: 3, fairValue: -1, presenze: -1, mv: -1, fm: -1, goals: -1, assists: -1 };
   const startIdx = hasHeader ? 1 : 0;
 
   const imported: Player[] = [];
@@ -195,8 +238,9 @@ export function parsePlayersCsv(text: string): Player[] {
     const team = (cols.team !== -1 ? rawCols[cols.team] : '') || 'Serie A';
     const price = toNumber(cols.price !== -1 ? rawCols[cols.price] : null) ?? 1;
     const fvm = cols.fairValue !== -1 ? toNumber(rawCols[cols.fairValue]) : null;
+    const historical = readHistoricalStats(cols, (idx) => rawCols[idx]);
 
-    imported.push(buildPlayer(i, name, role, team, price, fvm));
+    imported.push(buildPlayer(i, name, role, team, price, fvm, historical));
   }
 
   return assignTiersByRole(imported);
@@ -253,8 +297,9 @@ export async function parsePlayersXlsxBuffer(buffer: ArrayBuffer): Promise<Playe
       const team = (cols.team !== -1 ? String(row[cols.team] ?? '').trim() : '') || 'Serie A';
       const price = toNumber(cols.price !== -1 ? row[cols.price] : null) ?? 1;
       const fvm = cols.fairValue !== -1 ? toNumber(row[cols.fairValue]) : null;
+      const historical = readHistoricalStats(cols, (idx) => row[idx]);
 
-      imported.push(buildPlayer(rowCounter++, name, role, team, price, fvm));
+      imported.push(buildPlayer(rowCounter++, name, role, team, price, fvm, historical));
     }
   }
 

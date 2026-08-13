@@ -1,0 +1,200 @@
+DIM A1:F81
+A1 'PARAMETRI MOTORE DI PRICING'
+A3 'Budget Base Listone (standard Fantacalcio.it)'
+B3 500
+C3 'Le quotazioni Qt.A del listone sono tarate su un budget standard di 500 crediti e una rosa 3P-8D-8C-6A. I prezzi vengono riscalati sul tuo Budget Iniziale (Info Lega!B4).'
+A5 'Boost Modificatore Ruolo (%)'
+B5 0.15
+C5 'Se attivo il Modificatore Difesa o Centrocampo (Info Lega), il prezzo base del ruolo interessato viene aumentato di questa percentuale.'
+A7 'Boost Whichlist / Preferiti (%)'
+B7 0.15
+C7 "Boost MASSIMO applicato all'Offerta Max se il giocatore e' whichlist. Ora scala con l'Aggressivita' (Info Strategia!B6): aggressivita'=0 -> nessun sovrapprezzo, aggressivita'=1 -> boost pieno."
+A9 'Peso Performance Storica (Fantamedia vs media ruolo, %)'
+B9 0.2
+C9 "Quanto la Fantamedia reale 2025/26 (rispetto alla media di ruolo) sposta il prezzo in piu' o in meno. 0% = ignora la storia, guarda solo il mercato. Il fattore e' limitato a +/-25% per non far esplod
+A10 'Ampiezza range di valutazione per ruolo (Spread %)'
+A11 'Ruolo'
+B11 'Spread %'
+A12 'P'
+B12 0.15
+A13 'D'
+B13 0.2
+A14 'C'
+B14 0.25
+A15 'A'
+B15 0.3
+C16 "Spread = quanto Valutazione Min/Max si allontanano dal prezzo base scalato. Ruoli piu' cari (A, C) hanno piu' varianza di mercato."
+A17 'Fantamedia media per ruolo (calcolata sui giocatori con dati storici)'
+C17 'Media della Fantamedia per ruolo, calcolata solo sui giocatori che raggiungono la soglia minima di presenze.'
+A18 'Ruolo'
+B18 'Fantamedia Media'
+A19 'P'
+B19 '=IFERROR(AVERAGEIFS(\'Output Utente\'!$T$2:$T$492,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$T$2:$T$492,"<>",\'Output Utente\'!$I$2:$I$492,">="&$B$23),"")'
+A20 'D'
+B20 '=IFERROR(AVERAGEIFS(\'Output Utente\'!$T$2:$T$492,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$T$2:$T$492,"<>",\'Output Utente\'!$I$2:$I$492,">="&$B$23),"")'
+A21 'C'
+B21 '=IFERROR(AVERAGEIFS(\'Output Utente\'!$T$2:$T$492,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$T$2:$T$492,"<>",\'Output Utente\'!$I$2:$I$492,">="&$B$23),"")'
+A22 'A'
+B22 '=IFERROR(AVERAGEIFS(\'Output Utente\'!$T$2:$T$492,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$T$2:$T$492,"<>",\'Output Utente\'!$I$2:$I$492,">="&$B$23),"")'
+A23 'Presenze minime per storico (media/performance)'
+B23 10
+C23 "Un giocatore con meno di questa soglia di presenze non influenza la Fantamedia media del ruolo e non riceve bonus/malus dalla performance storica. La soglia e' modificabile."
+A24 "Soglia 'OK' (x credito medio per slot rimanente)"
+B24 1.5
+C24 'Sotto la soglia OK: offerta compatibile col ritmo di spesa che ti puoi permettere. Tra OK e Attenzione: fattibile ma ti restringe le prossime chiamate. Sopra: rischi di restare senza budget per gli s
+A25 "Soglia 'Attenzione' (x credito medio per slot rimanente)"
+B25 3
+A27 'Fattore Scarsità di Ruolo attivo (Si/No)'
+B27 'Si'
+C27 'Confronta, per ogni ruolo, quanti giocatori disponibili restano rispetto agli slot ancora da riempire in tutta la lega. I giocatori con Qt.A=1 possono essere esclusi dal conteggio tramite il parametr
+A28 'Peso massimo Scarsità (premio/sconto max, %)'
+B28 0.3
+A29 "Escludi Qt.A=1 dalla scarsita' (Si/No)"
+B29 'Si'
+C29 "Se attivo, i giocatori con Qt.A=1 e ancora non assegnati non vengono conteggiati tra i giocatori disponibili per il calcolo della scarsita'. Restano comunque visibili nel listone."
+A30 'Riserva minima per slot (crediti)'
+B30 1
+C30 "Crediti minimi da conservare per ogni slot ancora da riempire. Con base d'asta a 1, il minimo teorico è 1 credito per slot."
+A31 'Max Bid dinamico'
+B31 'ATTIVO'
+C31 'Il Max Bid dinamico viene limitato dal budget realmente spendibile: Budget residuo meno la riserva minima necessaria per tutti gli slot ancora vuoti.'
+D31 'Slot Ancora da Riempire'
+E31 'Giocatori Liberi nel Listone'
+F31 'Rapporto Off./Dom.'
+A32 'P'
+B32 "='Info Lega'!$B$3*'Info Lega'!$B$5"
+C32 '=COUNTIFS(\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$D$2:$D$492,"<>")'
+D32 '=$B32-$C32'
+E32 '=IF($B$29="Si",COUNTIFS(\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$D$2:$D$492,"",\'Output Utente\'!$N$2:$N$492,">1"),COUNTIFS(\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$D$2:$D$492
+F32 '=IFERROR($E32/$D32,"")'
+A33 'D'
+B33 "='Info Lega'!$B$3*'Info Lega'!$B$6"
+C33 '=COUNTIFS(\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$D$2:$D$492,"<>")'
+D33 '=$B33-$C33'
+E33 '=IF($B$29="Si",COUNTIFS(\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$D$2:$D$492,"",\'Output Utente\'!$N$2:$N$492,">1"),COUNTIFS(\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$D$2:$D$492
+F33 '=IFERROR($E33/$D33,"")'
+A34 'C'
+B34 "='Info Lega'!$B$3*'Info Lega'!$B$7"
+C34 '=COUNTIFS(\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$D$2:$D$492,"<>")'
+D34 '=$B34-$C34'
+E34 '=IF($B$29="Si",COUNTIFS(\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$D$2:$D$492,"",\'Output Utente\'!$N$2:$N$492,">1"),COUNTIFS(\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$D$2:$D$492
+F34 '=IFERROR($E34/$D34,"")'
+A35 'A'
+B35 "='Info Lega'!$B$3*'Info Lega'!$B$8"
+C35 '=COUNTIFS(\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$D$2:$D$492,"<>")'
+D35 '=$B35-$C35'
+E35 '=IF($B$29="Si",COUNTIFS(\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$D$2:$D$492,"",\'Output Utente\'!$N$2:$N$492,">1"),COUNTIFS(\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$D$2:$D$492
+F35 '=IFERROR($E35/$D35,"")'
+A37 'Base di prezzo: pool FVM proporzionale al budget di lega'
+C37 'Pool FVM: per ogni ruolo prende tutti i giocatori fino alla soglia del N-esimo FVM (N = slot totali di quel ruolo nella lega). In caso di pari FVM sulla soglia, tutti i giocatori a pari FVM entrano n
+A38 'Ruolo'
+B38 'Slot Totali Lega'
+C38 'Somma FVM Pool'
+A39 'P'
+B39 '=$B$32'
+C39 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$V$2:$V$492,"<="&$B39)'
+A40 'D'
+B40 '=$B$33'
+C40 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$V$2:$V$492,"<="&$B40)'
+A41 'C'
+B41 '=$B$34'
+C41 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$V$2:$V$492,"<="&$B41)'
+A42 'A'
+B42 '=$B$35'
+C42 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$V$2:$V$492,"<="&$B42)'
+A43 'Somma FVM Pool TOTALE (tutti i ruoli, denominatore comune)'
+B43 '=SUM($C$39:$C$42)'
+C43 "Correzione: ogni ruolo deve condividere lo stesso budget di lega, non riceverne uno intero a testa. Questa e' la somma di TUTTI i pool per ruolo, usata come denominatore comune."
+A44 'Budget Totale Lega (Numero Partecipanti x Budget Iniziale)'
+B44 "='Info Lega'!$B$3*'Info Lega'!$B$4"
+A46 'Soglia Pressione VERDE (Top+Buoni rimasti / slot residui lega, >=)'
+B46 2
+C46 'Sotto la soglia gialla: Pressione ROSSA (non aspettare). Esempio ChatGPT: 7 Top/Buoni per 3 slot=2.33 (verde), 4 per 3=1.33 (giallo), 2 per 3=0.67 (rosso).'
+A47 'Soglia Pressione GIALLA (>=)'
+B47 1
+A48 'Target storico % budget per ruolo (calibrato su aste reali)'
+C48 'Fonte: Rose_fantalba 2023 e 2025 (dati reali, 8 squadre, 16 aste-ruolo). Sostituisce la distribuzione derivata dal solo FVM, che sovrastimava i difensori (18%->reale 11.6%) e sottostimava portieri e 
+A49 'Ruolo'
+B49 '% Budget Target (storico)'
+A50 'P'
+B50 0.093
+A51 'D'
+B51 0.116
+A52 'C'
+B52 0.278
+A53 'A'
+B53 0.515
+A55 'Modello a due livelli: Titolari vs Riserve (calibrato su aste reali 2023+2025)'
+C55 "Nelle aste reali l'85-96% del budget di ruolo va ai 'titolari' (i migliori N per FVM, N = squadre x titolari-per-ruolo dal modulo preferito). Le riserve costano quasi niente indipendentemente dal lor
+A56 'Ruolo'
+B56 'Titolari per Squadra'
+C56 'N Titolari Lega'
+D56 '% Budget Ruolo ai Titolari'
+E56 'Somma FVM Titolari'
+F56 'Somma FVM Riserve'
+A57 'P'
+B57 '=1'
+C57 "='Info Lega'!$B$3*$B57"
+D57 0.88
+E57 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"P",\'Output Utente\'!$V$2:$V$492,"<="&$C57)'
+F57 '=$C$39-$E57'
+A58 'D'
+B58 "='Info Strategia'!$B$2"
+C58 "='Info Lega'!$B$3*$B58"
+D58 0.85
+E58 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"D",\'Output Utente\'!$V$2:$V$492,"<="&$C58)'
+F58 '=$C$40-$E58'
+A59 'C'
+B59 "='Info Strategia'!$B$3"
+C59 "='Info Lega'!$B$3*$B59"
+D59 0.95
+E59 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"C",\'Output Utente\'!$V$2:$V$492,"<="&$C59)'
+F59 '=$C$41-$E59'
+A60 'A'
+B60 "='Info Strategia'!$B$4"
+C60 "='Info Lega'!$B$3*$B60"
+D60 0.93
+E60 '=SUMIFS(\'Output Utente\'!$O$2:$O$492,\'Output Utente\'!$B$2:$B$492,"A",\'Output Utente\'!$V$2:$V$492,"<="&$C60)'
+F60 '=$C$42-$E60'
+A62 'SOGLIE FASCIA QUALITATIVA (percentile del FVM nel ruolo)'
+C62 "Determinano la Fascia Aspettativa (TOP/BUONO/MEDIA/SCOMMESSA) in 'Output Utente'. Basate su percentile, non su valori assoluti: funzionano anche se cambia il listone."
+A63 'Percentile minimo TOP (>=)'
+B63 0.9
+C63 'Es. 0.90 = miglior 10% del ruolo per FVM.'
+A64 'Percentile minimo BUONO (>=)'
+B64 0.7
+C64 'Tra questa soglia e quella TOP.'
+A65 'Percentile minimo MEDIA (>=)'
+B65 0.4
+C65 'Sotto questa soglia: SCOMMESSA. Tutte e tre le soglie sono modificabili.'
+A67 "OPPORTUNITY GAP - soglie segnale (in 'Output Utente' e 'Decisione Live')"
+C67 "Gap = Offerta Max Dinamica - Prezzo Attuale. Segnala se il prezzo in asta e' un'opportunita' o un sovrapprezzo rispetto al TUO tetto (non rispetto al FVM)."
+A68 'Soglia Verde: Gap >= % della Offerta Max Dinamica'
+B68 0.15
+C68 "Sopra: opportunita' (verde). Sotto zero: hai superato il tuo tetto (rosso)."
+A69 'Soglia Rossa: Gap <= % della Offerta Max Dinamica'
+B69 0
+C69 'Tra le due soglie: prezzo corretto (giallo).'
+A71 "PRESSIONE COMPETITIVA (informativa - NON altera il FVM o l'Offerta Max)"
+C71 "Stima quante squadre avversarie hanno ancora bisogno di un TITOLARE in quel ruolo e quanto budget hanno disponibile. Vedi foglio 'Pressione Competitiva'."
+A72 'Ruolo'
+B72 'Titolari Standard Assunti per Squadre Avversarie'
+A73 'P'
+B73 1
+C73 'Fisso: ogni squadra gioca 1 portiere titolare a giornata.'
+A74 'D'
+B74 "='Info Strategia'!$B$2"
+C74 'Assunzione: le avversarie cercano un numero di titolari per ruolo comparabile al TUO modulo (dato reale non osservabile). Modificabile con un numero fisso se preferisci.'
+A75 'C'
+B75 "='Info Strategia'!$B$3"
+A76 'A'
+B76 "='Info Strategia'!$B$4"
+A78 'Soglia N Squadre Bisognose per Pressione ALTA (>=)'
+B78 2
+C78 '2+ squadre ancora a caccia di un titolare nello stesso ruolo = pressione competitiva concreta.'
+A79 'Soglia Budget Medio Disponibile (di quelle squadre) per MOLTO ALTA (>=, crediti)'
+B79 150
+C79 'Se le squadre bisognose hanno anche molto budget, la pressione sale a MOLTO ALTA.'
+A81 'VERSIONE MOTORE'
+B81 'FantaAuction Engine — Cowork Final'
+C81 "Vedi 'Guida' > Versione / Log delle modifiche per il dettaglio."

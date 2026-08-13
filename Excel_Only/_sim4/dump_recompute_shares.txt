@@ -1,0 +1,29 @@
+Squadre 2025: ['NapoletanaGas', 'Napoli 1926', 'Aurora Ercolanese', 'PeppeNight']
+  NapoletanaGas: 54 giocatori, costo totale=1590.0
+  Napoli 1926: 54 giocatori, costo totale=1968.0
+  Aurora Ercolanese: 54 giocatori, costo totale=1886.0
+  PeppeNight: 54 giocatori, costo totale=1938.0
+Squadre 2023: ['NapoletanaGas', 'Napoli 1926']
+  NapoletanaGas: 24 giocatori, costo totale=922.0
+  Napoli 1926: 21 giocatori, costo totale=625.0
+
+--- Solo 2025 (4 squadre) ---
+  n_squadre=4 totale_speso=7382
+  P: speso=738 share=0.1000
+  D: speso=769 share=0.1042
+  C: speso=2290 share=0.3102
+  A: speso=3585 share=0.4856
+
+--- Solo 2023 (2 squadre) ---
+  n_squadre=2 totale_speso=1547
+  P: speso=103 share=0.0666
+  D: speso=87 share=0.0562
+  C: speso=364 share=0.2353
+  A: speso=993 share=0.6419
+
+--- Combinato 2023+2025 (6 squadre-stagione) ---
+  n_squadre=6 totale_speso=8929
+  P: speso=841 share=0.0942
+  D: speso=856 share=0.0959
+  C: speso=2654 share=0.2972
+  A: speso=4578 share=0.5127

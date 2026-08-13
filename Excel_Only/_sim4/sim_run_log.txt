@@ -1,0 +1,4 @@
+N_SEEDS=60 (seed 5000-5059), 480 osservazioni squadra per strategia
+Strategia A: {'n': 480, 'fvm_medio': 735.65625, 'fvm_sd': 303.34558222035173, 'spend_medio': 981.88125, 'spend_pct': 98.188125, 'fail': 0, 'win_pct': 0.0}
+Strategia F: {'n': 480, 'fvm_medio': 802.0479166666667, 'fvm_sd': 235.76197344071355, 'spend_medio': 966.5458333333333, 'spend_pct': 96.65458333333333, 'fail': 0, 'win_pct': 98.33333333333333}
+Testa a testa per asta (stesso seed): F migliore in 59/60, A migliore in 0/60, pari in 1

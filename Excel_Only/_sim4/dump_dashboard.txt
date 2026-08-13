@@ -1,0 +1,97 @@
+DIM A1:J21
+A1 'DASHBOARD ASTA — vista live'
+A3 'Giocatori chiamati / Totale'
+D3 '% Asta completata'
+G3 'Prezzo medio pagato'
+I3 'Budget medio residuo squadre attive'
+A4 "='Stato Asta'!$C$3"
+D4 "='Stato Asta'!$C$4"
+G4 "='Stato Asta'!$C$6"
+I4 "='Stato Asta'!$C$5"
+A6 'Ruolo'
+B6 'TOP'
+C6 'BUONI'
+D6 'MEDIA'
+E6 'SCOMMESSE'
+F6 'Totale Disp.'
+G6 'Slot Residui Lega'
+H6 'Quality Coverage'
+I6 "Pressione Asta (scarsita')"
+J6 'Pressione Competitiva'
+A7 'P'
+B7 "='Stato Asta'!$B$9"
+C7 "='Stato Asta'!$C$9"
+D7 "='Stato Asta'!$I$9"
+E7 "='Stato Asta'!$J$9"
+F7 "='Stato Asta'!$K$9"
+G7 "='Stato Asta'!$E$9"
+H7 "='Stato Asta'!$L$9"
+I7 "='Stato Asta'!$G$9"
+J7 "='Pressione Competitiva'!$F$3"
+A8 'D'
+B8 "='Stato Asta'!$B$10"
+C8 "='Stato Asta'!$C$10"
+D8 "='Stato Asta'!$I$10"
+E8 "='Stato Asta'!$J$10"
+F8 "='Stato Asta'!$K$10"
+G8 "='Stato Asta'!$E$10"
+H8 "='Stato Asta'!$L$10"
+I8 "='Stato Asta'!$G$10"
+J8 "='Pressione Competitiva'!$F$4"
+A9 'C'
+B9 "='Stato Asta'!$B$11"
+C9 "='Stato Asta'!$C$11"
+D9 "='Stato Asta'!$I$11"
+E9 "='Stato Asta'!$J$11"
+F9 "='Stato Asta'!$K$11"
+G9 "='Stato Asta'!$E$11"
+H9 "='Stato Asta'!$L$11"
+I9 "='Stato Asta'!$G$11"
+J9 "='Pressione Competitiva'!$F$5"
+A10 'A'
+B10 "='Stato Asta'!$B$12"
+C10 "='Stato Asta'!$C$12"
+D10 "='Stato Asta'!$I$12"
+E10 "='Stato Asta'!$J$12"
+F10 "='Stato Asta'!$K$12"
+G10 "='Stato Asta'!$E$12"
+H10 "='Stato Asta'!$L$12"
+I10 "='Stato Asta'!$G$12"
+J10 "='Pressione Competitiva'!$F$6"
+A12 'LA MIA ROSA — sintesi'
+A13 'Budget Residuo'
+C13 'Slot Residui'
+E13 'FVM Totale Acquistato'
+G13 'Crediti Spesi'
+I13 'Efficienza (FVM/credito)'
+A14 "='La Mia Rosa'!$S$2"
+C14 "='La Mia Rosa'!$S$3"
+E14 "='La Mia Rosa'!$R$6"
+G14 "='La Mia Rosa'!$R$7"
+I14 "='La Mia Rosa'!$R$8"
+A16 'Copertura Titolari (prossimo bisogno)'
+A17 'Ruolo'
+B17 'Titolari Coperti'
+C17 'Titolari Necessari'
+D17 'Riserve Coperte'
+E17 'Prossimo Slot'
+A18 'P'
+B18 "='La Mia Rosa'!$R$13"
+C18 "='La Mia Rosa'!$S$13"
+D18 "='La Mia Rosa'!$T$13"
+E18 "='La Mia Rosa'!$U$13"
+A19 'D'
+B19 "='La Mia Rosa'!$R$14"
+C19 "='La Mia Rosa'!$S$14"
+D19 "='La Mia Rosa'!$T$14"
+E19 "='La Mia Rosa'!$U$14"
+A20 'C'
+B20 "='La Mia Rosa'!$R$15"
+C20 "='La Mia Rosa'!$S$15"
+D20 "='La Mia Rosa'!$T$15"
+E20 "='La Mia Rosa'!$U$15"
+A21 'A'
+B21 "='La Mia Rosa'!$R$16"
+C21 "='La Mia Rosa'!$S$16"
+D21 "='La Mia Rosa'!$T$16"
+E21 "='La Mia Rosa'!$U$16"

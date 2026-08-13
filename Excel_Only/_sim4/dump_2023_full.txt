@@ -1,0 +1,10 @@
+dim A1:I111
+row1: ['Rose lega FantAlba 2023', None, None, None, None, None, None, None, None]
+row2: ['https://leghe.fantacalcio.it/fantalba-2023', None, None, None, None, None, None, None, None]
+row3: ['* Calciatori non più in campionato - Data download 08/02/2024', None, None, None, None, None, None, None, None]
+row4: [None, None, None, None, None, None, None, None, None]
+row5: ['NapoletanaGas', None, None, None, None, 'Napoli 1926', None, None, None]
+row6: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo']
+row7: ['P', 'Sepe', 'Laz', '1', None, 'P', 'Consigli', 'Sas', '5']
+row8: ['P', 'Provedel', 'Laz', '81', None, 'P', 'Caprile', 'Emp', '1']
+row9: ['P', 'Martinez Jo.', 'Gen', '4', None, 'P', 'Di Gregorio', 'Mon', '11']

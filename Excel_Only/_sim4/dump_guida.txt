@@ -1,0 +1,52 @@
+DIM A1:A58 max_row=58
+A1: Guida — Motore Prezzi Asta Fantacalcio
+A2: Questo file calcola automaticamente un prezzo massimo consigliato e un range di valutazione per ciascun giocatore, in base al budget, alla rosa, alle regole della lega e ai dati FVM/statistici. Il motore si aggiorna modificando i parametri e gli assegnamenti dell'asta.
+A3: Come e' organizzato il file
+A5: • Info Lega: dati della tua lega (budget, rosa, regole, nomi squadre). 'La Mia Squadra' (B28) identifica la tua squadra.
+A6: • Info Strategia: modulo preferito, aggressivita' e lista 'Giocatori Preferiti' (colonna D).
+A7: • Parametri Modello: tutte le leve del motore prezzi, incluse soglia minima di presenze storiche e gestione della scarsita'.
+A8: • Input Giocatori 2026_27: il listone originale, invariato — e' la fonte dati.
+A9: • Output Utente: tabella madre con un giocatore per riga, prezzo consigliato, range, statistiche e stato dell'asta.
+A10: • Giocatori Liberi: elenco ordinato dei giocatori non ancora assegnati; il calcolo della scarsita' puo' escludere i giocatori con Qt.A=1.
+A11: • La Mia Rosa: la tua rosa attuale + budget speso/rimanente + slot per ruolo, live durante l'asta.
+A12: Come si calcola il prezzo (Output Utente)
+A14: 1. Prezzo Base FVM = (FVM del giocatore / Somma FVM Pool Totale) × Budget Totale Lega. Il pool comprende, per ciascun ruolo, i migliori N giocatori per FVM, dove N e' il numero totale di slot di quel ruolo nella lega. Il denominatore e' la somma dei pool di tutti i ruoli.
+A15: 2. Se il Modificatore Difesa o Centrocampo della tua lega e' attivo, il Prezzo Base del ruolo interessato viene aumentato del Boost Modificatore Ruolo (default +15%).
+A16: 3. Performance storica: il prezzo viene corretto in base alla Fantamedia 2025/26 rispetto alla media del proprio ruolo. Il peso e' in Parametri Modello > Peso Performance Storica. Se le presenze sono inferiori alla soglia minima impostata, il giocatore non influenza la media del ruolo e il suo fattore storico resta neutro.
+A17: 4. Scarsita' di ruolo: il motore confronta giocatori disponibili e slot ancora da riempire. Se il rapporto scende sotto 1, il prezzo sale; se e' sopra 1, il prezzo scende. I giocatori con Qt.A=1 possono essere esclusi dal conteggio per evitare di considerare riserve/panchinari difficilmente utilizzabili.
+A18: 5. Valutazione Min / Max: il Prezzo Base corretto viene trasformato in un range tramite lo Spread % specifico del ruolo. 6. Offerta Max = Valutazione Min + (Valutazione Max − Valutazione Min) × Aggressivita'. 7. Se il giocatore e' nei Preferiti, l'Offerta Max riceve il boost previsto dal parametro Whichlist/Preferiti.
+A19: Statistiche stagione precedente — filtro minimo presenze
+A20: Le colonne Presenze / Gol / Assist / Media Voto / Fantamedia 2025/26 sono collegate al foglio 'Input Statistiche 2025_26'.
+A21: La media di Fantamedia per ruolo e il fattore di performance usano solo i giocatori che raggiungono la soglia 'Presenze minime per storico (media/performance)' in Parametri Modello. Questo evita che 1-2 partite eccezionali o casuali spostino la media del ruolo e il prezzo di tutti gli altri giocatori.
+A22: I giocatori senza storico o sotto la soglia minima non ricevono bonus/malus dalla performance storica: il loro prezzo resta determinato dagli altri componenti del motore.
+A23: Fascia Aspettativa
+A24: Il posizionamento del FVM nel ruolo (Top / Buono / Nella Media / Scommessa) misura quanto il mercato valuta oggi il giocatore. E' complementare alla Fantamedia storica.
+A25: Come usare il motore durante l'asta
+A26: • Quando un giocatore viene acquistato, inserisci Squadra Assegnata e Prezzo Pagato: la scarsita' e i dati della rosa si aggiornano.
+A27: • L'Offerta Max rappresenta il tetto consigliato dalla strategia. Per una versione live piu' avanzata, il prossimo passo e' confrontare questo tetto con budget residuo, slot residui e alternative ancora disponibili.
+A28: • La logica puo' essere portata in una web app mantenendo Excel come ambiente di validazione e test del motore.
+A30: Validazione del motore tramite simulazione
+A31: Un passaggio importante prima della web app e' simulare molte aste virtuali (es. 100-1.000). In ogni simulazione il motore deve decidere quanto spendere, contro avversari con strategie diverse, e alla fine confrontare qualita' della rosa, valore FVM acquistato, distribuzione del budget e risultati attesi.
+A32: Confidence Storico: indicatore informativo della solidita' del dato storico, basato sulle presenze. Non modifica il prezzo. Serve a distinguere una Fantamedia ottenuta su molte partite da una ottenuta su un campione molto piccolo.
+A33: Aggressivita': e' una preferenza dell'utente, non un parametro che il motore deve ottimizzare. Rappresenta quanto l'utente vuole spingersi verso il limite alto del range, soprattutto sui giocatori preferiti. Il motore non deve interpretare un'aggressivita' alta come una maggiore disponibilita' economica: il Max Bid dinamico resta comunque vincolato dal budget e dalla riserva minima.
+A35: FantaAuction Engine — Cowork Final
+A36: Nuovi fogli aggiunti in questa versione
+A37: • Dashboard Asta: vista unica con stato asta, tabella qualita' TOP/BUONI/MEDIA/SCOMMESSE per ruolo, sintesi rosa e copertura titolari.
+A38: • Decisione Live: scheda del singolo giocatore. Scrivi il nome e il prezzo attuale: FVM, Range, Max Bid, Pressione Competitiva e Decisione (BID/PASS/ATTENZIONE) con motivazione.
+A39: • Pressione Competitiva + TeamDetail: stima, per ruolo, quante squadre avversarie cercano ancora un titolare e con quanto budget. E' informativa: NON moltiplica il FVM.
+A40: • Giocatori Da Chiamare: griglia Ruolo x Fascia con i nomi ancora disponibili (non assegnati, Qt.A>1). Risponde a 'se lo lascio andare, cosa mi resta?'.
+A41: • Analisi Asta Reale 2025: benchmark su prezzi reali di un'asta 2025 vs FVM pre-stagione. Spiega i fenomeni (bidding war attaccanti, difensori a costo quasi nullo), non sostituisce il motore.
+A42: • Simulazioni: struttura pronta per confrontare 6 varianti del motore (A-F) su 100-1000 aste simulate, obiettivo FVM totale rosa finale.
+A44: Cosa e' cambiato nei fogli esistenti
+A45: • Fascia Aspettativa (Output Utente) ora usa soglie percentile configurabili in Parametri Modello (righe 62-65), non piu' fisse all'85%/60%/30%.
+A46: • Giocatori Liberi e Stato Asta ora escludono correttamente i giocatori con Qt.A=1 anche dai conteggi Top/Buoni Rimasti (prima erano esclusi solo dal rapporto di scarsita').
+A47: • Stato Asta mostra anche Media Rimasti, Scommesse Rimaste e Quality Coverage (Top+Buoni / Totale disponibili), non solo Top+Buoni.
+A48: • Output Utente ha 7 colonne nuove: Titolare/Riserva (mercato), Pressione Competitiva Ruolo, Opportunity Gap (+ segnale), Motivo Decisione, e 2 colonne tecniche per la griglia Giocatori Da Chiamare.
+A49: • La Mia Rosa mostra ora Prezzo Pagato, Differenza FVM-Prezzo, Titolare/Riserva per ogni giocatore, FVM Totale Acquistato, Crediti Spesi, Efficienza, e copertura titolari per ruolo.
+A50: • Decisione Live (colonna in Output Utente) usa la stessa soglia parametrica dell'Opportunity Gap invece di un valore fisso 0.85 nascosto nella formula.
+A52: VERSIONE / LOG DELLE MODIFICHE
+A53: v9 — Auction State: prima gestione dello stato dell'asta (giocatori chiamati/assegnati).
+A54: v10 — Calibrata: modello FVM-proporzionale calibrato su dati reali (sostituisce lo scaling da Qt.A).
+A55: v11 — Titolari/Riserve: modello a due livelli (85-96% budget di ruolo ai titolari), scarsita' di ruolo con esclusione Qt.A=1, soglia minima presenze per le statistiche, fasce Top/Buono/Media/Scommessa per percentile.
+A56: FINAL — Cowork: soglie fascia parametrizzate; Qt.A=1 escluso ovunque dai 'disponibili' (non solo dalla scarsita'); Quality Scarcity completa (4 fasce, non solo Top+Buoni); Pressione Competitiva per ruolo (nuova, informativa); Opportunity Gap esplicito con soglie configurabili; Dashboard Asta; Decisione Live (scheda giocatore); Giocatori Da Chiamare (griglia Ruolo x Fascia); La Mia Rosa con FVM Totale Acquistato e copertura titolari; Analisi Asta Reale 2025; scaffold Simulazioni A-F.
+A58: Generato: 2026-08-12

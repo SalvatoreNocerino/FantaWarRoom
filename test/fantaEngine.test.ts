@@ -1,10 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import {
-  calculateTeamsSummary,
-  calculateDynamicFairValueBracket,
-  getLivePlayerRecommendation,
-} from '../src/utils/fantaEngine';
-import { LeagueSettings, StrategySettings, Player, RosterPlayer } from '../src/types';
+import { calculateTeamsSummary, calculateDynamicFairValueBracket } from '../src/utils/fantaEngine';
+import { LeagueSettings, Player, RosterPlayer } from '../src/types';
 
 function makeLeague(overrides: Partial<LeagueSettings> = {}): LeagueSettings {
   return {
@@ -18,8 +14,8 @@ function makeLeague(overrides: Partial<LeagueSettings> = {}): LeagueSettings {
       { name: 'Avversario', isMyTeam: false, initialBudget: 500 },
     ],
     bonusRules: [],
-    defensiveModifier: { enabled: false, tiers: [] },
-    midfieldModifier: { enabled: false, tiers: [] },
+    defensiveModifier: { enabled: false },
+    midfieldModifier: { enabled: false },
     auctionRules: { callOrderRule: 'free' },
     selectableFormations: ['4-3-3'],
     ...overrides,
@@ -128,40 +124,7 @@ describe('calculateDynamicFairValueBracket', () => {
   });
 });
 
-describe('getLivePlayerRecommendation', () => {
-  const strategy: StrategySettings = {
-    preferredFormation: '4-3-3',
-    aggressionScore: 50,
-    budgetAllocationPct: { P: 8, D: 15, C: 27, A: 50 },
-    wishlistIds: [],
-    blacklistIds: [],
-  };
-
-  it('consiglia un budget più alto per un giocatore tier 1 rispetto a un tier 3', () => {
-    const league = makeLeague();
-    const teamsSummary = calculateTeamsSummary(league, [], []);
-
-    const top = makePlayer({ id: 'top', tier: 1, basePrice: 60 });
-    const scommessa = makePlayer({ id: 'low', tier: 3, basePrice: 5 });
-
-    const recoTop = getLivePlayerRecommendation(top, league, strategy, teamsSummary);
-    const recoLow = getLivePlayerRecommendation(scommessa, league, strategy, teamsSummary);
-
-    expect(recoTop.maxBid).toBeGreaterThan(recoLow.maxBid);
-    expect(recoTop.maxBid).toBeGreaterThan(0);
-  });
-
-  it('non consiglia mai di offrire più dei crediti residui della mia squadra', () => {
-    const league = makeLeague();
-    const history: RosterPlayer[] = [
-      { id: 'h1', playerId: 'other', boughtByTeam: 'La mia squadra', cost: 490, timestamp: 1 },
-    ];
-    const teamsSummary = calculateTeamsSummary(league, history, [makePlayer({ id: 'other' })]);
-
-    const top = makePlayer({ id: 'top', tier: 1, basePrice: 80 });
-    const reco = getLivePlayerRecommendation(top, league, strategy, teamsSummary);
-
-    const myCredits = teamsSummary.find((t) => t.isMyTeam)!.remainingCredits;
-    expect(reco.maxBid).toBeLessThanOrEqual(myCredits);
-  });
-});
+// La vecchia euristica getLivePlayerRecommendation() è stata rimossa: la
+// raccomandazione di prezzo live ora viene dal motore deterministico in
+// src/engine/pricingEngine.ts, verificato da test/pricingEngine.golden.test.ts
+// e test/pricingEngine.test.ts.

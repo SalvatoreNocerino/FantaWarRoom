@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from '../types';
-import { calculateTeamsSummary, getLivePlayerRecommendation } from '../utils/fantaEngine';
-import { StatusBudgetBar, BudgetStatus } from './war-room/StatusBudgetBar';
-import { ActivePlayerBiddingPanel } from './war-room/ActivePlayerBiddingPanel';
-import { PlayerCallList } from './war-room/PlayerCallList';
+import { priceAllPlayers, computeMyTeamBudget } from '../engine/pricingEngine';
+import { toEnginePlayer, toEngineLeagueConfig, toEngineStrategyConfig, toAuctionAssignments } from '../engine/adapter';
+import { BudgetSidebar } from './war-room/BudgetSidebar';
+import { PlayerPricingCard } from './war-room/PlayerPricingCard';
+import { PlayersPanel, PanelMode, SortBy } from './war-room/PlayersPanel';
 import { AssignmentHistoryPanel } from './war-room/AssignmentHistoryPanel';
-import { AiRecommendationPanel } from './war-room/AiRecommendationPanel';
 import { Sparkles } from 'lucide-react';
 
 interface WarRoomAuctionConsoleProps {
@@ -17,14 +17,13 @@ interface WarRoomAuctionConsoleProps {
   onUndoLastAssignment: () => void;
   onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
   onDeleteAssignment?: (assignmentId: string) => void;
-  onOpenCopilotWithPlayer: (player: Player) => void;
 }
 
-// Container: possiede TUTTO lo stato e la logica derivata (nessuna logica
-// è stata spostata o duplicata durante lo split). I 5 blocchi visivi
-// (StatusBudgetBar, ActivePlayerBiddingPanel, PlayerCallList,
-// AssignmentHistoryPanel, AiRecommendationPanel) sono puramente
-// presentazionali e vivono in ./war-room/.
+// Container: possiede lo stato e la logica derivata. Il pricing (Valore,
+// Range, Max Bid, Pressione, Sostenibilità) viene dal motore deterministico
+// in src/engine/pricingEngine.ts — nessuna chiamata AI qui. I blocchi visivi
+// (PlayerPricingCard, BudgetSidebar, PlayersPanel, AssignmentHistoryPanel)
+// sono puramente presentazionali e vivono in ./war-room/.
 export const WarRoomAuctionConsole: React.FC<WarRoomAuctionConsoleProps> = ({
   allPlayers,
   league,
@@ -34,12 +33,12 @@ export const WarRoomAuctionConsole: React.FC<WarRoomAuctionConsoleProps> = ({
   onUndoLastAssignment,
   onUpdateAssignment,
   onDeleteAssignment,
-  onOpenCopilotWithPlayer
 }) => {
-  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(allPlayers[0]?.id || null);
+  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [panelMode, setPanelMode] = useState<PanelMode>(null);
   const [roleFilter, setRoleFilter] = useState<PlayerRole | 'ALL'>('ALL');
-  const [aiEnabled, setAiEnabled] = useState<boolean>(true);
+  const [sortBy, setSortBy] = useState<SortBy>('maxBid');
 
   const [editingAssignmentId, setEditingAssignmentId] = useState<string | null>(null);
   const [editTeam, setEditTeam] = useState<string>('');
@@ -57,9 +56,7 @@ export const WarRoomAuctionConsole: React.FC<WarRoomAuctionConsoleProps> = ({
         // ignore if not allowed by browser permissions
       }
     }
-    setTimeout(() => {
-      setToastMessage(null);
-    }, 3500);
+    setTimeout(() => setToastMessage(null), 3000);
   };
 
   const handleStartEditHistory = (item: RosterPlayer) => {
@@ -69,200 +66,146 @@ export const WarRoomAuctionConsole: React.FC<WarRoomAuctionConsoleProps> = ({
   };
 
   const handleSaveEditHistory = (assignmentId: string) => {
-    if (!editTeam) return;
-    if (editCost < 1) return;
-    if (onUpdateAssignment) {
-      onUpdateAssignment(assignmentId, editTeam, editCost);
-      showToast(`✏️ Assegnazione aggiornata per ${editTeam} (${editCost} FM)`);
-    }
+    if (!editTeam || editCost < 1) return;
+    onUpdateAssignment?.(assignmentId, editTeam, editCost);
+    showToast(`Assegnazione aggiornata: ${editTeam} (${editCost} cr)`);
     setEditingAssignmentId(null);
   };
 
   const handleDeleteHistoryItem = (assignmentId: string, playerName: string) => {
-    if (onDeleteAssignment) {
-      onDeleteAssignment(assignmentId);
-      showToast(`🗑️ Assegnazione cancellata per ${playerName}`);
-    }
-    if (editingAssignmentId === assignmentId) {
-      setEditingAssignmentId(null);
-    }
+    onDeleteAssignment?.(assignmentId);
+    showToast(`Assegnazione cancellata per ${playerName}`);
+    if (editingAssignmentId === assignmentId) setEditingAssignmentId(null);
   };
 
-  const myTeamName = useMemo(() => {
-    return league.participants.find((p) => p.isMyTeam)?.name || league.participants[0]?.name || 'FC Real Fantasia';
-  }, [league.participants]);
+  const myTeamName = useMemo(
+    () => league.participants.find((p) => p.isMyTeam)?.name || league.participants[0]?.name || '',
+    [league.participants]
+  );
 
   const [buyerTeam, setBuyerTeam] = useState<string>(myTeamName);
   const [bidPrice, setBidPrice] = useState<number>(1);
 
-  const teamsSummary = useMemo(() => calculateTeamsSummary(league, auctionHistory, allPlayers), [league, auctionHistory, allPlayers]);
+  useEffect(() => setBuyerTeam(myTeamName), [myTeamName]);
+
+  // --- Motore di pricing: un solo calcolo per l'intero listone ------------
+  const enginePlayers = useMemo(() => allPlayers.map(toEnginePlayer), [allPlayers]);
+  const engineLeague = useMemo(() => toEngineLeagueConfig(league), [league]);
+  const engineStrategy = useMemo(() => toEngineStrategyConfig(strategy), [strategy]);
+  const assignments = useMemo(() => toAuctionAssignments(auctionHistory), [auctionHistory]);
+
+  const pricingMap = useMemo(
+    () => priceAllPlayers(enginePlayers, engineLeague, engineStrategy, assignments),
+    [enginePlayers, engineLeague, engineStrategy, assignments]
+  );
+  const myTeamBudget = useMemo(
+    () => computeMyTeamBudget(enginePlayers, engineLeague, assignments),
+    [enginePlayers, engineLeague, assignments]
+  );
 
   const assignedPlayerIds = useMemo(() => new Set(auctionHistory.map((h) => h.playerId)), [auctionHistory]);
-
   const availablePlayers = useMemo(() => allPlayers.filter((p) => !assignedPlayerIds.has(p.id)), [allPlayers, assignedPlayerIds]);
 
   const activePlayer = useMemo(
-    () => availablePlayers.find((p) => p.id === selectedPlayerId) || availablePlayers[0] || null,
-    [availablePlayers, selectedPlayerId]
+    () => allPlayers.find((p) => p.id === selectedPlayerId) || null,
+    [allPlayers, selectedPlayerId]
   );
-
-  const recommendation = useMemo(() => {
-    if (!activePlayer) return null;
-    return getLivePlayerRecommendation(activePlayer, league, strategy, teamsSummary);
-  }, [activePlayer, league, strategy, teamsSummary]);
+  const activePricing = activePlayer ? pricingMap.get(activePlayer.id) ?? null : null;
 
   useEffect(() => {
-    if (activePlayer) {
-      setBidPrice(Math.max(1, activePlayer.basePrice));
-    }
+    if (activePricing) setBidPrice(Math.max(1, activePricing.maxBidDinamico || activePricing.value));
   }, [activePlayer?.id]);
 
-  const filteredSearchList = useMemo(() => {
-    return availablePlayers
-      .filter((p) => {
-        const matchesRole = roleFilter === 'ALL' || p.role === roleFilter;
-        const matchesSearch =
-          p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.team.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesRole && matchesSearch;
-      })
-      .slice(0, 15);
-  }, [availablePlayers, searchQuery, roleFilter]);
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase();
+    return availablePlayers.filter((p) => p.name.toLowerCase().includes(q)).slice(0, 8);
+  }, [availablePlayers, searchQuery]);
 
-  const myTeamSummary = useMemo(
-    () => teamsSummary.find((t) => t.isMyTeam || t.teamName === myTeamName) || teamsSummary[0],
-    [teamsSummary, myTeamName]
+  const slotsOccupiedByRole = useMemo(() => {
+    const occ: Record<PlayerRole, number> = { P: 0, D: 0, C: 0, A: 0 };
+    for (const h of auctionHistory) {
+      if (h.boughtByTeam !== myTeamName) continue;
+      const p = allPlayers.find((pl) => pl.id === h.playerId);
+      if (p) occ[p.role]++;
+    }
+    return occ;
+  }, [auctionHistory, myTeamName, allPlayers]);
+
+  const myRoster = useMemo(
+    () =>
+      auctionHistory
+        .filter((h) => h.boughtByTeam === myTeamName)
+        .map((h) => {
+          const player = allPlayers.find((p) => p.id === h.playerId);
+          return player ? { player, pricing: pricingMap.get(player.id), paid: h.cost } : null;
+        })
+        .filter((x): x is { player: Player; pricing: ReturnType<typeof pricingMap.get>; paid: number } => x !== null),
+    [auctionHistory, myTeamName, allPlayers, pricingMap]
   );
 
-  const budgetStatus: BudgetStatus = useMemo(() => {
-    if (!myTeamSummary) {
-      return {
-        color: 'green',
-        text: 'Competitivo (Semaforo Verde)',
-        badgeBg: 'bg-emerald-500 text-slate-950',
-        cardBorder: 'border-emerald-500/50',
-        textColor: 'text-emerald-400'
-      };
-    }
-    const remainingCredits = myTeamSummary.remainingCredits ?? 0;
-    const remainingPct = league.totalBudget > 0 ? (remainingCredits / league.totalBudget) * 100 : 0;
-    const slotsLeft = myTeamSummary.totalSlotsNeeded ?? 0;
-    const avgBudgetPerSlot = slotsLeft > 0 ? remainingCredits / slotsLeft : 0;
+  const buyerBudgetResiduo = useMemo(() => {
+    if (buyerTeam === myTeamName) return myTeamBudget.budgetResiduo;
+    const spent = auctionHistory.filter((h) => h.boughtByTeam === buyerTeam).reduce((sum, h) => sum + h.cost, 0);
+    const participant = league.participants.find((p) => p.name === buyerTeam);
+    const initBudget = league.equalInitialCredits ? league.totalBudget : participant?.initialBudget ?? league.totalBudget;
+    return Math.max(0, initBudget - spent);
+  }, [buyerTeam, myTeamName, myTeamBudget, auctionHistory, league]);
 
-    if (remainingPct >= 50 && avgBudgetPerSlot >= 10) {
-      return {
-        color: 'green',
-        text: 'Competitivo (Semaforo Verde)',
-        badgeBg: 'bg-emerald-500 text-slate-950',
-        cardBorder: 'border-emerald-500/50',
-        textColor: 'text-emerald-400'
-      };
-    } else if (remainingPct >= 25 && avgBudgetPerSlot >= 4) {
-      return {
-        color: 'orange',
-        text: 'Moderato (Semaforo Arancione)',
-        badgeBg: 'bg-amber-500 text-slate-950',
-        cardBorder: 'border-amber-500/50',
-        textColor: 'text-amber-400'
-      };
-    } else {
-      return {
-        color: 'red',
-        text: 'Riservato / Critico (Semaforo Rosso)',
-        badgeBg: 'bg-red-500 text-white',
-        cardBorder: 'border-red-500/50',
-        textColor: 'text-red-400'
-      };
-    }
-  }, [myTeamSummary, league.totalBudget]);
-
-  const buyerTeamSummary = useMemo(() => teamsSummary.find((t) => t.teamName === buyerTeam), [teamsSummary, buyerTeam]);
-
-  const isOverBudget = useMemo(() => {
-    if (!buyerTeamSummary) return false;
-    return bidPrice > buyerTeamSummary.remainingCredits;
-  }, [buyerTeamSummary, bidPrice]);
+  const isOverBudget = bidPrice > buyerBudgetResiduo;
 
   const handleConfirmAssignment = () => {
-    if (!activePlayer) return;
-    if (bidPrice < 1) return;
-
-    if (buyerTeamSummary && bidPrice > buyerTeamSummary.remainingCredits) {
-      showToast(`⛔ ERRORE: ${buyerTeam} non ha budget sufficiente! (Disponibili: ${buyerTeamSummary.remainingCredits} FM, Offerta: ${bidPrice} FM)`);
-      return;
-    }
-
+    if (!activePlayer || bidPrice < 1 || isOverBudget) return;
     onAssignPlayer(activePlayer.id, buyerTeam, bidPrice);
-    showToast(`✅ ${activePlayer.name} assegnato a ${buyerTeam} per ${bidPrice} FM!`);
-
-    const remainingWishlist = strategy.wishlistIds.map((id) => availablePlayers.find((p) => p.id === id)).filter(Boolean) as Player[];
-
-    const nextPlayer = remainingWishlist.find((p) => p.id !== activePlayer.id) || availablePlayers.find((p) => p.id !== activePlayer.id);
-
-    if (nextPlayer) {
-      setSelectedPlayerId(nextPlayer.id);
-    }
+    showToast(`${activePlayer.name} assegnato a ${buyerTeam} per ${bidPrice} cr`);
+    setSelectedPlayerId(null);
     setSearchQuery('');
   };
 
   const handleUndo = () => {
     onUndoLastAssignment();
-    showToast('↩️ Ultima assegnazione annullata!');
-  };
-
-  const handleAddBid = (amount: number) => {
-    setBidPrice((prev) => Math.max(1, prev + amount));
-    if (typeof window !== 'undefined' && 'vibrate' in navigator) {
-      try {
-        navigator.vibrate(20);
-      } catch (e) {
-        // ignore
-      }
-    }
+    showToast('Ultima assegnazione annullata');
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-5 space-y-4 text-slate-100 relative">
+    <div className="max-w-5xl mx-auto px-3 sm:px-4 py-4 space-y-4 text-slate-100">
       {toastMessage && (
-        <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-slate-900 border-2 border-emerald-500 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 text-xs sm:text-sm font-bold animate-bounce">
-          <Sparkles className="w-5 h-5 text-emerald-400 shrink-0" />
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-slate-800 border border-slate-700 text-white px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2 text-xs font-semibold">
+          <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
           <span>{toastMessage}</span>
         </div>
       )}
 
-      <StatusBudgetBar myTeamName={myTeamName} league={league} myTeamSummary={myTeamSummary} budgetStatus={budgetStatus} />
+      <BudgetSidebar myTeamName={myTeamName} league={league} myTeamBudget={myTeamBudget} slotsOccupiedByRole={slotsOccupiedByRole} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-7 space-y-4">
-          <ActivePlayerBiddingPanel
-            activePlayer={activePlayer}
-            league={league}
-            strategy={strategy}
-            buyerTeam={buyerTeam}
-            setBuyerTeam={setBuyerTeam}
-            bidPrice={bidPrice}
-            setBidPrice={setBidPrice}
-            handleAddBid={handleAddBid}
-            isOverBudget={isOverBudget}
-            buyerTeamSummary={buyerTeamSummary}
-            auctionHistoryLength={auctionHistory.length}
-            handleUndo={handleUndo}
-            handleConfirmAssignment={handleConfirmAssignment}
-          />
-        </div>
+      <PlayerPricingCard
+        activePlayer={activePlayer}
+        pricing={activePricing}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        searchResults={searchResults}
+        onSelectPlayer={setSelectedPlayerId}
+        buyerTeam={buyerTeam}
+        setBuyerTeam={setBuyerTeam}
+        bidPrice={bidPrice}
+        setBidPrice={setBidPrice}
+        league={league}
+        isOverBudget={isOverBudget}
+        onConfirmAssignment={handleConfirmAssignment}
+      />
 
-        <div className="lg:col-span-5 space-y-3">
-          <PlayerCallList
-            filteredSearchList={filteredSearchList}
-            activePlayer={activePlayer}
-            strategy={strategy}
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            roleFilter={roleFilter}
-            setRoleFilter={setRoleFilter}
-            setSelectedPlayerId={setSelectedPlayerId}
-          />
-        </div>
-      </div>
+      <PlayersPanel
+        mode={panelMode}
+        setMode={setPanelMode}
+        availablePlayers={availablePlayers}
+        pricingMap={pricingMap}
+        roleFilter={roleFilter}
+        setRoleFilter={setRoleFilter}
+        sortBy={sortBy}
+        setSortBy={setSortBy}
+        onSelectPlayer={setSelectedPlayerId}
+        myRoster={myRoster}
+      />
 
       <AssignmentHistoryPanel
         auctionHistory={auctionHistory}
@@ -280,18 +223,6 @@ export const WarRoomAuctionConsole: React.FC<WarRoomAuctionConsoleProps> = ({
         handleSaveEditHistory={handleSaveEditHistory}
         handleDeleteHistoryItem={handleDeleteHistoryItem}
         handleUndo={handleUndo}
-      />
-
-      <AiRecommendationPanel
-        aiEnabled={aiEnabled}
-        setAiEnabled={setAiEnabled}
-        recommendation={recommendation}
-        activePlayer={activePlayer}
-        bidPrice={bidPrice}
-        setBidPrice={setBidPrice}
-        handleAddBid={handleAddBid}
-        showToast={showToast}
-        onOpenCopilotWithPlayer={onOpenCopilotWithPlayer}
       />
     </div>
   );

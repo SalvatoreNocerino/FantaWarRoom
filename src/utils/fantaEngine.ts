@@ -1,4 +1,4 @@
-import { Player, LeagueSettings, StrategySettings, RosterPlayer } from '../types';
+import { Player, LeagueSettings, RosterPlayer } from '../types';
 
 export interface TeamSummary {
   teamName: string;
@@ -122,36 +122,7 @@ export function calculateDynamicFairValueBracket(player: Player, totalBudget: nu
   return `${min}-${max} FM`;
 }
 
-export function getLivePlayerRecommendation(
-  player: Player,
-  league: LeagueSettings,
-  strategy: StrategySettings,
-  teamsSummary: TeamSummary[]
-): { maxBid: number; reasoning: string } {
-  const myTeam = teamsSummary.find((t) => t.isMyTeam);
-  const myCredits = myTeam ? myTeam.remainingCredits : league.totalBudget;
-
-  const rolePct = strategy.budgetAllocationPct[player.role] || 25;
-  const roleBudget = Math.round((league.totalBudget * rolePct) / 100);
-
-  // Calculate recommended bid based on player tier and base price
-  const budgetRatio = league.totalBudget / 500;
-  let maxBid = Math.max(1, Math.round(player.basePrice * budgetRatio * (1 + strategy.aggressionScore / 100)));
-
-  if (player.tier === 1) {
-    maxBid = Math.min(myCredits - 5, Math.round(roleBudget * 0.55));
-  } else if (player.tier === 2) {
-    maxBid = Math.min(myCredits - 10, Math.round(roleBudget * 0.3));
-  } else {
-    maxBid = Math.min(Math.round(15 * budgetRatio), Math.max(1, Math.round(player.basePrice * budgetRatio)));
-  }
-
-  maxBid = Math.max(1, maxBid);
-
-  const fairVal = calculateDynamicFairValueBracket(player, league.totalBudget);
-  const reasoning = `Modulo ${strategy.preferredFormation} | Fair Value: ${fairVal} | Consigliato max: ${maxBid} FM (${
-    player.tier === 1 ? 'TOP di reparto!' : 'Buon acquisto per la rosa.'
-  })`;
-
-  return { maxBid, reasoning };
-}
+// La raccomandazione di prezzo live durante l'asta è ora calcolata dal
+// motore deterministico in src/engine/pricingEngine.ts (portato 1:1 dal
+// modello Excel calibrato), non da questa euristica per tier. Vedi
+// WarRoomAuctionConsole.tsx.

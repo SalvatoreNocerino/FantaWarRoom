@@ -1,8 +1,8 @@
 import React from 'react';
-import { Settings, Sliders, Database, Users, ShieldAlert, Bot, RotateCcw, LogIn, LogOut, CloudCheck, Cloud } from 'lucide-react';
+import { Settings, Sliders, Database, Users, ShieldAlert, RotateCcw, LogIn, LogOut, CloudCheck, Cloud } from 'lucide-react';
 import { AppUser } from '../lib/supabase';
 
-export type ActiveTab = 'league' | 'strategy' | 'database' | 'teams' | 'warroom' | 'copilot';
+export type ActiveTab = 'league' | 'strategy' | 'database' | 'teams' | 'warroom';
 
 interface NavbarProps {
   activeTab: ActiveTab;
@@ -35,7 +35,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'database', label: '3. Listone Serie A', icon: Database, num: '3' },
     { id: 'teams', label: '4. Squadre della Lega', icon: Users, num: '4' },
     { id: 'warroom', label: '5. Console Live', icon: ShieldAlert, num: '5' },
-    { id: 'copilot', label: '6. AI Copilot', icon: Bot, num: '6' },
   ];
 
   return (

@@ -1,0 +1,16 @@
+
+=== C:\Users\salva\Projects\FantaWarRoom\Excel_Only\Dati\Rose_fantalba-2025.xlsx ===
+  sheet TutteLeRose dim=A1:X57
+  row1: ['NapoletanaGas', 'Colonna1', 'Colonna2', 'Colonna3', 'Colonna4', None, 'Napoli 1926', 'Colonna1', 'Colonna2', 'Colonna3', None, None, 'Aurora Ercolanese', 'Colonna1', 'Colonna2', 'Colonna3', None, None, 'PeppeNight', 'Colonna1', 'Colonna2', 'Colonna3', None, None]
+  row2: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', '#NAME?', None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None]
+  row3: ['P', 'Leali', 'Gen', 5, '#NAME?', None, 'P', 'Milinkovic-Savic V.', 'Nap', 42, None, None, 'P', 'Perin', 'Juv', 1, None, None, 'P', 'Skorupski', 'Bol', 41, None, None]
+  row4: ['P', 'Meret', 'Nap', 80, '#NAME?', None, 'P', 'Caprile', 'Cag', 12, None, None, 'P', 'Terracciano', 'Mil', 1, None, None, 'P', 'Svilar', 'Rom', 96, None, None]
+  row5: ['P', 'Audero', 'Cre', 1, '#NAME?', None, 'P', 'Di Gregorio', 'Juv', 90, None, None, 'P', 'Maignan', 'Mil', 96, None, None, 'P', 'Vasquez D.', 'Rom', 1, None, None]
+
+=== C:\Users\salva\Projects\FantaWarRoom\Excel_Only\Dati\Rose_fantalba-2023.xlsx ===
+  sheet TutteLeRose dim=A1:I111
+  row1: ['Rose lega FantAlba 2023', None, None, None, None, None, None, None, None]
+  row2: ['https://leghe.fantacalcio.it/fantalba-2023', None, None, None, None, None, None, None, None]
+  row3: ['* Calciatori non più in campionato - Data download 08/02/2024', None, None, None, None, None, None, None, None]
+  row4: [None, None, None, None, None, None, None, None, None]
+  row5: ['NapoletanaGas', None, None, None, None, 'Napoli 1926', None, None, None]

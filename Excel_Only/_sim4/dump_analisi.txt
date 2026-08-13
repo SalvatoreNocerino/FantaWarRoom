@@ -1,0 +1,194 @@
+DIM A1:G45
+A1 'ANALISI ASTA REALE 2025 — benchmark empirico (4 squadre, lega FantAlba)'
+A2 "Fonte: Excel_Only/Dati/Rose_fantalba-2025.xlsx (prezzi reali pagati) incrociato con Quotazioni_Fantacalcio_Stagione_2025_26 (listone pre-stagione, stesso periodo, per evitare look-ahead bias). 186 giocatori su 200 abbinati per nome (93%). Questi num
+A4 'MULTIPLO PREZZO REALE / FVM per ruolo'
+A5 'Ruolo'
+B5 'N'
+C5 'Costo Medio'
+D5 'FVM Medio'
+E5 'Multiplo Medio'
+F5 'Multiplo Mediano'
+A6 'Portieri'
+B6 23
+C6 32
+D6 30.1
+E6 1.42
+F6 1
+A7 'Difensori'
+B7 64
+C7 12
+D7 27.7
+E7 0.64
+F7 0.27
+A8 'Centrocampisti'
+B8 59
+C8 37.8
+D8 44.6
+E8 1.06
+F8 0.5
+A9 'Attaccanti'
+B9 40
+C9 79.1
+D9 68.3
+E9 2.33
+F9 0.92
+A11 "Lettura: Portieri vicino a 1x (mercato liquido). Difensori e Centrocampisti fortemente sotto 1x sulla mediana (molti difensori costano 1 credito, pochi ne costano tanti: distribuzione a coda lunga). Attaccanti: media 2.3x ma mediana 0.9x — cioe' MET
+A13 "CASI PREZZO >> FVM (bidding war / necessita' di ruolo)"
+A14 'Ruolo'
+B14 'Nome'
+C14 'Squadra Fantacalcio'
+D14 'Costo Reale'
+E14 'FVM'
+F14 'Multiplo'
+A15 'A'
+B15 'Ferguson E.'
+C15 'Napoli 1926'
+D15 191
+E15 12
+F15 15.92
+A16 'A'
+B16 'Openda'
+C16 'Aurora Ercolanese'
+D16 81
+E16 8
+F16 10.12
+A17 'A'
+B17 'Dovbyk'
+C17 'Aurora Ercolanese'
+D17 73
+E17 8
+F17 9.12
+A18 'A'
+B18 'David'
+C18 'Aurora Ercolanese'
+D18 226
+E18 28
+F18 8.07
+A19 'A'
+B19 'Gimenez'
+C19 'Napoli 1926'
+D19 91
+E19 12
+F19 7.58
+A20 'A'
+B20 'Kean'
+C20 'PeppeNight'
+D20 295
+E20 40
+F20 7.38
+A21 'C'
+B21 'Zaccagni'
+C21 'Aurora Ercolanese'
+D21 170
+E21 25
+F21 6.8
+A22 'A'
+B22 'Morata'
+C22 'Aurora Ercolanese'
+D22 68
+E22 10
+F22 6.8
+A23 'D'
+B23 'Estupinan'
+C23 'Aurora Ercolanese'
+D23 41
+E23 8
+F23 5.12
+A24 'P'
+B24 'Leali'
+C24 'NapoletanaGas'
+D24 5
+E24 1
+F24 5
+A25 'C'
+B25 'Zhegrova'
+C25 'Aurora Ercolanese'
+D25 59
+E25 12
+F25 4.92
+A26 'P'
+B26 'Provedel'
+C26 'Aurora Ercolanese'
+D26 70
+E26 15
+F26 4.67
+A29 "CASI PREZZO << FVM (scivolati, ruolo saturo, timing d'asta)"
+A30 'Ruolo'
+B30 'Nome'
+C30 'Squadra Fantacalcio'
+D30 'Costo Reale'
+E30 'FVM'
+F30 'Multiplo'
+A31 'A'
+B31 'Douvikas'
+C31 'Aurora Ercolanese'
+D31 20
+E31 200
+F31 0.1
+A32 'A'
+B32 'Scamacca'
+C32 'Aurora Ercolanese'
+D32 11
+E32 95
+F32 0.12
+A33 'D'
+B33 'Dimarco'
+C33 'PeppeNight'
+D33 56
+E33 320
+F33 0.17
+A34 'C'
+B34 'Rabiot'
+C34 'PeppeNight'
+D34 41
+E34 195
+F34 0.21
+A35 'A'
+B35 'Laurientè'
+C35 'PeppeNight'
+D35 20
+E35 82
+F35 0.24
+A36 'C'
+B36 'Calhanoglu'
+C36 'NapoletanaGas'
+D36 50
+E36 190
+F36 0.26
+A37 'C'
+B37 'Locatelli'
+C37 'Aurora Ercolanese'
+D37 14
+E37 47
+F37 0.3
+A38 'A'
+B38 'Yildiz'
+C38 'NapoletanaGas'
+D38 57
+E38 182
+F38 0.31
+A39 'P'
+B39 'Carnesecchi'
+C39 'Napoli 1926'
+D39 27
+E39 80
+F39 0.34
+A40 'C'
+B40 'Modric'
+C40 'Aurora Ercolanese'
+D40 31
+E40 90
+F40 0.34
+A41 'C'
+B41 'Atta'
+C41 'Napoli 1926'
+D41 31
+E41 85
+F41 0.36
+A42 'C'
+B42 'Vlasic'
+C42 'Aurora Ercolanese'
+D42 41
+E42 100
+F42 0.41
+A45 "Limiti di questa analisi: (1) il file di quotazioni usato come FVM di riferimento e' uno snapshot che puo' essere leggermente successivo al giorno reale dell'asta, quindi alcuni FVM potrebbero essersi mossi nel frattempo (es. dopo un mercato dell'ul

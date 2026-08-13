@@ -1,0 +1,37 @@
+
+=== UPLOADED_2023 (C:\Users\salva\AppData\Roaming\Claude\local-agent-mode-sessions\94c2bcce-5c67-4e3c-bcb2-6a5c6550207a\0d0827d3-ae19-4ee8-9846-c1f409610a73\local_886c534b-88e2-4ce4-9d88-7c954c13cc30\uploads\Rose_fantalba-2023.xlsx) ===
+sheets: ['TutteLeRose']
+  sheet TutteLeRose dim=A1:I111 max_col=9 max_row=111
+    row1: ['Rose lega FantAlba 2023', None, None, None, None, None, None, None, None]
+    row2: ['https://leghe.fantacalcio.it/fantalba-2023', None, None, None, None, None, None, None, None]
+    row5: ['NapoletanaGas', None, None, None, None, 'Napoli 1926', None, None, None]
+    row6: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo']
+
+=== UPLOADED_2025 (C:\Users\salva\AppData\Roaming\Claude\local-agent-mode-sessions\94c2bcce-5c67-4e3c-bcb2-6a5c6550207a\0d0827d3-ae19-4ee8-9846-c1f409610a73\local_886c534b-88e2-4ce4-9d88-7c954c13cc30\uploads\Rose_fantalba-2025 (1).xlsx) ===
+sheets: ['TutteLeRose', 'Svincolati']
+  sheet TutteLeRose dim=A2:AG45 max_col=33 max_row=45
+    row1: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    row2: ['NapoletanaGas', None, None, None, 'Napoli 1926', None, None, None, 'Aurora Ercolanese', None, None, None, 'PeppeNight', None, None, None, 'Oktoberfest Team', None, None, None, 'San Lorenzo', None, None, None, 'MYTHOS', None, None, None, 'eRasmus', None, None, None, None]
+    row5: ['P', 'Audero', 'Cre', '1', 'P', 'Milinkovic-Savic V.', 'Nap', '42', 'P', 'Terracciano', 'Mil', '1', 'P', 'Svilar', 'Rom', '96', 'P', 'Martinez Jo.', 'Int', 1, 'P', 'Carnesecchi', 'Ata', '27', 'P', 'Mandas *', 'Laz', '1', 'P', 'Suzuki', 'Par', '3', None]
+    row6: ['P', 'Di Gregorio', 'Juv', '90', 'P', 'Caprile', 'Cag', '12', 'P', 'Maignan', 'Mil', '96', 'P', 'Vasquez D.', 'Rom', '1', 'P', 'Israel', 'Tor', 1, 'P', 'Montipò', 'Ver', '1', 'P', 'Sava', 'Udi', '1', 'P', 'Butez', 'Com', '4', None]
+  sheet Svincolati dim=A1:N446 max_col=14 max_row=446
+    row1: ['#', 'R.', 'Nome', 'Fuori lista', 'Sq.', 'Under', 'R.MANTRA', 'PGv', 'MV', 'FM', 'FVM/1000', 'QUOT.', 'FantaSquadra', 'Costo']
+    row2: [4371, 'A', 'Raspadori', '', 'Atalanta', 25, 'A', 2, 6.25, 7.75, 82, 16, None, None]
+    row5: [7313, 'A', 'Ratkov', '', 'Lazio', 22, 'Pc', 4, 5.62, 5.62, 52, 14, None, None]
+    row6: [7316, 'A', 'Durosinmi', '', 'Pisa', 22, 'Pc', 3, 6.33, 7.67, 49, 15, None, None]
+
+=== DATI_2023 (C:\Users\salva\Projects\FantaWarRoom\Excel_Only\Dati\Rose_fantalba-2023.xlsx) ===
+sheets: ['TutteLeRose']
+  sheet TutteLeRose dim=A1:I111 max_col=9 max_row=111
+    row1: ['Rose lega FantAlba 2023', None, None, None, None, None, None, None, None]
+    row2: ['https://leghe.fantacalcio.it/fantalba-2023', None, None, None, None, None, None, None, None]
+    row5: ['NapoletanaGas', None, None, None, None, 'Napoli 1926', None, None, None]
+    row6: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo']
+
+=== DATI_2025 (C:\Users\salva\Projects\FantaWarRoom\Excel_Only\Dati\Rose_fantalba-2025.xlsx) ===
+sheets: ['TutteLeRose']
+  sheet TutteLeRose dim=A1:X57 max_col=24 max_row=57
+    row1: ['NapoletanaGas', 'Colonna1', 'Colonna2', 'Colonna3', 'Colonna4', None, 'Napoli 1926', 'Colonna1', 'Colonna2', 'Colonna3', None, None, 'Aurora Ercolanese', 'Colonna1', 'Colonna2', 'Colonna3', None, None, 'PeppeNight', 'Colonna1', 'Colonna2', 'Colonna3', None, None]
+    row2: ['Ruolo', 'Calciatore', 'Squadra', 'Costo', '#NAME?', None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None, 'Ruolo', 'Calciatore', 'Squadra', 'Costo', None, None]
+    row5: ['P', 'Audero', 'Cre', 1, '#NAME?', None, 'P', 'Di Gregorio', 'Juv', 90, None, None, 'P', 'Maignan', 'Mil', 96, None, None, 'P', 'Vasquez D.', 'Rom', 1, None, None]
+    row6: ['D', 'Buongiorno', 'Nap', 26, '#NAME?', None, 'D', 'Angelino', 'Rom', 32, None, None, 'D', 'Bremer', 'Juv', 31, None, None, 'D', 'Dimarco', 'Int', 56, None, None]

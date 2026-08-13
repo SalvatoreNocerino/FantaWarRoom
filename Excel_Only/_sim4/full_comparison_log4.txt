@@ -1,0 +1,8 @@
+Strategia A: FVM medio=964.0 mediana=929.0 sd=329.9 win%=31.6 complete%=100.0 residuo_medio=100.6 FVM/credito=1.052  (n=1000)
+Strategia B: FVM medio=972.4 mediana=936.0 sd=333.4 win%=32.6 complete%=100.0 residuo_medio=97.5 FVM/credito=1.057  (n=1000)
+Strategia C: FVM medio=972.4 mediana=936.0 sd=333.4 win%=32.6 complete%=100.0 residuo_medio=97.5 FVM/credito=1.057  (n=1000)
+Strategia D: FVM medio=979.5 mediana=946.5 sd=331.4 win%=32.9 complete%=100.0 residuo_medio=95.7 FVM/credito=1.063  (n=1000)
+Strategia E: FVM medio=805.9 mediana=737.0 sd=318.8 win%=16.8 complete%=100.0 residuo_medio=65.7 FVM/credito=0.852  (n=1000)
+Strategia F: FVM medio=738.2 mediana=679.0 sd=287.8 win%=11.4 complete%=100.0 residuo_medio=39.5 FVM/credito=0.764  (n=1000)
+
+Tempo totale: 386.3s
