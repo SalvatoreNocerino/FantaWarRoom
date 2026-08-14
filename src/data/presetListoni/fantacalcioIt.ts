@@ -1,12 +1,12 @@
 import { Player } from '../../types';
 
-// Generato una tantum da test/fixtures/quotazioni_fantacalcio.xlsx (export
-// reale Fantacalcio.it) via parsePlayersXlsxBuffer, per evitare di parsare
-// l'xlsx a runtime nel browser. Rigenerare con lo stesso script se il
-// fixture viene aggiornato.
+// Generato una tantum da test/fixtures/quotazioni_fantacalcio_2026_27.xlsx
+// (export reale Fantacalcio.it, stagione 2026/27) via parsePlayersXlsxBuffer,
+// per evitare di parsare l'xlsx a runtime nel browser. Rigenerare con lo
+// stesso script se il listone viene aggiornato.
 export const FANTACALCIO_IT_LISTONE: Player[] = [
   {
-    "id": "imp_0_1786658188246_kk3e",
+    "id": "imp_0_1786710050180_8jyr",
     "name": "Svilar",
     "role": "P",
     "team": "Roma",
@@ -19,7 +19,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 65
   },
   {
-    "id": "imp_1_1786658188246_q8uw",
+    "id": "imp_1_1786710050180_ufn9",
     "name": "Martinez Jo.",
     "role": "P",
     "team": "Inter",
@@ -32,7 +32,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 63
   },
   {
-    "id": "imp_2_1786658188246_vvej",
+    "id": "imp_2_1786710050180_lc4l",
     "name": "Carnesecchi",
     "role": "P",
     "team": "Atalanta",
@@ -45,7 +45,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 52
   },
   {
-    "id": "imp_3_1786658188246_yxhm",
+    "id": "imp_3_1786710050180_hpy1",
     "name": "Butez",
     "role": "P",
     "team": "Como",
@@ -58,7 +58,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 56
   },
   {
-    "id": "imp_4_1786658188246_0dfr",
+    "id": "imp_4_1786710050180_0a3r",
     "name": "Maignan",
     "role": "P",
     "team": "Milan",
@@ -71,7 +71,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 50
   },
   {
-    "id": "imp_5_1786658188246_otir",
+    "id": "imp_5_1786710050180_30b3",
     "name": "De Gea",
     "role": "P",
     "team": "Fiorentina",
@@ -84,7 +84,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 45
   },
   {
-    "id": "imp_6_1786658188246_eg46",
+    "id": "imp_6_1786710050180_0ssg",
     "name": "Meret",
     "role": "P",
     "team": "Napoli",
@@ -97,7 +97,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 45
   },
   {
-    "id": "imp_7_1786658188246_rspn",
+    "id": "imp_7_1786710050180_ypjq",
     "name": "Skorupski",
     "role": "P",
     "team": "Bologna",
@@ -110,7 +110,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 37
   },
   {
-    "id": "imp_8_1786658188246_x462",
+    "id": "imp_8_1786710050180_bylg",
     "name": "Caprile",
     "role": "P",
     "team": "Cagliari",
@@ -123,7 +123,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_9_1786658188246_rofa",
+    "id": "imp_9_1786710050180_39z6",
     "name": "Di Gregorio",
     "role": "P",
     "team": "Juventus",
@@ -136,7 +136,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 40
   },
   {
-    "id": "imp_10_1786658188246_2mr6",
+    "id": "imp_10_1786710050180_l2gr",
     "name": "Mandas",
     "role": "P",
     "team": "Lazio",
@@ -149,7 +149,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 30
   },
   {
-    "id": "imp_11_1786658188246_7jmc",
+    "id": "imp_11_1786710050180_s0cc",
     "name": "Okoye",
     "role": "P",
     "team": "Udinese",
@@ -162,7 +162,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 29
   },
   {
-    "id": "imp_12_1786658188246_knjs",
+    "id": "imp_12_1786710050180_iond",
     "name": "Bijlow",
     "role": "P",
     "team": "Genoa",
@@ -175,7 +175,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_13_1786658188246_g50k",
+    "id": "imp_13_1786710050180_1ycj",
     "name": "Falcone",
     "role": "P",
     "team": "Lecce",
@@ -188,7 +188,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_14_1786658188246_b019",
+    "id": "imp_14_1786710050180_bkme",
     "name": "Daffara",
     "role": "P",
     "team": "Parma",
@@ -201,7 +201,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_15_1786658188246_d06e",
+    "id": "imp_15_1786710050180_ewcz",
     "name": "Suzuki",
     "role": "P",
     "team": "Parma",
@@ -214,7 +214,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_16_1786658188246_fa8b",
+    "id": "imp_16_1786710050180_wwjl",
     "name": "Muric",
     "role": "P",
     "team": "Sassuolo",
@@ -227,7 +227,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_17_1786658188246_1urh",
+    "id": "imp_17_1786710050180_j0gj",
     "name": "Perin",
     "role": "P",
     "team": "Juventus",
@@ -240,7 +240,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_18_1786658188246_qaju",
+    "id": "imp_18_1786710050180_yy4n",
     "name": "Stankovic F.",
     "role": "P",
     "team": "Venezia",
@@ -253,7 +253,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_19_1786658188246_14om",
+    "id": "imp_19_1786710050180_hoes",
     "name": "Thiam",
     "role": "P",
     "team": "Monza",
@@ -266,7 +266,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_20_1786658188247_pvgv",
+    "id": "imp_20_1786710050180_gxxf",
     "name": "Milinkovic-Savic V.",
     "role": "P",
     "team": "Napoli",
@@ -279,7 +279,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_21_1786658188247_gjjd",
+    "id": "imp_21_1786710050180_xtvo",
     "name": "Palmisani",
     "role": "P",
     "team": "Frosinone",
@@ -292,7 +292,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_22_1786658188247_e0dz",
+    "id": "imp_22_1786710050180_u362",
     "name": "Desplanches",
     "role": "P",
     "team": "Frosinone",
@@ -305,7 +305,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_23_1786658188247_xypv",
+    "id": "imp_23_1786710050180_4fqb",
     "name": "Provedel",
     "role": "P",
     "team": "Inter",
@@ -318,7 +318,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_24_1786658188247_wh45",
+    "id": "imp_24_1786710050180_hm41",
     "name": "Sportiello",
     "role": "P",
     "team": "Atalanta",
@@ -331,7 +331,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_25_1786658188247_p8ca",
+    "id": "imp_25_1786710050180_1ms7",
     "name": "Happonen",
     "role": "P",
     "team": "Bologna",
@@ -344,7 +344,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_26_1786658188247_apo5",
+    "id": "imp_26_1786710050180_xvdf",
     "name": "Pessina Mas.",
     "role": "P",
     "team": "Bologna",
@@ -357,20 +357,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_27_1786658188247_41mx",
-    "name": "Ciocci",
-    "role": "P",
-    "team": "Cagliari",
-    "basePrice": 1,
-    "expectedFantaAvg": 6.6,
-    "expectedGoalsAssists": "N/A",
-    "tier": 2,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "1-1 FM",
-    "fvm": 1
-  },
-  {
-    "id": "imp_28_1786658188247_z2c3",
+    "id": "imp_27_1786710050180_7711",
     "name": "Sherri",
     "role": "P",
     "team": "Cagliari",
@@ -383,7 +370,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_29_1786658188247_qhu7",
+    "id": "imp_28_1786710050180_prh3",
     "name": "Tornqvist",
     "role": "P",
     "team": "Como",
@@ -396,20 +383,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_30_1786658188247_byx2",
+    "id": "imp_29_1786710050180_7rrg",
     "name": "Vigorito",
     "role": "P",
     "team": "Como",
     "basePrice": 1,
-    "expectedFantaAvg": 6.1,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 3,
+    "tier": 2,
     "notes": "Caricato da listone importato",
     "fairValueBracket": "1-1 FM",
     "fvm": 1
   },
   {
-    "id": "imp_31_1786658188247_x9ko",
+    "id": "imp_30_1786710050180_lwmk",
     "name": "Christensen O.",
     "role": "P",
     "team": "Fiorentina",
@@ -422,7 +409,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_32_1786658188247_9ytt",
+    "id": "imp_31_1786710050180_t5h2",
     "name": "Lezzerini",
     "role": "P",
     "team": "Fiorentina",
@@ -435,7 +422,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_33_1786658188247_8603",
+    "id": "imp_32_1786710050180_jnxd",
     "name": "Lolic",
     "role": "P",
     "team": "Frosinone",
@@ -448,7 +435,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_34_1786658188247_vtpq",
+    "id": "imp_33_1786710050181_30y7",
     "name": "Sommariva",
     "role": "P",
     "team": "Genoa",
@@ -461,7 +448,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_35_1786658188247_xjzz",
+    "id": "imp_34_1786710050181_vsug",
     "name": "Stolz",
     "role": "P",
     "team": "Genoa",
@@ -474,7 +461,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_36_1786658188247_zvhw",
+    "id": "imp_35_1786710050181_9bpj",
     "name": "Di Gennaro",
     "role": "P",
     "team": "Inter",
@@ -487,7 +474,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_37_1786658188247_jn9k",
+    "id": "imp_36_1786710050181_bfo5",
     "name": "Pinsoglio",
     "role": "P",
     "team": "Juventus",
@@ -500,7 +487,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_38_1786658188247_6g5g",
+    "id": "imp_37_1786710050181_f1iq",
     "name": "Motta",
     "role": "P",
     "team": "Lazio",
@@ -513,7 +500,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_39_1786658188247_z4zr",
+    "id": "imp_38_1786710050181_av4c",
     "name": "Renzetti",
     "role": "P",
     "team": "Lazio",
@@ -526,20 +513,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_40_1786658188247_r7nf",
-    "name": "Samooja",
-    "role": "P",
-    "team": "Lecce",
-    "basePrice": 1,
-    "expectedFantaAvg": 6.1,
-    "expectedGoalsAssists": "N/A",
-    "tier": 3,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "1-1 FM",
-    "fvm": 1
-  },
-  {
-    "id": "imp_41_1786658188247_vbqb",
+    "id": "imp_39_1786710050181_hal3",
     "name": "Terracciano",
     "role": "P",
     "team": "Milan",
@@ -552,7 +526,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_42_1786658188247_9na3",
+    "id": "imp_40_1786710050181_a9vo",
     "name": "Torriani",
     "role": "P",
     "team": "Milan",
@@ -565,7 +539,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_43_1786658188247_hwev",
+    "id": "imp_41_1786710050181_y5v4",
     "name": "Pizzignacco",
     "role": "P",
     "team": "Monza",
@@ -578,7 +552,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_44_1786658188247_2uok",
+    "id": "imp_42_1786710050181_3rs6",
     "name": "Strajnar",
     "role": "P",
     "team": "Monza",
@@ -591,7 +565,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_45_1786658188247_s0mh",
+    "id": "imp_43_1786710050181_m0qa",
     "name": "Contini",
     "role": "P",
     "team": "Napoli",
@@ -604,7 +578,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_46_1786658188247_hyte",
+    "id": "imp_44_1786710050181_ki58",
     "name": "Corvi",
     "role": "P",
     "team": "Parma",
@@ -617,7 +591,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_47_1786658188247_a5x4",
+    "id": "imp_45_1786710050181_85mt",
     "name": "De Marzi",
     "role": "P",
     "team": "Roma",
@@ -630,7 +604,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_48_1786658188247_1abc",
+    "id": "imp_46_1786710050181_a8ek",
     "name": "Gollini",
     "role": "P",
     "team": "Roma",
@@ -643,7 +617,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_49_1786658188247_f2ja",
+    "id": "imp_47_1786710050181_0onj",
     "name": "Russo A.",
     "role": "P",
     "team": "Sassuolo",
@@ -656,7 +630,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_50_1786658188247_wc33",
+    "id": "imp_48_1786710050181_00eb",
     "name": "Turati",
     "role": "P",
     "team": "Sassuolo",
@@ -669,7 +643,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_51_1786658188247_izuy",
+    "id": "imp_49_1786710050181_27wr",
     "name": "Mascardi",
     "role": "P",
     "team": "Torino",
@@ -682,7 +656,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_52_1786658188247_e0b9",
+    "id": "imp_50_1786710050181_y5qe",
     "name": "Paleari",
     "role": "P",
     "team": "Torino",
@@ -695,7 +669,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_53_1786658188247_wu83",
+    "id": "imp_51_1786710050181_sxiu",
     "name": "Siviero",
     "role": "P",
     "team": "Torino",
@@ -708,7 +682,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_54_1786658188247_xic5",
+    "id": "imp_52_1786710050181_nrag",
     "name": "Padelli",
     "role": "P",
     "team": "Udinese",
@@ -721,7 +695,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_55_1786658188247_rkn7",
+    "id": "imp_53_1786710050181_ikmk",
     "name": "Piana",
     "role": "P",
     "team": "Udinese",
@@ -734,7 +708,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_56_1786658188247_ojp5",
+    "id": "imp_54_1786710050181_bmcc",
     "name": "Grandi",
     "role": "P",
     "team": "Venezia",
@@ -747,7 +721,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_57_1786658188247_91gk",
+    "id": "imp_55_1786710050181_6imz",
     "name": "Pozzi",
     "role": "P",
     "team": "Venezia",
@@ -760,7 +734,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_58_1786658188247_87wf",
+    "id": "imp_56_1786710050181_d0gj",
     "name": "Vismara",
     "role": "P",
     "team": "Atalanta",
@@ -773,7 +747,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_59_1786658188247_k5fi",
+    "id": "imp_57_1786710050181_k79s",
     "name": "Satalino",
     "role": "P",
     "team": "Sassuolo",
@@ -786,7 +760,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_60_1786658188247_brak",
+    "id": "imp_58_1786710050181_6m83",
+    "name": "Penev",
+    "role": "P",
+    "team": "Lecce",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
+  },
+  {
+    "id": "imp_59_1786710050181_z4qx",
     "name": "Dimarco",
     "role": "D",
     "team": "Inter",
@@ -799,7 +786,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 265
   },
   {
-    "id": "imp_61_1786658188247_70le",
+    "id": "imp_60_1786710050181_osea",
+    "name": "Molina N.",
+    "role": "D",
+    "team": "Roma",
+    "basePrice": 18,
+    "expectedFantaAvg": 7.2,
+    "expectedGoalsAssists": "N/A",
+    "tier": 1,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "74-100 FM",
+    "fvm": 87
+  },
+  {
+    "id": "imp_61_1786710050181_hl34",
     "name": "Wesley",
     "role": "D",
     "team": "Roma",
@@ -808,11 +808,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "77-103 FM",
-    "fvm": 90
+    "fairValueBracket": "71-95 FM",
+    "fvm": 83
   },
   {
-    "id": "imp_62_1786658188247_qsdv",
+    "id": "imp_62_1786710050181_oh21",
     "name": "Akanji",
     "role": "D",
     "team": "Inter",
@@ -825,7 +825,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 55
   },
   {
-    "id": "imp_63_1786658188247_znhk",
+    "id": "imp_63_1786710050181_rydh",
     "name": "Bremer",
     "role": "D",
     "team": "Juventus",
@@ -838,7 +838,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 50
   },
   {
-    "id": "imp_64_1786658188247_hjjr",
+    "id": "imp_64_1786710050181_c2n6",
     "name": "Mancini",
     "role": "D",
     "team": "Roma",
@@ -851,7 +851,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 49
   },
   {
-    "id": "imp_65_1786658188247_xdjq",
+    "id": "imp_65_1786710050181_v0fa",
     "name": "Bastoni",
     "role": "D",
     "team": "Inter",
@@ -864,7 +864,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 44
   },
   {
-    "id": "imp_66_1786658188247_or48",
+    "id": "imp_66_1786710050181_y3f4",
     "name": "Pavlovic",
     "role": "D",
     "team": "Milan",
@@ -877,7 +877,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 48
   },
   {
-    "id": "imp_67_1786658188247_4rf1",
+    "id": "imp_67_1786710050181_ymv5",
     "name": "Rrahmani",
     "role": "D",
     "team": "Napoli",
@@ -890,7 +890,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 47
   },
   {
-    "id": "imp_68_1786658188247_x2bf",
+    "id": "imp_68_1786710050181_cmgu",
     "name": "Kalulu",
     "role": "D",
     "team": "Juventus",
@@ -903,7 +903,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 46
   },
   {
-    "id": "imp_69_1786658188247_vzhm",
+    "id": "imp_69_1786710050181_0ozo",
     "name": "N'Dicka",
     "role": "D",
     "team": "Roma",
@@ -916,7 +916,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 44
   },
   {
-    "id": "imp_70_1786658188247_brt4",
+    "id": "imp_70_1786710050181_2lit",
     "name": "Solet",
     "role": "D",
     "team": "Udinese",
@@ -929,7 +929,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 46
   },
   {
-    "id": "imp_71_1786658188247_1arj",
+    "id": "imp_71_1786710050181_hqqx",
     "name": "Stones",
     "role": "D",
     "team": "Inter",
@@ -942,7 +942,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 38
   },
   {
-    "id": "imp_72_1786658188247_oq56",
+    "id": "imp_72_1786710050181_hofw",
     "name": "Gila",
     "role": "D",
     "team": "Milan",
@@ -955,7 +955,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 31
   },
   {
-    "id": "imp_73_1786658188247_x2l4",
+    "id": "imp_73_1786710050181_3ciz",
     "name": "Di Lorenzo",
     "role": "D",
     "team": "Napoli",
@@ -968,7 +968,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 40
   },
   {
-    "id": "imp_74_1786658188247_oejl",
+    "id": "imp_74_1786710050181_3znz",
     "name": "Ostigard",
     "role": "D",
     "team": "Genoa",
@@ -981,7 +981,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 40
   },
   {
-    "id": "imp_75_1786658188247_5w50",
+    "id": "imp_75_1786710050181_c9is",
     "name": "Bisseck",
     "role": "D",
     "team": "Inter",
@@ -994,7 +994,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 33
   },
   {
-    "id": "imp_76_1786658188247_0yoi",
+    "id": "imp_76_1786710050181_turd",
     "name": "Scalvini",
     "role": "D",
     "team": "Atalanta",
@@ -1007,7 +1007,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 28
   },
   {
-    "id": "imp_77_1786658188247_gp0d",
+    "id": "imp_77_1786710050181_57ex",
     "name": "Ramon",
     "role": "D",
     "team": "Como",
@@ -1020,7 +1020,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_78_1786658188247_smur",
+    "id": "imp_78_1786710050181_03hm",
     "name": "Dodò",
     "role": "D",
     "team": "Fiorentina",
@@ -1033,7 +1033,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 30
   },
   {
-    "id": "imp_79_1786658188247_jrwq",
+    "id": "imp_79_1786710050181_oj4n",
     "name": "Hermoso",
     "role": "D",
     "team": "Roma",
@@ -1046,7 +1046,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 26
   },
   {
-    "id": "imp_80_1786658188247_rxen",
+    "id": "imp_80_1786710050181_kj3y",
     "name": "Vasquez",
     "role": "D",
     "team": "Genoa",
@@ -1059,7 +1059,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 33
   },
   {
-    "id": "imp_81_1786658188247_lz1z",
+    "id": "imp_81_1786710050181_opsp",
     "name": "Cambiaso",
     "role": "D",
     "team": "Juventus",
@@ -1072,7 +1072,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_82_1786658188247_x3sk",
+    "id": "imp_82_1786710050181_2744",
+    "name": "Chalobah T.",
+    "role": "D",
+    "team": "Como",
+    "basePrice": 9,
+    "expectedFantaAvg": 7.2,
+    "expectedGoalsAssists": "N/A",
+    "tier": 1,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "22-30 FM",
+    "fvm": 26
+  },
+  {
+    "id": "imp_83_1786710050181_lro7",
     "name": "Hien",
     "role": "D",
     "team": "Atalanta",
@@ -1085,7 +1098,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_83_1786658188247_hzja",
+    "id": "imp_84_1786710050181_ad39",
     "name": "Zappacosta",
     "role": "D",
     "team": "Atalanta",
@@ -1098,7 +1111,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_84_1786658188247_4day",
+    "id": "imp_85_1786710050181_dc0a",
     "name": "Lucumì",
     "role": "D",
     "team": "Bologna",
@@ -1111,33 +1124,33 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_85_1786658188247_e7ni",
+    "id": "imp_86_1786710050181_rrmv",
     "name": "Miranda J.",
     "role": "D",
     "team": "Bologna",
     "basePrice": 8,
-    "expectedFantaAvg": 7.2,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 1,
+    "tier": 2,
     "notes": "Caricato da listone importato",
     "fairValueBracket": "20-28 FM",
     "fvm": 24
   },
   {
-    "id": "imp_86_1786658188247_6tor",
+    "id": "imp_87_1786710050181_uw1f",
     "name": "Mina",
     "role": "D",
     "team": "Cagliari",
     "basePrice": 8,
-    "expectedFantaAvg": 7.2,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 1,
+    "tier": 2,
     "notes": "Caricato da listone importato",
     "fairValueBracket": "17-23 FM",
     "fvm": 20
   },
   {
-    "id": "imp_87_1786658188247_7a9r",
+    "id": "imp_88_1786710050181_9cln",
     "name": "Dragusin",
     "role": "D",
     "team": "Fiorentina",
@@ -1150,7 +1163,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_88_1786658188247_0rk2",
+    "id": "imp_89_1786710050181_eoem",
     "name": "Jimenez A.",
     "role": "D",
     "team": "Fiorentina",
@@ -1163,7 +1176,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_89_1786658188247_r3sa",
+    "id": "imp_90_1786710050181_2rjm",
     "name": "Norton-Cuffy",
     "role": "D",
     "team": "Genoa",
@@ -1176,7 +1189,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 22
   },
   {
-    "id": "imp_90_1786658188247_n2xj",
+    "id": "imp_91_1786710050181_okhw",
     "name": "Celik",
     "role": "D",
     "team": "Juventus",
@@ -1185,11 +1198,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "18-24 FM",
-    "fvm": 21
+    "fairValueBracket": "11-15 FM",
+    "fvm": 13
   },
   {
-    "id": "imp_91_1786658188247_a1mf",
+    "id": "imp_92_1786710050181_5e0e",
     "name": "Bartesaghi",
     "role": "D",
     "team": "Milan",
@@ -1202,7 +1215,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_92_1786658188247_3cam",
+    "id": "imp_93_1786710050181_0gk3",
     "name": "Spinazzola",
     "role": "D",
     "team": "Napoli",
@@ -1215,7 +1228,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_93_1786658188247_4pc7",
+    "id": "imp_94_1786710050181_51u6",
     "name": "Delprato",
     "role": "D",
     "team": "Parma",
@@ -1228,7 +1241,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 21
   },
   {
-    "id": "imp_94_1786658188247_a8gy",
+    "id": "imp_95_1786710050181_j4dg",
     "name": "Valeri",
     "role": "D",
     "team": "Parma",
@@ -1241,7 +1254,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_95_1786658188247_501r",
+    "id": "imp_96_1786710050181_je8x",
     "name": "Koulierakis",
     "role": "D",
     "team": "Roma",
@@ -1254,7 +1267,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_96_1786658188247_cm9j",
+    "id": "imp_97_1786710050181_hau3",
     "name": "Vojvoda",
     "role": "D",
     "team": "Udinese",
@@ -1267,7 +1280,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_97_1786658188247_yrjg",
+    "id": "imp_98_1786710050181_kf4t",
     "name": "Couto",
     "role": "D",
     "team": "Como",
@@ -1280,20 +1293,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_98_1786658188247_6zso",
-    "name": "Djimsiti",
-    "role": "D",
-    "team": "Atalanta",
-    "basePrice": 7,
-    "expectedFantaAvg": 6.6,
-    "expectedGoalsAssists": "N/A",
-    "tier": 2,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "14-18 FM",
-    "fvm": 16
-  },
-  {
-    "id": "imp_99_1786658188247_hdms",
+    "id": "imp_99_1786710050181_aq7k",
     "name": "Obert",
     "role": "D",
     "team": "Cagliari",
@@ -1306,7 +1306,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_100_1786658188247_qbz6",
+    "id": "imp_100_1786710050181_5nok",
     "name": "Kaiki",
     "role": "D",
     "team": "Como",
@@ -1319,7 +1319,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_101_1786658188247_6tqa",
+    "id": "imp_101_1786710050181_gd7r",
     "name": "Carlos Augusto",
     "role": "D",
     "team": "Inter",
@@ -1332,7 +1332,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_102_1786658188247_33n6",
+    "id": "imp_102_1786710050181_mr5g",
     "name": "Doekhi",
     "role": "D",
     "team": "Lazio",
@@ -1345,7 +1345,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 22
   },
   {
-    "id": "imp_103_1786658188247_0k25",
+    "id": "imp_103_1786710050181_xwkz",
     "name": "Romagnoli",
     "role": "D",
     "team": "Lazio",
@@ -1358,7 +1358,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_104_1786658188247_866v",
+    "id": "imp_104_1786710050181_lsoz",
     "name": "Tiago Gabriel",
     "role": "D",
     "team": "Lecce",
@@ -1371,7 +1371,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 17
   },
   {
-    "id": "imp_105_1786658188247_6zf3",
+    "id": "imp_105_1786710050181_5caz",
     "name": "Gabbia",
     "role": "D",
     "team": "Milan",
@@ -1380,11 +1380,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fairValueBracket": "21-29 FM",
+    "fvm": 25
   },
   {
-    "id": "imp_106_1786658188247_iy79",
+    "id": "imp_106_1786710050181_4mox",
     "name": "Tomori",
     "role": "D",
     "team": "Milan",
@@ -1393,11 +1393,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fairValueBracket": "9-13 FM",
+    "fvm": 11
   },
   {
-    "id": "imp_107_1786658188247_1fgd",
+    "id": "imp_107_1786710050181_3oqo",
     "name": "Buongiorno",
     "role": "D",
     "team": "Napoli",
@@ -1406,11 +1406,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
-    "id": "imp_108_1786658188247_qgh5",
+    "id": "imp_108_1786710050181_6fby",
     "name": "Idzes",
     "role": "D",
     "team": "Sassuolo",
@@ -1423,7 +1423,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_109_1786658188247_kqpr",
+    "id": "imp_109_1786710050181_of9f",
     "name": "Coco",
     "role": "D",
     "team": "Torino",
@@ -1436,7 +1436,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_110_1786658188247_vb2x",
+    "id": "imp_110_1786710050181_0y2a",
     "name": "Ismajli",
     "role": "D",
     "team": "Torino",
@@ -1449,20 +1449,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_111_1786658188247_zp9h",
+    "id": "imp_111_1786710050181_fr2n",
     "name": "Kristensen T.",
     "role": "D",
-    "team": "Udinese",
+    "team": "Atalanta",
     "basePrice": 7,
     "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fairValueBracket": "17-23 FM",
+    "fvm": 20
   },
   {
-    "id": "imp_112_1786658188247_8x2j",
+    "id": "imp_112_1786710050181_pu06",
     "name": "Ahanor",
     "role": "D",
     "team": "Atalanta",
@@ -1475,7 +1475,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_113_1786658188247_wec3",
+    "id": "imp_113_1786710050181_002g",
     "name": "Bellanova",
     "role": "D",
     "team": "Atalanta",
@@ -1488,7 +1488,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_114_1786658188247_fhcd",
+    "id": "imp_114_1786710050181_e7k5",
     "name": "Bernasconi",
     "role": "D",
     "team": "Atalanta",
@@ -1501,7 +1501,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 17
   },
   {
-    "id": "imp_115_1786658188247_ds2j",
+    "id": "imp_115_1786710050181_e15t",
     "name": "Heggem",
     "role": "D",
     "team": "Bologna",
@@ -1514,7 +1514,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_116_1786658188247_0kbt",
+    "id": "imp_116_1786710050181_e23q",
     "name": "Zortea",
     "role": "D",
     "team": "Bologna",
@@ -1527,7 +1527,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_117_1786658188247_vj8g",
+    "id": "imp_117_1786710050181_ced6",
     "name": "Valle",
     "role": "D",
     "team": "Como",
@@ -1540,7 +1540,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_118_1786658188247_ejsu",
+    "id": "imp_118_1786710050181_lm57",
     "name": "Valdepenas",
     "role": "D",
     "team": "Fiorentina",
@@ -1553,7 +1553,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_119_1786658188247_sjin",
+    "id": "imp_119_1786710050181_loas",
     "name": "Viery",
     "role": "D",
     "team": "Fiorentina",
@@ -1566,7 +1566,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_120_1786658188247_gxxn",
+    "id": "imp_120_1786710050181_9tp4",
     "name": "Monterisi",
     "role": "D",
     "team": "Frosinone",
@@ -1579,7 +1579,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_121_1786658188247_cln9",
+    "id": "imp_121_1786710050181_afks",
     "name": "Marcandalli",
     "role": "D",
     "team": "Genoa",
@@ -1592,7 +1592,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_122_1786658188247_gncn",
+    "id": "imp_122_1786710050181_imwa",
     "name": "Pavard",
     "role": "D",
     "team": "Inter",
@@ -1605,7 +1605,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_123_1786658188247_csq8",
+    "id": "imp_123_1786710050181_v6q5",
     "name": "Tavares N.",
     "role": "D",
     "team": "Lazio",
@@ -1618,7 +1618,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 17
   },
   {
-    "id": "imp_124_1786658188247_wrls",
+    "id": "imp_124_1786710050181_zef5",
     "name": "Marusic",
     "role": "D",
     "team": "Lazio",
@@ -1631,7 +1631,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_125_1786658188247_0i0w",
+    "id": "imp_125_1786710050181_k3ch",
     "name": "Gallo",
     "role": "D",
     "team": "Lecce",
@@ -1644,7 +1644,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_126_1786658188247_ccl1",
+    "id": "imp_126_1786710050181_5cc2",
     "name": "Mangas",
     "role": "D",
     "team": "Monza",
@@ -1657,7 +1657,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_127_1786658188247_mpvy",
+    "id": "imp_127_1786710050181_0mbv",
     "name": "Beukema",
     "role": "D",
     "team": "Napoli",
@@ -1666,11 +1666,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fairValueBracket": "11-15 FM",
+    "fvm": 13
   },
   {
-    "id": "imp_128_1786658188247_h540",
+    "id": "imp_128_1786710050181_9ox6",
     "name": "Circati",
     "role": "D",
     "team": "Parma",
@@ -1683,7 +1683,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_129_1786658188247_9hf6",
+    "id": "imp_129_1786710050181_6kcb",
     "name": "Comuzzo",
     "role": "D",
     "team": "Torino",
@@ -1696,7 +1696,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_130_1786658188247_8myd",
+    "id": "imp_130_1786710050181_kxab",
     "name": "Kamara H.",
     "role": "D",
     "team": "Udinese",
@@ -1709,7 +1709,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_131_1786658188247_3lof",
+    "id": "imp_131_1786710050181_f0l9",
     "name": "Bella-Kotchap",
     "role": "D",
     "team": "Venezia",
@@ -1722,7 +1722,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_132_1786658188247_jhf2",
+    "id": "imp_132_1786710050181_cl9t",
     "name": "Kolasinac",
     "role": "D",
     "team": "Atalanta",
@@ -1735,7 +1735,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_133_1786658188247_sfek",
+    "id": "imp_133_1786710050181_oc6h",
     "name": "Vitik",
     "role": "D",
     "team": "Bologna",
@@ -1748,7 +1748,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_134_1786658188247_qwcv",
+    "id": "imp_134_1786710050181_3uy0",
     "name": "Holm",
     "role": "D",
     "team": "Bologna",
@@ -1761,7 +1761,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_135_1786658188247_lmw9",
+    "id": "imp_135_1786710050181_1yaq",
     "name": "Kofler",
     "role": "D",
     "team": "Cagliari",
@@ -1774,7 +1774,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_136_1786658188247_3bow",
+    "id": "imp_136_1786710050181_d8ha",
     "name": "Zè Pedro",
     "role": "D",
     "team": "Cagliari",
@@ -1787,7 +1787,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_137_1786658188247_cna3",
+    "id": "imp_137_1786710050181_9g70",
     "name": "Kempf",
     "role": "D",
     "team": "Como",
@@ -1800,7 +1800,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_138_1786658188247_xf8o",
+    "id": "imp_138_1786710050181_j3sq",
     "name": "Parisi",
     "role": "D",
     "team": "Fiorentina",
@@ -1813,7 +1813,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_139_1786658188247_8cgw",
+    "id": "imp_139_1786710050181_da17",
     "name": "Bracaglia",
     "role": "D",
     "team": "Frosinone",
@@ -1826,7 +1826,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_140_1786658188247_ap2z",
+    "id": "imp_140_1786710050181_sn74",
     "name": "Oyono A.",
     "role": "D",
     "team": "Frosinone",
@@ -1839,7 +1839,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_141_1786658188247_r2ae",
+    "id": "imp_141_1786710050181_1p4w",
     "name": "Martin",
     "role": "D",
     "team": "Genoa",
@@ -1852,7 +1852,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_142_1786658188247_9mct",
+    "id": "imp_142_1786710050181_nvvl",
     "name": "Kelly L.",
     "role": "D",
     "team": "Juventus",
@@ -1861,11 +1861,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fairValueBracket": "9-12 FM",
+    "fvm": 10
   },
   {
-    "id": "imp_143_1786658188247_nigw",
+    "id": "imp_143_1786710050181_c861",
     "name": "Pedraza",
     "role": "D",
     "team": "Lazio",
@@ -1878,7 +1878,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_144_1786658188247_jg25",
+    "id": "imp_144_1786710050181_gkjt",
     "name": "Gaspar K.",
     "role": "D",
     "team": "Lecce",
@@ -1891,7 +1891,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_145_1786658188247_vk2u",
+    "id": "imp_145_1786710050181_nfw7",
     "name": "Veiga D.",
     "role": "D",
     "team": "Lecce",
@@ -1904,7 +1904,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_146_1786658188247_khs5",
+    "id": "imp_146_1786710050181_m847",
     "name": "Olivera",
     "role": "D",
     "team": "Napoli",
@@ -1917,20 +1917,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_147_1786658188247_rbl6",
+    "id": "imp_147_1786710050181_rjur",
     "name": "Rensch",
     "role": "D",
     "team": "Roma",
     "basePrice": 5,
-    "expectedFantaAvg": 6.6,
+    "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
-    "tier": 2,
+    "tier": 3,
     "notes": "Caricato da listone importato",
     "fairValueBracket": "14-18 FM",
     "fvm": 16
   },
   {
-    "id": "imp_148_1786658188247_6org",
+    "id": "imp_148_1786710050181_cx20",
     "name": "Pedersen",
     "role": "D",
     "team": "Torino",
@@ -1943,7 +1943,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_149_1786658188247_3pvu",
+    "id": "imp_149_1786710050181_1v2p",
     "name": "Moreno M.",
     "role": "D",
     "team": "Venezia",
@@ -1956,7 +1956,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_150_1786658188247_b0ja",
+    "id": "imp_150_1786710050181_w7d6",
     "name": "Haps",
     "role": "D",
     "team": "Venezia",
@@ -1969,7 +1969,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_151_1786658188247_zh9m",
+    "id": "imp_151_1786710050181_zv7p",
     "name": "Zappa",
     "role": "D",
     "team": "Cagliari",
@@ -1982,7 +1982,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_152_1786658188247_0uqa",
+    "id": "imp_152_1786710050181_9fse",
     "name": "Smolcic I.",
     "role": "D",
     "team": "Como",
@@ -1995,7 +1995,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_153_1786658188247_wg9p",
+    "id": "imp_153_1786710050181_unrm",
     "name": "Pongracic",
     "role": "D",
     "team": "Fiorentina",
@@ -2008,7 +2008,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_154_1786658188247_b3x2",
+    "id": "imp_154_1786710050181_tp4n",
     "name": "Calvani",
     "role": "D",
     "team": "Frosinone",
@@ -2021,7 +2021,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_155_1786658188247_biwl",
+    "id": "imp_155_1786710050181_jfv7",
     "name": "Mitaj",
     "role": "D",
     "team": "Genoa",
@@ -2034,7 +2034,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_156_1786658188247_pdmg",
+    "id": "imp_156_1786710050181_o8hn",
     "name": "Gatti",
     "role": "D",
     "team": "Juventus",
@@ -2047,7 +2047,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_157_1786658188247_seo0",
+    "id": "imp_157_1786710050181_sq0h",
     "name": "Siebert",
     "role": "D",
     "team": "Lecce",
@@ -2060,7 +2060,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_158_1786658188247_nygq",
+    "id": "imp_158_1786710050181_w15r",
     "name": "Delli Carri",
     "role": "D",
     "team": "Monza",
@@ -2073,7 +2073,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_159_1786658188247_c0yl",
+    "id": "imp_159_1786710050181_1cbk",
     "name": "Lucchesi",
     "role": "D",
     "team": "Monza",
@@ -2086,7 +2086,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_160_1786658188247_0t3f",
+    "id": "imp_160_1786710050181_mqws",
     "name": "Birindelli",
     "role": "D",
     "team": "Monza",
@@ -2099,7 +2099,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_161_1786658188247_25yt",
+    "id": "imp_161_1786710050181_dboi",
     "name": "Valenti",
     "role": "D",
     "team": "Parma",
@@ -2112,7 +2112,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_162_1786658188247_momi",
+    "id": "imp_162_1786710050181_j53r",
     "name": "Ghilardi",
     "role": "D",
     "team": "Roma",
@@ -2125,7 +2125,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_163_1786658188247_6zja",
+    "id": "imp_163_1786710050181_jzjh",
     "name": "Walukiewicz",
     "role": "D",
     "team": "Sassuolo",
@@ -2138,7 +2138,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_164_1786658188247_dvwx",
+    "id": "imp_164_1786710050181_lllu",
     "name": "Doig",
     "role": "D",
     "team": "Sassuolo",
@@ -2147,11 +2147,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fairValueBracket": "9-12 FM",
+    "fvm": 10
   },
   {
-    "id": "imp_165_1786658188247_imyy",
+    "id": "imp_165_1786710050181_xyof",
     "name": "Comert",
     "role": "D",
     "team": "Torino",
@@ -2164,7 +2164,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_166_1786658188247_qz7y",
+    "id": "imp_166_1786710050181_kvv9",
     "name": "Kabasele",
     "role": "D",
     "team": "Udinese",
@@ -2177,7 +2177,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_167_1786658188247_8j0a",
+    "id": "imp_167_1786710050181_4cex",
     "name": "Bertola",
     "role": "D",
     "team": "Udinese",
@@ -2190,7 +2190,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_168_1786658188247_aoyv",
+    "id": "imp_168_1786710050181_5988",
     "name": "Zanoli",
     "role": "D",
     "team": "Udinese",
@@ -2203,7 +2203,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_169_1786658188247_vg9s",
+    "id": "imp_169_1786710050181_ctuq",
     "name": "Arizala",
     "role": "D",
     "team": "Udinese",
@@ -2216,7 +2216,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_170_1786658188247_ruzq",
+    "id": "imp_170_1786710050181_u84z",
     "name": "Halhal",
     "role": "D",
     "team": "Venezia",
@@ -2229,7 +2229,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_171_1786658188247_h07l",
+    "id": "imp_171_1786710050181_ehta",
     "name": "Correia T.",
     "role": "D",
     "team": "Venezia",
@@ -2242,7 +2242,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_172_1786658188247_gos8",
+    "id": "imp_172_1786710050181_yptm",
     "name": "Kossounou",
     "role": "D",
     "team": "Atalanta",
@@ -2255,7 +2255,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_173_1786658188247_t9hp",
+    "id": "imp_173_1786710050181_c6f0",
     "name": "Casale",
     "role": "D",
     "team": "Bologna",
@@ -2268,7 +2268,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_174_1786658188247_c17y",
+    "id": "imp_174_1786710050181_fg3k",
     "name": "Rodriguez Ju.",
     "role": "D",
     "team": "Cagliari",
@@ -2281,7 +2281,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_175_1786658188247_6jkg",
+    "id": "imp_175_1786710050181_a8hj",
     "name": "Idrissi R.",
     "role": "D",
     "team": "Cagliari",
@@ -2294,7 +2294,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_176_1786658188247_rt1c",
+    "id": "imp_176_1786710050181_vbrd",
     "name": "Ranieri L.",
     "role": "D",
     "team": "Fiorentina",
@@ -2307,7 +2307,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_177_1786658188247_2l8d",
+    "id": "imp_177_1786710050181_swwm",
     "name": "Joao Mario",
     "role": "D",
     "team": "Fiorentina",
@@ -2320,7 +2320,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_178_1786658188247_idkt",
+    "id": "imp_178_1786710050181_sc3s",
     "name": "Akpoguma",
     "role": "D",
     "team": "Frosinone",
@@ -2333,7 +2333,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_179_1786658188247_ti6b",
+    "id": "imp_179_1786710050181_t0i3",
     "name": "Cittadini",
     "role": "D",
     "team": "Frosinone",
@@ -2346,7 +2346,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_180_1786658188247_r9u3",
+    "id": "imp_180_1786710050181_lncr",
     "name": "Provstgaard",
     "role": "D",
     "team": "Lazio",
@@ -2359,7 +2359,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_181_1786658188247_236r",
+    "id": "imp_181_1786710050181_ajfc",
     "name": "Floriani Mussolini",
     "role": "D",
     "team": "Lazio",
@@ -2372,7 +2372,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_182_1786658188247_on97",
+    "id": "imp_182_1786710050181_b55p",
     "name": "De Winter",
     "role": "D",
     "team": "Milan",
@@ -2385,7 +2385,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_183_1786658188247_eyze",
+    "id": "imp_183_1786710050181_qho3",
     "name": "Athekame",
     "role": "D",
     "team": "Milan",
@@ -2398,7 +2398,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_184_1786658188247_hi1f",
+    "id": "imp_184_1786710050181_4cj9",
     "name": "Estupinan",
     "role": "D",
     "team": "Milan",
@@ -2411,7 +2411,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_185_1786658188247_s8jp",
+    "id": "imp_185_1786710050181_zr6e",
     "name": "Kouadio",
     "role": "D",
     "team": "Monza",
@@ -2424,7 +2424,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_186_1786658188247_3eba",
+    "id": "imp_186_1786710050181_r2lr",
     "name": "Carboni A.",
     "role": "D",
     "team": "Monza",
@@ -2437,7 +2437,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_187_1786658188247_haja",
+    "id": "imp_187_1786710050181_uuqn",
     "name": "Troilo",
     "role": "D",
     "team": "Parma",
@@ -2450,7 +2450,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_188_1786658188247_pg5w",
+    "id": "imp_188_1786710050181_nxyf",
     "name": "Britschgi",
     "role": "D",
     "team": "Parma",
@@ -2463,7 +2463,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_189_1786658188247_z3gp",
+    "id": "imp_189_1786710050181_ta9b",
     "name": "Candè",
     "role": "D",
     "team": "Sassuolo",
@@ -2476,7 +2476,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_190_1786658188247_u05k",
+    "id": "imp_190_1786710050181_0wn9",
     "name": "Schingtienne",
     "role": "D",
     "team": "Venezia",
@@ -2489,7 +2489,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_191_1786658188247_e1jz",
+    "id": "imp_191_1786710050181_6s2l",
     "name": "Sverko",
     "role": "D",
     "team": "Venezia",
@@ -2502,7 +2502,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_192_1786658188247_ieg6",
+    "id": "imp_192_1786710050181_djnf",
     "name": "Hainaut",
     "role": "D",
     "team": "Venezia",
@@ -2515,7 +2515,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_193_1786658188247_a0ni",
+    "id": "imp_193_1786710050181_4rls",
     "name": "Helland",
     "role": "D",
     "team": "Bologna",
@@ -2528,7 +2528,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_194_1786658188247_ml0f",
+    "id": "imp_194_1786710050181_zvjt",
     "name": "Alhassane",
     "role": "D",
     "team": "Bologna",
@@ -2541,7 +2541,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_195_1786658188247_ajf8",
+    "id": "imp_195_1786710050181_odh3",
     "name": "Van Der Brempt",
     "role": "D",
     "team": "Como",
@@ -2554,7 +2554,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_196_1786658188247_je63",
+    "id": "imp_196_1786710050181_3fji",
     "name": "Otoa",
     "role": "D",
     "team": "Genoa",
@@ -2567,7 +2567,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_197_1786658188247_ez9n",
+    "id": "imp_197_1786710050181_mucj",
     "name": "Puczka",
     "role": "D",
     "team": "Genoa",
@@ -2580,7 +2580,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_198_1786658188247_w0e7",
+    "id": "imp_198_1786710050181_jwys",
     "name": "Sabelli",
     "role": "D",
     "team": "Genoa",
@@ -2593,7 +2593,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_199_1786658188247_6bi5",
+    "id": "imp_199_1786710050181_cbpn",
     "name": "Lazzari",
     "role": "D",
     "team": "Lazio",
@@ -2606,7 +2606,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_200_1786658188247_jb1s",
+    "id": "imp_200_1786710050181_p0uh",
     "name": "Pellegrini Lu.",
     "role": "D",
     "team": "Lazio",
@@ -2619,7 +2619,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_201_1786658188247_bsvw",
+    "id": "imp_201_1786710050181_9p93",
     "name": "Jean",
     "role": "D",
     "team": "Lecce",
@@ -2632,7 +2632,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_202_1786658188247_277k",
+    "id": "imp_202_1786710050181_3jyx",
     "name": "Diawara S.",
     "role": "D",
     "team": "Milan",
@@ -2645,7 +2645,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_203_1786658188247_4apq",
+    "id": "imp_203_1786710050181_tsxg",
     "name": "Marin R.",
     "role": "D",
     "team": "Napoli",
@@ -2658,7 +2658,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_204_1786658188247_px6k",
+    "id": "imp_204_1786710050181_3uzs",
     "name": "Biraghi",
     "role": "D",
     "team": "Torino",
@@ -2671,7 +2671,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_205_1786658188247_zm1p",
+    "id": "imp_205_1786710050181_oqry",
     "name": "Palma",
     "role": "D",
     "team": "Udinese",
@@ -2684,7 +2684,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_206_1786658188247_9moe",
+    "id": "imp_206_1786710050181_kkt9",
     "name": "Ebosse",
     "role": "D",
     "team": "Udinese",
@@ -2697,7 +2697,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_207_1786658188247_fgd1",
+    "id": "imp_207_1786710050181_lks9",
     "name": "Franjic",
     "role": "D",
     "team": "Venezia",
@@ -2710,7 +2710,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_208_1786658188247_4t3b",
+    "id": "imp_208_1786710050181_5495",
     "name": "Sagrado",
     "role": "D",
     "team": "Venezia",
@@ -2723,7 +2723,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_209_1786658188247_zgxd",
+    "id": "imp_209_1786710050181_x5sd",
+    "name": "Aurelio",
+    "role": "D",
+    "team": "Cagliari",
+    "basePrice": 2,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "4-6 FM",
+    "fvm": 5
+  },
+  {
+    "id": "imp_210_1786710050181_qrew",
     "name": "De Silvestri",
     "role": "D",
     "team": "Bologna",
@@ -2736,20 +2749,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_210_1786658188247_wawo",
-    "name": "Raterink",
-    "role": "D",
-    "team": "Cagliari",
-    "basePrice": 1,
-    "expectedFantaAvg": 6.1,
-    "expectedGoalsAssists": "N/A",
-    "tier": 3,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "1-1 FM",
-    "fvm": 1
-  },
-  {
-    "id": "imp_211_1786658188247_ppje",
+    "id": "imp_211_1786710050181_dhid",
     "name": "Goldaniga",
     "role": "D",
     "team": "Como",
@@ -2762,7 +2762,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_212_1786658188247_iggb",
+    "id": "imp_212_1786710050181_5vld",
     "name": "Cuenca A.",
     "role": "D",
     "team": "Como",
@@ -2775,7 +2775,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_213_1786658188247_3vy6",
+    "id": "imp_213_1786710050181_19rz",
     "name": "Amey",
     "role": "D",
     "team": "Frosinone",
@@ -2788,7 +2788,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_214_1786658188247_0mi1",
+    "id": "imp_214_1786710050181_90qw",
     "name": "Gelli J.",
     "role": "D",
     "team": "Frosinone",
@@ -2801,7 +2801,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_215_1786658188247_xi0y",
+    "id": "imp_215_1786710050181_fhim",
     "name": "Oyono J.",
     "role": "D",
     "team": "Frosinone",
@@ -2814,7 +2814,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_216_1786658188247_ok81",
+    "id": "imp_216_1786710050181_feyo",
     "name": "Corrado",
     "role": "D",
     "team": "Frosinone",
@@ -2827,7 +2827,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_217_1786658188247_vc5d",
+    "id": "imp_217_1786710050181_9qi4",
     "name": "Matturro",
     "role": "D",
     "team": "Genoa",
@@ -2840,7 +2840,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_218_1786658188247_ag92",
+    "id": "imp_218_1786710050181_ygvw",
     "name": "Rugani",
     "role": "D",
     "team": "Juventus",
@@ -2853,7 +2853,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_219_1786658188247_f476",
+    "id": "imp_219_1786710050181_6nvz",
     "name": "Cabal",
     "role": "D",
     "team": "Juventus",
@@ -2866,7 +2866,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_220_1786658188247_tfz6",
+    "id": "imp_220_1786710050181_9gqg",
     "name": "Patric",
     "role": "D",
     "team": "Lazio",
@@ -2879,20 +2879,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_221_1786658188247_wn6j",
-    "name": "Perez M.",
-    "role": "D",
-    "team": "Lecce",
-    "basePrice": 1,
-    "expectedFantaAvg": 6.1,
-    "expectedGoalsAssists": "N/A",
-    "tier": 3,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "1-1 FM",
-    "fvm": 1
-  },
-  {
-    "id": "imp_222_1786658188247_un3m",
+    "id": "imp_221_1786710050181_4t4w",
     "name": "Ndaba",
     "role": "D",
     "team": "Lecce",
@@ -2905,7 +2892,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_223_1786658188247_ibvz",
+    "id": "imp_222_1786710050181_0ee4",
     "name": "Antov",
     "role": "D",
     "team": "Monza",
@@ -2918,7 +2905,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_224_1786658188247_hpwp",
+    "id": "imp_223_1786710050181_ajos",
     "name": "Bakoune",
     "role": "D",
     "team": "Monza",
@@ -2931,7 +2918,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_225_1786658188247_50ud",
+    "id": "imp_224_1786710050181_pfa7",
     "name": "Marianucci",
     "role": "D",
     "team": "Napoli",
@@ -2940,11 +2927,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fairValueBracket": "3-3 FM",
+    "fvm": 3
   },
   {
-    "id": "imp_226_1786658188247_2nih",
+    "id": "imp_225_1786710050181_nbpn",
     "name": "Mazzocchi",
     "role": "D",
     "team": "Napoli",
@@ -2957,7 +2944,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_227_1786658188247_z5ul",
+    "id": "imp_226_1786710050181_yor8",
     "name": "Ndiaye",
     "role": "D",
     "team": "Parma",
@@ -2970,7 +2957,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_228_1786658188247_vazr",
+    "id": "imp_227_1786710050181_jvl7",
     "name": "Carboni F.",
     "role": "D",
     "team": "Parma",
@@ -2983,7 +2970,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_229_1786658188247_f18f",
+    "id": "imp_228_1786710050181_0rg4",
     "name": "Ziolkowski",
     "role": "D",
     "team": "Roma",
@@ -2996,7 +2983,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_230_1786658188247_ku1k",
+    "id": "imp_229_1786710050181_mpx2",
     "name": "Missori",
     "role": "D",
     "team": "Sassuolo",
@@ -3009,7 +2996,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_231_1786658188247_szz3",
+    "id": "imp_230_1786710050181_6dt2",
     "name": "Pieragnolo",
     "role": "D",
     "team": "Sassuolo",
@@ -3022,7 +3009,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_232_1786658188247_552e",
+    "id": "imp_231_1786710050181_hjj4",
     "name": "Mlacic",
     "role": "D",
     "team": "Udinese",
@@ -3035,7 +3022,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_233_1786658188248_5w1q",
+    "id": "imp_232_1786710050181_hg0z",
     "name": "Abankwah",
     "role": "D",
     "team": "Udinese",
@@ -3048,7 +3035,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_234_1786658188248_u7dy",
+    "id": "imp_233_1786710050181_1hm0",
     "name": "Gomes",
     "role": "D",
     "team": "Venezia",
@@ -3061,7 +3048,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_235_1786658188248_hs68",
+    "id": "imp_234_1786710050181_7kix",
     "name": "Paz N.",
     "role": "C",
     "team": "Como",
@@ -3074,7 +3061,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 250
   },
   {
-    "id": "imp_236_1786658188248_po9s",
+    "id": "imp_235_1786710050181_f3yx",
     "name": "McTominay",
     "role": "C",
     "team": "Napoli",
@@ -3087,7 +3074,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 240
   },
   {
-    "id": "imp_237_1786658188248_g9vt",
+    "id": "imp_236_1786710050181_6npl",
     "name": "Calhanoglu",
     "role": "C",
     "team": "Inter",
@@ -3100,7 +3087,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 230
   },
   {
-    "id": "imp_238_1786658188248_v6bo",
+    "id": "imp_237_1786710050181_2556",
     "name": "Orsolini",
     "role": "C",
     "team": "Bologna",
@@ -3113,7 +3100,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 200
   },
   {
-    "id": "imp_239_1786658188248_an9q",
+    "id": "imp_238_1786710050181_04et",
     "name": "Pulisic",
     "role": "C",
     "team": "Milan",
@@ -3126,7 +3113,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 180
   },
   {
-    "id": "imp_240_1786658188248_0ddl",
+    "id": "imp_239_1786710050181_3a0h",
     "name": "Rabiot",
     "role": "C",
     "team": "Milan",
@@ -3139,7 +3126,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 128
   },
   {
-    "id": "imp_241_1786658188248_pk3c",
+    "id": "imp_240_1786710050181_3ckc",
     "name": "Baturina",
     "role": "C",
     "team": "Como",
@@ -3152,7 +3139,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 102
   },
   {
-    "id": "imp_242_1786658188248_ne62",
+    "id": "imp_241_1786710050181_m1os",
     "name": "Da Cunha",
     "role": "C",
     "team": "Como",
@@ -3165,7 +3152,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 90
   },
   {
-    "id": "imp_243_1786658188248_i3uq",
+    "id": "imp_242_1786710050181_otsh",
     "name": "Zaniolo",
     "role": "C",
     "team": "Udinese",
@@ -3174,11 +3161,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "77-103 FM",
-    "fvm": 90
+    "fairValueBracket": "85-115 FM",
+    "fvm": 100
   },
   {
-    "id": "imp_244_1786658188248_02rp",
+    "id": "imp_243_1786710050181_svuu",
     "name": "Atta",
     "role": "C",
     "team": "Fiorentina",
@@ -3191,7 +3178,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 87
   },
   {
-    "id": "imp_245_1786658188248_4l8k",
+    "id": "imp_244_1786710050181_ji5x",
     "name": "Barella",
     "role": "C",
     "team": "Inter",
@@ -3200,11 +3187,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "70-94 FM",
-    "fvm": 82
+    "fairValueBracket": "68-92 FM",
+    "fvm": 80
   },
   {
-    "id": "imp_246_1786658188248_xih6",
+    "id": "imp_245_1786710050181_61zu",
     "name": "McKennie",
     "role": "C",
     "team": "Juventus",
@@ -3217,7 +3204,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 68
   },
   {
-    "id": "imp_247_1786658188248_iu2i",
+    "id": "imp_246_1786710050181_clx0",
     "name": "Zaccagni",
     "role": "C",
     "team": "Lazio",
@@ -3230,7 +3217,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 91
   },
   {
-    "id": "imp_248_1786658188248_l3n3",
+    "id": "imp_247_1786710050181_g1jj",
     "name": "De Bruyne",
     "role": "C",
     "team": "Napoli",
@@ -3239,11 +3226,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "85-115 FM",
-    "fvm": 100
+    "fairValueBracket": "83-113 FM",
+    "fvm": 98
   },
   {
-    "id": "imp_249_1786658188248_gmbv",
+    "id": "imp_248_1786710050181_mc9o",
     "name": "Vlasic",
     "role": "C",
     "team": "Torino",
@@ -3256,7 +3243,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 80
   },
   {
-    "id": "imp_250_1786658188248_341u",
+    "id": "imp_249_1786710050181_rjk4",
     "name": "Gudmundsson A.",
     "role": "C",
     "team": "Fiorentina",
@@ -3269,7 +3256,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 61
   },
   {
-    "id": "imp_251_1786658188248_ltoy",
+    "id": "imp_250_1786710050181_49g6",
     "name": "Taylor K.",
     "role": "C",
     "team": "Lazio",
@@ -3282,7 +3269,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 64
   },
   {
-    "id": "imp_252_1786658188248_l2es",
+    "id": "imp_251_1786710050181_xihj",
     "name": "Ederson D.S.",
     "role": "C",
     "team": "Atalanta",
@@ -3295,7 +3282,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 45
   },
   {
-    "id": "imp_253_1786658188248_91x5",
+    "id": "imp_252_1786710050181_bk26",
     "name": "Samardzic",
     "role": "C",
     "team": "Atalanta",
@@ -3308,7 +3295,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 42
   },
   {
-    "id": "imp_254_1786658188248_qvhe",
+    "id": "imp_253_1786710050181_unfj",
     "name": "Rodriguez Je.",
     "role": "C",
     "team": "Como",
@@ -3321,7 +3308,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_255_1786658188248_qqzh",
+    "id": "imp_254_1786710050181_ubmp",
     "name": "Alajbegovic",
     "role": "C",
     "team": "Juventus",
@@ -3330,11 +3317,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "48-66 FM",
-    "fvm": 57
+    "fairValueBracket": "48-64 FM",
+    "fvm": 56
   },
   {
-    "id": "imp_256_1786658188248_z82y",
+    "id": "imp_255_1786710050181_bfc2",
     "name": "Conceicao",
     "role": "C",
     "team": "Juventus",
@@ -3347,7 +3334,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 60
   },
   {
-    "id": "imp_257_1786658188248_7r2u",
+    "id": "imp_256_1786710050181_iq38",
     "name": "Modric",
     "role": "C",
     "team": "Milan",
@@ -3360,7 +3347,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 50
   },
   {
-    "id": "imp_258_1786658188248_be22",
+    "id": "imp_257_1786710050181_qeyf",
+    "name": "Mastantuono",
+    "role": "C",
+    "team": "Fiorentina",
+    "basePrice": 12,
+    "expectedFantaAvg": 7.2,
+    "expectedGoalsAssists": "N/A",
+    "tier": 1,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "49-67 FM",
+    "fvm": 58
+  },
+  {
+    "id": "imp_258_1786710050181_tf9r",
     "name": "Rowe",
     "role": "C",
     "team": "Bologna",
@@ -3373,7 +3373,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 37
   },
   {
-    "id": "imp_259_1786658188248_o12x",
+    "id": "imp_259_1786710050181_9qrn",
     "name": "Baldanzi",
     "role": "C",
     "team": "Genoa",
@@ -3386,7 +3386,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 30
   },
   {
-    "id": "imp_260_1786658188248_4lsy",
+    "id": "imp_260_1786710050181_wh1g",
     "name": "Zambo Anguissa",
     "role": "C",
     "team": "Napoli",
@@ -3395,11 +3395,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "47-63 FM",
-    "fvm": 55
+    "fairValueBracket": "46-62 FM",
+    "fvm": 54
   },
   {
-    "id": "imp_261_1786658188248_p8rt",
+    "id": "imp_261_1786710050181_t9um",
     "name": "Perrone",
     "role": "C",
     "team": "Como",
@@ -3412,7 +3412,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 38
   },
   {
-    "id": "imp_262_1786658188248_rf4b",
+    "id": "imp_262_1786710050181_0tm9",
     "name": "Zielinski",
     "role": "C",
     "team": "Inter",
@@ -3425,7 +3425,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 41
   },
   {
-    "id": "imp_263_1786658188248_2pow",
+    "id": "imp_263_1786710050181_of7l",
     "name": "Thuram K.",
     "role": "C",
     "team": "Juventus",
@@ -3438,7 +3438,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 41
   },
   {
-    "id": "imp_264_1786658188248_xisq",
+    "id": "imp_264_1786710050181_913q",
     "name": "Saelemaekers",
     "role": "C",
     "team": "Milan",
@@ -3451,7 +3451,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 43
   },
   {
-    "id": "imp_265_1786658188248_r3e7",
+    "id": "imp_265_1786710050181_diyr",
     "name": "Politano",
     "role": "C",
     "team": "Napoli",
@@ -3464,7 +3464,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 47
   },
   {
-    "id": "imp_266_1786658188248_obzb",
+    "id": "imp_266_1786710050181_jmm5",
     "name": "Konè M.",
     "role": "C",
     "team": "Roma",
@@ -3477,7 +3477,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 42
   },
   {
-    "id": "imp_267_1786658188248_snly",
+    "id": "imp_267_1786710050181_nmyv",
     "name": "Thorstvedt",
     "role": "C",
     "team": "Sassuolo",
@@ -3490,7 +3490,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 41
   },
   {
-    "id": "imp_268_1786658188248_x1ff",
+    "id": "imp_268_1786710050181_87tr",
     "name": "Casadei",
     "role": "C",
     "team": "Torino",
@@ -3503,7 +3503,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 37
   },
   {
-    "id": "imp_269_1786658188248_5ix5",
+    "id": "imp_269_1786710050181_5ab4",
     "name": "Ekkelenkamp",
     "role": "C",
     "team": "Udinese",
@@ -3516,7 +3516,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 41
   },
   {
-    "id": "imp_270_1786658188248_vkf6",
+    "id": "imp_270_1786710050181_as9y",
+    "name": "Pellegrini Lo.",
+    "role": "C",
+    "team": "Roma",
+    "basePrice": 10,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "24-32 FM",
+    "fvm": 28
+  },
+  {
+    "id": "imp_271_1786710050181_wfwu",
     "name": "Pasalic",
     "role": "C",
     "team": "Atalanta",
@@ -3529,7 +3542,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_271_1786658188248_2zks",
+    "id": "imp_272_1786710050181_3i6r",
     "name": "Bernardeschi",
     "role": "C",
     "team": "Bologna",
@@ -3542,7 +3555,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 21
   },
   {
-    "id": "imp_272_1786658188248_reub",
+    "id": "imp_273_1786710050181_up0a",
     "name": "Mandragora",
     "role": "C",
     "team": "Fiorentina",
@@ -3555,7 +3568,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 28
   },
   {
-    "id": "imp_273_1786658188248_is5n",
+    "id": "imp_274_1786710050181_h14t",
     "name": "Cancellieri",
     "role": "C",
     "team": "Lazio",
@@ -3568,7 +3581,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 28
   },
   {
-    "id": "imp_274_1786658188248_wdug",
+    "id": "imp_275_1786710050181_bu6w",
     "name": "Isaksen",
     "role": "C",
     "team": "Lazio",
@@ -3581,7 +3594,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_275_1786658188248_jb0a",
+    "id": "imp_276_1786710050181_g9q3",
     "name": "Konè I.",
     "role": "C",
     "team": "Sassuolo",
@@ -3594,7 +3607,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_276_1786658188248_s4a9",
+    "id": "imp_277_1786710050181_mgas",
     "name": "Odgaard",
     "role": "C",
     "team": "Bologna",
@@ -3607,7 +3620,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 22
   },
   {
-    "id": "imp_277_1786658188248_5qm7",
+    "id": "imp_278_1786710050181_8nbc",
     "name": "Cambiaghi",
     "role": "C",
     "team": "Bologna",
@@ -3620,7 +3633,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_278_1786658188248_u3gf",
+    "id": "imp_279_1786710050181_sn4o",
     "name": "Fagioli",
     "role": "C",
     "team": "Fiorentina",
@@ -3633,7 +3646,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_279_1786658188248_n72u",
+    "id": "imp_280_1786710050181_5z2l",
     "name": "Ndour",
     "role": "C",
     "team": "Fiorentina",
@@ -3646,7 +3659,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_280_1786658188248_iwmc",
+    "id": "imp_281_1786710050181_vb26",
     "name": "Diouf",
     "role": "C",
     "team": "Inter",
@@ -3659,7 +3672,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 37
   },
   {
-    "id": "imp_281_1786658188248_c42d",
+    "id": "imp_282_1786710050181_09yt",
     "name": "Sucic P.",
     "role": "C",
     "team": "Inter",
@@ -3672,7 +3685,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 26
   },
   {
-    "id": "imp_282_1786658188248_d5lw",
+    "id": "imp_283_1786710050181_70sh",
     "name": "Locatelli",
     "role": "C",
     "team": "Juventus",
@@ -3685,7 +3698,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_283_1786658188248_2iiz",
+    "id": "imp_284_1786710050181_w8mn",
     "name": "Colpani",
     "role": "C",
     "team": "Monza",
@@ -3698,7 +3711,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_284_1786658188248_71uu",
+    "id": "imp_285_1786710050181_g2ek",
     "name": "Vergara",
     "role": "C",
     "team": "Napoli",
@@ -3711,7 +3724,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 34
   },
   {
-    "id": "imp_285_1786658188248_tegg",
+    "id": "imp_286_1786710050181_4zip",
     "name": "Cristante",
     "role": "C",
     "team": "Roma",
@@ -3724,7 +3737,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 29
   },
   {
-    "id": "imp_286_1786658188248_tagn",
+    "id": "imp_287_1786710050181_yk45",
+    "name": "Schmid",
+    "role": "C",
+    "team": "Frosinone",
+    "basePrice": 8,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "26-35 FM",
+    "fvm": 30
+  },
+  {
+    "id": "imp_288_1786710050181_w8hc",
     "name": "Gaetano",
     "role": "C",
     "team": "Atalanta",
@@ -3737,7 +3763,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_287_1786658188248_x4st",
+    "id": "imp_289_1786710050181_ocqe",
     "name": "Ferguson",
     "role": "C",
     "team": "Bologna",
@@ -3750,7 +3776,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_288_1786658188248_iaai",
+    "id": "imp_290_1786710050181_8qjx",
     "name": "Fazzini",
     "role": "C",
     "team": "Cagliari",
@@ -3763,7 +3789,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_289_1786658188248_tlyy",
+    "id": "imp_291_1786710050181_p3ae",
     "name": "Calò",
     "role": "C",
     "team": "Frosinone",
@@ -3776,7 +3802,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_290_1786658188248_kw84",
+    "id": "imp_292_1786710050181_aty4",
     "name": "Frendrup",
     "role": "C",
     "team": "Genoa",
@@ -3789,7 +3815,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_291_1786658188248_wn6d",
+    "id": "imp_293_1786710050181_greb",
     "name": "Frattesi",
     "role": "C",
     "team": "Inter",
@@ -3798,11 +3824,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
-    "id": "imp_292_1786658188248_01ks",
+    "id": "imp_294_1786710050181_bi86",
     "name": "Pessina",
     "role": "C",
     "team": "Monza",
@@ -3811,11 +3837,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
-    "id": "imp_293_1786658188248_01pu",
+    "id": "imp_295_1786710050181_r2l1",
     "name": "Lobotka",
     "role": "C",
     "team": "Napoli",
@@ -3828,7 +3854,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_294_1786658188248_smop",
+    "id": "imp_296_1786710050181_h4ev",
     "name": "Bernabè",
     "role": "C",
     "team": "Parma",
@@ -3841,7 +3867,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 36
   },
   {
-    "id": "imp_295_1786658188248_mlqg",
+    "id": "imp_297_1786710050181_8jxa",
     "name": "Volpato",
     "role": "C",
     "team": "Sassuolo",
@@ -3854,7 +3880,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_296_1786658188248_jw8b",
+    "id": "imp_298_1786710050181_ywhq",
     "name": "Oristanio",
     "role": "C",
     "team": "Torino",
@@ -3867,7 +3893,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 27
   },
   {
-    "id": "imp_297_1786658188248_oari",
+    "id": "imp_299_1786710050181_kr7h",
     "name": "Unai Gomez",
     "role": "C",
     "team": "Udinese",
@@ -3880,7 +3906,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_298_1786658188248_r87i",
+    "id": "imp_300_1786710050181_wpdd",
     "name": "Sow",
     "role": "C",
     "team": "Genoa",
@@ -3893,7 +3919,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_299_1786658188248_l51x",
+    "id": "imp_301_1786710050181_343l",
     "name": "Zalewski",
     "role": "C",
     "team": "Atalanta",
@@ -3906,7 +3932,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 21
   },
   {
-    "id": "imp_300_1786658188248_dcgl",
+    "id": "imp_302_1786710050181_k7pz",
     "name": "Pobega",
     "role": "C",
     "team": "Bologna",
@@ -3919,7 +3945,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_301_1786658188248_y7ie",
+    "id": "imp_303_1786710050181_rtz3",
     "name": "Adopo",
     "role": "C",
     "team": "Cagliari",
@@ -3932,7 +3958,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_302_1786658188248_seva",
+    "id": "imp_304_1786710050181_m0ez",
     "name": "Winks",
     "role": "C",
     "team": "Cagliari",
@@ -3945,7 +3971,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_303_1786658188248_ref5",
+    "id": "imp_305_1786710050181_hyj0",
     "name": "Caqueret",
     "role": "C",
     "team": "Como",
@@ -3958,7 +3984,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_304_1786658188248_iz3a",
+    "id": "imp_306_1786710050181_jh3q",
     "name": "Liberali",
     "role": "C",
     "team": "Como",
@@ -3971,7 +3997,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 22
   },
   {
-    "id": "imp_305_1786658188248_shsg",
+    "id": "imp_307_1786710050181_ytbd",
     "name": "Oulai",
     "role": "C",
     "team": "Fiorentina",
@@ -3984,7 +4010,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_306_1786658188248_3w8z",
+    "id": "imp_308_1786710050181_bamx",
     "name": "Ellertsson",
     "role": "C",
     "team": "Genoa",
@@ -3997,7 +4023,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_307_1786658188248_vhba",
+    "id": "imp_309_1786710050181_kcox",
     "name": "Zhegrova",
     "role": "C",
     "team": "Juventus",
@@ -4010,7 +4036,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_308_1786658188248_t9ze",
+    "id": "imp_310_1786710050181_4m6s",
     "name": "Rovella",
     "role": "C",
     "team": "Lazio",
@@ -4023,7 +4049,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_309_1786658188248_mpmc",
+    "id": "imp_311_1786710050181_6v9r",
     "name": "Coulibaly L.",
     "role": "C",
     "team": "Lecce",
@@ -4036,7 +4062,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_310_1786658188248_y73u",
+    "id": "imp_312_1786710050181_wgte",
     "name": "Pierotti",
     "role": "C",
     "team": "Lecce",
@@ -4049,7 +4075,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_311_1786658188248_hei5",
+    "id": "imp_313_1786710050181_h5d5",
     "name": "Chukwueze",
     "role": "C",
     "team": "Milan",
@@ -4062,7 +4088,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_312_1786658188248_2rfg",
+    "id": "imp_314_1786710050181_e7pm",
     "name": "Akinsanmiro",
     "role": "C",
     "team": "Monza",
@@ -4075,7 +4101,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_313_1786658188248_hqn7",
+    "id": "imp_315_1786710050181_gpkf",
     "name": "Nicolussi Caviglia",
     "role": "C",
     "team": "Parma",
@@ -4088,7 +4114,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_314_1786658188248_3d7y",
+    "id": "imp_316_1786710050181_339v",
     "name": "Karlstrom",
     "role": "C",
     "team": "Udinese",
@@ -4101,7 +4127,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_315_1786658188248_z8pu",
+    "id": "imp_317_1786710050182_8d3c",
     "name": "Basic",
     "role": "C",
     "team": "Venezia",
@@ -4114,7 +4140,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_316_1786658188248_j0oe",
+    "id": "imp_318_1786710050182_hkho",
     "name": "Amondarain",
     "role": "C",
     "team": "Bologna",
@@ -4127,7 +4153,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_317_1786658188248_b6mi",
+    "id": "imp_319_1786710050182_6x7y",
     "name": "Romano",
     "role": "C",
     "team": "Cagliari",
@@ -4140,7 +4166,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_318_1786658188248_uc26",
+    "id": "imp_320_1786710050182_r62h",
     "name": "Felici",
     "role": "C",
     "team": "Cagliari",
@@ -4153,7 +4179,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_319_1786658188248_ogmd",
+    "id": "imp_321_1786710050182_4x96",
     "name": "Milla",
     "role": "C",
     "team": "Como",
@@ -4166,20 +4192,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_320_1786658188248_5sj0",
+    "id": "imp_322_1786710050182_hac3",
     "name": "Addai",
     "role": "C",
     "team": "Como",
     "basePrice": 5,
-    "expectedFantaAvg": 6.6,
+    "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
-    "tier": 2,
+    "tier": 3,
     "notes": "Caricato da listone importato",
     "fairValueBracket": "9-12 FM",
     "fvm": 10
   },
   {
-    "id": "imp_321_1786658188248_8ovo",
+    "id": "imp_323_1786710050182_5pv3",
     "name": "Zerbin",
     "role": "C",
     "team": "Frosinone",
@@ -4192,7 +4218,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_322_1786658188248_4af7",
+    "id": "imp_324_1786710050182_k7io",
     "name": "Meichtry",
     "role": "C",
     "team": "Genoa",
@@ -4205,7 +4231,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_323_1786658188248_vu0r",
+    "id": "imp_325_1786710050182_n2r3",
     "name": "Traorè Hj.",
     "role": "C",
     "team": "Genoa",
@@ -4218,7 +4244,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_324_1786658188248_dk8r",
+    "id": "imp_326_1786710050182_jazv",
     "name": "Mkhitaryan",
     "role": "C",
     "team": "Inter",
@@ -4231,7 +4257,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
-    "id": "imp_325_1786658188248_fp5d",
+    "id": "imp_327_1786710050182_w696",
     "name": "Koopmeiners",
     "role": "C",
     "team": "Juventus",
@@ -4244,7 +4270,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_326_1786658188248_pf41",
+    "id": "imp_328_1786710050182_lhjs",
     "name": "Dele-Bashiru",
     "role": "C",
     "team": "Lazio",
@@ -4257,7 +4283,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_327_1786658188248_is3u",
+    "id": "imp_329_1786710050182_ccpa",
     "name": "Berisha M.",
     "role": "C",
     "team": "Lecce",
@@ -4270,7 +4296,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_328_1786658188248_3sv3",
+    "id": "imp_330_1786710050182_370f",
     "name": "Gandelman",
     "role": "C",
     "team": "Lecce",
@@ -4283,7 +4309,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_329_1786658188248_61wo",
+    "id": "imp_331_1786710050182_kbp4",
     "name": "Fofana Y.",
     "role": "C",
     "team": "Milan",
@@ -4296,7 +4322,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 23
   },
   {
-    "id": "imp_330_1786658188248_n4n5",
+    "id": "imp_332_1786710050182_tpe4",
     "name": "Keita M.",
     "role": "C",
     "team": "Parma",
@@ -4309,20 +4335,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_331_1786658188248_99w9",
-    "name": "Ondrejka",
-    "role": "C",
-    "team": "Parma",
-    "basePrice": 5,
-    "expectedFantaAvg": 6.1,
-    "expectedGoalsAssists": "N/A",
-    "tier": 3,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "15-21 FM",
-    "fvm": 18
-  },
-  {
-    "id": "imp_332_1786658188248_ebx0",
+    "id": "imp_333_1786710050182_o53d",
     "name": "Pisilli",
     "role": "C",
     "team": "Roma",
@@ -4335,7 +4348,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 17
   },
   {
-    "id": "imp_333_1786658188248_lred",
+    "id": "imp_334_1786710050182_a2lw",
     "name": "Matic",
     "role": "C",
     "team": "Sassuolo",
@@ -4348,21 +4361,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_334_1786658188248_816f",
+    "id": "imp_335_1786710050182_jdu7",
     "name": "Adzic",
-    "role": "C",
-    "team": "Sassuolo",
-    "basePrice": 5,
-    "expectedFantaAvg": 6.1,
-    "expectedGoalsAssists": "N/A",
-    "tier": 3,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "12-16 FM",
-    "fvm": 14
-  },
-  {
-    "id": "imp_335_1786658188248_i840",
-    "name": "Bakola",
     "role": "C",
     "team": "Sassuolo",
     "basePrice": 5,
@@ -4374,7 +4374,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_336_1786658188248_12dx",
+    "id": "imp_336_1786710050182_fdag",
+    "name": "Bakola",
+    "role": "C",
+    "team": "Sassuolo",
+    "basePrice": 5,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "12-16 FM",
+    "fvm": 14
+  },
+  {
+    "id": "imp_337_1786710050182_o52h",
     "name": "Cacciamani",
     "role": "C",
     "team": "Torino",
@@ -4387,7 +4400,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_337_1786658188248_p565",
+    "id": "imp_338_1786710050182_rt7s",
     "name": "Gineitis",
     "role": "C",
     "team": "Torino",
@@ -4400,7 +4413,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_338_1786658188248_9l4b",
+    "id": "imp_339_1786710050182_6uqf",
     "name": "Piotrowski",
     "role": "C",
     "team": "Udinese",
@@ -4413,7 +4426,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_339_1786658188248_fuhw",
+    "id": "imp_340_1786710050182_arqf",
     "name": "Busio",
     "role": "C",
     "team": "Venezia",
@@ -4426,7 +4439,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_340_1786658188248_1qds",
+    "id": "imp_341_1786710050182_wvgm",
     "name": "Sohm",
     "role": "C",
     "team": "Venezia",
@@ -4439,7 +4452,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_341_1786658188248_sk9r",
+    "id": "imp_342_1786710050182_eviu",
     "name": "Perez K.",
     "role": "C",
     "team": "Venezia",
@@ -4452,7 +4465,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_342_1786658188248_i6i1",
+    "id": "imp_343_1786710050182_36qh",
+    "name": "Grillitsch",
+    "role": "C",
+    "team": "Frosinone",
+    "basePrice": 5,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "12-16 FM",
+    "fvm": 14
+  },
+  {
+    "id": "imp_344_1786710050182_9x0v",
     "name": "De Roon",
     "role": "C",
     "team": "Atalanta",
@@ -4465,7 +4491,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_343_1786658188248_vim2",
+    "id": "imp_345_1786710050182_55vq",
     "name": "Moro N.",
     "role": "C",
     "team": "Bologna",
@@ -4478,7 +4504,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_344_1786658188248_a2gz",
+    "id": "imp_346_1786710050182_kv87",
     "name": "Prati",
     "role": "C",
     "team": "Cagliari",
@@ -4491,7 +4517,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_345_1786658188248_57ym",
+    "id": "imp_347_1786710050182_jz5j",
     "name": "Fabbian",
     "role": "C",
     "team": "Fiorentina",
@@ -4504,7 +4530,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_346_1786658188248_77dd",
+    "id": "imp_348_1786710050182_rora",
     "name": "Cichella",
     "role": "C",
     "team": "Frosinone",
@@ -4517,7 +4543,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_347_1786658188248_yuwd",
+    "id": "imp_349_1786710050182_cvn1",
     "name": "Koutsoupias",
     "role": "C",
     "team": "Frosinone",
@@ -4530,7 +4556,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_348_1786658188248_ode9",
+    "id": "imp_350_1786710050182_59la",
     "name": "Amorim",
     "role": "C",
     "team": "Genoa",
@@ -4543,7 +4569,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_349_1786658188248_ez5q",
+    "id": "imp_351_1786710050182_zzua",
     "name": "Luis Henrique",
     "role": "C",
     "team": "Inter",
@@ -4556,7 +4582,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_350_1786658188248_t2h1",
+    "id": "imp_352_1786710050182_f6os",
     "name": "Douglas Luiz",
     "role": "C",
     "team": "Juventus",
@@ -4569,7 +4595,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_351_1786658188248_3erp",
+    "id": "imp_353_1786710050182_oh72",
     "name": "Cataldi",
     "role": "C",
     "team": "Lazio",
@@ -4582,7 +4608,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_352_1786658188248_22od",
+    "id": "imp_354_1786710050182_l199",
     "name": "Ngom",
     "role": "C",
     "team": "Lecce",
@@ -4595,7 +4621,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_353_1786658188248_1sjc",
+    "id": "imp_355_1786710050182_r3qo",
     "name": "Ricci S.",
     "role": "C",
     "team": "Milan",
@@ -4608,7 +4634,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_354_1786658188248_fcan",
+    "id": "imp_356_1786710050182_xmcp",
     "name": "Jashari",
     "role": "C",
     "team": "Milan",
@@ -4621,7 +4647,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_355_1786658188248_kpgj",
+    "id": "imp_357_1786710050182_7jtm",
     "name": "Loftus-Cheek",
     "role": "C",
     "team": "Milan",
@@ -4634,7 +4660,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_356_1786658188248_laqo",
+    "id": "imp_358_1786710050182_bomt",
     "name": "Folorunsho",
     "role": "C",
     "team": "Napoli",
@@ -4647,7 +4673,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_357_1786658188248_3wcb",
+    "id": "imp_359_1786710050182_jr5s",
     "name": "Almqvist",
     "role": "C",
     "team": "Parma",
@@ -4660,7 +4686,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_358_1786658188248_l4i1",
+    "id": "imp_360_1786710050182_8wub",
     "name": "El Aynaoui",
     "role": "C",
     "team": "Roma",
@@ -4673,7 +4699,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_359_1786658188248_prg7",
+    "id": "imp_361_1786710050182_ee0l",
     "name": "Fitz-Jim",
     "role": "C",
     "team": "Torino",
@@ -4686,7 +4712,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_360_1786658188248_ynx5",
+    "id": "imp_362_1786710050182_c34u",
     "name": "Ilkhan",
     "role": "C",
     "team": "Torino",
@@ -4699,7 +4725,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_361_1786658188248_ahiz",
+    "id": "imp_363_1786710050182_28l5",
     "name": "Njie",
     "role": "C",
     "team": "Torino",
@@ -4712,7 +4738,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_362_1786658188248_a4ax",
+    "id": "imp_364_1786710050182_rmji",
     "name": "Sulemana I.",
     "role": "C",
     "team": "Atalanta",
@@ -4725,20 +4751,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_363_1786658188248_fij6",
+    "id": "imp_365_1786710050182_1lco",
     "name": "Dominguez B.",
     "role": "C",
-    "team": "Bologna",
+    "team": "Sassuolo",
     "basePrice": 3,
     "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fairValueBracket": "10-14 FM",
+    "fvm": 12
   },
   {
-    "id": "imp_364_1786658188248_eyt9",
+    "id": "imp_366_1786710050182_qkxr",
     "name": "Deiola",
     "role": "C",
     "team": "Cagliari",
@@ -4751,7 +4777,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_365_1786658188248_wnnu",
+    "id": "imp_367_1786710050182_mlmb",
     "name": "Brescianini",
     "role": "C",
     "team": "Fiorentina",
@@ -4764,7 +4790,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_366_1786658188248_h5i6",
+    "id": "imp_368_1786710050182_071d",
     "name": "Gelli F.",
     "role": "C",
     "team": "Frosinone",
@@ -4777,7 +4803,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_367_1786658188248_0zia",
+    "id": "imp_369_1786710050182_cauj",
     "name": "Fini",
     "role": "C",
     "team": "Frosinone",
@@ -4790,7 +4816,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_368_1786658188248_h97z",
+    "id": "imp_370_1786710050182_dq8d",
     "name": "Messias",
     "role": "C",
     "team": "Genoa",
@@ -4803,7 +4829,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 8
   },
   {
-    "id": "imp_369_1786658188248_l4be",
+    "id": "imp_371_1786710050182_ml1t",
     "name": "Stankovic A.",
     "role": "C",
     "team": "Inter",
@@ -4816,7 +4842,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_370_1786658188248_mwlo",
+    "id": "imp_372_1786710050182_oojw",
     "name": "Miretti",
     "role": "C",
     "team": "Juventus",
@@ -4829,7 +4855,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_371_1786658188248_r44u",
+    "id": "imp_373_1786710050182_tvl6",
     "name": "Colombo L.",
     "role": "C",
     "team": "Monza",
@@ -4842,7 +4868,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_372_1786658188248_h8wg",
+    "id": "imp_374_1786710050182_0pd6",
     "name": "Gilmour",
     "role": "C",
     "team": "Napoli",
@@ -4855,7 +4881,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_373_1786658188248_vahl",
+    "id": "imp_375_1786710050182_hadc",
     "name": "Sorensen O.",
     "role": "C",
     "team": "Parma",
@@ -4868,7 +4894,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_374_1786658188248_3oq0",
+    "id": "imp_376_1786710050182_oob6",
     "name": "Diallo O.",
     "role": "C",
     "team": "Parma",
@@ -4881,7 +4907,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_375_1786658188248_yy57",
+    "id": "imp_377_1786710050182_px2f",
     "name": "Aboukhlal",
     "role": "C",
     "team": "Torino",
@@ -4894,7 +4920,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_376_1786658188248_myl5",
+    "id": "imp_378_1786710050182_xt0z",
     "name": "Miller L.",
     "role": "C",
     "team": "Udinese",
@@ -4907,7 +4933,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
-    "id": "imp_377_1786658188248_jl6r",
+    "id": "imp_379_1786710050182_p71h",
     "name": "Helgason",
     "role": "C",
     "team": "Venezia",
@@ -4920,7 +4946,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_378_1786658188248_zpbq",
+    "id": "imp_380_1786710050182_c0wu",
     "name": "El Azzouzi O.",
     "role": "C",
     "team": "Bologna",
@@ -4933,7 +4959,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_379_1786658188248_a936",
+    "id": "imp_381_1786710050182_zsse",
     "name": "Fadera",
     "role": "C",
     "team": "Como",
@@ -4946,7 +4972,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_380_1786658188248_r1n5",
+    "id": "imp_382_1786710050182_5tw2",
     "name": "Hasa",
     "role": "C",
     "team": "Frosinone",
@@ -4959,10 +4985,10 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_381_1786658188248_y0ut",
+    "id": "imp_383_1786710050182_ytp6",
     "name": "Masini",
     "role": "C",
-    "team": "Genoa",
+    "team": "Frosinone",
     "basePrice": 2,
     "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
@@ -4972,7 +4998,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_382_1786658188248_a6nu",
+    "id": "imp_384_1786710050182_bnpg",
     "name": "Venturino",
     "role": "C",
     "team": "Genoa",
@@ -4985,7 +5011,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_383_1786658188248_so5g",
+    "id": "imp_385_1786710050182_73l1",
     "name": "Maleh",
     "role": "C",
     "team": "Lecce",
@@ -4998,7 +5024,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_384_1786658188248_0y8a",
+    "id": "imp_386_1786710050182_3t9f",
     "name": "Musah",
     "role": "C",
     "team": "Milan",
@@ -5011,7 +5037,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_385_1786658188248_4dgg",
+    "id": "imp_387_1786710050182_wviv",
     "name": "Ciurria",
     "role": "C",
     "team": "Monza",
@@ -5024,7 +5050,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_386_1786658188248_d4lm",
+    "id": "imp_388_1786710050182_225s",
     "name": "Ordonez C.",
     "role": "C",
     "team": "Parma",
@@ -5037,7 +5063,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_387_1786658188248_hzj3",
+    "id": "imp_389_1786710050182_t5i8",
     "name": "Boloca",
     "role": "C",
     "team": "Sassuolo",
@@ -5050,7 +5076,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_388_1786658188248_9rvt",
+    "id": "imp_390_1786710050182_6eir",
     "name": "Lipani",
     "role": "C",
     "team": "Sassuolo",
@@ -5063,7 +5089,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_389_1786658188248_n6lg",
+    "id": "imp_391_1786710050182_cx06",
     "name": "Chakvetadze",
     "role": "C",
     "team": "Udinese",
@@ -5076,7 +5102,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 6
   },
   {
-    "id": "imp_390_1786658188248_hwst",
+    "id": "imp_392_1786710050182_ftn3",
     "name": "Duncan",
     "role": "C",
     "team": "Venezia",
@@ -5089,7 +5115,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_391_1786658188248_qepl",
+    "id": "imp_393_1786710050182_idep",
     "name": "Liteta",
     "role": "C",
     "team": "Cagliari",
@@ -5102,7 +5128,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_392_1786658188248_kh2h",
+    "id": "imp_394_1786710050182_pb7i",
     "name": "Lahdo",
     "role": "C",
     "team": "Como",
@@ -5115,7 +5141,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_393_1786658188248_21e1",
+    "id": "imp_395_1786710050182_r7o4",
     "name": "El Azzouzi A.",
     "role": "C",
     "team": "Frosinone",
@@ -5128,7 +5154,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_394_1786658188248_bbz9",
+    "id": "imp_396_1786710050182_h349",
     "name": "Kone B.",
     "role": "C",
     "team": "Frosinone",
@@ -5141,7 +5167,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_395_1786658188248_n9tj",
+    "id": "imp_397_1786710050182_06cc",
     "name": "Belahyane",
     "role": "C",
     "team": "Lazio",
@@ -5154,7 +5180,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_396_1786658188248_5aax",
+    "id": "imp_398_1786710050182_w772",
     "name": "Przyborek",
     "role": "C",
     "team": "Lazio",
@@ -5167,7 +5193,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_397_1786658188248_t538",
+    "id": "imp_399_1786710050182_0q3m",
     "name": "Gorter",
     "role": "C",
     "team": "Lecce",
@@ -5180,7 +5206,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_398_1786658188248_uvem",
+    "id": "imp_400_1786710050182_5l4m",
     "name": "Kaba",
     "role": "C",
     "team": "Lecce",
@@ -5193,7 +5219,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_399_1786658188248_t4em",
+    "id": "imp_401_1786710050182_or2r",
     "name": "Fofana Sa.",
     "role": "C",
     "team": "Lecce",
@@ -5206,7 +5232,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_400_1786658188248_96yn",
+    "id": "imp_402_1786710050182_zmnt",
     "name": "Cremaschi",
     "role": "C",
     "team": "Parma",
@@ -5219,7 +5245,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_401_1786658188248_b67l",
+    "id": "imp_403_1786710050182_70rz",
     "name": "Iannoni",
     "role": "C",
     "team": "Sassuolo",
@@ -5232,7 +5258,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_402_1786658188248_4e5h",
+    "id": "imp_404_1786710050182_3dg7",
     "name": "Ilic",
     "role": "C",
     "team": "Torino",
@@ -5245,7 +5271,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_403_1786658188248_euk7",
+    "id": "imp_405_1786710050182_wkez",
     "name": "Anjorin",
     "role": "C",
     "team": "Torino",
@@ -5258,7 +5284,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_404_1786658188248_os4y",
+    "id": "imp_406_1786710050182_wjis",
     "name": "Camara A.",
     "role": "C",
     "team": "Udinese",
@@ -5271,7 +5297,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_405_1786658188248_54jn",
+    "id": "imp_407_1786710050182_q85e",
     "name": "Zarraga",
     "role": "C",
     "team": "Udinese",
@@ -5284,7 +5310,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_406_1786658188248_43l0",
+    "id": "imp_408_1786710050182_1xcp",
     "name": "Dagasso",
     "role": "C",
     "team": "Venezia",
@@ -5297,7 +5323,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_407_1786658188248_zekb",
+    "id": "imp_409_1786710050182_xnaj",
     "name": "Martinez L.",
     "role": "A",
     "team": "Inter",
@@ -5310,7 +5336,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 370
   },
   {
-    "id": "imp_408_1786658188248_ver6",
+    "id": "imp_410_1786710050182_4khm",
     "name": "Malen",
     "role": "A",
     "team": "Roma",
@@ -5323,7 +5349,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 365
   },
   {
-    "id": "imp_409_1786658188248_m8tz",
+    "id": "imp_411_1786710050182_zs1q",
     "name": "Thuram",
     "role": "A",
     "team": "Inter",
@@ -5336,7 +5362,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 280
   },
   {
-    "id": "imp_410_1786658188248_qe2n",
+    "id": "imp_412_1786710050182_lmhg",
     "name": "Hojlund",
     "role": "A",
     "team": "Napoli",
@@ -5349,7 +5375,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 271
   },
   {
-    "id": "imp_411_1786658188248_tzg4",
+    "id": "imp_413_1786710050182_pyit",
     "name": "Ramos G.",
     "role": "A",
     "team": "Milan",
@@ -5358,11 +5384,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "204-276 FM",
-    "fvm": 240
+    "fairValueBracket": "197-267 FM",
+    "fvm": 232
   },
   {
-    "id": "imp_412_1786658188248_9eh1",
+    "id": "imp_414_1786710050182_adwc",
     "name": "Kolo Muani",
     "role": "A",
     "team": "Juventus",
@@ -5375,7 +5401,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 225
   },
   {
-    "id": "imp_413_1786658188248_nkqo",
+    "id": "imp_415_1786710050182_b721",
     "name": "Kean",
     "role": "A",
     "team": "Fiorentina",
@@ -5384,11 +5410,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "180-244 FM",
-    "fvm": 212
+    "fairValueBracket": "170-230 FM",
+    "fvm": 200
   },
   {
-    "id": "imp_414_1786658188248_wfg3",
+    "id": "imp_416_1786710050182_lp8s",
     "name": "Yildiz",
     "role": "A",
     "team": "Juventus",
@@ -5397,11 +5423,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "170-230 FM",
-    "fvm": 200
+    "fairValueBracket": "163-221 FM",
+    "fvm": 192
   },
   {
-    "id": "imp_415_1786658188248_paq4",
+    "id": "imp_417_1786710050182_wcba",
     "name": "Douvikas",
     "role": "A",
     "team": "Como",
@@ -5414,7 +5440,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 157
   },
   {
-    "id": "imp_416_1786658188248_ebvb",
+    "id": "imp_418_1786710050182_ucsd",
     "name": "Scamacca",
     "role": "A",
     "team": "Atalanta",
@@ -5423,11 +5449,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "109-147 FM",
-    "fvm": 128
+    "fairValueBracket": "111-151 FM",
+    "fvm": 131
   },
   {
-    "id": "imp_417_1786658188248_6dp0",
+    "id": "imp_419_1786710050182_1tzw",
     "name": "Davis K.",
     "role": "A",
     "team": "Udinese",
@@ -5436,11 +5462,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "103-139 FM",
-    "fvm": 121
+    "fairValueBracket": "104-140 FM",
+    "fvm": 122
   },
   {
-    "id": "imp_418_1786658188248_9x46",
+    "id": "imp_420_1786710050182_c1m0",
     "name": "Krstovic",
     "role": "A",
     "team": "Atalanta",
@@ -5449,11 +5475,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "85-115 FM",
-    "fvm": 100
+    "fairValueBracket": "81-109 FM",
+    "fvm": 95
   },
   {
-    "id": "imp_419_1786658188248_xixv",
+    "id": "imp_421_1786710050182_9319",
     "name": "Leao",
     "role": "A",
     "team": "Milan",
@@ -5466,7 +5492,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 120
   },
   {
-    "id": "imp_420_1786658188248_okvm",
+    "id": "imp_422_1786710050182_ark5",
     "name": "Berardi",
     "role": "A",
     "team": "Sassuolo",
@@ -5479,7 +5505,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 115
   },
   {
-    "id": "imp_421_1786658188248_eyu3",
+    "id": "imp_423_1786710050182_q0wa",
     "name": "De Ketelaere",
     "role": "A",
     "team": "Atalanta",
@@ -5492,7 +5518,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 106
   },
   {
-    "id": "imp_422_1786658188248_dtvv",
+    "id": "imp_424_1786710050182_9isy",
     "name": "Dovbyk",
     "role": "A",
     "team": "Bologna",
@@ -5501,11 +5527,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "71-97 FM",
-    "fvm": 84
+    "fairValueBracket": "62-84 FM",
+    "fvm": 73
   },
   {
-    "id": "imp_423_1786658188248_ljsn",
+    "id": "imp_425_1786710050182_oco3",
     "name": "Esposito F.P.",
     "role": "A",
     "team": "Inter",
@@ -5518,20 +5544,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 93
   },
   {
-    "id": "imp_424_1786658188248_4i0s",
+    "id": "imp_426_1786710050182_pelb",
     "name": "Pellegrino M.",
     "role": "A",
-    "team": "Parma",
+    "team": "Fiorentina",
     "basePrice": 15,
     "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "69-93 FM",
-    "fvm": 81
+    "fairValueBracket": "51-69 FM",
+    "fvm": 60
   },
   {
-    "id": "imp_425_1786658188248_bpk9",
+    "id": "imp_427_1786710050182_cw3o",
     "name": "Laurientè",
     "role": "A",
     "team": "Sassuolo",
@@ -5544,7 +5570,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 88
   },
   {
-    "id": "imp_426_1786658188248_vgro",
+    "id": "imp_428_1786710050182_e1j3",
     "name": "Simeone",
     "role": "A",
     "team": "Torino",
@@ -5557,7 +5583,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 82
   },
   {
-    "id": "imp_427_1786658188248_a75i",
+    "id": "imp_429_1786710050182_vq05",
     "name": "Santos A.",
     "role": "A",
     "team": "Napoli",
@@ -5566,11 +5592,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "51-69 FM",
-    "fvm": 60
+    "fairValueBracket": "48-66 FM",
+    "fvm": 57
   },
   {
-    "id": "imp_428_1786658188248_dbdt",
+    "id": "imp_430_1786710050182_ww5s",
     "name": "Dybala",
     "role": "A",
     "team": "Roma",
@@ -5583,7 +5609,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 67
   },
   {
-    "id": "imp_429_1786658188248_lhrn",
+    "id": "imp_431_1786710050182_gy2w",
     "name": "Castro S.",
     "role": "A",
     "team": "Roma",
@@ -5592,11 +5618,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "71-95 FM",
-    "fvm": 83
+    "fairValueBracket": "69-93 FM",
+    "fvm": 81
   },
   {
-    "id": "imp_430_1786658188248_ae78",
+    "id": "imp_432_1786710050182_q2dd",
     "name": "Raspadori",
     "role": "A",
     "team": "Atalanta",
@@ -5609,7 +5635,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 62
   },
   {
-    "id": "imp_431_1786658188248_s2gp",
+    "id": "imp_433_1786710050182_pbw1",
     "name": "Esposito Se.",
     "role": "A",
     "team": "Cagliari",
@@ -5618,11 +5644,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "43-57 FM",
-    "fvm": 50
+    "fairValueBracket": "34-46 FM",
+    "fvm": 40
   },
   {
-    "id": "imp_432_1786658188248_5pew",
+    "id": "imp_434_1786710050182_d84z",
     "name": "Nkunku",
     "role": "A",
     "team": "Milan",
@@ -5631,11 +5657,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "44-60 FM",
-    "fvm": 52
+    "fairValueBracket": "21-29 FM",
+    "fvm": 25
   },
   {
-    "id": "imp_433_1786658188248_bgql",
+    "id": "imp_435_1786710050182_o3rt",
     "name": "Pinamonti",
     "role": "A",
     "team": "Sassuolo",
@@ -5644,11 +5670,24 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "49-67 FM",
-    "fvm": 58
+    "fairValueBracket": "47-63 FM",
+    "fvm": 55
   },
   {
-    "id": "imp_434_1786658188248_qwzi",
+    "id": "imp_436_1786710050182_kcqn",
+    "name": "Kevin Carlos",
+    "role": "A",
+    "team": "Cagliari",
+    "basePrice": 13,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "40-54 FM",
+    "fvm": 47
+  },
+  {
+    "id": "imp_437_1786710050182_oi4j",
     "name": "Soulè",
     "role": "A",
     "team": "Roma",
@@ -5657,11 +5696,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "47-63 FM",
-    "fvm": 55
+    "fairValueBracket": "45-61 FM",
+    "fvm": 53
   },
   {
-    "id": "imp_435_1786658188248_gnmt",
+    "id": "imp_438_1786710050182_8qzd",
     "name": "Adams A.",
     "role": "A",
     "team": "Venezia",
@@ -5670,11 +5709,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "44-60 FM",
-    "fvm": 52
+    "fairValueBracket": "43-59 FM",
+    "fvm": 51
   },
   {
-    "id": "imp_436_1786658188248_rumh",
+    "id": "imp_439_1786710050182_wan6",
     "name": "Diao",
     "role": "A",
     "team": "Como",
@@ -5687,7 +5726,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 50
   },
   {
-    "id": "imp_437_1786658188248_ex9g",
+    "id": "imp_440_1786710050182_tjn8",
     "name": "Colombo",
     "role": "A",
     "team": "Genoa",
@@ -5700,7 +5739,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 63
   },
   {
-    "id": "imp_438_1786658188248_7zgj",
+    "id": "imp_441_1786710050182_0nsm",
+    "name": "Tourè E.",
+    "role": "A",
+    "team": "Parma",
+    "basePrice": 11,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Caricato da listone importato",
+    "fairValueBracket": "37-49 FM",
+    "fvm": 43
+  },
+  {
+    "id": "imp_442_1786710050182_ayh0",
     "name": "Dia",
     "role": "A",
     "team": "Lazio",
@@ -5713,7 +5765,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 31
   },
   {
-    "id": "imp_439_1786658188248_ye4n",
+    "id": "imp_443_1786710050182_f8ks",
     "name": "Ratkov",
     "role": "A",
     "team": "Lazio",
@@ -5726,20 +5778,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_440_1786658188248_on0i",
-    "name": "Lukaku",
-    "role": "A",
-    "team": "Napoli",
-    "basePrice": 10,
-    "expectedFantaAvg": 6.6,
-    "expectedGoalsAssists": "N/A",
-    "tier": 2,
-    "notes": "Caricato da listone importato",
-    "fairValueBracket": "38-52 FM",
-    "fvm": 45
-  },
-  {
-    "id": "imp_441_1786658188248_rjlw",
+    "id": "imp_444_1786710050182_famd",
     "name": "Bowie",
     "role": "A",
     "team": "Sassuolo",
@@ -5752,7 +5791,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 39
   },
   {
-    "id": "imp_442_1786658188248_81d8",
+    "id": "imp_445_1786710050182_nyre",
     "name": "Ghedjemis",
     "role": "A",
     "team": "Frosinone",
@@ -5765,7 +5804,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 30
   },
   {
-    "id": "imp_443_1786658188248_3e6k",
+    "id": "imp_446_1786710050182_lmkk",
     "name": "David",
     "role": "A",
     "team": "Juventus",
@@ -5778,7 +5817,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 40
   },
   {
-    "id": "imp_444_1786658188248_7dzc",
+    "id": "imp_447_1786710050182_chzz",
     "name": "Geubbels",
     "role": "A",
     "team": "Lecce",
@@ -5791,7 +5830,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_445_1786658188248_z577",
+    "id": "imp_448_1786710050182_sqck",
     "name": "Cutrone",
     "role": "A",
     "team": "Monza",
@@ -5804,7 +5843,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 33
   },
   {
-    "id": "imp_446_1786658188248_238s",
+    "id": "imp_449_1786710050182_h815",
     "name": "Adams C.",
     "role": "A",
     "team": "Torino",
@@ -5817,7 +5856,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 32
   },
   {
-    "id": "imp_447_1786658188248_3aee",
+    "id": "imp_450_1786710050182_fos5",
     "name": "Dallinga",
     "role": "A",
     "team": "Bologna",
@@ -5826,24 +5865,24 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fairValueBracket": "9-12 FM",
+    "fvm": 10
   },
   {
-    "id": "imp_448_1786658188248_oabu",
+    "id": "imp_451_1786710050182_q47y",
     "name": "Piccoli",
     "role": "A",
-    "team": "Fiorentina",
+    "team": "Bologna",
     "basePrice": 8,
     "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fairValueBracket": "26-36 FM",
+    "fvm": 31
   },
   {
-    "id": "imp_449_1786658188248_sgzv",
+    "id": "imp_452_1786710050182_in1b",
     "name": "Vitinha O.",
     "role": "A",
     "team": "Genoa",
@@ -5856,7 +5895,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_450_1786658188248_mgvn",
+    "id": "imp_453_1786710050182_zdak",
     "name": "Yeboah J.",
     "role": "A",
     "team": "Venezia",
@@ -5869,7 +5908,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 28
   },
   {
-    "id": "imp_451_1786658188248_p9wq",
+    "id": "imp_454_1786710050182_3k1q",
     "name": "Rrahmani Al.",
     "role": "A",
     "team": "Venezia",
@@ -5882,7 +5921,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 20
   },
   {
-    "id": "imp_452_1786658188248_250b",
+    "id": "imp_455_1786710050182_jokd",
     "name": "Raimondo",
     "role": "A",
     "team": "Frosinone",
@@ -5895,7 +5934,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 24
   },
   {
-    "id": "imp_453_1786658188248_ewvm",
+    "id": "imp_456_1786710050182_e4id",
     "name": "Bonny",
     "role": "A",
     "team": "Inter",
@@ -5908,7 +5947,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 21
   },
   {
-    "id": "imp_454_1786658188248_mt2i",
+    "id": "imp_457_1786710050182_jjy7",
     "name": "Stulic",
     "role": "A",
     "team": "Lecce",
@@ -5921,7 +5960,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_455_1786658188248_zwij",
+    "id": "imp_458_1786710050182_orsx",
     "name": "Zapata D.",
     "role": "A",
     "team": "Torino",
@@ -5934,7 +5973,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_456_1786658188248_r5ls",
+    "id": "imp_459_1786710050182_wong",
     "name": "Sulemana K.",
     "role": "A",
     "team": "Atalanta",
@@ -5947,7 +5986,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 16
   },
   {
-    "id": "imp_457_1786658188248_zmtz",
+    "id": "imp_460_1786710050182_gpu0",
     "name": "Mutandwa",
     "role": "A",
     "team": "Cagliari",
@@ -5956,11 +5995,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
-    "id": "imp_458_1786658188248_px1n",
+    "id": "imp_461_1786710050182_07kz",
     "name": "Boga",
     "role": "A",
     "team": "Juventus",
@@ -5973,7 +6012,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
-    "id": "imp_459_1786658188248_xv1g",
+    "id": "imp_462_1786710050182_jz98",
     "name": "Noslin",
     "role": "A",
     "team": "Lazio",
@@ -5986,7 +6025,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 17
   },
   {
-    "id": "imp_460_1786658188248_2o7b",
+    "id": "imp_463_1786710050182_yf8r",
     "name": "Gimenez",
     "role": "A",
     "team": "Milan",
@@ -5999,7 +6038,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_461_1786658188248_rjoc",
+    "id": "imp_464_1786710050182_ijg2",
     "name": "Neres",
     "role": "A",
     "team": "Napoli",
@@ -6012,20 +6051,20 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 22
   },
   {
-    "id": "imp_462_1786658188248_1onh",
+    "id": "imp_465_1786710050182_0kpk",
     "name": "Maldini",
     "role": "A",
-    "team": "Atalanta",
+    "team": "Cagliari",
     "basePrice": 5,
     "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fairValueBracket": "19-25 FM",
+    "fvm": 22
   },
   {
-    "id": "imp_463_1786658188248_irhi",
+    "id": "imp_466_1786710050182_vwnq",
     "name": "Camarda",
     "role": "A",
     "team": "Milan",
@@ -6034,11 +6073,11 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Caricato da listone importato",
-    "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fairValueBracket": "17-23 FM",
+    "fvm": 20
   },
   {
-    "id": "imp_464_1786658188248_k344",
+    "id": "imp_467_1786710050182_8uwj",
     "name": "Mota",
     "role": "A",
     "team": "Monza",
@@ -6051,7 +6090,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 18
   },
   {
-    "id": "imp_465_1786658188248_s7s2",
+    "id": "imp_468_1786710050182_vnyv",
     "name": "Frigan",
     "role": "A",
     "team": "Parma",
@@ -6064,7 +6103,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 13
   },
   {
-    "id": "imp_466_1786658188248_4poz",
+    "id": "imp_469_1786710050182_9dcd",
     "name": "Adorante",
     "role": "A",
     "team": "Venezia",
@@ -6077,7 +6116,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 14
   },
   {
-    "id": "imp_467_1786658188248_i54j",
+    "id": "imp_470_1786710050182_crw8",
     "name": "Borrelli",
     "role": "A",
     "team": "Cagliari",
@@ -6090,7 +6129,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_468_1786658188248_sd8w",
+    "id": "imp_471_1786710050182_yw17",
     "name": "Mendy P.",
     "role": "A",
     "team": "Cagliari",
@@ -6103,7 +6142,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_469_1786658188248_co4z",
+    "id": "imp_472_1786710050182_krsm",
     "name": "Morata",
     "role": "A",
     "team": "Como",
@@ -6116,7 +6155,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_470_1786658188248_tsrs",
+    "id": "imp_473_1786710050182_vn8v",
     "name": "Kvernadze",
     "role": "A",
     "team": "Frosinone",
@@ -6129,7 +6168,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 15
   },
   {
-    "id": "imp_471_1786658188248_x0tf",
+    "id": "imp_474_1786710050182_vyyk",
     "name": "Havel",
     "role": "A",
     "team": "Genoa",
@@ -6142,7 +6181,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_472_1786658188248_85oe",
+    "id": "imp_475_1786710050182_zhr9",
     "name": "Giovane",
     "role": "A",
     "team": "Napoli",
@@ -6155,7 +6194,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_473_1786658188248_m3b6",
+    "id": "imp_476_1786710050182_vbjm",
     "name": "Kulenovic",
     "role": "A",
     "team": "Torino",
@@ -6168,7 +6207,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_474_1786658188248_k9n9",
+    "id": "imp_477_1786710050182_rhj1",
     "name": "Gueye",
     "role": "A",
     "team": "Udinese",
@@ -6181,7 +6220,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_475_1786658188248_3rcw",
+    "id": "imp_478_1786710050182_1eev",
     "name": "Robinson J.",
     "role": "A",
     "team": "Monza",
@@ -6194,7 +6233,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_476_1786658188248_a99z",
+    "id": "imp_479_1786710050182_23f4",
     "name": "Kuhn",
     "role": "A",
     "team": "Como",
@@ -6207,7 +6246,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_477_1786658188248_li3p",
+    "id": "imp_480_1786710050182_sqpo",
     "name": "Ekhator",
     "role": "A",
     "team": "Juventus",
@@ -6220,7 +6259,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_478_1786658188248_bhjv",
+    "id": "imp_481_1786710050182_f5gk",
     "name": "N'Dri",
     "role": "A",
     "team": "Lecce",
@@ -6233,7 +6272,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 9
   },
   {
-    "id": "imp_479_1786658188248_2vsf",
+    "id": "imp_482_1786710050182_gwv8",
     "name": "Varela G.",
     "role": "A",
     "team": "Monza",
@@ -6246,7 +6285,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 7
   },
   {
-    "id": "imp_480_1786658188248_dnn3",
+    "id": "imp_483_1786710050182_dx5v",
     "name": "Lang",
     "role": "A",
     "team": "Napoli",
@@ -6259,7 +6298,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_481_1786658188248_3wxl",
+    "id": "imp_484_1786710050182_j05h",
     "name": "Lucca",
     "role": "A",
     "team": "Napoli",
@@ -6272,7 +6311,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 10
   },
   {
-    "id": "imp_482_1786658188248_m66l",
+    "id": "imp_485_1786710050182_sx7b",
     "name": "Elphege",
     "role": "A",
     "team": "Parma",
@@ -6285,7 +6324,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 11
   },
   {
-    "id": "imp_483_1786658188248_bdo9",
+    "id": "imp_486_1786710050182_bkan",
     "name": "Petagna",
     "role": "A",
     "team": "Monza",
@@ -6298,7 +6337,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
-    "id": "imp_484_1786658188248_jv0k",
+    "id": "imp_487_1786710050182_grhs",
     "name": "Buksa",
     "role": "A",
     "team": "Udinese",
@@ -6311,7 +6350,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_485_1786658188248_ieq1",
+    "id": "imp_488_1786710050182_45ao",
     "name": "Albarracin",
     "role": "A",
     "team": "Cagliari",
@@ -6324,7 +6363,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_486_1786658188248_897r",
+    "id": "imp_489_1786710050182_6cvm",
     "name": "Trepy",
     "role": "A",
     "team": "Cagliari",
@@ -6337,7 +6376,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 2
   },
   {
-    "id": "imp_487_1786658188248_th9h",
+    "id": "imp_490_1786710050182_hyyp",
     "name": "Azon",
     "role": "A",
     "team": "Como",
@@ -6350,7 +6389,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_488_1786658188248_g3x2",
+    "id": "imp_491_1786710050182_9ybn",
     "name": "Vaz",
     "role": "A",
     "team": "Roma",
@@ -6363,7 +6402,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 4
   },
   {
-    "id": "imp_489_1786658188248_k3mz",
+    "id": "imp_492_1786710050182_h7lx",
     "name": "Moro L.",
     "role": "A",
     "team": "Sassuolo",
@@ -6376,7 +6415,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_490_1786658188248_qa9h",
+    "id": "imp_493_1786710050182_rdj1",
     "name": "Bayo V.",
     "role": "A",
     "team": "Udinese",
@@ -6389,7 +6428,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 3
   },
   {
-    "id": "imp_491_1786658188248_07qs",
+    "id": "imp_494_1786710050182_vi4p",
     "name": "Lisman",
     "role": "A",
     "team": "Venezia",
@@ -6402,7 +6441,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
-    "id": "imp_492_1786658188248_hmo0",
+    "id": "imp_495_1786710050182_vrru",
     "name": "Lauberbach",
     "role": "A",
     "team": "Venezia",

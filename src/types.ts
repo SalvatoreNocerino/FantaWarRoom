@@ -99,7 +99,7 @@ export interface RosterPlayer {
 export interface AppData {
   league: LeagueSettings;
   strategy: StrategySettings;
-  /** Listone attivo (preset selezionato o file caricato) — null = usa INITIAL_SERIE_A_PLAYERS. */
+  /** Listone attivo (preset selezionato o file caricato) — null = usa il default Fantacalcio.it. */
   importedListone: Player[] | null;
   customPlayers: Player[];
   auctionHistory: RosterPlayer[];

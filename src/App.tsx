@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
-import { INITIAL_SERIE_A_PLAYERS } from './data/initialPlayers';
+import { FANTACALCIO_IT_LISTONE } from './data/presetListoni/fantacalcioIt';
 import { AppShell } from './components/shell/AppShell';
 import { ActiveTab } from './components/shell/navItems';
 import { LeagueSettingsView } from './components/LeagueSettingsView';
@@ -96,9 +96,11 @@ export default function App() {
     }
   };
 
-  // Listone attivo (preset scelto o file caricato) + giocatori aggiunti a mano
+  // Listone attivo (preset scelto o file caricato) + giocatori aggiunti a mano.
+  // Se l'utente non ha ancora importato/selezionato nulla, il default è il
+  // listone reale Fantacalcio.it (non più il piccolo dataset demo).
   const allPlayers = useMemo(() => {
-    return [...(appData.importedListone ?? INITIAL_SERIE_A_PLAYERS), ...appData.customPlayers];
+    return [...(appData.importedListone ?? FANTACALCIO_IT_LISTONE), ...appData.customPlayers];
   }, [appData.importedListone, appData.customPlayers]);
 
   const myTeamName = useMemo(

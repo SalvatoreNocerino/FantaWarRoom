@@ -74,7 +74,7 @@ export const AuthBlock: React.FC<Props> = ({ currentUser, onLogin, onLogout, isC
           className="bg-accent/10 border border-accent/40 hover:bg-accent text-accent hover:text-accent-ink px-3 py-2 rounded-xl font-semibold flex items-center justify-center gap-1.5 transition-colors"
         >
           <LogIn className="w-3.5 h-3.5" />
-          <span>Salva su Cloud</span>
+          <span>Accedi / Registrati con Google</span>
         </button>
       )}
       <button type="button" onClick={handleReset} className="text-faint hover:text-negative flex items-center justify-center gap-1.5 py-1">

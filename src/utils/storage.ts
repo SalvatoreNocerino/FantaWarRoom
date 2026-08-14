@@ -64,16 +64,13 @@ export const DEFAULT_LEAGUE_SETTINGS: LeagueSettings = {
 export const DEFAULT_STRATEGY_SETTINGS: StrategySettings = {
   preferredFormation: '3-4-3',
   aggressionScore: 50,
-  // Calibrato su aste reali (10 squadre-stagione, Rose_fantalba 2023+2025):
-  // vedi src/engine/modelParams.ts > DEFAULT_ROLE_BUDGET_PCT. Resta un campo
-  // modificabile dall'utente, questo è solo il punto di partenza consigliato.
   budgetAllocationPct: {
-    P: 9.3,
-    D: 11.6,
-    C: 27.8,
-    A: 51.5,
+    P: 8,
+    D: 17,
+    C: 25,
+    A: 50,
   },
-  wishlistIds: ['p_lautaro', 'p_pulisic', 'p_dimarco', 'p_sommer'],
+  wishlistIds: [],
   blacklistIds: [],
 };
 
