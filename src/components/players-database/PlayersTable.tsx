@@ -2,8 +2,9 @@ import React, { useMemo } from 'react';
 import { Player, RosterPlayer } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
-import { Heart, Ban, Star, Info, Megaphone } from 'lucide-react';
+import { Heart, Ban, Star, Info, Megaphone, ChevronUp, ChevronDown } from 'lucide-react';
 import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge } from '../ui';
+import { SortKey } from '../PlayersDatabaseView';
 
 interface PlayersTableProps {
   players: Player[];
@@ -17,7 +18,41 @@ interface PlayersTableProps {
   onSelectPlayer: (p: Player) => void;
   selectedAuctionPlayerId: string | null;
   onSelectForAuction: (id: string) => void;
+  sortKey: SortKey;
+  sortDir: 'asc' | 'desc';
+  onSort: (key: SortKey) => void;
 }
+
+const SortableHeader: React.FC<{
+  label: string;
+  sortKeyValue: NonNullable<SortKey>;
+  activeKey: SortKey;
+  dir: 'asc' | 'desc';
+  onSort: (key: SortKey) => void;
+  align?: 'left' | 'center';
+}> = ({ label, sortKeyValue, activeKey, dir, onSort, align = 'left' }) => {
+  const isActive = activeKey === sortKeyValue;
+  return (
+    <button
+      type="button"
+      onClick={() => onSort(sortKeyValue)}
+      className={`flex items-center gap-0.5 font-inherit hover:text-ink transition-colors ${
+        align === 'center' ? 'mx-auto' : ''
+      } ${isActive ? 'text-ink' : ''}`}
+    >
+      <span>{label}</span>
+      {isActive ? (
+        dir === 'asc' ? (
+          <ChevronUp className="w-3 h-3" />
+        ) : (
+          <ChevronDown className="w-3 h-3" />
+        )
+      ) : (
+        <ChevronUp className="w-3 h-3 opacity-20" />
+      )}
+    </button>
+  );
+};
 
 export const PlayersTable: React.FC<PlayersTableProps> = ({
   players,
@@ -31,6 +66,9 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
   onSelectPlayer,
   selectedAuctionPlayerId,
   onSelectForAuction,
+  sortKey,
+  sortDir,
+  onSort,
 }) => {
   const assignmentByPlayerId = useMemo(() => {
     const m = new Map<string, RosterPlayer>();
@@ -43,10 +81,20 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
       <table className="w-full text-left border-collapse text-xs">
         <Thead>
           <th className="p-3 w-12 text-center">R</th>
-          <th className="p-3">Calciatore & Squadra</th>
-          <th className="p-3 text-center">Quot. Base</th>
+          <th className="p-3">
+            <div className="flex items-center gap-2">
+              <SortableHeader label="Calciatore" sortKeyValue="name" activeKey={sortKey} dir={sortDir} onSort={onSort} />
+              <span className="text-faint">&middot;</span>
+              <SortableHeader label="Squadra" sortKeyValue="team" activeKey={sortKey} dir={sortDir} onSort={onSort} />
+            </div>
+          </th>
+          <th className="p-3 text-center">
+            <SortableHeader label="Quot. Base" sortKeyValue="basePrice" activeKey={sortKey} dir={sortDir} onSort={onSort} align="center" />
+          </th>
           <th className="p-3">Fair Value Stimato</th>
-          <th className="p-3 text-center">Max Bid / Pagato</th>
+          <th className="p-3 text-center">
+            <SortableHeader label="Max Bid / Pagato" sortKeyValue="maxBid" activeKey={sortKey} dir={sortDir} onSort={onSort} align="center" />
+          </th>
           <th className="p-3 text-center hidden md:table-cell">Stats 24/25</th>
           <th className="p-3 text-right">Azioni</th>
         </Thead>

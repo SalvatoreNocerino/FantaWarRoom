@@ -8,6 +8,8 @@ import { PlayerDetailModal } from './players-database/PlayerDetailModal';
 import { AddPlayerModal } from './players-database/AddPlayerModal';
 import { PageHeader, Button } from './ui';
 
+export type SortKey = 'name' | 'team' | 'basePrice' | 'maxBid' | null;
+
 interface PlayersDatabaseViewProps {
   allPlayers: Player[];
   league: LeagueSettings;
@@ -50,8 +52,26 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   const [teamFilter, setTeamFilter] = useState<string>('ALL');
   const [showAddModal, setShowAddModal] = useState(false);
   const [selectedPlayerModal, setSelectedPlayerModal] = useState<Player | null>(null);
+  const [sortKey, setSortKey] = useState<SortKey>(null);
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
 
   const { pricingMap } = useWarRoomEngine(allPlayers, league, strategy, auctionHistory);
+
+  const costByPlayerId = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const h of auctionHistory) m.set(h.playerId, h.cost);
+    return m;
+  }, [auctionHistory]);
+
+  const handleSort = (key: SortKey) => {
+    if (sortKey === key) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
+    } else {
+      setSortKey(key);
+      // Alfabetico/squadra partono da A→Z, i numerici dal valore più alto.
+      setSortDir(key === 'name' || key === 'team' ? 'asc' : 'desc');
+    }
+  };
 
   const teamsList = useMemo(() => {
     const teams = new Set(allPlayers.map((p) => p.team));
@@ -67,6 +87,33 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
       return matchRole && matchTeam && matchSearch;
     });
   }, [allPlayers, roleFilter, teamFilter, search]);
+
+  const sortedPlayers = useMemo(() => {
+    if (!sortKey) return filteredPlayers;
+    // Pagato per gli aggiudicati, altrimenti max bid stimato per i liberi —
+    // stesso valore mostrato nella colonna "Max Bid / Pagato" della tabella.
+    const maxBidValue = (p: Player) => costByPlayerId.get(p.id) ?? pricingMap.get(p.id)?.offertaMax ?? 0;
+
+    const sorted = [...filteredPlayers].sort((a, b) => {
+      let cmp = 0;
+      switch (sortKey) {
+        case 'name':
+          cmp = a.name.localeCompare(b.name);
+          break;
+        case 'team':
+          cmp = a.team.localeCompare(b.team);
+          break;
+        case 'basePrice':
+          cmp = a.basePrice - b.basePrice;
+          break;
+        case 'maxBid':
+          cmp = maxBidValue(a) - maxBidValue(b);
+          break;
+      }
+      return sortDir === 'asc' ? cmp : -cmp;
+    });
+    return sorted;
+  }, [filteredPlayers, sortKey, sortDir, pricingMap, costByPlayerId]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6 space-y-6 text-ink">
@@ -93,7 +140,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
       />
 
       <PlayersTable
-        players={filteredPlayers}
+        players={sortedPlayers}
         auctionHistory={auctionHistory}
         pricingMap={pricingMap}
         wishlistIds={wishlistIds}
@@ -104,6 +151,9 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         onSelectPlayer={setSelectedPlayerModal}
         selectedAuctionPlayerId={selectedAuctionPlayerId}
         onSelectForAuction={onSelectForAuction}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onSort={handleSort}
       />
 
       {selectedPlayerModal && (
