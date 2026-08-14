@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LeagueSettings, TeamParticipant } from '../../types';
-import { Plus, Trash2 } from 'lucide-react';
+import { Plus, Trash2, Pencil } from 'lucide-react';
 import { Card, SectionHeader, Input, Button } from '../ui';
 
 interface Props {
@@ -11,6 +11,25 @@ interface Props {
 export const ParticipantsSection: React.FC<Props> = ({ formData, setFormData }) => {
   const [newTeamName, setNewTeamName] = useState('');
   const [newTeamBudget, setNewTeamBudget] = useState(formData.totalBudget);
+  const [editingIdx, setEditingIdx] = useState<number | null>(null);
+  const [editingName, setEditingName] = useState('');
+
+  const startEditName = (idx: number, currentName: string) => {
+    setEditingIdx(idx);
+    setEditingName(currentName);
+  };
+
+  const commitEditName = () => {
+    if (editingIdx === null) return;
+    const trimmed = editingName.trim();
+    if (trimmed) {
+      setFormData((prev) => ({
+        ...prev,
+        participants: prev.participants.map((p, i) => (i === editingIdx ? { ...p, name: trimmed } : p)),
+      }));
+    }
+    setEditingIdx(null);
+  };
 
   const handleAddParticipant = () => {
     if (!newTeamName.trim()) return;
@@ -104,7 +123,29 @@ export const ParticipantsSection: React.FC<Props> = ({ formData, setFormData }) 
               >
                 {team.isMyTeam ? '★ MIA SQUADRA' : 'Imposta Tu'}
               </button>
-              <span className="font-semibold">{team.name}</span>
+              {editingIdx === idx ? (
+                <input
+                  autoFocus
+                  value={editingName}
+                  onChange={(e) => setEditingName(e.target.value)}
+                  onBlur={commitEditName}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
+                    if (e.key === 'Escape') setEditingIdx(null);
+                  }}
+                  className="bg-surface border border-accent/60 rounded px-1.5 py-0.5 font-semibold text-ink min-w-0 w-32"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => startEditName(idx, team.name)}
+                  className="font-semibold flex items-center gap-1 hover:text-accent transition-colors group/name"
+                  title="Clicca per rinominare"
+                >
+                  <span>{team.name}</span>
+                  <Pencil className="w-3 h-3 opacity-0 group-hover/name:opacity-60" />
+                </button>
+              )}
             </div>
 
             <div className="flex items-center gap-2 font-mono">

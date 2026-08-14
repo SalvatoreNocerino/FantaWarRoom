@@ -39,7 +39,7 @@ export const DEFAULT_LEAGUE_SETTINGS: LeagueSettings = {
     { id: 'espulsione', name: 'Espulsione', value: -1, enabled: true, category: 'malus' },
   ],
   defensiveModifier: {
-    enabled: true,
+    enabled: false,
   },
   midfieldModifier: {
     enabled: false,

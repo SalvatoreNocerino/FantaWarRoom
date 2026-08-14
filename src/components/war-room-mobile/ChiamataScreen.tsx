@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, ArrowDownAZ, ArrowDown01 } from 'lucide-react';
 import { Player, LeagueSettings, PlayerRole } from '../../types';
 import { PlayerPricing, MyTeamBudget } from '../../engine/types';
 import { TeamSummary } from '../../utils/fantaEngine';
@@ -46,6 +46,9 @@ export const ChiamataScreen: React.FC<Props> = ({
   const [pickerOpen, setPickerOpen] = useState(false);
   const [bid, setBid] = useState(1);
   const [buyerTeam, setBuyerTeam] = useState(myTeamName);
+  // Ordinamento della lista "rimanenti nel ruolo" — solo desktop (vedi
+  // noBottomTabBar più sotto), su mobile resta il default per valore.
+  const [restSort, setRestSort] = useState<'valore' | 'alfabetico'>('valore');
 
   useEffect(() => setBuyerTeam((t) => (league.participants.some((p) => p.name === t) ? t : myTeamName)), [myTeamName, league.participants]);
 
@@ -72,11 +75,28 @@ export const ChiamataScreen: React.FC<Props> = ({
     });
   }, [sortedAvailable, roleFilter, query]);
 
+  // Già ordinati per valore (offertaMax desc, via sortedAvailable).
   const restAll = useMemo(() => {
     if (!activePlayer) return [];
     return sortedAvailable.filter((p) => p.role === activePlayer.role && p.id !== activePlayer.id);
   }, [sortedAvailable, activePlayer]);
-  const restList = restAll.slice(0, 5);
+
+  // Desktop mostra 5 TOP + 5 Buoni (10 totali) con toggle di ordinamento;
+  // mobile resta il pannello compatto originale (3 TOP + 2 Buoni, fisso per valore).
+  const restListSize = noBottomTabBar ? 10 : 5;
+  const tierBoundary = noBottomTabBar ? 5 : 3;
+  const restTiered = useMemo(
+    () => restAll.slice(0, restListSize).map((p, i) => ({ player: p, tier: (i < tierBoundary ? 'TOP' : 'BUO') as 'TOP' | 'BUO' })),
+    [restAll, restListSize, tierBoundary]
+  );
+  // Il tier riflette sempre il ranking per valore; l'ordinamento alfabetico
+  // (solo desktop) riordina la visualizzazione senza toccarlo.
+  const restList = useMemo(() => {
+    if (noBottomTabBar && restSort === 'alfabetico') {
+      return [...restTiered].sort((a, b) => a.player.name.localeCompare(b.player.name));
+    }
+    return restTiered;
+  }, [restTiered, restSort, noBottomTabBar]);
 
   const buyerSummary = teamSummaries.find((t) => t.teamName === buyerTeam);
   const isMyBuyer = buyerTeam === myTeamName;
@@ -303,12 +323,60 @@ export const ChiamataScreen: React.FC<Props> = ({
             >
               {activePlayer.role}
             </span>
-            <span style={{ marginLeft: 'auto', fontSize: 11, color: COLORS.textWeak }}>{restAll.length} liberi · max bid</span>
+            {noBottomTabBar && (
+              <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontSize: 11, color: COLORS.textWeak }}>{restAll.length} liberi</span>
+                <div style={{ display: 'flex', gap: 4 }}>
+                <button
+                  type="button"
+                  onClick={() => setRestSort('valore')}
+                  title="Ordina per valore"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 3,
+                    padding: '3px 7px',
+                    borderRadius: 7,
+                    border: `1px solid ${restSort === 'valore' ? COLORS.accent : COLORS.borderInput}`,
+                    background: restSort === 'valore' ? 'rgba(61,220,151,.10)' : 'transparent',
+                    color: restSort === 'valore' ? COLORS.accent : COLORS.textMuted,
+                    font: `700 10px ${FONT_UI}`,
+                    cursor: 'pointer',
+                  }}
+                >
+                  <ArrowDown01 size={11} />
+                  Valore
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setRestSort('alfabetico')}
+                  title="Ordina alfabeticamente"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 3,
+                    padding: '3px 7px',
+                    borderRadius: 7,
+                    border: `1px solid ${restSort === 'alfabetico' ? COLORS.accent : COLORS.borderInput}`,
+                    background: restSort === 'alfabetico' ? 'rgba(61,220,151,.10)' : 'transparent',
+                    color: restSort === 'alfabetico' ? COLORS.accent : COLORS.textMuted,
+                    font: `700 10px ${FONT_UI}`,
+                    cursor: 'pointer',
+                  }}
+                >
+                  <ArrowDownAZ size={11} />
+                  A-Z
+                </button>
+                </div>
+              </div>
+            )}
+            {!noBottomTabBar && (
+              <span style={{ marginLeft: 'auto', fontSize: 11, color: COLORS.textWeak }}>{restAll.length} liberi · max bid</span>
+            )}
           </div>
           <div style={{ background: COLORS.bgCard, border: `1px solid ${COLORS.borderCard}`, borderRadius: 16, overflow: 'hidden' }}>
-            {restList.map((p, i) => {
+            {restList.map(({ player: p, tier }) => {
               const pricing = pricingMap.get(p.id);
-              const tier = i < 3 ? 'TOP' : 'BUO';
               const tierColor = tier === 'TOP' ? COLORS.accent : COLORS.warning;
               return (
                 <div
