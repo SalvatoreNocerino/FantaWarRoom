@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { StrategySettings, Player, PlayerRole } from '../types';
-import { Sliders, Save, CheckCircle2 } from 'lucide-react';
+import { Sliders, Save } from 'lucide-react';
 import { FormationSection } from './strategy-settings/FormationSection';
 import { AggressivenessSection } from './strategy-settings/AggressivenessSection';
 import { BudgetAllocationSection } from './strategy-settings/BudgetAllocationSection';
-import { WishlistSection } from './strategy-settings/WishlistSection';
+import { WishlistSection, WISHLIST_MAX } from './strategy-settings/WishlistSection';
+import { PageHeader, Button, Alert, Card, SectionHeader } from './ui';
 
 interface StrategySettingsViewProps {
   strategy: StrategySettings;
@@ -25,7 +26,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
 }) => {
   const [formData, setFormData] = useState<StrategySettings>({ ...strategy });
   const [saveSuccessMsg, setSaveSuccessMsg] = useState(false);
-  const [playerSearchSelect, setPlayerSearchSelect] = useState('');
 
   const totalAllocationPct =
     formData.budgetAllocationPct.P +
@@ -63,10 +63,9 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
 
   const handleAddPlayerToWishlist = (playerId: string) => {
     if (!playerId) return;
-    if (!formData.wishlistIds.includes(playerId)) {
+    if (!formData.wishlistIds.includes(playerId) && formData.wishlistIds.length < WISHLIST_MAX) {
       setFormData((prev) => ({ ...prev, wishlistIds: [...prev.wishlistIds, playerId] }));
     }
-    setPlayerSearchSelect('');
   };
 
   const handleRemoveFromWishlist = (playerId: string) => {
@@ -77,35 +76,20 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   };
 
   return (
-    <form onSubmit={handleSave} className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-slate-100">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-        <div>
-          <h1 className="text-2xl font-bold flex items-center space-x-2 text-cyan-400">
-            <Sliders className="w-6 h-6" />
-            <span>2. Strategia Pre-Asta & Target Budget</span>
-          </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
-            Imposta il modulo base, lo stile di aggressività, la distribuzione del budget e seleziona i tuoi
-            obiettivi wishlist.
-          </p>
-        </div>
+    <form onSubmit={handleSave} className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-ink">
+      <PageHeader
+        icon={Sliders}
+        title="2. Strategia Pre-Asta & Target Budget"
+        subtitle="Imposta il modulo base, lo stile di aggressività, la distribuzione del budget e seleziona i tuoi obiettivi wishlist."
+        action={
+          <Button type="submit" disabled={!isAllocationValid}>
+            <Save className="w-4 h-4" />
+            <span>Salva Strategia</span>
+          </Button>
+        }
+      />
 
-        <button
-          type="submit"
-          disabled={!isAllocationValid}
-          className="bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-white font-bold px-6 py-2.5 rounded-xl text-sm flex items-center space-x-2 transition-all shadow-lg shadow-cyan-600/30 shrink-0 self-start sm:self-auto"
-        >
-          <Save className="w-4 h-4" />
-          <span>Salva Strategia</span>
-        </button>
-      </div>
-
-      {saveSuccessMsg && (
-        <div className="bg-emerald-950/80 border border-emerald-500 text-emerald-200 px-4 py-3 rounded-xl text-xs flex items-center space-x-2 animate-bounce">
-          <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-          <span className="font-bold">Strategia Pre-Asta salvata con successo!</span>
-        </div>
-      )}
+      {saveSuccessMsg && <Alert tone="success">Strategia Pre-Asta salvata con successo!</Alert>}
 
       <FormationSection
         preferredFormation={formData.preferredFormation}
@@ -130,38 +114,26 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
         onAutoBalance={autoBalanceAllocation}
       />
 
-      <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
-        <div className="border-b border-slate-800 pb-3">
-          <h2 className="text-lg font-bold text-white flex items-center space-x-2">
-            <span className="w-6 h-6 rounded bg-cyan-950 text-cyan-400 font-mono text-xs font-bold flex items-center justify-center">
-              2.4
-            </span>
-            <span>Wishlist Obiettivi Asta</span>
-          </h2>
-          <p className="text-slate-400 text-xs mt-1">
-            Seleziona i giocatori obiettivo dal menu e ordinali per ruolo.
-          </p>
+      <Card className="p-6 space-y-6">
+        <div>
+          <SectionHeader number="2.4" title="Wishlist Obiettivi Asta" className="border-b-0 pb-0" />
+          <p className="text-muted text-xs mt-1">Seleziona i giocatori obiettivo dal menu e ordinali per ruolo.</p>
         </div>
 
         <WishlistSection
           allPlayers={allPlayers}
           wishlistPlayers={wishlistPlayers}
           totalBudget={totalBudget}
-          playerSearchSelect={playerSearchSelect}
           onAddPlayer={handleAddPlayerToWishlist}
           onRemovePlayer={handleRemoveFromWishlist}
         />
-      </section>
+      </Card>
 
       <div className="pt-4 flex justify-end">
-        <button
-          type="submit"
-          disabled={!isAllocationValid}
-          className="bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-white font-bold px-8 py-3 rounded-xl text-sm flex items-center space-x-2 transition-all shadow-xl shadow-cyan-600/30"
-        >
+        <Button type="submit" disabled={!isAllocationValid} size="lg">
           <Save className="w-5 h-5" />
           <span>Salva Strategia Pre-Asta</span>
-        </button>
+        </Button>
       </div>
     </form>
   );

@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import { Player } from '../../types';
-import { Upload, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Upload, Download } from 'lucide-react';
 import { parsePlayersFileContent, parsePlayersXlsxBuffer, PlayersImportError } from '../../utils/playersImport';
+import { FANTACALCIO_IT_LISTONE } from '../../data/presetListoni/fantacalcioIt';
+import { Card, SectionHeader, Alert, Select, Button } from '../ui';
 
 interface Props {
   onImportPlayersList?: (customList: Player[]) => void;
 }
 
+type Source = 'fantacalcio' | 'fantateam' | 'fantalab' | 'custom';
+
+const CONFIRM_MESSAGE =
+  'Questo sostituirà il listone attualmente in uso (e i giocatori aggiunti a mano) con quello selezionato. Continuare?';
+
 export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) => {
+  const [source, setSource] = useState<Source>('fantacalcio');
   const [feedback, setFeedback] = useState<{ type: 'ok' | 'error'; message: string } | null>(null);
 
   const applyImport = (imported: Player[]) => {
@@ -22,9 +30,18 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
     }
   };
 
+  const handleLoadPreset = () => {
+    if (!confirm(CONFIRM_MESSAGE)) return;
+    applyImport(FANTACALCIO_IT_LISTONE);
+  };
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    if (!confirm(CONFIRM_MESSAGE)) {
+      e.target.value = '';
+      return;
+    }
     setFeedback(null);
 
     const isXlsx = /\.xlsx$/i.test(file.name);
@@ -61,46 +78,48 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
   };
 
   return (
-    <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-      <h2 className="text-lg font-bold text-white flex items-center space-x-2 border-b border-slate-800 pb-3">
-        <span className="w-6 h-6 rounded bg-emerald-950 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center">
-          1.7
-        </span>
-        <span>Carica Listone Serie A (Excel / CSV / JSON)</span>
-      </h2>
+    <Card className="p-6 space-y-4">
+      <SectionHeader number="1.5" title="Listone Serie A" />
 
-      <p className="text-slate-400 text-xs leading-relaxed">
-        Carica il listone così come lo scarichi da Fantacalcio.it (.xlsx) o Fantapazz (.csv), senza doverlo
-        modificare: le colonne vengono riconosciute automaticamente dai nomi delle intestazioni. Verrà usato come
-        riferimento live durante l'asta e per i consigli dell'AI.
+      <p className="text-muted text-xs leading-relaxed">
+        Scegli il listone da usare come riferimento live durante l'asta: un provider precaricato, oppure carica un
+        tuo file (Excel / CSV / JSON) — le colonne vengono riconosciute automaticamente dai nomi delle intestazioni.
       </p>
 
-      <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-        <label className="bg-slate-950 border border-emerald-500/40 hover:border-emerald-500 text-emerald-300 font-bold px-4 py-3 rounded-xl text-xs flex items-center space-x-2 cursor-pointer transition-colors w-full sm:w-auto justify-center">
-          <Upload className="w-4 h-4" />
-          <span>Seleziona File Listone</span>
-          <input type="file" accept=".json,.csv,.xlsx" onChange={handleFileUpload} className="hidden" />
-        </label>
+      <Select value={source} onChange={(e) => { setSource(e.target.value as Source); setFeedback(null); }} className="text-xs max-w-xs">
+        <option value="fantacalcio">Fantacalcio.it</option>
+        <option value="fantateam" disabled>
+          FantaTeam (presto disponibile)
+        </option>
+        <option value="fantalab" disabled>
+          FantaLab (presto disponibile)
+        </option>
+        <option value="custom">Lista propria</option>
+      </Select>
 
-        <span className="text-slate-500 text-xs">Formati supportati: .xlsx, .csv, .json</span>
-      </div>
-
-      {feedback && (
-        <div
-          className={`flex items-center space-x-2 text-xs p-3 rounded-xl border ${
-            feedback.type === 'ok'
-              ? 'bg-emerald-950/60 border-emerald-500/40 text-emerald-200'
-              : 'bg-red-950/60 border-red-500/40 text-red-200'
-          }`}
-        >
-          {feedback.type === 'ok' ? (
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
-          ) : (
-            <AlertTriangle className="w-4 h-4 shrink-0" />
-          )}
-          <span>{feedback.message}</span>
+      {source === 'fantacalcio' && (
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
+          <Button onClick={handleLoadPreset} className="w-full sm:w-auto">
+            <Download className="w-4 h-4" />
+            <span>Carica Listone Fantacalcio.it</span>
+          </Button>
+          <span className="text-faint text-xs">{FANTACALCIO_IT_LISTONE.length} giocatori — quotazioni ufficiali</span>
         </div>
       )}
-    </section>
+
+      {source === 'custom' && (
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
+          <label className="bg-surface-2 border border-accent/40 hover:border-accent text-accent font-bold px-4 py-3 rounded-xl text-xs flex items-center gap-2 cursor-pointer transition-colors w-full sm:w-auto justify-center">
+            <Upload className="w-4 h-4" />
+            <span>Seleziona File Listone</span>
+            <input type="file" accept=".json,.csv,.xlsx" onChange={handleFileUpload} className="hidden" />
+          </label>
+
+          <span className="text-faint text-xs">Formati supportati: .xlsx, .csv, .json</span>
+        </div>
+      )}
+
+      {feedback && <Alert tone={feedback.type === 'ok' ? 'success' : 'error'}>{feedback.message}</Alert>}
+    </Card>
   );
 };

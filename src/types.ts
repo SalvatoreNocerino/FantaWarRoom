@@ -99,6 +99,8 @@ export interface RosterPlayer {
 export interface AppData {
   league: LeagueSettings;
   strategy: StrategySettings;
+  /** Listone attivo (preset selezionato o file caricato) — null = usa INITIAL_SERIE_A_PLAYERS. */
+  importedListone: Player[] | null;
   customPlayers: Player[];
   auctionHistory: RosterPlayer[];
 }

@@ -125,4 +125,4 @@ export function calculateDynamicFairValueBracket(player: Player, totalBudget: nu
 // La raccomandazione di prezzo live durante l'asta è ora calcolata dal
 // motore deterministico in src/engine/pricingEngine.ts (portato 1:1 dal
 // modello Excel calibrato), non da questa euristica per tier. Vedi
-// WarRoomAuctionConsole.tsx.
+// src/engine/useWarRoomEngine.ts.

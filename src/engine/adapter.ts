@@ -42,7 +42,6 @@ export function toEngineLeagueConfig(league: LeagueSettings): EngineLeagueConfig
 export function toEngineStrategyConfig(strategy: StrategySettings): EngineStrategyConfig {
   const { P, D, C, A } = strategy.budgetAllocationPct;
   return {
-    preferredFormation: strategy.preferredFormation,
     aggressiveness: strategy.aggressionScore / 100,
     roleBudgetPct: { P: P / 100, D: D / 100, C: C / 100, A: A / 100 },
     wishlistIds: strategy.wishlistIds,

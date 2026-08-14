@@ -84,6 +84,7 @@ export function loadAppData(): AppData {
       return {
         league: DEFAULT_LEAGUE_SETTINGS,
         strategy: DEFAULT_STRATEGY_SETTINGS,
+        importedListone: null,
         customPlayers: [],
         auctionHistory: [],
       };
@@ -107,6 +108,7 @@ export function loadAppData(): AppData {
     return {
       league: loadedLeague,
       strategy: loadedStrategy,
+      importedListone: parsed.importedListone || null,
       customPlayers: parsed.customPlayers || [],
       auctionHistory: parsed.auctionHistory || [],
     };
@@ -115,6 +117,7 @@ export function loadAppData(): AppData {
     return {
       league: DEFAULT_LEAGUE_SETTINGS,
       strategy: DEFAULT_STRATEGY_SETTINGS,
+      importedListone: null,
       customPlayers: [],
       auctionHistory: [],
     };
@@ -133,6 +136,7 @@ export function resetAppData(): AppData {
   const fresh: AppData = {
     league: DEFAULT_LEAGUE_SETTINGS,
     strategy: DEFAULT_STRATEGY_SETTINGS,
+    importedListone: null,
     customPlayers: [],
     auctionHistory: [],
   };

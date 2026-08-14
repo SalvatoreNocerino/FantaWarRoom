@@ -1,37 +1,57 @@
 import React, { useState, useMemo } from 'react';
-import { Player, PlayerRole } from '../types';
+import { Player, PlayerRole, LeagueSettings, StrategySettings, RosterPlayer } from '../types';
 import { Database, Plus } from 'lucide-react';
+import { useWarRoomEngine } from '../engine/useWarRoomEngine';
 import { PlayersFilterBar } from './players-database/PlayersFilterBar';
 import { PlayersTable } from './players-database/PlayersTable';
 import { PlayerDetailModal } from './players-database/PlayerDetailModal';
 import { AddPlayerModal } from './players-database/AddPlayerModal';
+import { PageHeader, Button } from './ui';
 
 interface PlayersDatabaseViewProps {
   allPlayers: Player[];
+  league: LeagueSettings;
+  strategy: StrategySettings;
+  auctionHistory: RosterPlayer[];
   wishlistIds: string[];
   blacklistIds: string[];
   totalBudget?: number;
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
   onAddCustomPlayer: (player: Player) => void;
+  /** Giocatore selezionato per la chiamata live, condiviso con Console Live. */
+  selectedAuctionPlayerId: string | null;
+  onSelectForAuction: (id: string) => void;
+  /** Filtro ruolo condiviso con Console Live (per "vedi tutti gli attaccanti"). */
+  roleFilter: PlayerRole | 'ALL';
+  setRoleFilter: (r: PlayerRole | 'ALL') => void;
 }
 
-// Orchestratore: possiede solo i filtri e quale modal è aperto.
-// Tabella, filtri e i due modal vivono in ./players-database/.
+// Orchestratore: possiede solo i filtri di ricerca/squadra e quale modal è
+// aperto. Il filtro ruolo è sollevato in App.tsx (condiviso con Console
+// Live). Tabella, filtri e i due modal vivono in ./players-database/.
 export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   allPlayers,
+  league,
+  strategy,
+  auctionHistory,
   wishlistIds,
   blacklistIds,
   totalBudget = 500,
   onToggleWishlist,
   onToggleBlacklist,
   onAddCustomPlayer,
+  selectedAuctionPlayerId,
+  onSelectForAuction,
+  roleFilter,
+  setRoleFilter,
 }) => {
   const [search, setSearch] = useState('');
-  const [roleFilter, setRoleFilter] = useState<PlayerRole | 'ALL'>('ALL');
   const [teamFilter, setTeamFilter] = useState<string>('ALL');
   const [showAddModal, setShowAddModal] = useState(false);
   const [selectedPlayerModal, setSelectedPlayerModal] = useState<Player | null>(null);
+
+  const { pricingMap } = useWarRoomEngine(allPlayers, league, strategy, auctionHistory);
 
   const teamsList = useMemo(() => {
     const teams = new Set(allPlayers.map((p) => p.team));
@@ -43,33 +63,24 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
       const matchRole = roleFilter === 'ALL' || p.role === roleFilter;
       const matchTeam = teamFilter === 'ALL' || p.team === teamFilter;
       const matchSearch =
-        p.name.toLowerCase().includes(search.toLowerCase()) ||
-        p.team.toLowerCase().includes(search.toLowerCase());
+        p.name.toLowerCase().includes(search.toLowerCase()) || p.team.toLowerCase().includes(search.toLowerCase());
       return matchRole && matchTeam && matchSearch;
     });
   }, [allPlayers, roleFilter, teamFilter, search]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6 space-y-6 text-slate-100">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-        <div>
-          <h1 className="text-2xl font-bold flex items-center space-x-2 text-emerald-400">
-            <Database className="w-6 h-6" />
-            <span>3. Listone Serie A 2026 ({allPlayers.length} Giocatori)</span>
-          </h1>
-          <p className="text-slate-400 text-xs sm:text-sm mt-1">
-            Lista compatta di tutti i calciatori. Clicca su un calciatore per aprire la scheda di dettaglio.
-          </p>
-        </div>
-
-        <button
-          onClick={() => setShowAddModal(true)}
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center space-x-2 transition-colors self-start sm:self-auto shadow-lg shadow-emerald-600/30 shrink-0"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Aggiungi Nuovo Giocatore</span>
-        </button>
-      </div>
+    <div className="max-w-7xl mx-auto px-4 py-6 space-y-6 text-ink">
+      <PageHeader
+        icon={Database}
+        title={`3. Listone Serie A (${allPlayers.length} Giocatori)`}
+        subtitle="Listone completo, aggiornato live con l'andamento dell'asta: max bid per i liberi, prezzo pagato per gli aggiudicati. Clicca su un calciatore per la scheda di dettaglio."
+        action={
+          <Button onClick={() => setShowAddModal(true)}>
+            <Plus className="w-4 h-4" />
+            <span>Aggiungi Nuovo Giocatore</span>
+          </Button>
+        }
+      />
 
       <PlayersFilterBar
         search={search}
@@ -83,12 +94,16 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
 
       <PlayersTable
         players={filteredPlayers}
+        auctionHistory={auctionHistory}
+        pricingMap={pricingMap}
         wishlistIds={wishlistIds}
         blacklistIds={blacklistIds}
         totalBudget={totalBudget}
         onToggleWishlist={onToggleWishlist}
         onToggleBlacklist={onToggleBlacklist}
         onSelectPlayer={setSelectedPlayerModal}
+        selectedAuctionPlayerId={selectedAuctionPlayerId}
+        onSelectForAuction={onSelectForAuction}
       />
 
       {selectedPlayerModal && (
@@ -103,9 +118,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         />
       )}
 
-      {showAddModal && (
-        <AddPlayerModal onClose={() => setShowAddModal(false)} onAddCustomPlayer={onAddCustomPlayer} />
-      )}
+      {showAddModal && <AddPlayerModal onClose={() => setShowAddModal(false)} onAddCustomPlayer={onAddCustomPlayer} />}
     </div>
   );
 };

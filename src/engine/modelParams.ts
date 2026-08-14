@@ -43,8 +43,20 @@ export const SOGLIA_SOSTENIBILITA_OK = 1.5;
 /** Parametri Modello!B25 — sotto questa soglia: "Attenzione"; sopra: "Rischio Alto". */
 export const SOGLIA_SOSTENIBILITA_ATTENZIONE = 3;
 
-/** Parametri Modello!B28 — peso massimo del fattore di scarsità di ruolo sul prezzo base (premio fino a +B28*1.5, sconto fino a -B28). */
+/**
+ * Peso massimo del fattore di scarsità di ruolo sul prezzo base: premio fino
+ * a +PESO_MAX_SCARSITA*1.5 se i giocatori di qualità liberi scarseggiano.
+ *
+ * Deviazione deliberata dal foglio Excel (Parametri Modello!B28), su
+ * richiesta esplicita dell'utente: la scarsità non deve mai scontare il
+ * prezzo base (l'Excel originale permetteva uno sconto fino a -B28 quando i
+ * giocatori liberi erano in abbondanza) — il minimo è 0%, prezzo base
+ * invariato. Vedi SCARSITA_SCONTO_MINIMO sotto.
+ */
 export const PESO_MAX_SCARSITA = 0.3;
+
+/** Pavimento del modificatore di scarsità: mai sotto 0 (nessuno sconto), solo premio verso l'alto. */
+export const SCARSITA_SCONTO_MINIMO = 0;
 
 /** Parametri Modello!B29 — i giocatori con Qt.A=1 (ancora liberi) non contano come "disponibili" nel calcolo della scarsità. */
 export const ESCLUDI_QTA1_DA_SCARSITA = true;
@@ -69,8 +81,23 @@ export const DEFAULT_ROLE_BUDGET_PCT: RoleMap<number> = { P: 0.093, D: 0.116, C:
 /** Parametri Modello!D57:D60 — quota della "torta" di ruolo che va ai titolari (il resto va alle riserve). */
 export const PCT_BUDGET_RUOLO_AI_TITOLARI: RoleMap<number> = { P: 0.88, D: 0.85, C: 0.95, A: 0.93 };
 
-/** Parametri Modello!B73 — i portieri titolari per squadra sono sempre 1, indipendentemente dal modulo. */
-export const TITOLARI_PORTIERE_PER_SQUADRA = 1;
+/**
+ * Titolari-per-ruolo-in-lega, per squadra: quanti giocatori per ruolo sono
+ * considerati "titolari di mercato" (il resto è "riserva"). Determina lo
+ * split di budget titolari/riserve, la classificazione Titolare/Riserva e il
+ * denominatore dell'Urgenza.
+ *
+ * Deviazione deliberata dall'Excel originale, su richiesta esplicita
+ * dell'utente: l'Excel usava il TUO modulo preferito come proxy per tutta la
+ * lega ("dato non osservabile", vedi Guida) — ma non sai se le altre squadre
+ * giocheranno con lo stesso numero di difensori/centrocampisti/attaccanti.
+ * Questi numeri sono quindi fissi e indipendenti dal modulo di chiunque:
+ * riflettono quanti giocatori "da titolare" un fantallenatore vuole avere in
+ * rosa per ruolo (considerando i turnover), non gli 11 di una singola
+ * formazione in campo — per questo la somma (1+5+6+4=16) supera l'undici
+ * titolare di una singola partita.
+ */
+export const TITOLARI_PER_SQUADRA_LEGA: RoleMap<number> = { P: 1, D: 5, C: 6, A: 4 };
 
 /** Parametri Modello!B63:B65 — soglie di percentile del FVM nel ruolo per la Fascia Aspettativa. */
 export const SOGLIE_FASCIA = { top: 0.9, buono: 0.7, media: 0.4 };

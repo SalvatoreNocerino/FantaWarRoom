@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer } from './types';
+import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
 import { INITIAL_SERIE_A_PLAYERS } from './data/initialPlayers';
-import { Navbar, ActiveTab } from './components/Navbar';
+import { AppShell } from './components/shell/AppShell';
+import { ActiveTab } from './components/shell/navItems';
 import { LeagueSettingsView } from './components/LeagueSettingsView';
 import { StrategySettingsView } from './components/StrategySettingsView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
-import { AllTeamsView } from './components/AllTeamsView';
-import { WarRoomAuctionConsole } from './components/WarRoomAuctionConsole';
+import { WarRoomMobileConsole } from './components/war-room-mobile/WarRoomMobileConsole';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
 import {
   AppUser,
@@ -22,6 +22,14 @@ export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
   // Start UX at 'league' settings as requested by user
   const [activeTab, setActiveTab] = useState<ActiveTab>('league');
+
+  // Giocatore selezionato per la chiamata live — condiviso tra il Listone
+  // (sezione 3) e Console Live (sezione 5), così selezionarlo in un punto lo
+  // mostra "in asta" nell'altro.
+  const [selectedAuctionPlayerId, setSelectedAuctionPlayerId] = useState<string | null>(null);
+  // Filtro ruolo del Listone — condiviso così "vedi tutti gli attaccanti" da
+  // Console Live naviga al Listone già filtrato per ruolo.
+  const [databaseRoleFilter, setDatabaseRoleFilter] = useState<PlayerRole | 'ALL'>('ALL');
 
   // Supabase Auth state
   const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
@@ -39,6 +47,10 @@ export default function App() {
             setAppData((prev) => ({
               league: { ...prev.league, ...(cloudData.league || {}) },
               strategy: { ...prev.strategy, ...(cloudData.strategy || {}) },
+              // importedListone non è (ancora) sincronizzato su Supabase — vedi
+              // supabase/migrations/002_add_imported_listone.sql — resta locale
+              // per ora, non sovrascriverlo con i dati cloud.
+              importedListone: prev.importedListone,
               customPlayers: cloudData.customPlayers || [],
               auctionHistory: cloudData.auctionHistory || [],
             }));
@@ -84,15 +96,20 @@ export default function App() {
     }
   };
 
-  // Combine initial Serie A players with user custom added players
+  // Listone attivo (preset scelto o file caricato) + giocatori aggiunti a mano
   const allPlayers = useMemo(() => {
-    return [...INITIAL_SERIE_A_PLAYERS, ...appData.customPlayers];
-  }, [appData.customPlayers]);
+    return [...(appData.importedListone ?? INITIAL_SERIE_A_PLAYERS), ...appData.customPlayers];
+  }, [appData.importedListone, appData.customPlayers]);
+
+  const myTeamName = useMemo(
+    () => appData.league.participants.find((p) => p.isMyTeam)?.name || appData.league.participants[0]?.name || '',
+    [appData.league.participants]
+  );
 
   // Total my team spent
   const myBids = useMemo(
-    () => appData.auctionHistory.filter((b) => b.boughtByTeam === appData.league.participants.find(p => p.isMyTeam)?.name || appData.league.name),
-    [appData.auctionHistory, appData.league]
+    () => appData.auctionHistory.filter((b) => b.boughtByTeam === myTeamName),
+    [appData.auctionHistory, myTeamName]
   );
 
   const mySpent = useMemo(
@@ -204,10 +221,13 @@ export default function App() {
     }));
   };
 
+  // Sostituisce il listone attivo (preset scelto o file caricato) — non lo
+  // somma a quello corrente, a differenza di handleAddCustomPlayer.
   const handleImportPlayersList = (importedList: Player[]) => {
     setAppData((prev) => ({
       ...prev,
-      customPlayers: [...prev.customPlayers, ...importedList],
+      importedListone: importedList,
+      customPlayers: [],
     }));
   };
 
@@ -216,9 +236,16 @@ export default function App() {
     setAppData(fresh);
   };
 
+  // "Vedi tutti gli attaccanti" da Console Live → Chiamata: naviga al
+  // Listone (sezione 3) già filtrato per quel ruolo.
+  const handleSeeAllRoleInDatabase = (role: PlayerRole) => {
+    setDatabaseRoleFilter(role);
+    setActiveTab('database');
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950 pb-12">
-      <Navbar
+    <div className="min-h-screen bg-page text-ink font-sans selection:bg-accent selection:text-accent-ink">
+      <AppShell
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         myCredits={myRemainingCredits}
@@ -229,8 +256,7 @@ export default function App() {
         onLogin={handleLogin}
         onLogout={handleLogout}
         isCloudSyncing={isCloudSyncing}
-      />
-
+      >
       <main className="transition-all duration-200">
         {activeTab === 'league' && (
           <LeagueSettingsView
@@ -253,30 +279,31 @@ export default function App() {
         {activeTab === 'database' && (
           <PlayersDatabaseView
             allPlayers={allPlayers}
+            league={appData.league}
+            strategy={appData.strategy}
+            auctionHistory={appData.auctionHistory}
             wishlistIds={appData.strategy.wishlistIds}
             blacklistIds={appData.strategy.blacklistIds}
             totalBudget={appData.league.totalBudget}
             onToggleWishlist={handleToggleWishlist}
             onToggleBlacklist={handleToggleBlacklist}
             onAddCustomPlayer={handleAddCustomPlayer}
-          />
-        )}
-
-        {activeTab === 'teams' && (
-          <AllTeamsView
-            allPlayers={allPlayers}
-            league={appData.league}
-            strategy={appData.strategy}
-            auctionHistory={appData.auctionHistory}
+            selectedAuctionPlayerId={selectedAuctionPlayerId}
+            onSelectForAuction={setSelectedAuctionPlayerId}
+            roleFilter={databaseRoleFilter}
+            setRoleFilter={setDatabaseRoleFilter}
           />
         )}
 
         {activeTab === 'warroom' && (
-          <WarRoomAuctionConsole
+          <WarRoomMobileConsole
             allPlayers={allPlayers}
             league={appData.league}
             strategy={appData.strategy}
             auctionHistory={appData.auctionHistory}
+            selectedPlayerId={selectedAuctionPlayerId}
+            onSelectPlayer={setSelectedAuctionPlayerId}
+            onSeeAllRole={handleSeeAllRoleInDatabase}
             onAssignPlayer={handleAssignPlayer}
             onUndoLastAssignment={handleUndoLastAssignment}
             onUpdateAssignment={handleUpdateAssignment}
@@ -284,6 +311,7 @@ export default function App() {
           />
         )}
       </main>
+      </AppShell>
 
       <PwaInstallBanner />
     </div>

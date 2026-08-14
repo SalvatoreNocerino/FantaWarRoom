@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Player, PlayerRole } from '../../types';
-import { Plus } from 'lucide-react';
+import { Modal, Field, Input, Select, Textarea, Button } from '../ui';
 
 interface AddPlayerModalProps {
   onClose: () => void;
@@ -40,109 +40,52 @@ export const AddPlayerModal: React.FC<AddPlayerModalProps> = ({ onClose, onAddCu
   };
 
   return (
-    <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 max-w-md w-full space-y-4">
-        <h2 className="text-lg font-bold text-white flex items-center space-x-2">
-          <Plus className="w-5 h-5 text-emerald-400" />
-          <span>Aggiungi Giocatore al Listone</span>
-        </h2>
+    <Modal open onClose={onClose} title="Aggiungi Giocatore al Listone" maxWidth="max-w-md">
+      <form onSubmit={handleCreatePlayer} className="space-y-3 text-xs">
+        <Field label="Nome e Cognome">
+          <Input type="text" value={newName} onChange={(e) => setNewName(e.target.value)} required />
+        </Field>
 
-        <form onSubmit={handleCreatePlayer} className="space-y-3 text-xs">
-          <div>
-            <label className="block text-slate-400 mb-1">Nome e Cognome</label>
-            <input
-              type="text"
-              value={newName}
-              onChange={(e) => setNewName(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white"
-              required
-            />
-          </div>
+        <div className="grid grid-cols-2 gap-3">
+          <Field label="Ruolo">
+            <Select value={newRole} onChange={(e) => setNewRole(e.target.value as PlayerRole)}>
+              <option value="P">P (Portiere)</option>
+              <option value="D">D (Difensore)</option>
+              <option value="C">C (Centrocampista)</option>
+              <option value="A">A (Attaccante)</option>
+            </Select>
+          </Field>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="block text-slate-400 mb-1">Ruolo</label>
-              <select
-                value={newRole}
-                onChange={(e) => setNewRole(e.target.value as PlayerRole)}
-                className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white"
-              >
-                <option value="P">P (Portiere)</option>
-                <option value="D">D (Difensore)</option>
-                <option value="C">C (Centrocampista)</option>
-                <option value="A">A (Attaccante)</option>
-              </select>
-            </div>
+          <Field label="Squadra Serie A">
+            <Input type="text" value={newTeam} onChange={(e) => setNewTeam(e.target.value)} required />
+          </Field>
+        </div>
 
-            <div>
-              <label className="block text-slate-400 mb-1">Squadra Serie A</label>
-              <input
-                type="text"
-                value={newTeam}
-                onChange={(e) => setNewTeam(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white"
-                required
-              />
-            </div>
-          </div>
+        <div className="grid grid-cols-2 gap-3">
+          <Field label="Quotazione Base (FM)">
+            <Input type="number" variant="mono" value={newPrice} onChange={(e) => setNewPrice(Number(e.target.value))} />
+          </Field>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="block text-slate-400 mb-1">Quotazione Base (FM)</label>
-              <input
-                type="number"
-                value={newPrice}
-                onChange={(e) => setNewPrice(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white font-mono"
-              />
-            </div>
+          <Field label="FM Prevista">
+            <Input type="number" step="0.1" variant="mono" value={newFantaAvg} onChange={(e) => setNewFantaAvg(Number(e.target.value))} />
+          </Field>
+        </div>
 
-            <div>
-              <label className="block text-slate-400 mb-1">FM Prevista</label>
-              <input
-                type="number"
-                step="0.1"
-                value={newFantaAvg}
-                onChange={(e) => setNewFantaAvg(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white font-mono"
-              />
-            </div>
-          </div>
+        <Field label="Fascia Fair Value (es. 20-35 FM)">
+          <Input type="text" variant="mono" value={newFairValue} onChange={(e) => setNewFairValue(e.target.value)} />
+        </Field>
 
-          <div>
-            <label className="block text-slate-400 mb-1">Fascia Fair Value (es. 20-35 FM)</label>
-            <input
-              type="text"
-              value={newFairValue}
-              onChange={(e) => setNewFairValue(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white font-mono"
-            />
-          </div>
+        <Field label="Note Tattiche">
+          <Textarea value={newNotes} onChange={(e) => setNewNotes(e.target.value)} rows={2} />
+        </Field>
 
-          <div>
-            <label className="block text-slate-400 mb-1">Note Tattiche</label>
-            <textarea
-              value={newNotes}
-              onChange={(e) => setNewNotes(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded px-3 py-2 text-white"
-              rows={2}
-            />
-          </div>
-
-          <div className="flex justify-end space-x-2 pt-2">
-            <button type="button" onClick={onClose} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg">
-              Annulla
-            </button>
-
-            <button
-              type="submit"
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg"
-            >
-              Salva Giocatore
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+        <div className="flex justify-end gap-2 pt-2">
+          <Button type="button" variant="ghost" onClick={onClose}>
+            Annulla
+          </Button>
+          <Button type="submit">Salva Giocatore</Button>
+        </div>
+      </form>
+    </Modal>
   );
 };

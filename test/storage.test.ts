@@ -74,6 +74,7 @@ describe('saveAppData + loadAppData round-trip', () => {
     const custom = {
       league: { ...DEFAULT_LEAGUE_SETTINGS, name: 'Lega Salvatore', totalBudget: 300 },
       strategy: { ...DEFAULT_STRATEGY_SETTINGS, aggressionScore: 80 },
+      importedListone: null,
       customPlayers: [],
       auctionHistory: [],
     };

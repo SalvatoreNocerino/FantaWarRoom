@@ -43,10 +43,15 @@ export interface EngineLeagueConfig {
   myTeamName: string;
 }
 
-/** Configurazione di strategia necessaria al motore — sottoinsieme di StrategySettings. */
+/**
+ * Configurazione di strategia necessaria al motore — sottoinsieme di StrategySettings.
+ *
+ * NB: non include preferredFormation. I titolari-per-ruolo-in-lega usati per
+ * la classificazione Titolare/Riserva sono fissi (vedi
+ * modelParams.TITOLARI_PER_SQUADRA_LEGA) e non dipendono più dal modulo di
+ * nessuno: non è osservabile che modulo giocheranno le squadre avversarie.
+ */
 export interface EngineStrategyConfig {
-  /** Formato "D-C-A", es. "3-4-3". */
-  preferredFormation: string;
   /** 0 (conservativo) - 1 (aggressivo). Nell'app è 0-100: va normalizzato prima di passarlo. */
   aggressiveness: number;
   /** % del budget totale per ruolo, deve sommare a 1 (o vicino). Default calibrato in modelParams.DEFAULT_ROLE_BUDGET_PCT. */
@@ -55,13 +60,13 @@ export interface EngineStrategyConfig {
   wishlistIds: string[];
 }
 
-export type PressioneLevel = 'verde' | 'giallo' | 'rosso' | 'esaurito';
+export type UrgenzaLevel = 'verde' | 'giallo' | 'rosso' | 'esaurito';
 export type SostenibilitaLevel = 'ok' | 'attenzione' | 'rischio' | null;
 export type Fascia = 'Top' | 'Buono' | 'Nella Media' | 'Scommessa/Riserva';
 export type TitolareRiserva = 'Titolare' | 'Riserva';
 
-export interface PressioneRuolo {
-  level: PressioneLevel;
+export interface Urgenza {
+  level: UrgenzaLevel;
   /** Top+Buoni rimasti (se il giocatore è Titolare di mercato) o Media+Scommesse rimaste (se Riserva). */
   countRimasti: number;
   /** Titolari Residui o Riserve Residue in lega, a seconda del ramo. */
@@ -79,7 +84,9 @@ export interface RolePoolStats {
   role: PlayerRole;
   slotTotaliLega: number;
   slotAncoraDaRiempireLega: number;
+  /** Liberi di qualità (fascia Top o Buono) nel ruolo — alimenta la scarsità, che ignora le "Scommesse". */
   giocatoriLiberiListone: number;
+  /** giocatoriLiberiListone / slotAncoraDaRiempireLega — sotto 1 = scarsità di qualità nel ruolo. */
   rapportoOffertaDomanda: number | null;
   sommaFVMPool: number;
   nTitolariLega: number;
@@ -120,12 +127,12 @@ export interface PlayerPricing {
   value: number;
   rangeMin: number;
   rangeMax: number;
-  maxBidStrategico: number;
-  maxBidDinamico: number;
+  offertaConsigliata: number;
+  offertaMax: number;
   fascia: Fascia;
   rankFvmRuolo: number;
   titolareORiserva: TitolareRiserva;
   isWhichlist: boolean;
-  pressioneRuolo: PressioneRuolo;
+  urgenza: Urgenza;
   sostenibilita: Sostenibilita;
 }

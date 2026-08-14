@@ -22,12 +22,13 @@ import {
   SOGLIA_SOSTENIBILITA_OK,
   SOGLIA_SOSTENIBILITA_ATTENZIONE,
   PESO_MAX_SCARSITA,
+  SCARSITA_SCONTO_MINIMO,
   ESCLUDI_QTA1_DA_SCARSITA,
   RISERVA_MINIMA_PER_SLOT,
   SOGLIA_PRESSIONE_VERDE,
   SOGLIA_PRESSIONE_GIALLA,
   PCT_BUDGET_RUOLO_AI_TITOLARI,
-  TITOLARI_PORTIERE_PER_SQUADRA,
+  TITOLARI_PER_SQUADRA_LEGA,
   SOGLIE_FASCIA,
 } from './modelParams';
 import {
@@ -41,20 +42,13 @@ import {
   PlayerPricing,
   Fascia,
   TitolareRiserva,
-  PressioneRuolo,
+  Urgenza,
   Sostenibilita,
 } from './types';
 
 const ROLES: PlayerRole[] = ['P', 'D', 'C', 'A'];
 
 const clamp = (min: number, max: number, v: number) => Math.max(min, Math.min(max, v));
-
-/** Titolari per squadra, per ruolo — P fisso a 1, D/C/A dal modulo preferito ("D-C-A", es. "3-4-3"). */
-function titolariPerSquadra(formation: string): Record<PlayerRole, number> {
-  const match = /^(\d)-(\d)-(\d)$/.exec(formation.trim());
-  const [, d, c, a] = match ?? ['', '3', '4', '3']; // fallback difensivo su modulo non riconosciuto
-  return { P: TITOLARI_PORTIERE_PER_SQUADRA, D: Number(d), C: Number(c), A: Number(a) };
-}
 
 // --- Classificazione di mercato (indipendente dallo stato dell'asta) ------
 //
@@ -70,18 +64,13 @@ export interface MarketClassification {
   titolareORiserva: TitolareRiserva;
 }
 
-export function classifyMarket(
-  players: EnginePlayer[],
-  league: EngineLeagueConfig,
-  strategy: EngineStrategyConfig
-): Map<string, MarketClassification> {
-  const titolariSquadra = titolariPerSquadra(strategy.preferredFormation);
+export function classifyMarket(players: EnginePlayer[], league: EngineLeagueConfig): Map<string, MarketClassification> {
   const result = new Map<string, MarketClassification>();
 
   for (const role of ROLES) {
     const rolePlayers = players.filter((p) => p.role === role);
     const countRoleTotal = rolePlayers.length;
-    const nTitolariLega = league.numTeams * titolariSquadra[role];
+    const nTitolariLega = league.numTeams * TITOLARI_PER_SQUADRA_LEGA[role];
 
     for (const player of rolePlayers) {
       const rank = 1 + rolePlayers.filter((other) => other.fvm > player.fvm).length;
@@ -107,11 +96,9 @@ export function classifyMarket(
 export function computeLeaguePoolStats(
   players: EnginePlayer[],
   league: EngineLeagueConfig,
-  strategy: EngineStrategyConfig,
   assignments: AuctionAssignment[],
-  classification: Map<string, MarketClassification> = classifyMarket(players, league, strategy)
+  classification: Map<string, MarketClassification> = classifyMarket(players, league)
 ): LeaguePoolStats {
-  const titolariSquadra = titolariPerSquadra(strategy.preferredFormation);
   const assignedIds = new Set(assignments.map((a) => a.playerId));
   const budgetTotaleLega = league.numTeams * league.totalBudget;
 
@@ -120,13 +107,20 @@ export function computeLeaguePoolStats(
   for (const role of ROLES) {
     const rolePlayers = players.filter((p) => p.role === role);
     const slotTotaliLega = league.numTeams * league.rosterSlots[role];
-    const nTitolariLega = league.numTeams * titolariSquadra[role];
+    const nTitolariLega = league.numTeams * TITOLARI_PER_SQUADRA_LEGA[role];
 
     const chiamati = rolePlayers.filter((p) => assignedIds.has(p.id)).length;
     const slotAncoraDaRiempireLega = slotTotaliLega - chiamati;
 
     const liberi = rolePlayers.filter((p) => !assignedIds.has(p.id));
-    const giocatoriLiberiListone = liberi.filter((p) => !ESCLUDI_QTA1_DA_SCARSITA || p.qtA > 1).length;
+    // Scarsità di ruolo: conta solo i liberi di qualità (Top/Buono). Un mercato
+    // pieno di sole "Scommesse" non è davvero abbondante — su richiesta esplicita,
+    // deviazione dall'Excel originale che contava tutti i liberi indistintamente.
+    const giocatoriLiberiListone = liberi.filter(
+      (p) =>
+        (!ESCLUDI_QTA1_DA_SCARSITA || p.qtA > 1) &&
+        (classification.get(p.id)?.fascia === 'Top' || classification.get(p.id)?.fascia === 'Buono')
+    ).length;
     const rapportoOffertaDomanda = slotAncoraDaRiempireLega > 0 ? giocatoriLiberiListone / slotAncoraDaRiempireLega : null;
 
     const sommaFVMPool = rolePlayers
@@ -248,10 +242,10 @@ function modificatoreStorico(player: EnginePlayer, rp: RolePoolStats): number {
 function modificatoreScarsita(rp: RolePoolStats): number {
   if (!rp.rapportoOffertaDomanda) return 1;
   const raw = (1 / rp.rapportoOffertaDomanda - 1) * PESO_MAX_SCARSITA;
-  return 1 + clamp(-PESO_MAX_SCARSITA, PESO_MAX_SCARSITA * 1.5, raw);
+  return 1 + clamp(SCARSITA_SCONTO_MINIMO, PESO_MAX_SCARSITA * 1.5, raw);
 }
 
-function computePressioneRuolo(classification: MarketClassification, rp: RolePoolStats): PressioneRuolo {
+function computeUrgenza(classification: MarketClassification, rp: RolePoolStats): Urgenza {
   if (classification.titolareORiserva === 'Titolare') {
     const countRimasti = rp.topRimasti + rp.buoniRimasti;
     const denominatore = rp.titolariResidui;
@@ -281,13 +275,13 @@ function computePressioneRuolo(classification: MarketClassification, rp: RolePoo
   return { level: 'rosso', countRimasti, denominatore, label: '🔴 Riserve scarse' };
 }
 
-function computeSostenibilita(maxBidStrategico: number, myTeamBudget: MyTeamBudget, isAssigned: boolean): Sostenibilita {
+function computeSostenibilita(offertaConsigliata: number, myTeamBudget: MyTeamBudget, isAssigned: boolean): Sostenibilita {
   if (isAssigned || myTeamBudget.creditoMedioPerSlotRimanente === null) {
     return { level: null, label: '' };
   }
   const credito = myTeamBudget.creditoMedioPerSlotRimanente;
-  if (maxBidStrategico <= credito * SOGLIA_SOSTENIBILITA_OK) return { level: 'ok', label: 'OK' };
-  if (maxBidStrategico <= credito * SOGLIA_SOSTENIBILITA_ATTENZIONE) return { level: 'attenzione', label: 'Attenzione' };
+  if (offertaConsigliata <= credito * SOGLIA_SOSTENIBILITA_OK) return { level: 'ok', label: 'OK' };
+  if (offertaConsigliata <= credito * SOGLIA_SOSTENIBILITA_ATTENZIONE) return { level: 'attenzione', label: 'Attenzione' };
   return { level: 'rischio', label: 'Rischio Alto' };
 }
 
@@ -315,23 +309,23 @@ export function computePlayerPricing(
 
   const isWhichlist = strategy.wishlistIds.includes(player.id);
   const whichlistBoost = isWhichlist ? BOOST_WHICHLIST_MAX * strategy.aggressiveness : 0;
-  const maxBidStrategico = Math.round((rangeMin + (rangeMax - rangeMin) * strategy.aggressiveness) * (1 + whichlistBoost));
+  const offertaConsigliata = Math.round((rangeMin + (rangeMax - rangeMin) * strategy.aggressiveness) * (1 + whichlistBoost));
 
-  const maxBidDinamico = Math.min(maxBidStrategico, myTeamBudget.budgetSpendibile);
+  const offertaMax = Math.min(offertaConsigliata, myTeamBudget.budgetSpendibile);
 
   return {
     playerId: player.id,
     value,
     rangeMin,
     rangeMax,
-    maxBidStrategico,
-    maxBidDinamico,
+    offertaConsigliata,
+    offertaMax,
     fascia: classification.fascia,
     rankFvmRuolo: classification.rank,
     titolareORiserva: classification.titolareORiserva,
     isWhichlist,
-    pressioneRuolo: computePressioneRuolo(classification, rp),
-    sostenibilita: computeSostenibilita(maxBidStrategico, myTeamBudget, isAssigned),
+    urgenza: computeUrgenza(classification, rp),
+    sostenibilita: computeSostenibilita(offertaConsigliata, myTeamBudget, isAssigned),
   };
 }
 
@@ -343,8 +337,8 @@ export function priceAllPlayers(
   strategy: EngineStrategyConfig,
   assignments: AuctionAssignment[]
 ): Map<string, PlayerPricing> {
-  const classification = classifyMarket(players, league, strategy);
-  const poolStats = computeLeaguePoolStats(players, league, strategy, assignments, classification);
+  const classification = classifyMarket(players, league);
+  const poolStats = computeLeaguePoolStats(players, league, assignments, classification);
   const myTeamBudget = computeMyTeamBudget(players, league, assignments);
   const assignedIds = new Set(assignments.map((a) => a.playerId));
 

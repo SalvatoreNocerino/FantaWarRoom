@@ -87,7 +87,6 @@ export function goldenLeagueConfig(): EngineLeagueConfig {
 
 export function goldenStrategyConfig(): EngineStrategyConfig {
   return {
-    preferredFormation: '3-4-3', // Info Strategia!B1
     aggressiveness: 0.7, // Info Strategia!B6
     roleBudgetPct: DEFAULT_ROLE_BUDGET_PCT, // Parametri Modello!B50:B53 (questo file non ha whichlist né split custom)
     wishlistIds: [],
