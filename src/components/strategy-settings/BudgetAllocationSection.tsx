@@ -25,7 +25,6 @@ export const BudgetAllocationSection: React.FC<BudgetAllocationSectionProps> = (
 }) => {
   const totalAllocationPct =
     budgetAllocationPct.P + budgetAllocationPct.D + budgetAllocationPct.C + budgetAllocationPct.A;
-  // Tolleranza 0.25: lo split calibrato di default (9.3/11.6/27.8/51.5) somma 100.2.
   const isAllocationValid = Math.abs(totalAllocationPct - 100) < 0.25;
 
   return (
@@ -42,7 +41,7 @@ export const BudgetAllocationSection: React.FC<BudgetAllocationSectionProps> = (
             {!isAllocationValid && (
               <button type="button" onClick={onAutoBalance} className="text-accent hover:underline flex items-center gap-1 normal-case">
                 <RefreshCw className="w-3.5 h-3.5" />
-                <span>Bilancia (9.3-11.6-27.8-51.5)</span>
+                <span>Bilancia (8-17-25-50)</span>
               </button>
             )}
           </div>

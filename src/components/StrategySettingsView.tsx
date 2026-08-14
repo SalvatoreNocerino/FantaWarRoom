@@ -32,8 +32,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
     formData.budgetAllocationPct.D +
     formData.budgetAllocationPct.C +
     formData.budgetAllocationPct.A;
-  // Tolleranza 0.25 invece di 0.1: lo split calibrato di default (9.3/11.6/27.8/51.5,
-  // vedi src/engine/modelParams.ts) somma 100.2 per via degli arrotondamenti sui dati reali.
   const isAllocationValid = Math.abs(totalAllocationPct - 100) < 0.25;
 
   const handleSave = (e: React.FormEvent) => {
@@ -48,10 +46,9 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   };
 
   const autoBalanceAllocation = () => {
-    // Split calibrato su aste reali — vedi src/engine/modelParams.ts > DEFAULT_ROLE_BUDGET_PCT.
     setFormData((prev) => ({
       ...prev,
-      budgetAllocationPct: { P: 9.3, D: 11.6, C: 27.8, A: 51.5 },
+      budgetAllocationPct: { P: 8, D: 17, C: 25, A: 50 },
     }));
   };
 
