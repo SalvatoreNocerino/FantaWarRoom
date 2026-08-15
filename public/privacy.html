@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Informativa sulla Privacy — FantaWarRoom</title>
+<style>
+  :root {
+    --page: #0a0b0f;
+    --surface: #11141a;
+    --surface-2: #0d1014;
+    --border: rgba(255,255,255,.08);
+    --border-soft: rgba(255,255,255,.07);
+    --ink: #edeef2;
+    --ink-soft: #c9ccd4;
+    --muted: #8a8f9c;
+    --faint: #5d6270;
+    --accent: #3ddc97;
+    --warning: #f5c451;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink-soft);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { border-bottom: 1px solid var(--border-soft); padding-bottom: 20px; margin-bottom: 32px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  h1 { color: var(--ink); font-size: 26px; margin: 0 0 8px; }
+  .updated { color: var(--faint); font-size: 12.5px; }
+  h2 { color: var(--ink); font-size: 16px; margin: 36px 0 10px; }
+  p, li { font-size: 14px; color: var(--ink-soft); }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); }
+  .callout {
+    background: rgba(245,196,81,.08); border: 1px solid rgba(245,196,81,.3);
+    border-radius: 12px; padding: 14px 16px; font-size: 13px; color: var(--warning);
+    margin-bottom: 28px;
+  }
+  .callout strong { color: var(--warning); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); }
+  th { color: var(--ink); background: var(--surface-2); }
+  td { color: var(--ink-soft); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border-soft); font-size: 12px; color: var(--faint); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="badge">FantaWarRoom</div>
+    <h1>Informativa sulla Privacy</h1>
+    <div class="updated">Ultimo aggiornamento: 15 agosto 2026</div>
+  </header>
+
+  <div class="callout">
+    <strong>Nota:</strong> questo documento è una bozza generata a supporto del lancio del prodotto. Prima di attivare pagamenti reali o trattare dati su larga scala, fai revisionare questo testo (e il documento "Termini di Servizio") da un consulente legale/privacy, in particolare per la conformità GDPR e per gli obblighi specifici legati alla vendita di abbonamenti in Italia/UE.
+  </div>
+
+  <p>La presente informativa descrive quali dati raccoglie FantaWarRoom ("il Servizio"), perché li raccoglie e quali diritti hai su di essi, in conformità al Regolamento (UE) 2016/679 ("GDPR").</p>
+
+  <h2>1. Titolare del trattamento</h2>
+  <p>Il titolare del trattamento dei dati è Salvatore Nocerino, contattabile all'indirizzo email <a href="mailto:salvatorenocerino91@gmail.com">salvatorenocerino91@gmail.com</a>.</p>
+
+  <h2>2. Quali dati raccogliamo</h2>
+  <table>
+    <tr><th>Categoria</th><th>Dati</th><th>Fonte</th></tr>
+    <tr><td>Account</td><td>Nome, indirizzo email, foto profilo</td><td>Accesso con Google (OAuth), tramite Supabase Auth</td></tr>
+    <tr><td>Dati di lega</td><td>Nome lega, partecipanti, regole, strategia, storico asta, wishlist/blacklist giocatori</td><td>Inseriti da te nell'app</td></tr>
+    <tr><td>Utilizzo del Servizio</td><td>Pagine visitate, in forma aggregata e anonima, senza cookie di profilazione</td><td>Vercel Web Analytics</td></tr>
+    <tr><td>Dati di pagamento</td><td>Solo se attivi un abbonamento: gestiti direttamente dal fornitore di pagamenti terzo (es. Stripe). Non memorizziamo numeri di carta sui nostri server.</td><td>Fornitore di pagamento</td></tr>
+  </table>
+
+  <h2>3. Perché li usiamo</h2>
+  <ul>
+    <li>Fornire ed erogare il Servizio (gestione lega, asta, sincronizzazione tra dispositivi)</li>
+    <li>Autenticarti in modo sicuro</li>
+    <li>Gestire l'eventuale abbonamento a pagamento</li>
+    <li>Capire in forma aggregata come viene usato il Servizio, per migliorarlo</li>
+    <li>Rispondere a richieste di assistenza</li>
+  </ul>
+  <p>La base giuridica è l'esecuzione del contratto (fornirti il Servizio che richiedi) e, per gli aspetti facoltativi, il consenso.</p>
+
+  <h2>4. Con chi condividiamo i dati</h2>
+  <p>I dati sono trattati dai seguenti fornitori (subresponsabili del trattamento), necessari al funzionamento del Servizio:</p>
+  <ul>
+    <li><strong>Supabase</strong> — autenticazione e database dove sono salvati i dati della tua lega</li>
+    <li><strong>Vercel</strong> — hosting dell'applicazione e analytics anonimi</li>
+    <li><strong>Google</strong> — provider di accesso (OAuth), se scegli di accedere con Google</li>
+  </ul>
+  <p>Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.</p>
+
+  <h2>5. Dove sono conservati i dati</h2>
+  <p>I dati possono essere trattati anche al di fuori dello Spazio Economico Europeo dai fornitori indicati sopra, che adottano garanzie adeguate (es. clausole contrattuali standard della Commissione Europea) per la protezione dei tuoi dati.</p>
+
+  <h2>6. Per quanto tempo conserviamo i dati</h2>
+  <p>Conserviamo i tuoi dati finché il tuo account resta attivo. Puoi richiedere la cancellazione del tuo account e dei relativi dati in qualsiasi momento (vedi sezione 7); i dati vengono inoltre cancellabili direttamente dall'app tramite la funzione "Reset dati".</p>
+
+  <h2>7. I tuoi diritti</h2>
+  <p>In qualità di interessato, hai diritto a:</p>
+  <ul>
+    <li>Accedere ai dati che trattiamo su di te</li>
+    <li>Richiederne la rettifica o la cancellazione</li>
+    <li>Richiederne la portabilità in un formato leggibile</li>
+    <li>Opporti al trattamento o richiederne la limitazione</li>
+    <li>Presentare un reclamo al Garante per la Protezione dei Dati Personali</li>
+  </ul>
+  <p>Per esercitare questi diritti scrivi a <a href="mailto:salvatorenocerino91@gmail.com">salvatorenocerino91@gmail.com</a>.</p>
+
+  <h2>8. Minori</h2>
+  <p>Il Servizio non è destinato a persone di età inferiore ai 14 anni. Se ritieni che un minore abbia fornito dati personali senza il consenso di chi ne esercita la responsabilità genitoriale, contattaci per la rimozione.</p>
+
+  <h2>9. Modifiche a questa informativa</h2>
+  <p>Potremmo aggiornare periodicamente questo documento. In caso di modifiche sostanziali, ti informeremo tramite il Servizio o via email.</p>
+
+  <footer>
+    FantaWarRoom · Informativa sulla Privacy · <a href="/termini.html">Termini di Servizio</a>
+  </footer>
+</div>
+</body>
+</html>

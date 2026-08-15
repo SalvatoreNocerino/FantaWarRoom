@@ -81,6 +81,15 @@ export const NavDrawer: React.FC<Props> = ({
         <div className="p-3 border-t border-border-soft space-y-3">
           <BudgetStat myCredits={myCredits} mySlotsNeeded={mySlotsNeeded} countMyRole={countMyRole} rosterSlots={rosterSlots} />
           <AuthBlock currentUser={currentUser} onLogin={onLogin} onLogout={onLogout} isCloudSyncing={isCloudSyncing} onResetData={onResetData} />
+          <div className="flex items-center justify-center gap-3 text-[10px] text-faint pt-1">
+            <a href="/privacy.html" target="_blank" rel="noopener noreferrer" className="hover:text-muted">
+              Privacy
+            </a>
+            <span>&middot;</span>
+            <a href="/termini.html" target="_blank" rel="noopener noreferrer" className="hover:text-muted">
+              Termini
+            </a>
+          </div>
         </div>
       </div>
     </div>
