@@ -13,6 +13,8 @@ interface Props {
   onUndoLastAssignment: () => void;
   onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
   onDeleteAssignment?: (assignmentId: string) => void;
+  /** Lega condivisa: i membri vedono la history ma non possono modificarla. */
+  readOnly?: boolean;
 }
 
 export const HistoryScreen: React.FC<Props> = ({
@@ -23,6 +25,7 @@ export const HistoryScreen: React.FC<Props> = ({
   onUndoLastAssignment,
   onUpdateAssignment,
   onDeleteAssignment,
+  readOnly = false,
 }) => {
   const [search, setSearch] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -107,7 +110,7 @@ export const HistoryScreen: React.FC<Props> = ({
             }}
           />
         </div>
-        {auctionHistory.length > 0 && (
+        {!readOnly && auctionHistory.length > 0 && (
           <button
             type="button"
             onClick={onUndoLastAssignment}
@@ -253,6 +256,7 @@ export const HistoryScreen: React.FC<Props> = ({
                   {formatSignedInt(delta)}
                 </span>
               </span>
+              {!readOnly && (
               <div style={{ display: 'flex', gap: 4, flex: 'none', borderLeft: `1px solid ${COLORS.borderDivider}`, paddingLeft: 8, marginLeft: 2 }}>
                 <button
                   type="button"
@@ -285,6 +289,7 @@ export const HistoryScreen: React.FC<Props> = ({
                   <Trash2 size={13} />
                 </button>
               </div>
+              )}
             </div>
           );
         })}

@@ -21,6 +21,9 @@ interface Props {
   onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
   onDeleteAssignment?: (assignmentId: string) => void;
   onSeeAllRole: (role: PlayerRole) => void;
+  /** Lega condivisa: solo l'admin conduce l'asta, i membri seguono in sola
+   * lettura (vedi App.tsx isLeagueAdmin). Assente/false in modalità solo. */
+  readOnly?: boolean;
 }
 
 const HEADERS: Record<MobileScreen, { title: string; subtitle: (ctx: { count: number; teams: number; totalSpent: number }) => string }> = {
@@ -57,6 +60,7 @@ export const WarRoomMobileConsole: React.FC<Props> = ({
   onUpdateAssignment,
   onDeleteAssignment,
   onSeeAllRole,
+  readOnly = false,
 }) => {
   const { myTeamName, pricingMap, myTeamBudget, availablePlayers } = useWarRoomEngine(allPlayers, league, strategy, auctionHistory);
   const teamSummaries = useMemo(() => calculateTeamsSummary(league, auctionHistory, allPlayers), [league, auctionHistory, allPlayers]);
@@ -79,9 +83,19 @@ export const WarRoomMobileConsole: React.FC<Props> = ({
     onSelectPlayer,
     onAssignPlayer,
     onSeeAllRole,
+    readOnly,
   };
   const roseProps = { league, strategy, allPlayers, auctionHistory, teamSummaries, myTeamName };
-  const historyProps = { auctionHistory, allPlayers, pricingMap, league, onUndoLastAssignment, onUpdateAssignment, onDeleteAssignment };
+  const historyProps = {
+    auctionHistory,
+    allPlayers,
+    pricingMap,
+    league,
+    onUndoLastAssignment,
+    onUpdateAssignment,
+    onDeleteAssignment,
+    readOnly,
+  };
 
   return (
     <div

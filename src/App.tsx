@@ -17,7 +17,25 @@ import {
   logoutUser,
   saveUserDataToSupabase,
   loadUserDataFromSupabase,
+  createSharedLeague,
+  joinLeagueByCode,
+  findMyMembership,
+  loadSharedLeague,
+  saveSharedLeagueAsOwner,
+  saveMyMembershipStrategy,
+  leaveSharedLeague,
+  subscribeToSharedLeague,
 } from './lib/supabase';
+
+// Modalità lega condivisa (multi-utente, opt-in) — vedi
+// supabase/migrations/004_add_shared_leagues.sql. null = modalità solo
+// (comportamento invariato, dati in app_data).
+interface SharedLeagueMeta {
+  id: string;
+  ownerId: string;
+  inviteCode: string;
+  myParticipantIndex: number;
+}
 
 export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
@@ -37,6 +55,11 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
   const [isCloudSyncing, setIsCloudSyncing] = useState<boolean>(false);
 
+  // Lega condivisa attiva (v1: al massimo una per utente) — null = modalità solo.
+  const [sharedLeagueMeta, setSharedLeagueMeta] = useState<SharedLeagueMeta | null>(null);
+  const isSharedMode = sharedLeagueMeta !== null;
+  const isLeagueAdmin = !isSharedMode || sharedLeagueMeta!.ownerId === currentUser?.uid;
+
   // Freemium bootstrap (senza processore di pagamento, vedi UpgradeModal):
   // oltre FREE_ASSIGNMENT_LIMIT aggiudicazioni totali in Console Live, il
   // piano gratuito si ferma. isPremium arriva sola lettura da Supabase,
@@ -52,6 +75,30 @@ export default function App() {
       if (user) {
         setIsCloudSyncing(true);
         try {
+          // Prima controlla se l'utente è già membro di una lega condivisa
+          // (da questo o un altro dispositivo) — in quel caso i suoi dati di
+          // lega vengono da lì, non da app_data.
+          const membership = await findMyMembership(user.uid);
+          if (membership) {
+            const shared = await loadSharedLeague(membership.leagueId);
+            if (shared) {
+              setSharedLeagueMeta({
+                id: shared.id,
+                ownerId: shared.ownerId,
+                inviteCode: shared.inviteCode,
+                myParticipantIndex: membership.participantIndex,
+              });
+              setAppData({
+                league: shared.league,
+                strategy: membership.strategy,
+                importedListone: shared.importedListone,
+                customPlayers: shared.customPlayers,
+                auctionHistory: shared.auctionHistory,
+              });
+              return;
+            }
+          }
+
           const cloudData = await loadUserDataFromSupabase(user.uid);
           if (cloudData && cloudData.league) {
             setAppData((prev) => ({
@@ -80,8 +127,27 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Save to localStorage AND Supabase on state changes
+  // Save on state changes — modalità solo (localStorage + app_data) invariata;
+  // in modalità condivisa non tocchiamo mai localStorage/app_data: l'admin
+  // salva le regole/listone/storico asta di lega, i membri solo la propria
+  // strategia privata (le RLS bloccherebbero comunque il resto).
   useEffect(() => {
+    if (sharedLeagueMeta) {
+      if (!currentUser) return;
+      setIsCloudSyncing(true);
+      const save = isLeagueAdmin
+        ? saveSharedLeagueAsOwner(
+            sharedLeagueMeta.id,
+            appData.league,
+            appData.importedListone,
+            appData.customPlayers,
+            appData.auctionHistory
+          )
+        : saveMyMembershipStrategy(sharedLeagueMeta.id, currentUser.uid, appData.strategy);
+      save.finally(() => setIsCloudSyncing(false));
+      return;
+    }
+
     saveAppData(appData);
     if (currentUser) {
       setIsCloudSyncing(true);
@@ -89,7 +155,25 @@ export default function App() {
         setIsCloudSyncing(false);
       });
     }
-  }, [appData, currentUser]);
+  }, [appData, currentUser, sharedLeagueMeta, isLeagueAdmin]);
+
+  // Realtime: solo i membri (non l'admin) si iscrivono agli aggiornamenti —
+  // l'admin è la fonte di verità che scrive, iscriverlo alle proprie stesse
+  // scritture creerebbe un ping-pong salva→riceve→salva senza fine (ogni
+  // salvataggio aggiorna updated_at, quindi sembra sempre "diverso").
+  useEffect(() => {
+    if (!sharedLeagueMeta || isLeagueAdmin) return;
+    const unsubscribe = subscribeToSharedLeague(sharedLeagueMeta.id, (shared) => {
+      setAppData((prev) => ({
+        ...prev,
+        league: shared.league,
+        importedListone: shared.importedListone,
+        customPlayers: shared.customPlayers,
+        auctionHistory: shared.auctionHistory,
+      }));
+    });
+    return unsubscribe;
+  }, [sharedLeagueMeta?.id, isLeagueAdmin]);
 
   const handleLogin = async () => {
     try {
@@ -114,10 +198,15 @@ export default function App() {
     return [...(appData.importedListone ?? FANTACALCIO_IT_LISTONE), ...appData.customPlayers];
   }, [appData.importedListone, appData.customPlayers]);
 
-  const myTeamName = useMemo(
-    () => appData.league.participants.find((p) => p.isMyTeam)?.name || appData.league.participants[0]?.name || '',
-    [appData.league.participants]
-  );
+  // In modalità condivisa "la mia squadra" è lo slot reclamato all'iscrizione
+  // (myParticipantIndex), non isMyTeam — quel flag riflette solo la scelta
+  // fatta da chi ha creato la lega per sé stesso.
+  const myTeamName = useMemo(() => {
+    if (sharedLeagueMeta) {
+      return appData.league.participants[sharedLeagueMeta.myParticipantIndex]?.name || '';
+    }
+    return appData.league.participants.find((p) => p.isMyTeam)?.name || appData.league.participants[0]?.name || '';
+  }, [appData.league.participants, sharedLeagueMeta]);
 
   // Total my team spent
   const myBids = useMemo(
@@ -150,6 +239,7 @@ export default function App() {
 
   // Action Handlers
   const handleAssignPlayer = (playerId: string, boughtByTeam: string, cost: number) => {
+    if (!isLeagueAdmin) return; // in lega condivisa solo l'admin conduce l'asta
     if (!isPremium && appData.auctionHistory.length >= FREE_ASSIGNMENT_LIMIT) {
       setShowUpgradeModal(true);
       return;
@@ -170,6 +260,7 @@ export default function App() {
   };
 
   const handleUndoLastAssignment = () => {
+    if (!isLeagueAdmin) return;
     setAppData((prev) => ({
       ...prev,
       auctionHistory: prev.auctionHistory.slice(0, -1),
@@ -177,6 +268,7 @@ export default function App() {
   };
 
   const handleUpdateAssignment = (assignmentId: string, boughtByTeam: string, cost: number) => {
+    if (!isLeagueAdmin) return;
     setAppData((prev) => ({
       ...prev,
       auctionHistory: prev.auctionHistory.map((item) =>
@@ -186,6 +278,7 @@ export default function App() {
   };
 
   const handleDeleteAssignment = (assignmentId: string) => {
+    if (!isLeagueAdmin) return;
     setAppData((prev) => ({
       ...prev,
       auctionHistory: prev.auctionHistory.filter((item) => item.id !== assignmentId),
@@ -193,6 +286,7 @@ export default function App() {
   };
 
   const handleSaveLeague = (updatedLeague: LeagueSettings) => {
+    if (!isLeagueAdmin) return;
     setAppData((prev) => ({
       ...prev,
       league: updatedLeague,
@@ -242,6 +336,7 @@ export default function App() {
   // Sostituisce il listone attivo (preset scelto o file caricato) — non lo
   // somma a quello corrente, a differenza di handleAddCustomPlayer.
   const handleImportPlayersList = (importedList: Player[]) => {
+    if (!isLeagueAdmin) return;
     setAppData((prev) => ({
       ...prev,
       importedListone: importedList,
@@ -259,6 +354,69 @@ export default function App() {
   const handleSeeAllRoleInDatabase = (role: PlayerRole) => {
     setDatabaseRoleFilter(role);
     setActiveTab('database');
+  };
+
+  // --- Lega condivisa: creazione, adesione, uscita ---
+
+  const handleCreateSharedLeague = async (): Promise<boolean> => {
+    if (!currentUser) return false;
+    const shared = await createSharedLeague(
+      currentUser.uid,
+      appData.league,
+      appData.importedListone,
+      appData.customPlayers,
+      appData.strategy
+    );
+    if (!shared) return false;
+    const myIndex = Math.max(
+      0,
+      appData.league.participants.findIndex((p) => p.isMyTeam)
+    );
+    setSharedLeagueMeta({ id: shared.id, ownerId: shared.ownerId, inviteCode: shared.inviteCode, myParticipantIndex: myIndex });
+    return true;
+  };
+
+  const handleJoinSharedLeague = async (
+    leagueId: string,
+    participantIndex: number
+  ): Promise<{ ok: boolean; message?: string }> => {
+    if (!currentUser) return { ok: false, message: 'Devi accedere prima con Google.' };
+    const result = await joinLeagueByCode(leagueId, currentUser.uid, participantIndex, appData.strategy);
+    if (!result.ok) return result;
+
+    const shared = await loadSharedLeague(leagueId);
+    if (!shared) return { ok: false, message: 'Lega creata ma non riesco a caricarla. Ricarica la pagina.' };
+
+    setSharedLeagueMeta({ id: shared.id, ownerId: shared.ownerId, inviteCode: shared.inviteCode, myParticipantIndex: participantIndex });
+    setAppData((prev) => ({
+      league: shared.league,
+      strategy: prev.strategy,
+      importedListone: shared.importedListone,
+      customPlayers: shared.customPlayers,
+      auctionHistory: shared.auctionHistory,
+    }));
+    return { ok: true };
+  };
+
+  const handleLeaveSharedLeague = async () => {
+    if (!currentUser || !sharedLeagueMeta) return;
+    await leaveSharedLeague(sharedLeagueMeta.id, currentUser.uid);
+    setSharedLeagueMeta(null);
+
+    // Torna alla modalità solo: ricarica i dati locali, poi quelli cloud
+    // personali se presenti (stesso percorso del login iniziale).
+    setAppData(loadAppData());
+    const cloudData = await loadUserDataFromSupabase(currentUser.uid);
+    if (cloudData && cloudData.league) {
+      setAppData((prev) => ({
+        league: { ...prev.league, ...(cloudData.league || {}) },
+        strategy: { ...prev.strategy, ...(cloudData.strategy || {}) },
+        importedListone: prev.importedListone,
+        customPlayers: cloudData.customPlayers || [],
+        auctionHistory: cloudData.auctionHistory || [],
+      }));
+      setIsPremium(cloudData.isPremium ?? false);
+    }
   };
 
   return (
@@ -306,6 +464,13 @@ export default function App() {
             onSaveLeague={handleSaveLeague}
             onSaveStrategy={handleSaveStrategy}
             onImportPlayersList={handleImportPlayersList}
+            isSharedMode={isSharedMode}
+            isLeagueAdmin={isLeagueAdmin}
+            inviteCode={sharedLeagueMeta?.inviteCode ?? null}
+            myTeamName={myTeamName}
+            onCreateSharedLeague={handleCreateSharedLeague}
+            onJoinSharedLeague={handleJoinSharedLeague}
+            onLeaveSharedLeague={handleLeaveSharedLeague}
           />
         )}
 
@@ -341,6 +506,7 @@ export default function App() {
             onUndoLastAssignment={handleUndoLastAssignment}
             onUpdateAssignment={handleUpdateAssignment}
             onDeleteAssignment={handleDeleteAssignment}
+            readOnly={!isLeagueAdmin}
           />
         )}
       </main>

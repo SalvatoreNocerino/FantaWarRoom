@@ -47,6 +47,9 @@ export interface TeamParticipant {
   name: string;
   isMyTeam: boolean;
   initialBudget: number;
+  /** Solo modalità lega condivisa: uid Supabase del membro che ha reclamato
+   * questo slot squadra tramite codice invito. Assente in modalità solo. */
+  claimedByUserId?: string;
 }
 
 export interface LeagueSettings {
@@ -103,5 +106,29 @@ export interface AppData {
   importedListone: Player[] | null;
   customPlayers: Player[];
   auctionHistory: RosterPlayer[];
+}
+
+// --- Modalità lega condivisa (multi-utente, opt-in) ---
+// Dati "di lega" condivisi tra tutti i membri, modificabili solo dall'owner.
+// Specchia le colonne di AppData dove ha senso, per riuso di codice tra le
+// due modalità — vedi supabase/migrations/004_add_shared_leagues.sql.
+export interface SharedLeague {
+  id: string;
+  ownerId: string;
+  name: string;
+  inviteCode: string;
+  league: LeagueSettings;
+  importedListone: Player[] | null;
+  customPlayers: Player[];
+  auctionHistory: RosterPlayer[];
+}
+
+// La membership di un utente in una lega condivisa: privata, non visibile
+// agli altri membri (contiene la sua strategia/wishlist).
+export interface LeagueMembership {
+  leagueId: string;
+  userId: string;
+  participantIndex: number;
+  strategy: StrategySettings;
 }
 

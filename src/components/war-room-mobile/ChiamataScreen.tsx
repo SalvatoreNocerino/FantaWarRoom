@@ -26,6 +26,8 @@ interface Props {
   onSeeAllRole: (role: PlayerRole) => void;
   /** true su desktop: niente tab bar sotto, la barra offerta sticky a bottom:0. */
   noBottomTabBar?: boolean;
+  /** Lega condivisa: i membri seguono l'asta in sola lettura, solo l'admin assegna. */
+  readOnly?: boolean;
 }
 
 export const ChiamataScreen: React.FC<Props> = ({
@@ -41,6 +43,7 @@ export const ChiamataScreen: React.FC<Props> = ({
   onAssignPlayer,
   onSeeAllRole,
   noBottomTabBar = false,
+  readOnly = false,
 }) => {
   const [query, setQuery] = useState('');
   const [roleFilter, setRoleFilter] = useState<PlayerRole | 'ALL'>('ALL');
@@ -444,7 +447,26 @@ export const ChiamataScreen: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* Barra offerta — sticky sopra la tab bar (che è sticky bottom:0 nel genitore) */}
+      {/* Barra offerta — sticky sopra la tab bar (che è sticky bottom:0 nel genitore).
+          Lega condivisa: i membri seguono in sola lettura, solo l'admin assegna. */}
+      {readOnly ? (
+        <div
+          style={{
+            position: 'sticky',
+            bottom: noBottomTabBar ? 0 : MOBILE_TAB_BAR_HEIGHT,
+            padding: '14px 16px',
+            background: COLORS.bgNested,
+            borderTop: `1px solid ${COLORS.borderInput}`,
+            textAlign: 'center',
+            fontSize: 11.5,
+            color: COLORS.textMuted,
+            fontWeight: 700,
+            zIndex: 5,
+          }}
+        >
+          Segui l'asta in diretta — solo l'admin della lega può assegnare
+        </div>
+      ) : (
       <div
         style={{
           position: 'sticky',
@@ -566,6 +588,7 @@ export const ChiamataScreen: React.FC<Props> = ({
           </button>
         </div>
       </div>
+      )}
     </>
   );
 };
