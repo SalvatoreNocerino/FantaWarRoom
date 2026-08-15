@@ -24,6 +24,17 @@ interface Props {
 
 const ROLES: PlayerRole[] = ['P', 'D', 'C', 'A'];
 
+// Bordo sinistro colorato per ruolo sulle card statistiche — pattern del
+// redesign Stitch. Bordi per lato espliciti (non lo shorthand `border`, che
+// confliggerebbe con `border-l-4` sullo stesso lato) — Tailwind richiede
+// classi letterali, non interpolate.
+const ROLE_LEFT_BORDER: Record<PlayerRole, string> = {
+  P: 'border-t border-r border-b border-t-border-soft border-r-border-soft border-b-border-soft border-l-4 border-l-role-p',
+  D: 'border-t border-r border-b border-t-border-soft border-r-border-soft border-b-border-soft border-l-4 border-l-role-d',
+  C: 'border-t border-r border-b border-t-border-soft border-r-border-soft border-b-border-soft border-l-4 border-l-role-c',
+  A: 'border-t border-r border-b border-t-border-soft border-r-border-soft border-b-border-soft border-l-4 border-l-role-a',
+};
+
 // Prima schermata che l'utente vede: risponde a "a che punto sono?" prima di
 // spingerlo verso Console Live, invece di aprire direttamente su un form di
 // configurazione (vedi Fase 1/2 dell'audit UI/UX).
@@ -101,7 +112,7 @@ export const DashboardView: React.FC<Props> = ({
             const need = rosterSlots[role];
             const complete = have >= need;
             return (
-              <div key={role} className="bg-surface-2 border border-border-soft rounded-xl p-3 flex items-center gap-3">
+              <div key={role} className={`bg-surface-2 rounded-xl p-3 flex items-center gap-3 ${ROLE_LEFT_BORDER[role]}`}>
                 <RoleBadge role={role} />
                 <div className="min-w-0">
                   <div className="text-xs text-muted capitalize truncate">{ROLE_PLURAL[role]}</div>

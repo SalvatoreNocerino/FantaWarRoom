@@ -20,8 +20,10 @@ export const COLORS = {
   textSecondary: '#c9ccd4',
   textMuted: '#8a8f9c',
   textWeak: '#5d6270',
-  accent: '#3ddc97',
-  accentOn: '#07160f',
+  // "Electric Mint" — palette del redesign Stitch, vedi lo stesso commento
+  // su --color-accent in src/index.css.
+  accent: '#00ff9d',
+  accentOn: '#051f13',
   warning: '#f5c451',
   negative: '#ff6b6b',
   info: '#5bc8ff',
@@ -50,7 +52,7 @@ export const ROLE_ARTICLE: Record<PlayerRole, string> = {
   A: 'gli',
 };
 
-export const FONT_UI = "'Manrope', system-ui, sans-serif";
+export const FONT_UI = "'Plus Jakarta Sans', system-ui, sans-serif";
 export const FONT_MONO = "'JetBrains Mono', monospace";
 
 export const ROLES_WITH_ALL: (PlayerRole | 'ALL')[] = ['ALL', 'P', 'D', 'C', 'A'];
