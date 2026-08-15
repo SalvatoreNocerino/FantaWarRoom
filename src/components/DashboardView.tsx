@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Player, PlayerRole, RosterPlayer } from '../types';
 import { LayoutDashboard, ShieldAlert, Database, Megaphone } from 'lucide-react';
-import { Card, PageHeader, Button, StatTile, RoleBadge, EmptyState, PlayerAvatar } from './ui';
+import { Card, PageHeader, Button, StatTile, RoleBadge, EmptyState, PlayerAvatar, Alert } from './ui';
 import { ROLE_PLURAL } from './war-room-mobile/tokens';
 
 interface Props {
@@ -18,6 +18,8 @@ interface Props {
   onGoToWarRoom: () => void;
   onGoToDatabase: () => void;
   onSelectForAuction: (id: string) => void;
+  isPremium: boolean;
+  freeAssignmentLimit: number;
 }
 
 const ROLES: PlayerRole[] = ['P', 'D', 'C', 'A'];
@@ -39,6 +41,8 @@ export const DashboardView: React.FC<Props> = ({
   onGoToWarRoom,
   onGoToDatabase,
   onSelectForAuction,
+  isPremium,
+  freeAssignmentLimit,
 }) => {
   const takenPlayerIds = useMemo(() => new Set(auctionHistory.map((b) => b.playerId)), [auctionHistory]);
 
@@ -72,6 +76,16 @@ export const DashboardView: React.FC<Props> = ({
           </Button>
         }
       />
+
+      {!isPremium && (
+        <Alert tone={auctionHistory.length >= freeAssignmentLimit ? 'error' : 'warning'}>
+          Piano gratuito: {Math.min(auctionHistory.length, freeAssignmentLimit)}/{freeAssignmentLimit} aggiudicazioni
+          usate in Console Live.{' '}
+          {auctionHistory.length >= freeAssignmentLimit
+            ? 'Passa a Premium per continuare.'
+            : 'Passa a Premium per un uso illimitato per tutta la stagione.'}
+        </Alert>
+      )}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         <StatTile label="Budget Residuo" value={`${myRemainingCredits} FM`} tone={myRemainingCredits > 0 ? 'accent' : 'negative'} />

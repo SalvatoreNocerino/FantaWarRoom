@@ -105,6 +105,10 @@ export const loadUserDataFromSupabase = async (uid: string) => {
       strategy: data.strategy,
       customPlayers: data.custom_players,
       auctionHistory: data.auction_history,
+      // Sola lettura: l'app non scrive mai questo campo (vedi
+      // supabase/migrations/003_add_premium_gate.sql) — si attiva solo
+      // manualmente dal SQL Editor dopo un pagamento.
+      isPremium: data.is_premium ?? false,
     };
   } catch (err) {
     console.error('Error loading data from Supabase:', err);
