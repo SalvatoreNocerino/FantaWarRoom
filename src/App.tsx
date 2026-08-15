@@ -9,6 +9,7 @@ import { SettingsView } from './components/SettingsView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
 import { WarRoomMobileConsole } from './components/war-room-mobile/WarRoomMobileConsole';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
+import { UpgradeModal } from './components/UpgradeModal';
 import {
   AppUser,
   subscribeToAuth,
@@ -36,6 +37,14 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
   const [isCloudSyncing, setIsCloudSyncing] = useState<boolean>(false);
 
+  // Freemium bootstrap (senza processore di pagamento, vedi UpgradeModal):
+  // oltre FREE_ASSIGNMENT_LIMIT aggiudicazioni totali in Console Live, il
+  // piano gratuito si ferma. isPremium arriva sola lettura da Supabase,
+  // l'app non lo scrive mai (vedi supabase/migrations/003_add_premium_gate.sql).
+  const [isPremium, setIsPremium] = useState(false);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const FREE_ASSIGNMENT_LIMIT = 5;
+
   // Subscribe to Supabase Auth changes
   useEffect(() => {
     const unsubscribe = subscribeToAuth(async (user) => {
@@ -55,6 +64,7 @@ export default function App() {
               customPlayers: cloudData.customPlayers || [],
               auctionHistory: cloudData.auctionHistory || [],
             }));
+            setIsPremium(cloudData.isPremium ?? false);
           } else {
             // First time cloud user: seed Supabase with current appData
             await saveUserDataToSupabase(user.uid, appData);
@@ -140,6 +150,11 @@ export default function App() {
 
   // Action Handlers
   const handleAssignPlayer = (playerId: string, boughtByTeam: string, cost: number) => {
+    if (!isPremium && appData.auctionHistory.length >= FREE_ASSIGNMENT_LIMIT) {
+      setShowUpgradeModal(true);
+      return;
+    }
+
     const newBid: RosterPlayer = {
       id: `bid_${Date.now()}`,
       playerId,
@@ -278,6 +293,8 @@ export default function App() {
             onGoToWarRoom={() => setActiveTab('warroom')}
             onGoToDatabase={() => setActiveTab('database')}
             onSelectForAuction={setSelectedAuctionPlayerId}
+            isPremium={isPremium}
+            freeAssignmentLimit={FREE_ASSIGNMENT_LIMIT}
           />
         )}
 
@@ -330,6 +347,14 @@ export default function App() {
       </AppShell>
 
       <PwaInstallBanner />
+
+      <UpgradeModal
+        open={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+        currentUser={currentUser}
+        onLogin={handleLogin}
+        freeLimit={FREE_ASSIGNMENT_LIMIT}
+      />
     </div>
   );
 }
