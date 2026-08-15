@@ -3,7 +3,7 @@ import { Player, RosterPlayer } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
 import { Heart, Ban, Star, Info, Megaphone, ChevronUp, ChevronDown } from 'lucide-react';
-import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge } from '../ui';
+import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge, EmptyState } from '../ui';
 import { SortKey } from '../PlayersDatabaseView';
 
 interface PlayersTableProps {
@@ -101,8 +101,8 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
         <Tbody>
           {players.length === 0 ? (
             <tr>
-              <td colSpan={7} className="p-8 text-center text-faint">
-                Nessun calciatore trovato con i filtri selezionati.
+              <td colSpan={7}>
+                <EmptyState message="Nessun calciatore trovato con i filtri selezionati." />
               </td>
             </tr>
           ) : (

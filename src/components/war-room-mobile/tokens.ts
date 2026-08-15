@@ -27,11 +27,13 @@ export const COLORS = {
   info: '#5bc8ff',
 } as const;
 
+// Deliberatamente distinti (non alias) da COLORS.info/accent/warning/negative
+// — vedi lo stesso commento su --color-role-* in src/index.css.
 export const ROLE_COLORS: Record<PlayerRole, string> = {
-  P: '#5bc8ff',
-  D: '#3ddc97',
-  C: '#f5c451',
-  A: '#ff6b6b',
+  P: '#6f93b0',
+  D: '#6fa883',
+  C: '#c9a054',
+  A: '#c07a63',
 };
 
 export const ROLE_PLURAL: Record<PlayerRole, string> = {

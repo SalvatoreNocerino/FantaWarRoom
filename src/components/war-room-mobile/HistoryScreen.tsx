@@ -3,6 +3,7 @@ import { Undo2, Search, Edit3, Trash2, Save, X } from 'lucide-react';
 import { Player, RosterPlayer, LeagueSettings } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { COLORS, FONT_MONO, FONT_UI, ROLE_COLORS, deltaColor, formatSignedInt } from './tokens';
+import { ConfirmDialog } from '../ui';
 
 interface Props {
   auctionHistory: RosterPlayer[];
@@ -27,6 +28,7 @@ export const HistoryScreen: React.FC<Props> = ({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTeam, setEditTeam] = useState('');
   const [editCost, setEditCost] = useState(1);
+  const [deletingItem, setDeletingItem] = useState<{ id: string; playerName: string } | null>(null);
 
   const rows = useMemo(
     () =>
@@ -269,7 +271,7 @@ export const HistoryScreen: React.FC<Props> = ({
                 </button>
                 <button
                   type="button"
-                  onClick={() => onDeleteAssignment?.(h.id)}
+                  onClick={() => setDeletingItem({ id: h.id, playerName: player.name })}
                   style={{
                     display: 'flex',
                     padding: 6,
@@ -292,6 +294,19 @@ export const HistoryScreen: React.FC<Props> = ({
           </div>
         )}
       </div>
+
+      <ConfirmDialog
+        open={deletingItem !== null}
+        title="Eliminare l'aggiudicazione?"
+        message={`Rimuovi "${deletingItem?.playerName}" dalla history. L'operazione non è reversibile (a differenza di "Annulla Ultimo").`}
+        confirmLabel="Elimina"
+        tone="destructive"
+        onConfirm={() => {
+          if (deletingItem) onDeleteAssignment?.(deletingItem.id);
+          setDeletingItem(null);
+        }}
+        onCancel={() => setDeletingItem(null)}
+      />
     </div>
   );
 };

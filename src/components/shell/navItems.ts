@@ -1,6 +1,6 @@
-import { Settings, Sliders, Database, ShieldAlert, LucideIcon } from 'lucide-react';
+import { LayoutDashboard, Database, ShieldAlert, Settings2, LucideIcon } from 'lucide-react';
 
-export type ActiveTab = 'league' | 'strategy' | 'database' | 'warroom';
+export type ActiveTab = 'dashboard' | 'warroom' | 'database' | 'settings';
 
 export interface NavItem {
   id: ActiveTab;
@@ -8,9 +8,12 @@ export interface NavItem {
   icon: LucideIcon;
 }
 
+// Ordine per frequenza d'uso reale, non per sequenza di setup: Dashboard e
+// Console Live sono l'uso quotidiano durante l'asta, Lega/Strategia sono
+// configurazione one-shot raggruppata sotto "Impostazioni" (vedi SettingsView).
 export const NAV_ITEMS: NavItem[] = [
-  { id: 'league', label: 'Lega & Regole', icon: Settings },
-  { id: 'strategy', label: 'Strategia Pre-Asta', icon: Sliders },
-  { id: 'database', label: 'Listone Serie A', icon: Database },
+  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'warroom', label: 'Console Live', icon: ShieldAlert },
+  { id: 'database', label: 'Listone Serie A', icon: Database },
+  { id: 'settings', label: 'Impostazioni', icon: Settings2 },
 ];

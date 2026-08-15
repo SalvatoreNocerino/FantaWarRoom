@@ -9,6 +9,7 @@ export { Badge, RoleBadge } from './Badge';
 export { Chip, RoleFilterChips } from './Chip';
 export { Alert } from './Alert';
 export { Modal } from './Modal';
+export { ConfirmDialog } from './ConfirmDialog';
 export { EmptyState } from './EmptyState';
 export { StatTile } from './StatTile';
 export { PageHeader } from './PageHeader';

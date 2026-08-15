@@ -36,10 +36,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isAllocationValid) {
-      alert('La somma delle percentuali di budget per ruolo deve essere esattamente pari al 100%.');
-      return;
-    }
+    if (!isAllocationValid) return;
     onSaveStrategy(formData);
     setSaveSuccessMsg(true);
     setTimeout(() => setSaveSuccessMsg(false), 3000);
@@ -87,6 +84,11 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
       />
 
       {saveSuccessMsg && <Alert tone="success">Strategia Pre-Asta salvata con successo!</Alert>}
+      {!isAllocationValid && (
+        <Alert tone="warning">
+          La somma delle percentuali di budget per ruolo deve essere esattamente pari al 100% prima di poter salvare.
+        </Alert>
+      )}
 
       <FormationSection
         preferredFormation={formData.preferredFormation}

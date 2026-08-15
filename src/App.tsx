@@ -4,8 +4,8 @@ import { loadAppData, saveAppData, resetAppData } from './utils/storage';
 import { FANTACALCIO_IT_LISTONE } from './data/presetListoni/fantacalcioIt';
 import { AppShell } from './components/shell/AppShell';
 import { ActiveTab } from './components/shell/navItems';
-import { LeagueSettingsView } from './components/LeagueSettingsView';
-import { StrategySettingsView } from './components/StrategySettingsView';
+import { DashboardView } from './components/DashboardView';
+import { SettingsView } from './components/SettingsView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
 import { WarRoomMobileConsole } from './components/war-room-mobile/WarRoomMobileConsole';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
@@ -20,8 +20,9 @@ import {
 
 export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
-  // Start UX at 'league' settings as requested by user
-  const [activeTab, setActiveTab] = useState<ActiveTab>('league');
+  // Apertura su Dashboard: risponde subito a "a che punto sono?" invece di
+  // aprire su un form di configurazione (vedi Fase 1/2 redesign UI/UX).
+  const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
 
   // Giocatore selezionato per la chiamata live — condiviso tra il Listone
   // (sezione 3) e Console Live (sezione 5), così selezionarlo in un punto lo
@@ -260,21 +261,32 @@ export default function App() {
         isCloudSyncing={isCloudSyncing}
       >
       <main className="transition-all duration-200">
-        {activeTab === 'league' && (
-          <LeagueSettingsView
-            league={appData.league}
-            onSaveLeague={handleSaveLeague}
-            onImportPlayersList={handleImportPlayersList}
+        {activeTab === 'dashboard' && (
+          <DashboardView
+            myTeamName={myTeamName}
+            totalBudget={appData.league.totalBudget}
+            myRemainingCredits={myRemainingCredits}
+            rosterSlots={appData.league.rosterSlots}
+            countMyRole={countMyRole}
+            mySlotsNeeded={mySlotsNeeded}
+            participantsCount={appData.league.participants.length}
+            wishlistIds={appData.strategy.wishlistIds}
+            allPlayers={allPlayers}
+            auctionHistory={appData.auctionHistory}
+            onGoToWarRoom={() => setActiveTab('warroom')}
+            onGoToDatabase={() => setActiveTab('database')}
+            onSelectForAuction={setSelectedAuctionPlayerId}
           />
         )}
 
-        {activeTab === 'strategy' && (
-          <StrategySettingsView
+        {activeTab === 'settings' && (
+          <SettingsView
+            league={appData.league}
             strategy={appData.strategy}
             allPlayers={allPlayers}
-            totalBudget={appData.league.totalBudget}
-            selectableFormations={appData.league.selectableFormations}
+            onSaveLeague={handleSaveLeague}
             onSaveStrategy={handleSaveStrategy}
+            onImportPlayersList={handleImportPlayersList}
           />
         )}
 
