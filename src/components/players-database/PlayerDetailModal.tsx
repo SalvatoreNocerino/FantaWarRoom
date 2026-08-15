@@ -4,6 +4,11 @@ import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
 import { Star, Tag, BarChart3, TrendingUp, Heart, Ban } from 'lucide-react';
 import { Modal, RoleBadge, Badge } from '../ui';
 
+// Placeholder scritto da utils/playersImport.ts per ogni giocatore di un
+// listone importato (preset Fantacalcio.it incluso): non è una nota reale,
+// quindi non va mostrata come se lo fosse — vedi audit UI/UX Fase 1.
+const GENERIC_IMPORT_NOTE = 'Caricato da listone importato';
+
 interface PlayerDetailModalProps {
   player: Player;
   wishlistIds: string[];
@@ -92,19 +97,23 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
           <span>Previsioni Stagione (2025/26)</span>
         </span>
 
-        <div className="grid grid-cols-2 gap-2 font-mono pt-1">
-          <div className="bg-surface p-2.5 rounded-lg border border-border">
-            <span className="text-faint text-[10px] block">FantaMedia Prevista</span>
-            <strong className="text-accent text-sm">{player.expectedFantaAvg}</strong>
+        {player.expectedGoalsAssists === 'N/A' ? (
+          <span className="text-faint italic block p-2">Previsione non disponibile per questo listone</span>
+        ) : (
+          <div className="grid grid-cols-2 gap-2 font-mono pt-1">
+            <div className="bg-surface p-2.5 rounded-lg border border-border">
+              <span className="text-faint text-[10px] block">FantaMedia Prevista</span>
+              <strong className="text-accent text-sm">{player.expectedFantaAvg}</strong>
+            </div>
+            <div className="bg-surface p-2.5 rounded-lg border border-border">
+              <span className="text-faint text-[10px] block">Bonus Attesi (G+A)</span>
+              <strong className="text-info text-sm">{player.expectedGoalsAssists}</strong>
+            </div>
           </div>
-          <div className="bg-surface p-2.5 rounded-lg border border-border">
-            <span className="text-faint text-[10px] block">Bonus Attesi (G+A)</span>
-            <strong className="text-info text-sm">{player.expectedGoalsAssists}</strong>
-          </div>
-        </div>
+        )}
       </div>
 
-      {player.notes && (
+      {player.notes && player.notes !== GENERIC_IMPORT_NOTE && (
         <div className="bg-surface-2 p-3 rounded-xl border border-border text-xs space-y-1">
           <span className="text-muted font-bold block">Note Tattiche & Consiglio:</span>
           <p className="text-ink-soft italic">"{player.notes}"</p>

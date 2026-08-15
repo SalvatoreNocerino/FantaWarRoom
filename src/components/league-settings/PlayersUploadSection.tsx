@@ -3,7 +3,7 @@ import { Player } from '../../types';
 import { Upload, Download } from 'lucide-react';
 import { parsePlayersFileContent, parsePlayersXlsxBuffer, PlayersImportError } from '../../utils/playersImport';
 import { FANTACALCIO_IT_LISTONE } from '../../data/presetListoni/fantacalcioIt';
-import { Card, SectionHeader, Alert, Select, Button } from '../ui';
+import { Card, SectionHeader, Alert, Select, Button, ConfirmDialog } from '../ui';
 
 interface Props {
   onImportPlayersList?: (customList: Player[]) => void;
@@ -17,6 +17,9 @@ const CONFIRM_MESSAGE =
 export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) => {
   const [source, setSource] = useState<Source>('fantacalcio');
   const [feedback, setFeedback] = useState<{ type: 'ok' | 'error'; message: string } | null>(null);
+  // Azione rimandata in attesa di conferma nel ConfirmDialog — sostituisce
+  // window.confirm(), che qui bloccherebbe la lettura del file.
+  const [pendingAction, setPendingAction] = useState<(() => void) | null>(null);
 
   const applyImport = (imported: Player[]) => {
     if (imported.length > 0 && onImportPlayersList) {
@@ -30,18 +33,7 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
     }
   };
 
-  const handleLoadPreset = () => {
-    if (!confirm(CONFIRM_MESSAGE)) return;
-    applyImport(FANTACALCIO_IT_LISTONE);
-  };
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    if (!confirm(CONFIRM_MESSAGE)) {
-      e.target.value = '';
-      return;
-    }
+  const runFileImport = (file: File) => {
     setFeedback(null);
 
     const isXlsx = /\.xlsx$/i.test(file.name);
@@ -71,10 +63,19 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
     } else {
       reader.readAsText(file);
     }
+  };
 
+  const handleLoadPreset = () => {
+    setPendingAction(() => () => applyImport(FANTACALCIO_IT_LISTONE));
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     // Permette di ricaricare lo stesso file una seconda volta (altrimenti
     // l'evento onChange non si ripete se il path del file non cambia).
     e.target.value = '';
+    if (!file) return;
+    setPendingAction(() => () => runFileImport(file));
   };
 
   return (
@@ -120,6 +121,19 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
       )}
 
       {feedback && <Alert tone={feedback.type === 'ok' ? 'success' : 'error'}>{feedback.message}</Alert>}
+
+      <ConfirmDialog
+        open={pendingAction !== null}
+        title="Sostituire il listone attivo?"
+        message={CONFIRM_MESSAGE}
+        confirmLabel="Sostituisci"
+        tone="destructive"
+        onConfirm={() => {
+          pendingAction?.();
+          setPendingAction(null);
+        }}
+        onCancel={() => setPendingAction(null)}
+      />
     </Card>
   );
 };

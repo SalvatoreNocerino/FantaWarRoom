@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LogIn, LogOut, CloudCheck, RotateCcw } from 'lucide-react';
 import { AppUser } from '../../lib/supabase';
+import { ConfirmDialog } from '../ui';
 
 interface Props {
   currentUser: AppUser | null;
@@ -13,11 +14,22 @@ interface Props {
 }
 
 export const AuthBlock: React.FC<Props> = ({ currentUser, onLogin, onLogout, isCloudSyncing, onResetData, compact = false }) => {
-  const handleReset = () => {
-    if (confirm("Sei sicuro di voler azzerare tutti i dati dell'asta e le impostazioni salvate?")) {
-      onResetData();
-    }
-  };
+  const [confirmingReset, setConfirmingReset] = useState(false);
+
+  const confirmDialog = (
+    <ConfirmDialog
+      open={confirmingReset}
+      title="Azzerare tutti i dati?"
+      message="Questo cancellerà l'asta in corso, i partecipanti e tutte le impostazioni salvate. L'azione non è reversibile."
+      confirmLabel="Azzera dati"
+      tone="destructive"
+      onConfirm={() => {
+        setConfirmingReset(false);
+        onResetData();
+      }}
+      onCancel={() => setConfirmingReset(false)}
+    />
+  );
 
   if (compact) {
     return (
@@ -43,9 +55,10 @@ export const AuthBlock: React.FC<Props> = ({ currentUser, onLogin, onLogout, isC
             <span>Accedi</span>
           </button>
         )}
-        <button type="button" onClick={handleReset} className="text-muted hover:text-negative p-1.5" title="Reset dati">
+        <button type="button" onClick={() => setConfirmingReset(true)} className="text-muted hover:text-negative p-1.5" title="Reset dati">
           <RotateCcw className="w-4 h-4" />
         </button>
+        {confirmDialog}
       </div>
     );
   }
@@ -61,7 +74,7 @@ export const AuthBlock: React.FC<Props> = ({ currentUser, onLogin, onLogout, isC
           )}
           <div className="flex-1 min-w-0 text-left">
             <span className="text-ink-soft font-semibold block truncate">{currentUser.displayName || 'Utente Cloud'}</span>
-            <span className="text-faint block">{isCloudSyncing ? 'Syncing...' : 'Cloud Sync OK'}</span>
+            <span className="text-faint block">{isCloudSyncing ? 'Sincronizzazione...' : 'Sincronizzato'}</span>
           </div>
           <button type="button" onClick={onLogout} className="text-muted hover:text-negative p-1 shrink-0" title="Logout">
             <LogOut className="w-3.5 h-3.5" />
@@ -77,10 +90,15 @@ export const AuthBlock: React.FC<Props> = ({ currentUser, onLogin, onLogout, isC
           <span>Accedi / Registrati con Google</span>
         </button>
       )}
-      <button type="button" onClick={handleReset} className="text-faint hover:text-negative flex items-center justify-center gap-1.5 py-1">
+      <button
+        type="button"
+        onClick={() => setConfirmingReset(true)}
+        className="text-faint hover:text-negative flex items-center justify-center gap-1.5 py-1"
+      >
         <RotateCcw className="w-3.5 h-3.5" />
         <span>Reset dati</span>
       </button>
+      {confirmDialog}
     </div>
   );
 };

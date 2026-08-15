@@ -31,10 +31,15 @@
   --color-negative: #ff6b6b;
   --color-info: #5bc8ff;
 
-  --color-role-p: #5bc8ff;
-  --color-role-d: #3ddc97;
-  --color-role-c: #f5c451;
-  --color-role-a: #ff6b6b;
+  /* Colori-ruolo: deliberatamente distinti (non alias) dai colori di stato
+     sopra — un badge "Attaccante" non deve leggersi come un errore, né un
+     badge "Difensore" come il colore del CTA principale. Stessa famiglia
+     cromatica di prima (P blu, D verde, C oro, A rosso) ma desaturata, così
+     restano riconoscibili come tag di categoria invece che segnali. */
+  --color-role-p: #6f93b0;
+  --color-role-d: #6fa883;
+  --color-role-c: #c9a054;
+  --color-role-a: #c07a63;
 
   --font-sans: 'Manrope', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;

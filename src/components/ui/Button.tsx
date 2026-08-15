@@ -1,6 +1,6 @@
 import React from 'react';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'destructive';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'destructive' | 'danger';
 type Size = 'sm' | 'md' | 'lg';
 
 const variantClass: Record<Variant, string> = {
@@ -8,6 +8,10 @@ const variantClass: Record<Variant, string> = {
   secondary: 'bg-field border border-accent/30 text-accent hover:border-accent',
   ghost: 'bg-transparent border border-border-strong text-ink-soft hover:bg-surface-2',
   destructive: 'bg-transparent text-faint hover:text-negative',
+  // Azione affermativa distruttiva nei ConfirmDialog (es. "Elimina", "Azzera
+  // dati") — a differenza di `destructive` (icona sottile) deve essere ben
+  // visibile quanto `primary`, non un dettaglio secondario.
+  danger: 'bg-negative text-page hover:brightness-110 shadow-lg shadow-negative/20',
 };
 
 const sizeClass: Record<Size, string> = {
