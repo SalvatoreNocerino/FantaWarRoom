@@ -5,6 +5,7 @@ import { NavList } from './NavList';
 import { BudgetStat } from './BudgetStat';
 import { AuthBlock } from './AuthBlock';
 import { AppUser } from '../../lib/supabase';
+import { PlayerRole } from '../../types';
 
 interface Props {
   open: boolean;
@@ -13,6 +14,8 @@ interface Props {
   setActiveTab: (tab: ActiveTab) => void;
   myCredits: number;
   mySlotsNeeded: number;
+  countMyRole: Record<PlayerRole, number>;
+  rosterSlots: Record<PlayerRole, number>;
   leagueName: string;
   onResetData: () => void;
   currentUser: AppUser | null;
@@ -28,6 +31,8 @@ export const NavDrawer: React.FC<Props> = ({
   setActiveTab,
   myCredits,
   mySlotsNeeded,
+  countMyRole,
+  rosterSlots,
   leagueName,
   onResetData,
   currentUser,
@@ -74,7 +79,7 @@ export const NavDrawer: React.FC<Props> = ({
         </div>
 
         <div className="p-3 border-t border-border-soft space-y-3">
-          <BudgetStat myCredits={myCredits} mySlotsNeeded={mySlotsNeeded} />
+          <BudgetStat myCredits={myCredits} mySlotsNeeded={mySlotsNeeded} countMyRole={countMyRole} rosterSlots={rosterSlots} />
           <AuthBlock currentUser={currentUser} onLogin={onLogin} onLogout={onLogout} isCloudSyncing={isCloudSyncing} onResetData={onResetData} />
         </div>
       </div>

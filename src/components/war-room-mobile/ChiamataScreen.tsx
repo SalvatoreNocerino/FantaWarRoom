@@ -5,6 +5,7 @@ import { PlayerPricing, MyTeamBudget } from '../../engine/types';
 import { TeamSummary } from '../../utils/fantaEngine';
 import { COLORS, FONT_MONO, FONT_UI, ROLE_COLORS, ROLE_ARTICLE, ROLE_PLURAL, formatDelta } from './tokens';
 import { RoleChips } from './RoleChips';
+import { PlayerAvatar } from '../ui';
 
 // 6 (pad top) + 50 (bottone) + 14 (pad bottom) — vedi TabBar.tsx. Solo su
 // mobile: su desktop non c'è tab bar sotto, quindi l'offset è 0 (vedi
@@ -142,7 +143,7 @@ export const ChiamataScreen: React.FC<Props> = ({
               style={{
                 width: 36,
                 height: 36,
-                borderRadius: 11,
+                borderRadius: '50%',
                 background: `${roleColor}22`,
                 color: roleColor,
                 display: 'flex',
@@ -227,7 +228,7 @@ export const ChiamataScreen: React.FC<Props> = ({
                         borderBottom: `1px solid ${COLORS.borderDivider}`,
                       }}
                     >
-                      <span style={{ font: `700 10px ${FONT_MONO}`, color: ROLE_COLORS[p.role], width: 14, flex: 'none' }}>{p.role}</span>
+                      <PlayerAvatar name={p.name} role={p.role} size="sm" />
                       <span style={{ flex: 1, minWidth: 0, fontSize: 13, fontWeight: 600 }}>{p.name}</span>
                       <span style={{ font: `600 10.5px ${FONT_MONO}`, color: COLORS.textWeak }}>{p.team}</span>
                       <span style={{ font: `700 13px ${FONT_MONO}`, color: COLORS.accent }}>{pricing?.offertaMax ?? '—'}</span>
@@ -403,6 +404,7 @@ export const ChiamataScreen: React.FC<Props> = ({
                   >
                     {tier}
                   </span>
+                  <PlayerAvatar name={p.name} role={p.role} size="sm" />
                   <span style={{ flex: 1, minWidth: 0, fontSize: 13, fontWeight: 600 }}>{p.name}</span>
                   <span style={{ font: `400 12px ${FONT_UI}`, color: COLORS.textWeak }}>{p.team}</span>
                   <span style={{ font: `600 11px ${FONT_MONO}`, color: COLORS.textWeak }}>val {pricing?.value ?? '—'}</span>

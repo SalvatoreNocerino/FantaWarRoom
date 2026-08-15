@@ -26,13 +26,20 @@ interface RoleFilterChipsProps {
   className?: string;
 }
 
-/** P/D/C/A + TUTTI role filter row, built on Chip. */
+/** P/D/C/A + TUTTI role filter, come segmented control connesso (non chip separate). */
 export const RoleFilterChips: React.FC<RoleFilterChipsProps> = ({ value, onChange, className = '' }) => (
-  <div className={`flex gap-1.5 ${className}`}>
-    {ROLES.map((r) => (
-      <Chip key={r} active={r === value} onClick={() => onChange(r)}>
+  <div className={`inline-flex rounded-lg border border-border-strong overflow-hidden ${className}`}>
+    {ROLES.map((r, i) => (
+      <button
+        key={r}
+        type="button"
+        onClick={() => onChange(r)}
+        className={`flex-1 h-[30px] px-2.5 flex items-center justify-center text-xs font-bold transition-colors ${
+          i > 0 ? 'border-l border-border-strong' : ''
+        } ${r === value ? 'bg-accent/15 text-accent' : 'bg-transparent text-muted hover:text-ink-soft hover:bg-surface-2'}`}
+      >
         {r === 'ALL' ? 'TUTTI' : r}
-      </Chip>
+      </button>
     ))}
   </div>
 );
