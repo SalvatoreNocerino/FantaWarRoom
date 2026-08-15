@@ -7,9 +7,11 @@ interface Props {
   onChange: (role: PlayerRole | 'ALL') => void;
 }
 
+// Segmented control connesso (non chip separate) — coerente con
+// RoleFilterChips in ../ui/Chip.tsx.
 export const RoleChips: React.FC<Props> = ({ value, onChange }) => (
-  <div style={{ display: 'flex', gap: 6 }}>
-    {ROLES_WITH_ALL.map((r) => {
+  <div style={{ display: 'inline-flex', borderRadius: 8, border: `1px solid ${COLORS.borderInput}`, overflow: 'hidden' }}>
+    {ROLES_WITH_ALL.map((r, i) => {
       const active = r === value;
       return (
         <button
@@ -19,8 +21,8 @@ export const RoleChips: React.FC<Props> = ({ value, onChange }) => (
           style={{
             height: 30,
             padding: '0 10px',
-            borderRadius: 8,
-            border: `1px solid ${active ? 'rgba(61,220,151,.45)' : COLORS.borderInput}`,
+            border: 0,
+            borderLeft: i > 0 ? `1px solid ${COLORS.borderInput}` : 'none',
             background: active ? 'rgba(61,220,151,.14)' : 'transparent',
             color: active ? COLORS.accent : COLORS.textMuted,
             font: `700 11px ${FONT_UI}`,

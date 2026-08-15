@@ -6,6 +6,7 @@ export { Checkbox } from './Checkbox';
 export { RadioCard } from './RadioCard';
 export { Button } from './Button';
 export { Badge, RoleBadge } from './Badge';
+export { PlayerAvatar } from './PlayerAvatar';
 export { Chip, RoleFilterChips } from './Chip';
 export { Alert } from './Alert';
 export { Modal } from './Modal';

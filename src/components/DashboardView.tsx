@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Player, PlayerRole, RosterPlayer } from '../types';
 import { LayoutDashboard, ShieldAlert, Database, Megaphone } from 'lucide-react';
-import { Card, PageHeader, Button, StatTile, RoleBadge, EmptyState } from './ui';
+import { Card, PageHeader, Button, StatTile, RoleBadge, EmptyState, PlayerAvatar } from './ui';
 import { ROLE_PLURAL } from './war-room-mobile/tokens';
 
 interface Props {
@@ -106,7 +106,7 @@ export const DashboardView: React.FC<Props> = ({
         {nextWishlistTarget ? (
           <div className="flex items-center justify-between gap-3 bg-surface-2 border border-border-soft rounded-xl p-3">
             <div className="flex items-center gap-3 min-w-0">
-              <RoleBadge role={nextWishlistTarget.role} size="lg" />
+              <PlayerAvatar name={nextWishlistTarget.name} role={nextWishlistTarget.role} size="lg" />
               <div className="min-w-0">
                 <div className="font-bold text-ink truncate">{nextWishlistTarget.name}</div>
                 <div className="text-xs text-muted">

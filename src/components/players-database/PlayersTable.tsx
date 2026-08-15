@@ -3,7 +3,7 @@ import { Player, RosterPlayer } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
 import { Heart, Ban, Star, Info, Megaphone, ChevronUp, ChevronDown } from 'lucide-react';
-import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge, EmptyState } from '../ui';
+import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge, EmptyState, PlayerAvatar } from '../ui';
 import { SortKey } from '../PlayersDatabaseView';
 
 interface PlayersTableProps {
@@ -127,16 +127,21 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                   </td>
 
                   <td className="p-3">
-                    <div className="flex items-center gap-2">
-                      <strong className="text-ink text-sm group-hover:text-accent transition-colors">{p.name}</strong>
-                      <span className="bg-surface px-2 py-0.5 rounded text-[10px] font-bold text-ink-soft">{p.team}</span>
-                      {p.tier === 1 && !isSold && (
-                        <span className="text-warning text-[10px] font-bold flex items-center">
-                          <Star className="w-3 h-3 fill-warning mr-0.5" /> TOP
-                        </span>
-                      )}
+                    <div className="flex items-center gap-2.5">
+                      <PlayerAvatar name={p.name} role={p.role} size="sm" className={isSold ? 'opacity-50' : ''} />
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-2">
+                          <strong className="text-ink text-sm group-hover:text-accent transition-colors">{p.name}</strong>
+                          <span className="bg-surface px-2 py-0.5 rounded text-[10px] font-bold text-ink-soft">{p.team}</span>
+                          {p.tier === 1 && !isSold && (
+                            <span className="text-warning text-[10px] font-bold flex items-center">
+                              <Star className="w-3 h-3 fill-warning mr-0.5" /> TOP
+                            </span>
+                          )}
+                        </div>
+                        {isSold && <span className="text-[10.5px] text-muted block mt-0.5">a {assignment.boughtByTeam}</span>}
+                      </div>
                     </div>
-                    {isSold && <span className="text-[10.5px] text-muted block mt-0.5">a {assignment.boughtByTeam}</span>}
                   </td>
 
                   <td className="p-3 text-center font-mono font-bold text-warning">{p.basePrice} FM</td>

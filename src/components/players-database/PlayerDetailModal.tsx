@@ -2,7 +2,7 @@ import React from 'react';
 import { Player } from '../../types';
 import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
 import { Star, Tag, BarChart3, TrendingUp, Heart, Ban } from 'lucide-react';
-import { Modal, RoleBadge, Badge } from '../ui';
+import { Modal, RoleBadge, Badge, PlayerAvatar } from '../ui';
 
 // Placeholder scritto da utils/playersImport.ts per ogni giocatore di un
 // listone importato (preset Fantacalcio.it incluso): non è una nota reale,
@@ -31,10 +31,11 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
   return (
     <Modal open onClose={onClose} maxWidth="max-w-lg">
       <div className="flex items-center gap-3 border-b border-border pb-4">
-        <RoleBadge role={player.role} size="lg" />
+        <PlayerAvatar name={player.name} role={player.role} size="lg" />
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-xl font-bold text-ink">{player.name}</h2>
+            <RoleBadge role={player.role} size="sm" />
             <span className="bg-surface-2 px-2.5 py-0.5 rounded text-xs font-bold text-ink-soft">{player.team}</span>
           </div>
           {player.tier === 1 && (

@@ -36,7 +36,7 @@ export const PlayersFilterBar: React.FC<PlayersFilterBarProps> = ({
           />
         </div>
 
-        <RoleFilterChips value={roleFilter} onChange={setRoleFilter} className="justify-between" />
+        <RoleFilterChips value={roleFilter} onChange={setRoleFilter} className="w-full" />
 
         <Select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} className="text-xs py-2">
           <option value="ALL">Tutte le Squadre Serie A</option>

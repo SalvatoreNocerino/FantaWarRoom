@@ -253,6 +253,8 @@ export default function App() {
         setActiveTab={setActiveTab}
         myCredits={myRemainingCredits}
         mySlotsNeeded={mySlotsNeeded}
+        countMyRole={countMyRole}
+        rosterSlots={appData.league.rosterSlots}
         leagueName={appData.league.name}
         onResetData={handleResetData}
         currentUser={currentUser}
