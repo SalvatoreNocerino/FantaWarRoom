@@ -9,3 +9,8 @@ coverage/
 
 .vercel
 .env*
+
+# Tutto ciò che va qui dentro non deve mai finire su GitHub (credenziali,
+# chiavi, appunti con dati reali di lega/utenti, export non anonimizzati...).
+# Vedi private/README.md.
+/private/
