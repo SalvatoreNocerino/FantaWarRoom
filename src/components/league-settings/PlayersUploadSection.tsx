@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Player } from '../../types';
 import { Upload, Download } from 'lucide-react';
 import { parsePlayersFileContent, parsePlayersXlsxBuffer, PlayersImportError } from '../../utils/playersImport';
-import { FANTACALCIO_IT_LISTONE } from '../../data/presetListoni/fantacalcioIt';
+import { FANTACALCIO_IT_LISTONE } from '../../data/presetListoni';
 import { Card, SectionHeader, Alert, Select, Button, ConfirmDialog } from '../ui';
 
 interface Props {

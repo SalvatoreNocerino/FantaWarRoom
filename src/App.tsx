@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
-import { FANTACALCIO_IT_LISTONE } from './data/presetListoni/fantacalcioIt';
+import { FANTACALCIO_IT_LISTONE } from './data/presetListoni';
 import { AppShell } from './components/shell/AppShell';
 import { ActiveTab } from './components/shell/navItems';
 import { DashboardView } from './components/DashboardView';

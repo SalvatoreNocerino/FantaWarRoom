@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test:unit": "vitest run"
+    "test:unit": "vitest run",
+    "agente-ansa": "tsx Agente_Ansa/agente.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.2",

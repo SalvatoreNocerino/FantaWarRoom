@@ -32,7 +32,7 @@ export const AddPlayerModal: React.FC<AddPlayerModalProps> = ({ onClose, onAddCu
       notes: newNotes.trim() || 'Giocatore aggiunto manualmente',
       isCustom: true,
       fairValueBracket: newFairValue,
-      lastYearStats: { appearances: 25, goals: 3, assists: 2, fantaAvg: 6.3 },
+      lastYearStats: { appearances: 25, starterAppearances: 20, goals: 3, assists: 2, yellowCards: 3, redCards: 0 },
     };
 
     onAddCustomPlayer(custom);

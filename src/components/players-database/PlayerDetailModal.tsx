@@ -65,7 +65,7 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
       <div className="bg-surface-2/80 p-3 rounded-xl border border-border space-y-2 text-xs">
         <span className="text-ink-soft font-bold flex items-center gap-1.5">
           <BarChart3 className="w-4 h-4 text-warning" />
-          <span>Statistiche Anno Scorso (2024/25)</span>
+          <span>Statistiche Anno Scorso (2025/26)</span>
         </span>
 
         {player.lastYearStats ? (
@@ -73,6 +73,7 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
             <div className="bg-surface p-2 rounded-lg border border-border">
               <span className="text-faint block text-[10px]">Presenze</span>
               <strong className="text-ink text-sm">{player.lastYearStats.appearances}</strong>
+              <span className="text-faint block text-[9px]">({player.lastYearStats.starterAppearances} tit.)</span>
             </div>
             <div className="bg-surface p-2 rounded-lg border border-border">
               <span className="text-faint block text-[10px]">Gol</span>
@@ -83,34 +84,27 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
               <strong className="text-info text-sm">{player.lastYearStats.assists}</strong>
             </div>
             <div className="bg-surface p-2 rounded-lg border border-border">
-              <span className="text-faint block text-[10px]">FantaMedia</span>
-              <strong className="text-warning text-sm">{player.lastYearStats.fantaAvg}</strong>
+              <span className="text-faint block text-[10px]">Cartellini</span>
+              <strong className="text-warning text-sm">
+                {player.lastYearStats.yellowCards}🟨 {player.lastYearStats.redCards}🟥
+              </strong>
             </div>
           </div>
         ) : (
-          <span className="text-faint italic block p-2">Nessun dato storico precedente disponibile</span>
+          <span className="text-faint italic block p-2">Nessuna Informazione Disponibile</span>
         )}
       </div>
 
       <div className="bg-surface-2/80 p-3 rounded-xl border border-border space-y-2 text-xs">
         <span className="text-ink-soft font-bold flex items-center gap-1.5">
           <TrendingUp className="w-4 h-4 text-accent" />
-          <span>Previsioni Stagione (2025/26)</span>
+          <span>Previsioni Stagione (2026/27)</span>
         </span>
 
-        {player.expectedGoalsAssists === 'N/A' ? (
-          <span className="text-faint italic block p-2">Previsione non disponibile per questo listone</span>
+        {player.aiForecast ? (
+          <p className="text-ink-soft italic p-2">{player.aiForecast}</p>
         ) : (
-          <div className="grid grid-cols-2 gap-2 font-mono pt-1">
-            <div className="bg-surface p-2.5 rounded-lg border border-border">
-              <span className="text-faint text-[10px] block">FantaMedia Prevista</span>
-              <strong className="text-accent text-sm">{player.expectedFantaAvg}</strong>
-            </div>
-            <div className="bg-surface p-2.5 rounded-lg border border-border">
-              <span className="text-faint text-[10px] block">Bonus Attesi (G+A)</span>
-              <strong className="text-info text-sm">{player.expectedGoalsAssists}</strong>
-            </div>
-          </div>
+          <span className="text-faint italic block p-2">Nessuna Informazione Disponibile</span>
         )}
       </div>
 

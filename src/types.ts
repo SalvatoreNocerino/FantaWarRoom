@@ -2,9 +2,11 @@ export type PlayerRole = 'P' | 'D' | 'C' | 'A';
 
 export interface PlayerLastYearStats {
   appearances: number;
+  starterAppearances: number;
   goals: number;
   assists: number;
-  fantaAvg: number;
+  yellowCards: number;
+  redCards: number;
 }
 
 export interface Player {
@@ -20,6 +22,9 @@ export interface Player {
   injuryStatus?: 'healthy' | 'minor' | 'injured' | 'doubt';
   isCustom?: boolean;
   lastYearStats?: PlayerLastYearStats;
+  /** Previsione fantacalcistica di una riga per la stagione entrante, generata
+   * da Agente_Ansa via ricerca web — vedi Agente_Ansa/README.md. */
+  aiForecast?: string;
   fairValueBracket?: string; // es. "35-50 FM", "15-25 FM", "1-5 FM"
   // --- Campi opzionali per il motore di pricing deterministico (src/engine) ---
   // Popolati quando il listone importato li contiene (es. export fantacalcio.it

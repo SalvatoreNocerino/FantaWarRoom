@@ -95,7 +95,7 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
           <th className="p-3 text-center">
             <SortableHeader label="Max Bid / Pagato" sortKeyValue="maxBid" activeKey={sortKey} dir={sortDir} onSort={onSort} align="center" />
           </th>
-          <th className="p-3 text-center hidden md:table-cell">Stats 24/25</th>
+          <th className="p-3 text-center hidden md:table-cell">Stats 25/26</th>
           <th className="p-3 text-right">Azioni</th>
         </Thead>
         <Tbody>
@@ -163,8 +163,9 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                   <td className="p-3 text-center hidden md:table-cell text-muted font-mono text-[11px]">
                     {p.lastYearStats ? (
                       <span>
-                        {p.lastYearStats.appearances}p • <strong className="text-accent">{p.lastYearStats.goals}g</strong> •{' '}
-                        <strong className="text-info">{p.lastYearStats.assists}a</strong> (FM {p.lastYearStats.fantaAvg})
+                        {p.lastYearStats.appearances}p ({p.lastYearStats.starterAppearances}t) •{' '}
+                        <strong className="text-accent">{p.lastYearStats.goals}g</strong> •{' '}
+                        <strong className="text-info">{p.lastYearStats.assists}a</strong>
                       </span>
                     ) : (
                       <span className="text-faint italic">N/D</span>
