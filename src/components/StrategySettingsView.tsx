@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { StrategySettings, Player, PlayerRole } from '../types';
 import { Sliders, Save } from 'lucide-react';
-import { FormationSection } from './strategy-settings/FormationSection';
 import { AggressivenessSection } from './strategy-settings/AggressivenessSection';
 import { BudgetAllocationSection } from './strategy-settings/BudgetAllocationSection';
 import { WishlistSection, WISHLIST_MAX } from './strategy-settings/WishlistSection';
@@ -11,7 +10,6 @@ interface StrategySettingsViewProps {
   strategy: StrategySettings;
   allPlayers: Player[];
   totalBudget: number;
-  selectableFormations?: string[];
   onSaveStrategy: (updatedStrategy: StrategySettings) => void;
 }
 
@@ -21,7 +19,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   strategy,
   allPlayers,
   totalBudget,
-  selectableFormations = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1', '3-6-1', '6-3-1'],
   onSaveStrategy,
 }) => {
   const [formData, setFormData] = useState<StrategySettings>({ ...strategy });
@@ -74,7 +71,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
       <PageHeader
         icon={Sliders}
         title="Strategia Pre-Asta & Target Budget"
-        subtitle="Imposta il modulo base, lo stile di aggressività, la distribuzione del budget e seleziona i tuoi obiettivi wishlist."
+        subtitle="Imposta lo stile di aggressività, la distribuzione del budget e seleziona i tuoi obiettivi wishlist."
         action={
           <Button type="submit" disabled={!isAllocationValid}>
             <Save className="w-4 h-4" />
@@ -89,12 +86,6 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
           La somma delle percentuali di budget per ruolo deve essere esattamente pari al 100% prima di poter salvare.
         </Alert>
       )}
-
-      <FormationSection
-        preferredFormation={formData.preferredFormation}
-        selectableFormations={selectableFormations}
-        onChange={(preferredFormation) => setFormData({ ...formData, preferredFormation })}
-      />
 
       <AggressivenessSection
         aggressionScore={formData.aggressionScore}

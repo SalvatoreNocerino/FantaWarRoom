@@ -39,29 +39,6 @@ describe('loadAppData', () => {
     expect(data.league.rosterSlots).toEqual(DEFAULT_LEAGUE_SETTINGS.rosterSlots);
   });
 
-  it('scarta un modulo preferito non tra quelli selezionabili e ricade sul default', () => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ strategy: { preferredFormation: '9-9-9-non-valido' } })
-    );
-
-    const data = loadAppData();
-    expect(data.strategy.preferredFormation).toBe('3-4-3');
-  });
-
-  it('filtra le formazioni selezionabili non valide e non resta mai con lista vuota', () => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ league: { selectableFormations: ['3-4-2-1', 'non-valido'] } })
-    );
-
-    const data = loadAppData();
-    expect(data.league.selectableFormations.length).toBeGreaterThan(0);
-    data.league.selectableFormations.forEach((f: string) => {
-      expect(f).not.toBe('3-4-2-1');
-    });
-  });
-
   it('non va in crash su JSON salvato corrotto e ripristina i default', () => {
     localStorage.setItem(STORAGE_KEY, '{ questo non è json valido');
     const data = loadAppData();

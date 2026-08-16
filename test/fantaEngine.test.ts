@@ -17,7 +17,6 @@ function makeLeague(overrides: Partial<LeagueSettings> = {}): LeagueSettings {
     defensiveModifier: { enabled: false },
     midfieldModifier: { enabled: false },
     auctionRules: { callOrderRule: 'free' },
-    selectableFormations: ['4-3-3'],
     ...overrides,
   };
 }

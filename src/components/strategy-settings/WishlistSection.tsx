@@ -56,7 +56,7 @@ export const WishlistSection: React.FC<WishlistSectionProps> = ({
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-sm font-bold text-ink-soft flex items-center gap-2">
           <Heart className="w-4 h-4 text-negative" />
-          <span>2.4.1 Seleziona Giocatori per la Wishlist</span>
+          <span>Seleziona Giocatori per la Wishlist</span>
         </h3>
         <span className="text-[11px] font-mono text-faint shrink-0">
           {wishlistPlayers.length}/{WISHLIST_MAX}

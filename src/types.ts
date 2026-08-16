@@ -80,11 +80,9 @@ export interface LeagueSettings {
     callOrderRule: CallOrderRule;
     alphabetStartLetter?: string;
   };
-  selectableFormations: string[];
 }
 
 export interface StrategySettings {
-  preferredFormation: string;
   aggressionScore: number; // 0 (conservativo) to 100 (aggressivo)
   budgetAllocationPct: {
     P: number;

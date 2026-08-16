@@ -105,7 +105,6 @@ export const SettingsView: React.FC<Props> = ({
           strategy={strategy}
           allPlayers={allPlayers}
           totalBudget={league.totalBudget}
-          selectableFormations={league.selectableFormations}
           onSaveStrategy={onSaveStrategy}
         />
       )}

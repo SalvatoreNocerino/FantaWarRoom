@@ -48,21 +48,9 @@ export const DEFAULT_LEAGUE_SETTINGS: LeagueSettings = {
     callOrderRule: 'free',
     alphabetStartLetter: 'A',
   },
-  selectableFormations: [
-    '3-4-3',
-    '3-5-2',
-    '4-3-3',
-    '4-4-2',
-    '4-5-1',
-    '5-3-2',
-    '5-4-1',
-    '3-6-1',
-    '6-3-1',
-  ],
 };
 
 export const DEFAULT_STRATEGY_SETTINGS: StrategySettings = {
-  preferredFormation: '3-4-3',
   aggressionScore: 50,
   budgetAllocationPct: {
     P: 8,
@@ -89,18 +77,6 @@ export function loadAppData(): AppData {
     const parsed = JSON.parse(raw);
     const loadedLeague = { ...DEFAULT_LEAGUE_SETTINGS, ...(parsed.league || {}) };
     const loadedStrategy = { ...DEFAULT_STRATEGY_SETTINGS, ...(parsed.strategy || {}) };
-
-    // Sanitize selectableFormations to exclude invalid formations like '3-4-2-1'
-    const allowed = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1', '3-6-1', '6-3-1'];
-    if (loadedLeague.selectableFormations) {
-      loadedLeague.selectableFormations = loadedLeague.selectableFormations.filter((f: string) => allowed.includes(f));
-      if (loadedLeague.selectableFormations.length === 0) {
-        loadedLeague.selectableFormations = [...allowed];
-      }
-    }
-    if (!allowed.includes(loadedStrategy.preferredFormation)) {
-      loadedStrategy.preferredFormation = '3-4-3';
-    }
 
     return {
       league: loadedLeague,

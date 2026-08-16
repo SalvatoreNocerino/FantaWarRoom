@@ -46,10 +46,10 @@ export interface EngineLeagueConfig {
 /**
  * Configurazione di strategia necessaria al motore — sottoinsieme di StrategySettings.
  *
- * NB: non include preferredFormation. I titolari-per-ruolo-in-lega usati per
- * la classificazione Titolare/Riserva sono fissi (vedi
- * modelParams.TITOLARI_PER_SQUADRA_LEGA) e non dipendono più dal modulo di
- * nessuno: non è osservabile che modulo giocheranno le squadre avversarie.
+ * I titolari-per-ruolo-in-lega usati per la classificazione Titolare/Riserva
+ * sono fissi (vedi modelParams.TITOLARI_PER_SQUADRA_LEGA), non legati al
+ * modulo di nessuno: non è osservabile che modulo giocheranno gli avversari
+ * (per questo StrategySettings non ha più un campo "modulo preferito").
  */
 export interface EngineStrategyConfig {
   /** 0 (conservativo) - 1 (aggressivo). Nell'app è 0-100: va normalizzato prima di passarlo. */
