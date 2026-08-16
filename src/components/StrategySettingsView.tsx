@@ -15,8 +15,8 @@ interface StrategySettingsViewProps {
   onSaveStrategy: (updatedStrategy: StrategySettings) => void;
 }
 
-// Orchestratore: possiede solo formData e il submit. Ogni sezione numerata
-// (2.1-2.4) vive nel proprio file sotto ./strategy-settings/.
+// Orchestratore: possiede solo formData e il submit. Ogni sezione vive nel
+// proprio file sotto ./strategy-settings/.
 export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   strategy,
   allPlayers,
@@ -73,7 +73,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
     <form onSubmit={handleSave} className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-ink">
       <PageHeader
         icon={Sliders}
-        title="2. Strategia Pre-Asta & Target Budget"
+        title="Strategia Pre-Asta & Target Budget"
         subtitle="Imposta il modulo base, lo stile di aggressività, la distribuzione del budget e seleziona i tuoi obiettivi wishlist."
         action={
           <Button type="submit" disabled={!isAllocationValid}>
@@ -115,7 +115,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
 
       <Card className="p-6 space-y-6">
         <div>
-          <SectionHeader number="2.4" title="Wishlist Obiettivi Asta" className="border-b-0 pb-0" />
+          <SectionHeader title="Wishlist Obiettivi Asta" className="border-b-0 pb-0" />
           <p className="text-muted text-xs mt-1">Seleziona i giocatori obiettivo dal menu e ordinali per ruolo.</p>
         </div>
 

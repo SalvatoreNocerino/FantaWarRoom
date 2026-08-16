@@ -14,7 +14,7 @@ export const FormationSection: React.FC<FormationSectionProps> = ({
 }) => {
   return (
     <Card className="p-6 space-y-4">
-      <SectionHeader number="2.1" title="Modulo di Riferimento Tattico" />
+      <SectionHeader title="Modulo di Riferimento Tattico" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
         <Field label="Seleziona Modulo Principale">

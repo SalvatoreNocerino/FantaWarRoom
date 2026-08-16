@@ -119,7 +119,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
     <div className="max-w-7xl mx-auto px-4 py-6 space-y-6 text-ink">
       <PageHeader
         icon={Database}
-        title={`3. Listone Serie A (${allPlayers.length} Giocatori)`}
+        title={`Listone Serie A (${allPlayers.length} Giocatori)`}
         subtitle="Listone completo, aggiornato live con l'andamento dell'asta: max bid per i liberi, prezzo pagato per gli aggiudicati. Clicca su un calciatore per la scheda di dettaglio."
         action={
           <Button onClick={() => setShowAddModal(true)}>

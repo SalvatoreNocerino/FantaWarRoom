@@ -72,7 +72,7 @@ export const ParticipantsSection: React.FC<Props> = ({ formData, setFormData }) 
 
   return (
     <Card className="p-6 space-y-4">
-      <SectionHeader number="1.3" title={`Partecipanti della Lega (${formData.participants.length} Squadre)`} />
+      <SectionHeader title={`Partecipanti della Lega (${formData.participants.length} Squadre)`} />
 
       <div className="flex gap-2 text-xs">
         <div className="flex-1 min-w-0">

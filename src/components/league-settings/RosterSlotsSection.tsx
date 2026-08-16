@@ -18,7 +18,7 @@ const ROLE_FIELDS: { key: PlayerRole; label: string; borderClass: string; textCl
 export const RosterSlotsSection: React.FC<Props> = ({ formData, setFormData }) => {
   return (
     <Card className="p-6 space-y-4">
-      <SectionHeader number="1.2" title="Giocatori Per Squadra (Slot per Ruolo)" />
+      <SectionHeader title="Giocatori Per Squadra (Slot per Ruolo)" />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
         {ROLE_FIELDS.map(({ key, label, borderClass, textClass }) => (

@@ -15,8 +15,8 @@ interface LeagueSettingsViewProps {
 }
 
 // Orchestratore: possiede solo lo stato condiviso (formData) e il submit.
-// Ogni sezione numerata (1.1-1.5) vive nel proprio file sotto
-// ./league-settings/ e riceve formData + setFormData.
+// Ogni sezione vive nel proprio file sotto ./league-settings/ e riceve
+// formData + setFormData.
 export const LeagueSettingsView: React.FC<LeagueSettingsViewProps> = ({
   league,
   onSaveLeague,
@@ -36,7 +36,7 @@ export const LeagueSettingsView: React.FC<LeagueSettingsViewProps> = ({
     <form onSubmit={handleSave} className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-ink">
       <PageHeader
         icon={Settings}
-        title="1. Lega e Regole Fantacalcio"
+        title="Lega e Regole Fantacalcio"
         subtitle="Configura la lega, le squadre partecipanti, gli slot per ruolo, i modificatori e il listone di riferimento."
         action={
           <Button type="submit">

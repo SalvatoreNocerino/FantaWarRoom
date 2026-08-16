@@ -80,7 +80,7 @@ export const PlayersUploadSection: React.FC<Props> = ({ onImportPlayersList }) =
 
   return (
     <Card className="p-6 space-y-4">
-      <SectionHeader number="1.5" title="Listone Serie A" />
+      <SectionHeader title="Listone Serie A" />
 
       <p className="text-muted text-xs leading-relaxed">
         Scegli il listone da usare come riferimento live durante l'asta: un provider precaricato, oppure carica un

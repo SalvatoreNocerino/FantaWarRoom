@@ -10,7 +10,7 @@ interface Props {
 export const ScoringRulesSection: React.FC<Props> = ({ formData, setFormData }) => {
   return (
     <Card className="p-6 space-y-4">
-      <SectionHeader number="1.4" title="Modificatori di Ruolo" />
+      <SectionHeader title="Modificatori di Ruolo" />
 
       <Checkbox
         id="defModFlag"

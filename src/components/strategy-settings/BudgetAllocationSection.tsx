@@ -30,7 +30,6 @@ export const BudgetAllocationSection: React.FC<BudgetAllocationSectionProps> = (
   return (
     <Card className="p-6 space-y-5">
       <SectionHeader
-        number="2.3"
         title="Target Budget per Ruolo (Totale Allocazione: 100%)"
         action={
           <div className="flex items-center gap-3 font-mono text-xs">
@@ -66,11 +65,17 @@ export const BudgetAllocationSection: React.FC<BudgetAllocationSectionProps> = (
 
               <div className="flex items-center gap-2 pt-1 font-mono">
                 <input
-                  type="number"
-                  min={0}
-                  max={100}
+                  type="text"
+                  inputMode="numeric"
                   value={pct}
-                  onChange={(e) => onChangeRole(role, Number(e.target.value))}
+                  onChange={(e) => {
+                    // input testuale + strip di tutto ciò che non è cifra:
+                    // un <input type="number"> controllato lascia comunque
+                    // digitare "." (e con esso stati intermedi tipo "8."),
+                    // qui invece il punto non entra proprio nel valore.
+                    const digits = e.target.value.replace(/\D/g, '');
+                    onChangeRole(role, digits === '' ? 0 : Math.min(100, parseInt(digits, 10)));
+                  }}
                   className="w-full bg-field border border-border-strong rounded px-3 py-1.5 text-ink font-bold text-sm"
                 />
                 <span className="text-muted">%</span>

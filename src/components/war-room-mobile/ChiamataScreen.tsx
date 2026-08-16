@@ -48,6 +48,9 @@ export const ChiamataScreen: React.FC<Props> = ({
   const [query, setQuery] = useState('');
   const [roleFilter, setRoleFilter] = useState<PlayerRole | 'ALL'>('ALL');
   const [pickerOpen, setPickerOpen] = useState(false);
+  // Ordinamento del dropdown di selezione giocatore (separato da restSort,
+  // che riordina solo il pannello "rimanenti nel ruolo" più sotto).
+  const [pickerSort, setPickerSort] = useState<'valore' | 'alfabetico'>('valore');
   const [bid, setBid] = useState(1);
   const [buyerTeam, setBuyerTeam] = useState(myTeamName);
   // Ordinamento della lista "rimanenti nel ruolo" — solo desktop (vedi
@@ -72,12 +75,16 @@ export const ChiamataScreen: React.FC<Props> = ({
 
   const dropdownOptions = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return sortedAvailable.filter((p) => {
+    const filtered = availablePlayers.filter((p) => {
       if (roleFilter !== 'ALL' && p.role !== roleFilter) return false;
       if (!q) return true;
       return p.name.toLowerCase().includes(q) || p.team.toLowerCase().includes(q);
     });
-  }, [sortedAvailable, roleFilter, query]);
+    if (pickerSort === 'alfabetico') {
+      return [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+    }
+    return [...filtered].sort((a, b) => (pricingMap.get(b.id)?.offertaMax ?? 0) - (pricingMap.get(a.id)?.offertaMax ?? 0));
+  }, [availablePlayers, roleFilter, query, pickerSort, pricingMap]);
 
   // Già ordinati per valore (offertaMax desc, via sortedAvailable).
   const restAll = useMemo(() => {
@@ -206,8 +213,50 @@ export const ChiamataScreen: React.FC<Props> = ({
 
           {pickerOpen && (
             <div style={{ background: COLORS.bgNested, border: `1px solid ${COLORS.borderInput}`, borderRadius: 14, overflow: 'hidden' }}>
-              <div style={{ display: 'flex', gap: 6, padding: '10px 10px 8px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, padding: '10px 10px 8px', alignItems: 'center' }}>
                 <RoleChips value={roleFilter} onChange={setRoleFilter} />
+                <div style={{ display: 'flex', gap: 4, marginLeft: 'auto' }}>
+                  <button
+                    type="button"
+                    onClick={() => setPickerSort('valore')}
+                    title="Ordina per valore"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 3,
+                      padding: '3px 7px',
+                      borderRadius: 7,
+                      border: `1px solid ${pickerSort === 'valore' ? COLORS.accent : COLORS.borderInput}`,
+                      background: pickerSort === 'valore' ? 'rgba(61,220,151,.10)' : 'transparent',
+                      color: pickerSort === 'valore' ? COLORS.accent : COLORS.textMuted,
+                      font: `700 10px ${FONT_UI}`,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <ArrowDown01 size={11} />
+                    Valore
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPickerSort('alfabetico')}
+                    title="Ordina alfabeticamente"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 3,
+                      padding: '3px 7px',
+                      borderRadius: 7,
+                      border: `1px solid ${pickerSort === 'alfabetico' ? COLORS.accent : COLORS.borderInput}`,
+                      background: pickerSort === 'alfabetico' ? 'rgba(61,220,151,.10)' : 'transparent',
+                      color: pickerSort === 'alfabetico' ? COLORS.accent : COLORS.textMuted,
+                      font: `700 10px ${FONT_UI}`,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <ArrowDownAZ size={11} />
+                    A-Z
+                  </button>
+                </div>
               </div>
               <div style={{ maxHeight: 216, overflowY: 'auto' }}>
                 {dropdownOptions.map((p) => {

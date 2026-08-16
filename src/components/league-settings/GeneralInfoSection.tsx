@@ -50,10 +50,10 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
 
   return (
     <Card className="p-6 space-y-5">
-      <SectionHeader number="1.1" title="Informazioni Generali Lega" />
+      <SectionHeader title="Informazioni Generali Lega" />
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-        <Field number="1.1.1" label="Nome della Lega">
+        <Field label="Nome della Lega">
           <Input
             type="text"
             value={formData.name}
@@ -62,7 +62,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
           />
         </Field>
 
-        <Field number="1.1.2" label="Numero Partecipanti" hint="Aggiunge/rimuove squadre generiche; puoi anche gestirle a mano qui sotto in 1.3.">
+        <Field label="Numero Partecipanti" hint="Aggiunge/rimuove squadre generiche; puoi anche gestirle a mano qui sotto in Partecipanti della Lega.">
           <Input
             type="number"
             variant="mono"
@@ -77,7 +77,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
           />
         </Field>
 
-        <Field number="1.1.3" label="Budget Iniziale di Base (FM)">
+        <Field label="Budget Iniziale di Base (FM)">
           <Input
             type="number"
             variant="money"
@@ -90,12 +90,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
 
       <Checkbox
         id="equalCreditsFlag"
-        title={
-          <span className="inline-flex items-center gap-1.5">
-            <span className="rounded bg-accent/15 text-accent font-mono text-[10px] font-bold px-1 shrink-0">1.1.4</span>
-            Tutte le squadre partono con gli stessi crediti
-          </span>
-        }
+        title="Tutte le squadre partono con gli stessi crediti"
         description="Disattiva per personalizzare il budget iniziale per ogni fantallenatore (es. penalizzazioni o riconferme)."
         checked={formData.equalInitialCredits}
         onChange={(e) => setFormData({ ...formData, equalInitialCredits: e.target.checked })}

@@ -10,7 +10,6 @@ export const AggressivenessSection: React.FC<AggressivenessSectionProps> = ({ ag
   return (
     <Card className="p-6 space-y-4">
       <SectionHeader
-        number="2.2"
         title="Stile Offerte durante l'Asta (Aggressività)"
         action={
           <div className="flex items-center gap-3">

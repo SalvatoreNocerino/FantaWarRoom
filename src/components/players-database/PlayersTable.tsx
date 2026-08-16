@@ -132,14 +132,16 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                       <div className="min-w-0">
                         <div className="flex items-center gap-2">
                           <strong className="text-ink text-sm group-hover:text-accent transition-colors">{p.name}</strong>
-                          <span className="bg-surface px-2 py-0.5 rounded text-[10px] font-bold text-ink-soft">{p.team}</span>
                           {p.tier === 1 && !isSold && (
                             <span className="text-warning text-[10px] font-bold flex items-center">
                               <Star className="w-3 h-3 fill-warning mr-0.5" /> TOP
                             </span>
                           )}
                         </div>
-                        {isSold && <span className="text-[10.5px] text-muted block mt-0.5">a {assignment.boughtByTeam}</span>}
+                        <div className="text-[11px] text-muted mt-1">
+                          <span className="bg-surface-2 px-1.5 py-0.5 rounded font-bold text-ink-soft">{p.team}</span>
+                          {isSold && <span className="ml-1.5">a {assignment.boughtByTeam}</span>}
+                        </div>
                       </div>
                     </div>
                   </td>
