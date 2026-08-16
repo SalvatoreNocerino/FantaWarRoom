@@ -19,7 +19,9 @@ export const COLORS = {
   textPrimary: '#edeef2',
   textSecondary: '#c9ccd4',
   textMuted: '#8a8f9c',
-  textWeak: '#5d6270',
+  // #7a8193 invece del precedente #5d6270 — vedi lo stesso commento su
+  // --color-faint in src/index.css (fix contrasto WCAG AA).
+  textWeak: '#7a8193',
   // "Electric Mint" — palette del redesign Stitch, vedi lo stesso commento
   // su --color-accent in src/index.css.
   accent: '#00ff9d',

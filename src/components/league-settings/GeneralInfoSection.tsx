@@ -53,7 +53,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
       <SectionHeader number="1.1" title="Informazioni Generali Lega" />
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-        <Field label="1.1.1 Nome della Lega">
+        <Field number="1.1.1" label="Nome della Lega">
           <Input
             type="text"
             value={formData.name}
@@ -62,7 +62,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
           />
         </Field>
 
-        <Field label="1.1.2 Numero Partecipanti" hint="Aggiunge/rimuove squadre generiche; puoi anche gestirle a mano qui sotto in 1.3.">
+        <Field number="1.1.2" label="Numero Partecipanti" hint="Aggiunge/rimuove squadre generiche; puoi anche gestirle a mano qui sotto in 1.3.">
           <Input
             type="number"
             variant="mono"
@@ -77,7 +77,7 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
           />
         </Field>
 
-        <Field label="1.1.3 Budget Iniziale di Base (FM)">
+        <Field number="1.1.3" label="Budget Iniziale di Base (FM)">
           <Input
             type="number"
             variant="money"
@@ -90,7 +90,12 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
 
       <Checkbox
         id="equalCreditsFlag"
-        title="1.1.4 Tutte le squadre partono con gli stessi crediti"
+        title={
+          <span className="inline-flex items-center gap-1.5">
+            <span className="rounded bg-accent/15 text-accent font-mono text-[10px] font-bold px-1 shrink-0">1.1.4</span>
+            Tutte le squadre partono con gli stessi crediti
+          </span>
+        }
         description="Disattiva per personalizzare il budget iniziale per ogni fantallenatore (es. penalizzazioni o riconferme)."
         checked={formData.equalInitialCredits}
         onChange={(e) => setFormData({ ...formData, equalInitialCredits: e.target.checked })}

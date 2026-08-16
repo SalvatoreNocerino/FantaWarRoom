@@ -23,7 +23,11 @@
   --color-ink: #edeef2;
   --color-ink-soft: #c9ccd4;
   --color-muted: #8a8f9c;
-  --color-faint: #5d6270;
+  /* #7a8193 invece del precedente #5d6270: sotto 4.5:1 WCAG AA su
+     --color-page e --color-surface (misurato ~3.2:1 e ~3.0:1). Il nuovo
+     valore resta il gradino più debole della gerarchia (< --color-muted)
+     ma supera 4.5:1 su entrambi gli sfondi. */
+  --color-faint: #7a8193;
 
   /* "Electric Mint" — palette del redesign Stitch (vedi
      Fanta War Room Assistant su stitch.withgoogle.com). */

@@ -179,6 +179,7 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                           type="button"
                           onClick={() => onSelectForAuction(p.id)}
                           title="Chiama per l'asta"
+                          aria-label="Chiama per l'asta"
                           className={`p-1.5 rounded-lg text-xs transition-colors ${
                             isSelected ? 'bg-accent text-accent-ink' : 'bg-field text-muted hover:text-accent border border-border'
                           }`}
@@ -191,8 +192,12 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                         type="button"
                         onClick={() => onToggleWishlist(p.id)}
                         title={isWish ? 'Rimuovi da Wishlist' : 'Aggiungi a Wishlist'}
+                        aria-label={isWish ? 'Rimuovi da Wishlist' : 'Aggiungi a Wishlist'}
                         className={`p-1.5 rounded-lg text-xs transition-colors ${
-                          isWish ? 'bg-negative text-ink' : 'bg-field text-muted hover:text-negative border border-border'
+                          // Oro (warning), non rosso: coerente col badge TOP qui sopra
+                          // ("mi interessa"), e distinto dal rosso della blacklist
+                          // ("lo escludo") — due azioni opposte non devono condividere colore.
+                          isWish ? 'bg-warning/15 text-warning border border-warning/40' : 'bg-field text-muted hover:text-warning border border-border'
                         }`}
                       >
                         <Heart className="w-4 h-4" />
@@ -202,6 +207,7 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                         type="button"
                         onClick={() => onToggleBlacklist(p.id)}
                         title={isBlack ? 'Rimuovi da Blacklist' : 'Aggiungi a Blacklist'}
+                        aria-label={isBlack ? 'Rimuovi da Blacklist' : 'Aggiungi a Blacklist'}
                         className={`p-1.5 rounded-lg text-xs transition-colors ${
                           isBlack ? 'bg-surface-2 text-negative border border-negative' : 'bg-field text-muted hover:text-negative border border-border'
                         }`}
@@ -213,6 +219,7 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                         type="button"
                         onClick={() => onSelectPlayer(p)}
                         title="Vedi Scheda Dettaglio"
+                        aria-label="Vedi Scheda Dettaglio"
                         className="p-1.5 bg-field hover:bg-accent/10 text-ink-soft hover:text-accent border border-border rounded-lg text-xs transition-colors"
                       >
                         <Info className="w-4 h-4" />
