@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, LogIn } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import { Modal } from './ui';
 import { AppUser } from '../lib/supabase';
 
@@ -34,6 +35,7 @@ export const UpgradeModal: React.FC<Props> = ({ open, onClose, currentUser, onLo
         {currentUser ? (
           <a
             href={mailtoHref}
+            onClick={() => track('upgrade_email_clicked')}
             className="w-full inline-flex items-center justify-center gap-2 bg-accent text-accent-ink font-bold px-4 py-2.5 rounded-xl hover:brightness-110 transition-all"
           >
             <Mail className="w-4 h-4" />

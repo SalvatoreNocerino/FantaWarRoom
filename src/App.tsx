@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { track } from '@vercel/analytics';
 import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
 import { FANTACALCIO_IT_LISTONE } from './data/presetListoni';
@@ -42,6 +43,15 @@ export default function App() {
   // Apertura su Dashboard: risponde subito a "a che punto sono?" invece di
   // aprire su un form di configurazione (vedi Fase 1/2 redesign UI/UX).
   const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
+
+  // Unica via di navigazione fra tab: la SPA non usa un router (nessun
+  // cambio URL), quindi il pageview automatico di Vercel Analytics vede solo
+  // il caricamento iniziale. Questo evento è l'unico modo di sapere quali
+  // sezioni vengono davvero visitate.
+  const goToTab = (tab: ActiveTab) => {
+    track('tab_view', { tab });
+    setActiveTab(tab);
+  };
 
   // Giocatore selezionato per la chiamata live — condiviso tra il Listone
   // (sezione 3) e Console Live (sezione 5), così selezionarlo in un punto lo
@@ -176,6 +186,7 @@ export default function App() {
   }, [sharedLeagueMeta?.id, isLeagueAdmin]);
 
   const handleLogin = async () => {
+    track('login_started');
     try {
       await signInWithGoogle();
     } catch (err) {
@@ -241,6 +252,7 @@ export default function App() {
   const handleAssignPlayer = (playerId: string, boughtByTeam: string, cost: number) => {
     if (!isLeagueAdmin) return; // in lega condivisa solo l'admin conduce l'asta
     if (!isPremium && appData.auctionHistory.length >= FREE_ASSIGNMENT_LIMIT) {
+      track('premium_upsell_shown');
       setShowUpgradeModal(true);
       return;
     }
@@ -252,6 +264,12 @@ export default function App() {
       cost,
       timestamp: Date.now(),
     };
+
+    // Segnale d'uso principale: qui capiamo se l'app viene davvero usata
+    // durante un'asta reale, non solo aperta. Il ruolo basta a leggere il
+    // funnel in aggregato, niente nome giocatore/squadra (nessun dato di
+    // lega nell'evento).
+    track('player_assigned', { role: allPlayers.find((p) => p.id === playerId)?.role ?? 'unknown' });
 
     setAppData((prev) => ({
       ...prev,
@@ -287,6 +305,7 @@ export default function App() {
 
   const handleSaveLeague = (updatedLeague: LeagueSettings) => {
     if (!isLeagueAdmin) return;
+    track('league_settings_saved');
     setAppData((prev) => ({
       ...prev,
       league: updatedLeague,
@@ -294,6 +313,7 @@ export default function App() {
   };
 
   const handleSaveStrategy = (updatedStrategy: StrategySettings) => {
+    track('strategy_saved');
     setAppData((prev) => ({
       ...prev,
       strategy: updatedStrategy,
@@ -353,7 +373,7 @@ export default function App() {
   // Listone (sezione 3) già filtrato per quel ruolo.
   const handleSeeAllRoleInDatabase = (role: PlayerRole) => {
     setDatabaseRoleFilter(role);
-    setActiveTab('database');
+    goToTab('database');
   };
 
   // --- Lega condivisa: creazione, adesione, uscita ---
@@ -368,6 +388,7 @@ export default function App() {
       appData.strategy
     );
     if (!shared) return false;
+    track('shared_league_created');
     const myIndex = Math.max(
       0,
       appData.league.participants.findIndex((p) => p.isMyTeam)
@@ -387,6 +408,7 @@ export default function App() {
     const shared = await loadSharedLeague(leagueId);
     if (!shared) return { ok: false, message: 'Lega creata ma non riesco a caricarla. Ricarica la pagina.' };
 
+    track('shared_league_joined');
     setSharedLeagueMeta({ id: shared.id, ownerId: shared.ownerId, inviteCode: shared.inviteCode, myParticipantIndex: participantIndex });
     setAppData((prev) => ({
       league: shared.league,
@@ -423,7 +445,7 @@ export default function App() {
     <div className="min-h-screen bg-page text-ink font-sans selection:bg-accent selection:text-accent-ink">
       <AppShell
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={goToTab}
         myCredits={myRemainingCredits}
         mySlotsNeeded={mySlotsNeeded}
         countMyRole={countMyRole}
@@ -448,8 +470,8 @@ export default function App() {
             wishlistIds={appData.strategy.wishlistIds}
             allPlayers={allPlayers}
             auctionHistory={appData.auctionHistory}
-            onGoToWarRoom={() => setActiveTab('warroom')}
-            onGoToDatabase={() => setActiveTab('database')}
+            onGoToWarRoom={() => goToTab('warroom')}
+            onGoToDatabase={() => goToTab('database')}
             onSelectForAuction={setSelectedAuctionPlayerId}
             isPremium={isPremium}
             freeAssignmentLimit={FREE_ASSIGNMENT_LIMIT}
