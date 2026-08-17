@@ -3,7 +3,6 @@ import { ActiveTab } from './navItems';
 import { Sidebar } from './Sidebar';
 import { MobileTopBar } from './MobileTopBar';
 import { NavDrawer } from './NavDrawer';
-import { AppUser } from '../../lib/supabase';
 import { PlayerRole } from '../../types';
 
 interface Props {
@@ -15,10 +14,6 @@ interface Props {
   rosterSlots: Record<PlayerRole, number>;
   leagueName: string;
   onResetData: () => void;
-  currentUser: AppUser | null;
-  onLogin: () => void;
-  onLogout: () => void;
-  isCloudSyncing: boolean;
   children: React.ReactNode;
 }
 

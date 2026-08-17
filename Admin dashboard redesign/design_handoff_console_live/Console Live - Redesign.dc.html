@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.546.0/dist/umd/lucide.min.js"></script><style>html,body{margin:0;background:#08090c;font-family:Manrope,system-ui,sans-serif}.dv-turn{background:#08090c}.dv-olabel{color:rgba(255,255,255,.62)}.dv-next{color:rgba(255,255,255,.58)}.ic svg{width:100%;height:100%;display:block}a{color:#3ddc97}a:hover{color:#7af0bd}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(255,255,255,.07);scroll-margin-top:16px;background:#08090c}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:700 10px 'JetBrains Mono',monospace;padding:3px 7px;background:#3ddc97;color:#08090c;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 Manrope,sans-serif;color:#edeef2}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:700 10.5px 'JetBrains Mono',monospace;padding:3px 7px;background:rgba(255,255,255,.09);color:#edeef2;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 Manrope,sans-serif;color:rgba(255,255,255,.62)}.dv-card{max-width:100%;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden}.dv-opt:target .dv-oid{background:#3ddc97;color:#08090c}.dv-next{margin:22px 0 0;font:12px/1.5 Manrope,sans-serif;color:rgba(255,255,255,.58)}.pk::placeholder{color:#edeef2;opacity:1}</style></helmet>
+
+<section class="dv-turn" id="t6">
+<div class="dv-thd"><a class="dv-tid" href="#t6">6</a><span class="dv-tname">Mobile <a class="dv-oid" href="#5b">5b</a> con hero «giocatore chiamato» — max bid e statistiche prezzo, poi chi resta</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="6a"><div class="dv-olabel"><a class="dv-oid" href="#6a">6a</a>Hero = chiamato + max bid + statistiche prezzo · sotto i giocatori rimanenti · tab bar in basso</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">Console Live</div><div style="font-size:11px;color:#8a8f9c">chiamata #13 · 12 aggiudicati</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:14px;padding:14px 16px 18px">
+
+    <div style="background:linear-gradient(180deg,rgba(61,220,151,.10),rgba(61,220,151,0) 62%),#11141a;border:1px solid rgba(61,220,151,.28);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="{{ selRoleStyle }}">{{ selRole }}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#3ddc97;font-weight:800">In asta ora</div>
+          <input class="pk" value="{{ query }}" onChange="{{ onQuery }}" onFocus="{{ openPicker }}" placeholder="{{ selName }}" style="width:100%;box-sizing:border-box;background:transparent;border:0;padding:0;color:#edeef2;font:800 20px Manrope,sans-serif;letter-spacing:-.02em;outline:none"/>
+          <div style="font-size:11.5px;color:#8a8f9c">{{ selMeta }}</div>
+        </div>
+        <button onClick="{{ openPicker }}" style="flex:none;width:34px;height:34px;border-radius:10px;background:#0d1014;border:1px solid rgba(255,255,255,.1);color:#8a8f9c;display:flex;align-items:center;justify-content:center;cursor:pointer"><span class="ic" style="width:16px;height:16px"><i data-lucide="chevron-down"></i></span></button>
+      </div>
+
+      <sc-if value="{{ pickerOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden">
+          <div style="display:flex;gap:6px;padding:10px 10px 8px">
+            <sc-for list="{{ roles }}" as="r" hint-placeholder-count="5">
+              <button onClick="{{ r.pick }}" style="{{ r.style }}">{{ r.label }}</button>
+            </sc-for>
+          </div>
+          <div style="max-height:216px;overflow-y:auto">
+            <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+              <div onClick="{{ o.pick }}" style="{{ o.rowStyle }}">
+                <span style="{{ o.roleStyle }}">{{ o.role }}</span>
+                <span style="flex:1;min-width:0;font-size:13px;font-weight:600">{{ o.name }}</span>
+                <span style="font:600 10.5px 'JetBrains Mono',monospace;color:#5d6270">{{ o.team }}</span>
+                <span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">{{ o.max }}</span>
+              </div>
+            </sc-for>
+            <sc-if value="{{ emptyList }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:16px;text-align:center;font-size:12px;color:#5d6270">Nessun giocatore libero con questo filtro</div>
+            </sc-if>
+          </div>
+          <button onClick="{{ closePicker }}" style="width:100%;height:40px;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.07);color:#8a8f9c;font:700 11.5px Manrope,sans-serif;cursor:pointer">Chiudi</button>
+        </div>
+      </sc-if>
+
+      <div style="display:flex;align-items:flex-end;gap:14px;padding-bottom:2px">
+        <div>
+          <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Max bid</div>
+          <div style="font:700 64px/0.88 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:-.035em">{{ selMax }}</div>
+        </div>
+        <div style="margin-left:auto;text-align:right">
+          <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Offerta max</div>
+          <div style="font:700 26px 'JetBrains Mono',monospace;color:#f5c451;line-height:1.1">{{ cap }}</div>
+          <div style="font-size:10.5px;color:#8a8f9c">{{ deltaValore }}</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:11px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Valore</div><div style="font:700 19px 'JetBrains Mono',monospace;margin-top:3px">{{ selVal }}</div></div>
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:11px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Range</div><div style="font:700 15px 'JetBrains Mono',monospace;margin-top:6px">{{ selRange }}</div></div>
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:11px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Residui dopo</div><div style="font:700 19px 'JetBrains Mono',monospace;margin-top:3px">{{ restDopo }}</div></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;align-items:baseline;gap:8px;padding:0 2px">
+        <span style="font-size:12.5px;font-weight:800">{{ restTitle }}</span>
+        <span style="{{ restRoleStyle }}">{{ restRole }}</span>
+        <span style="margin-left:auto;font-size:11px;color:#5d6270">{{ restCount }}</span>
+      </div>
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+        <sc-for list="{{ restList }}" as="p" hint-placeholder-count="5">
+          <div onClick="{{ p.pick }}" style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer">
+            <span style="{{ p.tierStyle }}">{{ p.tier }}</span>
+            <span style="flex:1;min-width:0;font-size:13px;font-weight:600">{{ p.name }}</span>
+            <span style="font:400 12px Manrope,sans-serif;color:#5d6270">{{ p.team }}</span>
+            <span style="font:600 11px 'JetBrains Mono',monospace;color:#5d6270">{{ p.val }}</span>
+            <span style="{{ p.maxStyle }}">{{ p.max }}</span>
+          </div>
+        </sc-for>
+        <a href="#6a" style="padding:13px 14px;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:#c9ccd4;font:700 12px Manrope,sans-serif">{{ restAll }}<span class="ic" style="width:14px;height:14px"><i data-lucide="chevron-right"></i></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:10px 16px 12px;background:#0d1014;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="flex:1;display:flex;align-items:center;background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden">
+        <button onClick="{{ dec1 }}" style="width:46px;height:46px;background:transparent;border:0;color:#c9ccd4;font-size:22px;cursor:pointer">−</button>
+        <input value="{{ bid }}" onChange="{{ onBid }}" style="flex:1;min-width:0;background:transparent;border:0;text-align:center;color:#edeef2;font:700 20px 'JetBrains Mono',monospace"/>
+        <button onClick="{{ inc1 }}" style="width:46px;height:46px;background:transparent;border:0;color:#c9ccd4;font-size:22px;cursor:pointer">+</button>
+      </div>
+      <button onClick="{{ toMax }}" style="height:46px;padding:0 12px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#c9ccd4;font:700 11px Manrope,sans-serif;line-height:1.15;cursor:pointer">Offerta<br/>max</button>
+      <button style="height:46px;padding:0 22px;background:#edeef2;color:#0a0b0f;font:800 15px Manrope,sans-serif;border:0;border-radius:12px;cursor:pointer">Assegna</button>
+    </div>
+  </div>
+
+  <div style="padding:6px 10px 14px;background:#0d1014;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+    <a href="#6a" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#3ddc97;background:rgba(61,220,151,.1)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span><span style="font-size:10px;font-weight:700">Chiamata</span></a>
+    <a href="#6b" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span><span style="font-size:10px;font-weight:700">Rose</span></a>
+    <a href="#6c" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span><span style="font-size:10px;font-weight:700">Listone</span></a>
+    <a href="#6d" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="history"></i></span><span style="font-size:10px;font-weight:700">History</span></a>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="6b"><div class="dv-olabel"><a class="dv-oid" href="#6b">6b</a>Rose — accordion per squadra, la mia in cima</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">Rose della lega</div><div style="font-size:11px;color:#8a8f9c">8 squadre · crediti residui</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px;display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;align-items:center;gap:8px;padding:0 2px">
+      <span style="font-size:12px;font-weight:800">8 squadre · 12 aggiudicati</span>
+      <span style="margin-left:auto;font-size:11px;color:#5d6270">tocca per espandere</span>
+    </div>
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+      <sc-for list="{{ teamRows }}" as="t" hint-placeholder-count="8">
+        <div>
+          <div onClick="{{ t.toggle }}" style="{{ t.headStyle }}">
+            <span class="ic" style="width:14px;height:14px;flex:none;color:#5d6270"><i data-lucide="{{ t.chev }}"></i></span>
+            <span style="{{ t.nameStyle }}">{{ t.name }}</span>
+            <span style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">{{ t.slots }}</span>
+            <span style="{{ t.crStyle }}">{{ t.credits }}</span>
+          </div>
+          <sc-if value="{{ t.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:10px 14px 12px;background:#0d1014;border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ t.lines }}" as="l" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="{{ l.roleStyle }}">{{ l.role }}</span>
+                    <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">{{ l.count }}</span>
+                    <span style="margin-left:auto;font:600 11px 'JetBrains Mono',monospace;color:#5d6270">{{ l.budget }}</span>
+                  </div>
+                  <sc-if value="{{ l.planned }}" hint-placeholder-val="{{ false }}">
+                    <div style="height:3px;border-radius:99px;background:rgba(255,255,255,.08)"><div style="{{ l.barStyle }}"></div></div>
+                  </sc-if>
+                  <div style="font-size:11.5px;line-height:1.5;color:#c9ccd4;text-wrap:pretty">{{ l.players }}</div>
+                </div>
+              </sc-for>
+              <sc-if value="{{ t.empty }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11.5px;color:#5d6270">Nessun giocatore ancora acquistato</div>
+              </sc-if>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="padding:6px 10px 14px;background:#0d1014;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+    <a href="#6a" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span><span style="font-size:10px;font-weight:700">Chiamata</span></a>
+    <a href="#6b" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#3ddc97;background:rgba(61,220,151,.1)"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span><span style="font-size:10px;font-weight:700">Rose</span></a>
+    <a href="#6c" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span><span style="font-size:10px;font-weight:700">Listone</span></a>
+    <a href="#6d" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="history"></i></span><span style="font-size:10px;font-weight:700">History</span></a>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="6c"><div class="dv-olabel"><a class="dv-oid" href="#6c">6c</a>Listone — ricerca e filtro ruolo: liberi con max bid, aggiudicati con prezzo pagato</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">Listone</div><div style="font-size:11px;color:#8a8f9c">liberi e aggiudicati · max bid e prezzi pagati</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+  <div style="padding:12px 16px 10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="position:relative">
+      <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:13px"><i data-lucide="search"></i></span>
+      <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Cerca giocatore o squadra" style="width:100%;box-sizing:border-box;background:#12141a;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 12px 12px 36px;color:#edeef2;font-family:inherit;font-size:14px"/>
+    </div>
+    <div style="display:flex;gap:6px">
+      <sc-for list="{{ roles }}" as="r" hint-placeholder-count="5">
+        <button onClick="{{ r.pick }}" style="{{ r.style }}">{{ r.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 16px 16px">
+    <div style="display:flex;align-items:center;gap:8px;padding:0 2px 10px">
+      <span style="font-size:11px;color:#5d6270">{{ listCount }}</span>
+      <span style="margin-left:auto;font-size:11px;color:#5d6270">max bid · prezzo pagato</span>
+    </div>
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+      <sc-for list="{{ listRows }}" as="o" hint-placeholder-count="8">
+        <div onClick="{{ o.pick }}" style="{{ o.rowStyle }}">
+          <span style="{{ o.roleStyle }}">{{ o.role }}</span>
+          <span style="flex:1;min-width:0">
+            <span style="font-size:13px;font-weight:600">{{ o.name }}</span>
+            <sc-if value="{{ o.sold }}" hint-placeholder-val="{{ false }}">
+              <span style="display:block;font-size:10.5px;color:#5d6270">a {{ o.taken }}</span>
+            </sc-if>
+          </span>
+          <span style="font:600 10.5px 'JetBrains Mono',monospace;color:#5d6270">{{ o.team }}</span>
+          <span style="{{ o.rightStyle }}">{{ o.right }}</span>
+        </div>
+      </sc-for>
+      <sc-if value="{{ emptyList }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:18px;text-align:center;font-size:12px;color:#5d6270">Nessun giocatore libero con questo filtro</div>
+      </sc-if>
+    </div>
+  </div>
+  <div style="padding:6px 10px 14px;background:#0d1014;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+    <a href="#6a" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span><span style="font-size:10px;font-weight:700">Chiamata</span></a>
+    <a href="#6b" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span><span style="font-size:10px;font-weight:700">Rose</span></a>
+    <a href="#6c" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#3ddc97;background:rgba(61,220,151,.1)"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span><span style="font-size:10px;font-weight:700">Listone</span></a>
+    <a href="#6d" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="history"></i></span><span style="font-size:10px;font-weight:700">History</span></a>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="6d"><div class="dv-olabel"><a class="dv-oid" href="#6d">6d</a>History — aggiudicazioni recenti e scostamento dal valore</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">History</div><div style="font-size:11px;color:#8a8f9c">12 aggiudicati · 466 crediti spesi in lega</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:11px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Aggiudicati</div><div style="font:700 20px 'JetBrains Mono',monospace;margin-top:3px">12</div></div>
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:11px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Prezzo medio</div><div style="font:700 20px 'JetBrains Mono',monospace;margin-top:3px">39</div></div>
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:11px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">vs valore</div><div style="font:700 20px 'JetBrains Mono',monospace;margin-top:3px;color:#f5c451">+9%</div></div>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:8px;padding:0 2px">
+      <span style="font-size:12.5px;font-weight:800">Ultime chiamate</span>
+      <span style="margin-left:auto;font-size:11px;color:#5d6270">prezzo · scostamento</span>
+    </div>
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#f5c451">C</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Çalhanoğlu</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da Speranza FC → AC Picchia</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">96</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#ff6b6b">+11</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#3ddc97">D</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Dimarco</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da Real Madrink → FC Real Fantasia</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">74</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#3ddc97">−4</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#f5c451">C</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Barella</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da AC Picchia → FC Real Fantasia</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">52</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#ff6b6b">+6</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#5bc8ff">P</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Sommer</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da FC Real Fantasia → FC Real Fantasia</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">41</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#3ddc97">−2</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#3ddc97">D</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Cambiaso</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da Dinamo Barella → AS Birra</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">34</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#ff6b6b">+3</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.06)">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#3ddc97">D</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Bremer</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da AS Birra → Dinamo Barella</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">33</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#3ddc97">−8</span></span>
+      </div>
+      <div style="padding:12px 14px;display:flex;align-items:center;gap:10px">
+        <span style="width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:#5bc8ff">P</span>
+        <span style="flex:1;min-width:0"><span style="font-size:13px;font-weight:600">Maignan</span><span style="display:block;font-size:11px;color:#5d6270">chiamato da Bayer Leverkusen → AS Birra</span></span>
+        <span style="text-align:right"><span style="display:block;font:700 15px 'JetBrains Mono',monospace">28</span><span style="display:block;font:600 10.5px 'JetBrains Mono',monospace;color:#3ddc97">−1</span></span>
+      </div>
+    </div>
+  </div>
+  <div style="padding:6px 10px 14px;background:#0d1014;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+    <a href="#6a" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span><span style="font-size:10px;font-weight:700">Chiamata</span></a>
+    <a href="#6b" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span><span style="font-size:10px;font-weight:700">Rose</span></a>
+    <a href="#6c" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span><span style="font-size:10px;font-weight:700">Listone</span></a>
+    <a href="#6d" style="height:50px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#3ddc97;background:rgba(61,220,151,.1)"><span class="ic" style="width:18px;height:18px"><i data-lucide="history"></i></span><span style="font-size:10px;font-weight:700">History</span></a>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «porta questo hero anche sul desktop <a href="#4a">4a</a>» · «aggiungi i rivali sotto i rimanenti» · «applica lo stile alle altre 4 schermate»</p>
+</section>
+
+<section class="dv-turn" id="t5">
+<div class="dv-thd"><a class="dv-tid" href="#t5">5</a><span class="dv-tname">Versione mobile di <a class="dv-oid" href="#4a">4a</a> — 390px, azioni nel pollice</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="5a"><div class="dv-olabel"><a class="dv-oid" href="#5a">5a</a>Chiamata live — hero max bid, «se lo prendi a X», barra offerta fissa in basso</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">Console Live</div><div style="font-size:11px;color:#8a8f9c">chiamata #13 · 12 aggiudicati</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:14px;padding:14px 16px">
+    <div style="position:relative">
+      <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:14px"><i data-lucide="search"></i></span>
+      <input placeholder="Chi è stato chiamato?" style="width:100%;box-sizing:border-box;background:#12141a;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:13px 12px 13px 36px;color:#edeef2;font-family:inherit;font-size:14px"/>
+    </div>
+
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:34px;height:34px;flex:none;border-radius:10px;background:rgba(255,107,107,.12);color:#ff6b6b;display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace">A</div>
+        <div style="min-width:0"><div style="font-size:17px;font-weight:800;letter-spacing:-.01em">Lautaro Martínez</div><div style="font-size:11.5px;color:#8a8f9c">Inter · rank #1 · titolare</div></div>
+        <span style="margin-left:auto;font:700 9px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:3px 6px;border-radius:5px">WISH</span>
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:16px">
+        <div>
+          <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Max bid</div>
+          <div style="font:700 56px/0.9 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:-.03em">210</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-bottom:4px">
+          <div><div style="font-size:10px;color:#8a8f9c;font-weight:600">Valore</div><div style="font:700 15px 'JetBrains Mono',monospace">196</div></div>
+          <div><div style="font-size:10px;color:#8a8f9c;font-weight:600">Range</div><div style="font:700 15px 'JetBrains Mono',monospace">172–224</div></div>
+        </div>
+        <div style="margin-left:auto;text-align:right;padding-bottom:4px"><div style="font-size:10px;color:#8a8f9c;font-weight:600">Tuo tetto</div><div style="font:700 15px 'JetBrains Mono',monospace;color:#f5c451">209</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)">
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Residui</div><div style="font:700 19px 'JetBrains Mono',monospace;margin-top:3px">{{ restDopo }}</div></div>
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Medio/slot</div><div style="font:700 19px 'JetBrains Mono',monospace;margin-top:3px">{{ medioDopo }}</div></div>
+        <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px"><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Sosten.</div><div style="font:800 13px Manrope,sans-serif;margin-top:6px;color:{{ sostColor }}">{{ sostLabel }}</div></div>
+      </div>
+    </div>
+
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:12.5px;font-weight:700">Se lo perdi, restano</span><span style="font:700 9px 'JetBrains Mono',monospace;color:#ff6b6b;border:1px solid rgba(255,107,107,.35);padding:2px 5px;border-radius:4px">A</span><span style="margin-left:auto;font-size:11px;color:#5d6270">8 liberi</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font:700 9px 'JetBrains Mono',monospace;color:#3ddc97;margin-right:6px">TOP</span>Vlahović</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">168</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font:700 9px 'JetBrains Mono',monospace;color:#3ddc97;margin-right:6px">TOP</span>Lookman</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">151</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font:700 9px 'JetBrains Mono',monospace;color:#3ddc97;margin-right:6px">TOP</span>Thuram</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">148</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font:700 9px 'JetBrains Mono',monospace;color:#f5c451;margin-right:6px">BUO</span>Dovbyk</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">118</span></div>
+      <button style="height:44px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#c9ccd4;font:700 12px Manrope,sans-serif;cursor:pointer">Vedi tutti gli 8 attaccanti</button>
+    </div>
+
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center"><span style="font-size:12.5px;font-weight:700">Chi ti contende gli A</span><span style="margin-left:auto;font-size:11px;color:#ff6b6b;font-weight:700">3 sopra il tuo tetto</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1">Van Goof</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#3ddc97">500</span><span style="font:700 9px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px">A 6</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1">Speranza FC</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#3ddc97">500</span><span style="font:700 9px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px">A 6</span></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1">Real Madrink</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#3ddc97">500</span><span style="font:700 9px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px">A 6</span></div>
+    </div>
+  </div>
+
+  <div style="padding:12px 16px 16px;background:#0d1014;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="flex:1;display:flex;align-items:center;background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden">
+        <button onClick="{{ dec1 }}" style="width:48px;height:48px;background:transparent;border:0;color:#c9ccd4;font-size:22px;cursor:pointer">−</button>
+        <input value="{{ bid }}" onChange="{{ onBid }}" style="flex:1;min-width:0;background:transparent;border:0;text-align:center;color:#edeef2;font:700 20px 'JetBrains Mono',monospace"/>
+        <button onClick="{{ inc1 }}" style="width:48px;height:48px;background:transparent;border:0;color:#c9ccd4;font-size:22px;cursor:pointer">+</button>
+      </div>
+      <button onClick="{{ toMax }}" style="height:48px;padding:0 14px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#c9ccd4;font:700 12px Manrope,sans-serif;cursor:pointer">Tetto</button>
+    </div>
+    <div style="display:flex;gap:8px">
+      <select style="flex:1;min-width:0;height:48px;background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:12px;color:#edeef2;font-family:inherit;font-size:13px;padding:0 12px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option><option>AS Birra</option></select>
+      <button style="height:48px;padding:0 26px;background:#edeef2;color:#0a0b0f;font:800 15px Manrope,sans-serif;border:0;border-radius:12px;cursor:pointer">Assegna</button>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="5b"><div class="dv-olabel"><a class="dv-oid" href="#5b">5b</a>Rose &amp; rivali — seconda scheda: la mia rosa a target e le rose di tutte le squadre</div>
+<div class="dv-card" style="width:390px;height:844px;display:flex;flex-direction:column;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <div style="padding:14px 16px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+    <div style="width:30px;height:30px;border-radius:9px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+    <div style="min-width:0"><div style="font-size:13px;font-weight:800">Rose della lega</div><div style="font-size:11px;color:#8a8f9c">8 squadre · crediti residui</div></div>
+    <div style="margin-left:auto;text-align:right"><div style="font-size:10px;color:#8a8f9c;font-weight:700;letter-spacing:.08em">RESIDUI</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">225</div></div>
+  </div>
+
+  <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px;display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;align-items:center;gap:8px;padding:0 2px">
+      <span style="font-size:12px;font-weight:800">8 squadre · 12 aggiudicati</span>
+      <span style="margin-left:auto;font-size:11px;color:#5d6270">tocca per espandere</span>
+    </div>
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+      <sc-for list="{{ teamRows }}" as="t" hint-placeholder-count="8">
+        <div>
+          <div onClick="{{ t.toggle }}" style="{{ t.headStyle }}">
+            <span class="ic" style="width:14px;height:14px;flex:none;color:#5d6270"><i data-lucide="{{ t.chev }}"></i></span>
+            <span style="{{ t.nameStyle }}">{{ t.name }}</span>
+            <span style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">{{ t.slots }}</span>
+            <span style="{{ t.crStyle }}">{{ t.credits }}</span>
+          </div>
+          <sc-if value="{{ t.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:10px 14px 12px;background:#0d1014;border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ t.lines }}" as="l" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="{{ l.roleStyle }}">{{ l.role }}</span>
+                    <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">{{ l.count }}</span>
+                    <span style="margin-left:auto;font:600 11px 'JetBrains Mono',monospace;color:#5d6270">{{ l.budget }}</span>
+                  </div>
+                  <sc-if value="{{ l.planned }}" hint-placeholder-val="{{ false }}">
+                    <div style="height:3px;border-radius:99px;background:rgba(255,255,255,.08)"><div style="{{ l.barStyle }}"></div></div>
+                  </sc-if>
+                  <div style="font-size:11.5px;line-height:1.5;color:#c9ccd4;text-wrap:pretty">{{ l.players }}</div>
+                </div>
+              </sc-for>
+              <sc-if value="{{ t.empty }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:11.5px;color:#5d6270">Nessun giocatore ancora acquistato</div>
+              </sc-if>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="padding:8px 10px 14px;background:#0d1014;border-top:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+    <a href="#5a" style="height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#3ddc97;background:rgba(61,220,151,.1)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span><span style="font-size:10px;font-weight:700">Chiamata</span></a>
+    <a href="#5b" style="height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span><span style="font-size:10px;font-weight:700">Rose</span></a>
+    <a href="#5b" style="height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span><span style="font-size:10px;font-weight:700">Listone</span></a>
+    <a href="#5b" style="height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="history"></i></span><span style="font-size:10px;font-weight:700">History</span></a>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «unisci mobile e desktop in un unico layout responsive» · «aggiungi la scheda History su mobile» · «applica lo stile alle altre 4 schermate»</p>
+</section>
+
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">War Room — tutto sotto controllo in una schermata, prezzo interattivo</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a"><div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>Barra comando fissa · «se lo prendi a X» in tempo reale · alternative, minacce, rosa a target</div>
+<div class="dv-card" style="width:1440px;display:flex;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:72px;flex:none;background:#0d0f14;border-right:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="width:36px;height:36px;border-radius:11px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-bottom:12px">WR</div>
+    <a href="#4a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="settings"></i></span></a>
+    <a href="#4a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="sliders"></i></span></a>
+    <a href="#4a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span></a>
+    <a href="#4a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span></a>
+    <a href="#4a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(61,220,151,.14);color:#3ddc97;border:1px solid rgba(61,220,151,.3)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span></a>
+    <a href="#4a" style="margin-top:auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="rotate-ccw"></i></span></a>
+  </aside>
+
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column">
+
+    <div style="padding:14px 24px;background:#0d1014;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:14px">
+      <div style="position:relative;flex:1;min-width:0">
+        <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:12px"><i data-lucide="search"></i></span>
+        <input placeholder="Chi è stato chiamato?" style="width:100%;box-sizing:border-box;background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:11px 12px 11px 36px;color:#edeef2;font-family:inherit;font-size:13px"/>
+      </div>
+      <select style="background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:11px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option><option>AS Birra</option><option>Dinamo Barella</option></select>
+      <div style="display:flex;align-items:center;background:#08090c;border:1px solid rgba(255,255,255,.1);border-radius:10px;overflow:hidden">
+        <button onClick="{{ dec5 }}" style="width:34px;height:42px;background:transparent;border:0;color:#8a8f9c;font:700 12px 'JetBrains Mono',monospace;cursor:pointer">−5</button>
+        <button onClick="{{ dec1 }}" style="width:30px;height:42px;background:transparent;border:0;color:#8a8f9c;font-size:17px;cursor:pointer">−</button>
+        <input value="{{ bid }}" onChange="{{ onBid }}" style="width:74px;background:transparent;border:0;text-align:center;color:#edeef2;font:700 17px 'JetBrains Mono',monospace"/>
+        <button onClick="{{ inc1 }}" style="width:30px;height:42px;background:transparent;border:0;color:#8a8f9c;font-size:17px;cursor:pointer">+</button>
+        <button onClick="{{ inc5 }}" style="width:34px;height:42px;background:transparent;border:0;color:#8a8f9c;font:700 12px 'JetBrains Mono',monospace;cursor:pointer">+5</button>
+      </div>
+      <button onClick="{{ toMax }}" style="background:transparent;border:1px solid rgba(255,255,255,.12);color:#c9ccd4;font:700 12px Manrope,sans-serif;padding:11px 14px;border-radius:10px;cursor:pointer">Al mio tetto</button>
+      <button style="background:#edeef2;color:#0a0b0f;font:800 14px Manrope,sans-serif;padding:12px 28px;border:0;border-radius:10px;cursor:pointer">Assegna</button>
+      <button style="background:transparent;border:1px solid rgba(255,255,255,.12);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:11px 13px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="undo-2"></i></span>Annulla</button>
+    </div>
+
+    <div style="padding:20px 24px;display:grid;grid-template-columns:minmax(0,1fr) 372px 372px;gap:18px;align-items:start">
+
+      <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:42px;height:42px;flex:none;border-radius:11px;background:rgba(255,107,107,.12);color:#ff6b6b;display:flex;align-items:center;justify-content:center;font:700 15px 'JetBrains Mono',monospace">A</div>
+            <div style="min-width:0">
+              <div style="display:flex;align-items:center;gap:9px"><h2 style="margin:0;font-size:25px;font-weight:800;letter-spacing:-.02em">Lautaro Martínez</h2><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:3px 7px;border-radius:5px">WISHLIST</span></div>
+              <div style="font-size:12px;color:#8a8f9c;margin-top:3px">Inter · rank #1 attaccanti · titolare · FM prev. 8.8 · 23G 6A</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:flex-end;gap:26px">
+            <div>
+              <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Max bid consigliato</div>
+              <div style="font:700 72px/0.9 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:-.04em">210</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;padding-bottom:6px">
+              <div><div style="font-size:11px;color:#8a8f9c;font-weight:600">Valore</div><div style="font:700 20px 'JetBrains Mono',monospace">196</div></div>
+              <div><div style="font-size:11px;color:#8a8f9c;font-weight:600">Range</div><div style="font:700 20px 'JetBrains Mono',monospace">172–224</div></div>
+            </div>
+            <div style="margin-left:auto;text-align:right;padding-bottom:6px">
+              <div style="font-size:11px;color:#8a8f9c;font-weight:600">Il tuo tetto reale</div>
+              <div style="font:700 20px 'JetBrains Mono',monospace;color:#f5c451">209</div>
+              <div style="font-size:11px;color:#5d6270">1 credito per ogni slot restante</div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="position:relative;height:12px;border-radius:99px;background:rgba(255,255,255,.06)">
+              <div style="position:absolute;left:43%;width:13%;top:0;bottom:0;background:rgba(61,220,151,.22);border-radius:4px"></div>
+              <div style="position:absolute;left:52.5%;top:-4px;width:2px;height:20px;background:rgba(255,255,255,.35)"></div>
+              <div style="width:{{ bidWidth }};height:100%;border-radius:99px;background:#edeef2;opacity:.85"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font:500 11px 'JetBrains Mono',monospace;color:#5d6270"><span>0</span><span style="color:#c9ccd4">offerta {{ bid }} · {{ deltaValore }}</span><span>400</span></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)">
+            <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px">
+              <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Se lo prendi a {{ bid }}</div>
+              <div style="font:700 26px 'JetBrains Mono',monospace;margin-top:6px">{{ restDopo }}</div>
+              <div style="font-size:11px;color:#5d6270">crediti residui</div>
+            </div>
+            <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px">
+              <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Ti restano 16 slot</div>
+              <div style="font:700 26px 'JetBrains Mono',monospace;margin-top:6px">{{ medioDopo }}</div>
+              <div style="font-size:11px;color:#5d6270">crediti medi per slot</div>
+            </div>
+            <div style="background:#0d1014;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px">
+              <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Sostenibilità</div>
+              <div style="font:800 19px Manrope,sans-serif;margin-top:8px;color:{{ sostColor }}">{{ sostLabel }}</div>
+              <div style="font-size:11px;color:#5d6270">calcolata sul ritmo di spesa</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:22px">
+          <div>
+            <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Temperatura mercato</div>
+            <div style="font:800 17px Manrope,sans-serif;color:#ff6b6b;margin-top:5px">Caldo · +8%</div>
+          </div>
+          <div style="font-size:11.5px;color:#8a8f9c;max-width:210px;text-wrap:pretty">Le 12 aggiudicazioni finora sono chiuse in media l'8% sopra il valore del motore.</div>
+          <div style="margin-left:auto;display:flex;gap:18px;text-align:right">
+            <div><div style="font-size:11px;color:#8a8f9c">Çalhanoğlu</div><div style="font:700 14px 'JetBrains Mono',monospace">96 <span style="color:#ff6b6b;font-size:11px">+12</span></div></div>
+            <div><div style="font-size:11px;color:#8a8f9c">Dimarco</div><div style="font:700 14px 'JetBrains Mono',monospace">74 <span style="color:#ff6b6b;font-size:11px">+6</span></div></div>
+            <div><div style="font-size:11px;color:#8a8f9c">Bremer</div><div style="font:700 14px 'JetBrains Mono',monospace">33 <span style="color:#3ddc97;font-size:11px">−7</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:13px;font-weight:700">Se lo perdi, restano</span><span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;border:1px solid rgba(255,107,107,.35);padding:2px 6px;border-radius:5px">RUOLO A</span></div>
+          <div style="font-size:11px;color:#8a8f9c;margin-top:3px">8 attaccanti da titolare liberi · max bid consigliato</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:.1em">TOP</span><span style="font-size:11px;color:#5d6270">3 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Vlahović</span> <span style="color:#5d6270;font-size:11px">Juventus · FM 8.4</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">168</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Lookman</span> <span style="color:#5d6270;font-size:11px">Atalanta · FM 8.3</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">151</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Thuram</span> <span style="color:#5d6270;font-size:11px">Inter · FM 8.1</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">148</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#f5c451;letter-spacing:.1em">BUONO</span><span style="font-size:11px;color:#5d6270">5 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Dovbyk</span> <span style="color:#5d6270;font-size:11px">Roma · FM 7.8</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">118</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Dybala</span> <span style="color:#5d6270;font-size:11px">Roma · FM 8.2</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">104</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Morata</span> <span style="color:#5d6270;font-size:11px">Milan · FM 7.6</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">92</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Zapata</span> <span style="color:#5d6270;font-size:11px">Torino · FM 7.6</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">78</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Castellanos</span> <span style="color:#5d6270;font-size:11px">Lazio · FM 7.4</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">74</span></div>
+        </div>
+        <div style="margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.07);font-size:11.5px;color:#8a8f9c;text-wrap:pretty">Ti servono <strong style="color:#edeef2">5 attaccanti</strong>: se paghi 210 qui, ne restano 15 di budget per gli altri 4.</div>
+      </div>
+
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:14px">
+        <div>
+          <div style="font-size:13px;font-weight:700">Chi ti contende gli attaccanti</div>
+          <div style="font-size:11px;color:#8a8f9c;margin-top:3px">crediti residui · tetto d'offerta · slot A ancora liberi</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:rgba(255,107,107,.07)">
+          <span style="flex:1;font-size:12.5px;font-weight:600">Atletico Van Goof</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97;width:34px;text-align:right">500</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">476</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:rgba(255,107,107,.07)">
+          <span style="flex:1;font-size:12.5px;font-weight:600">Speranza FC</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97;width:34px;text-align:right">500</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">476</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:rgba(255,107,107,.07)">
+          <span style="flex:1;font-size:12.5px;font-weight:600">Real Madrink</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97;width:34px;text-align:right">500</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">476</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;background:rgba(255,107,107,.14);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px">
+          <span style="flex:1;font-size:12.5px;font-weight:600">Bayer Leverkusen</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97;width:34px;text-align:right">500</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">476</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#8a8f9c;background:rgba(255,255,255,.06);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px">
+          <span style="flex:1;font-size:12.5px;font-weight:600">Dinamo Barella</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451;width:34px;text-align:right">467</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">444</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#8a8f9c;background:rgba(255,255,255,.06);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px">
+          <span style="flex:1;font-size:12.5px;font-weight:600">AS Birra</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451;width:34px;text-align:right">438</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">416</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#8a8f9c;background:rgba(255,255,255,.06);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px">
+          <span style="flex:1;font-size:12.5px;font-weight:600">AC Picchia</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#ff6b6b;width:34px;text-align:right">404</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">381</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#8a8f9c;background:rgba(255,255,255,.06);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:rgba(61,220,151,.07);border:1px solid rgba(61,220,151,.22);margin-top:2px">
+          <span style="flex:1;font-size:12.5px;font-weight:800;color:#3ddc97">FC Real Fantasia (io)</span>
+          <span style="font:700 13px 'JetBrains Mono',monospace;color:#ff6b6b;width:34px;text-align:right">225</span>
+          <span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c;width:44px;text-align:right">209</span>
+          <span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;background:rgba(61,220,151,.14);padding:3px 6px;border-radius:5px;width:34px;text-align:center">A 5</span>
+        </div>
+        <div style="margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);font-size:11.5px;color:#8a8f9c;text-wrap:pretty">3 squadre possono arrivare a <strong style="color:#ff6b6b">476</strong> su questo giocatore: sopra il tuo tetto di 209.</div>
+      </div>
+    </div>
+
+    <div style="padding:0 24px 22px">
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+        <div style="padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07)">
+          <span class="ic" style="width:16px;height:16px;color:#3ddc97"><i data-lucide="users"></i></span>
+          <span style="font-size:13px;font-weight:700">La mia rosa · 8/25 · speso 275 di 500</span>
+          <span style="font-size:11px;color:#8a8f9c">barra chiara = target di budget per ruolo dalla tua strategia</span>
+          <a href="#3a" style="margin-left:auto;font-size:11.5px;text-decoration:none">Rose di tutte le squadre →</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:700 11px 'JetBrains Mono',monospace;color:#f5c451;letter-spacing:.08em">PORTIERI 1/3</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">41 / 47</span></div>
+            <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:87%;height:100%;border-radius:99px;background:#f5c451"></div></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Sommer <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">41</span></span>
+              <span style="font-size:11.5px;border:1px dashed rgba(255,255,255,.1);border-radius:6px;padding:5px 8px;color:#5d6270">+2</span>
+            </div>
+          </div>
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:700 11px 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:.08em">DIFENSORI 3/8</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">121 / 58</span></div>
+            <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#ff6b6b"></div></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Dimarco <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">74</span></span>
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Bastoni <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">32</span></span>
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Dumfries <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></span>
+              <span style="font-size:11.5px;border:1px dashed rgba(255,255,255,.1);border-radius:6px;padding:5px 8px;color:#5d6270">+5</span>
+            </div>
+          </div>
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:700 11px 'JetBrains Mono',monospace;color:#5bc8ff;letter-spacing:.08em">CENTROCAMPO 3/8</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">98 / 139</span></div>
+            <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:70%;height:100%;border-radius:99px;background:#5bc8ff"></div></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Barella <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">52</span></span>
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Man <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">31</span></span>
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Paz <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></span>
+              <span style="font-size:11.5px;border:1px dashed rgba(255,255,255,.1);border-radius:6px;padding:5px 8px;color:#5d6270">+5</span>
+            </div>
+          </div>
+          <div style="padding:16px 20px;display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:700 11px 'JetBrains Mono',monospace;color:#ff6b6b;letter-spacing:.08em">ATTACCO 1/6</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">15 / 258</span></div>
+            <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:6%;height:100%;border-radius:99px;background:#ff6b6b"></div></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="font-size:11.5px;background:rgba(255,255,255,.05);border-radius:6px;padding:5px 8px">Kean <span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></span>
+              <span style="font-size:11.5px;border:1px dashed rgba(61,220,151,.4);border-radius:6px;padding:5px 8px;color:#3ddc97;font-weight:700">Lautaro?</span>
+              <span style="font-size:11.5px;border:1px dashed rgba(255,255,255,.1);border-radius:6px;padding:5px 8px;color:#5d6270">+4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «tieni <a class="dv-oid" href="#4a">4a</a> e applicalo alle altre 4 schermate» · «versione mobile di <a class="dv-oid" href="#4a">4a</a>» · «rendi la barra comando fissa anche scrollando»</p>
+</section>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Fix di <a class="dv-oid" href="#2a">2a</a>: colonne bilanciate, budget non duplicato, rosa scalabile a 25, rose rivali</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a"><div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Tre fasce orizzontali — giocatore chiamato · rosa + fasce rimaste · squadre della lega con rose</div>
+<div class="dv-card" style="width:1320px;display:flex;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:72px;flex:none;background:#0d0f14;border-right:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="width:36px;height:36px;border-radius:11px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-bottom:12px">WR</div>
+    <a href="#3a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="settings"></i></span></a>
+    <a href="#3a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="sliders"></i></span></a>
+    <a href="#3a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span></a>
+    <a href="#3a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span></a>
+    <a href="#3a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(61,220,151,.14);color:#3ddc97;border:1px solid rgba(61,220,151,.3)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span></a>
+    <a href="#3a" style="margin-top:auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="rotate-ccw"></i></span></a>
+  </aside>
+
+  <div style="flex:1;min-width:0;padding:24px 28px 28px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:5px 9px;border-radius:6px">ASTA IN CORSO</span>
+      <span style="font-size:12px;color:#8a8f9c">Chiamata #13 · turno libero · 12 aggiudicati</span>
+      <div style="margin-left:auto;display:flex;gap:10px">
+        <button style="background:transparent;border:1px solid rgba(255,255,255,.1);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:9px 14px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="undo-2"></i></span>Annulla ultimo</button>
+        <button style="background:transparent;border:1px solid rgba(255,255,255,.1);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:9px 14px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="history"></i></span>History</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start">
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+      <div style="padding:22px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,.07)">
+        <div style="min-width:0">
+          <div style="display:flex;align-items:center;gap:10px"><h2 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">Lautaro Martínez</h2><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:3px 7px;border-radius:5px">WISHLIST</span></div>
+          <div style="font-size:12px;color:#8a8f9c;margin-top:4px">Inter · attaccante · titolare · rank #1 · FM prev. 8.8</div>
+        </div>
+        <div style="margin-left:auto;display:flex;gap:30px;text-align:right">
+          <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Valore</div><div style="font:700 26px 'JetBrains Mono',monospace">196</div></div>
+          <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Range</div><div style="font:700 26px 'JetBrains Mono',monospace">172–224</div></div>
+          <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#3ddc97;font-weight:700">Max bid</div><div style="font:700 26px 'JetBrains Mono',monospace;color:#3ddc97">210</div></div>
+          <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#f5c451;font-weight:700">Sostenibilità</div><div style="font:800 17px Manrope,sans-serif;color:#f5c451;margin-top:6px">Attenzione</div></div>
+        </div>
+      </div>
+      <div style="padding:18px 24px;display:flex;align-items:center;gap:14px;background:#0d1014">
+        <div style="position:relative;flex:1">
+          <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:12px"><i data-lucide="search"></i></span>
+          <input placeholder="Cambia giocatore chiamato…" style="width:100%;box-sizing:border-box;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px 11px 36px;color:#edeef2;font-family:inherit;font-size:13px"/>
+        </div>
+        <select style="background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option><option>Dinamo Barella</option></select>
+        <input value="210" style="width:84px;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px;text-align:center;color:#edeef2;font:700 15px 'JetBrains Mono',monospace"/>
+        <button style="background:#edeef2;color:#0a0b0f;font:800 14px Manrope,sans-serif;padding:12px 26px;border:0;border-radius:10px;cursor:pointer">Assegna</button>
+      </div>
+    </div>
+      <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:13px;font-weight:700">Attaccanti rimasti</span><span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;border:1px solid rgba(255,107,107,.35);padding:2px 6px;border-radius:5px">RUOLO A</span></div>
+          <div style="font-size:11px;color:#8a8f9c;margin-top:3px">fasce TOP e BUONO libere · max bid consigliato</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:.1em">TOP</span><span style="font-size:11px;color:#5d6270">3 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Vlahović</span> <span style="color:#5d6270;font-size:11px">Juventus</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">168</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Lookman</span> <span style="color:#5d6270;font-size:11px">Atalanta</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">151</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Thuram</span> <span style="color:#5d6270;font-size:11px">Inter</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#3ddc97">148</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#f5c451;letter-spacing:.1em">BUONO</span><span style="font-size:11px;color:#5d6270">5 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Dovbyk</span> <span style="color:#5d6270;font-size:11px">Roma</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">118</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Dybala</span> <span style="color:#5d6270;font-size:11px">Roma</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">104</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Morata</span> <span style="color:#5d6270;font-size:11px">Milan</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">92</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Zapata</span> <span style="color:#5d6270;font-size:11px">Torino</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">78</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12.5px"><span><span style="font-weight:600">Castellanos</span> <span style="color:#5d6270;font-size:11px">Lazio</span></span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">74</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+      <div style="padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07)">
+        <span class="ic" style="width:16px;height:16px;color:#3ddc97"><i data-lucide="users"></i></span>
+        <span style="font-size:13px;font-weight:700">Rose della lega · crediti residui</span>
+        <span style="font-size:11px;color:#8a8f9c">verde = più crediti disponibili, rosso = meno</span>
+        <span style="margin-left:auto;font-size:11px;color:#8a8f9c">la tua squadra è la prima</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px;background:rgba(61,220,151,.05)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:800;color:#3ddc97">FC Real Fantasia (io)</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#ff6b6b">225</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:45%;height:100%;border-radius:99px;background:#ff6b6b"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">8/25 slot · residui su 500 · max bid 209</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">P</span>Sommer</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">41</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">D</span>Dimarco</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">74</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">D</span>Bastoni</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">32</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">D</span>Dumfries</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">C</span>Barella</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">52</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">C</span>Man</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">31</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">C</span>Paz</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">A</span>Kean</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></div>
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">17 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">AC Picchia</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#ff6b6b">404</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:81%;height:100%;border-radius:99px;background:#ff6b6b"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">1/25 slot · residui su 500 · max bid 381</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">C</span>Çalhanoğlu</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">96</span></div>
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">24 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">AS Birra</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">438</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:88%;height:100%;border-radius:99px;background:#f5c451"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">2/25 slot · residui su 500 · max bid 416</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">P</span>Maignan</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">28</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">D</span>Cambiaso</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">34</span></div>
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">23 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">Dinamo Barella</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">467</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:93%;height:100%;border-radius:99px;background:#f5c451"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">1/25 slot · residui su 500 · max bid 444</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4;min-width:0"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270;margin-right:6px">D</span>Bremer</span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">33</span></div>
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">24 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">Atletico Van Goof</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#3ddc97">500</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">0/25 slot · residui su 500 · max bid 476</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">25 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">Speranza FC</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#3ddc97">500</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">0/25 slot · residui su 500 · max bid 476</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">25 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">Real Madrink</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#3ddc97">500</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">0/25 slot · residui su 500 · max bid 476</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">25 slot liberi</div>
+          </div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+            <span style="font-size:12.5px;font-weight:700;">Bayer Leverkusen</span>
+            <span style="font:700 16px 'JetBrains Mono',monospace;color:#3ddc97">500</span>
+          </div>
+          <div style="height:4px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div>
+          <div style="font:600 10px 'JetBrains Mono',monospace;color:#5d6270">0/25 slot · residui su 500 · max bid 476</div>
+          <div style="display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid rgba(255,255,255,.06)">
+          <div style="display:flex;align-items:center;justify-content:center;height:26px;border:1px dashed rgba(255,255,255,.09);border-radius:7px;font:600 10px 'JetBrains Mono',monospace;color:#5d6270">25 slot liberi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «apri la rosa completa di una squadra rivale in un pannello laterale» · «applica <a class="dv-oid" href="#3a">3a</a> alle altre 4 schermate» · «versione mobile di <a class="dv-oid" href="#3a">3a</a>»</p>
+</section>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Shell di <a class="dv-oid" href="#1b">1b</a> + schermata giocatore di <a class="dv-oid" href="#1c">1c</a>, fasce rimaste, crediti rivali, la mia rosa</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a"><div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Console completa — rail icone, fasce TOP/BUONO del ruolo chiamato, rosa sempre visibile</div>
+<div class="dv-card" style="width:1320px;display:flex;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:72px;flex:none;background:#0d0f14;border-right:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="width:36px;height:36px;border-radius:11px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-bottom:12px">WR</div>
+    <a href="#2a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="settings"></i></span></a>
+    <a href="#2a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="sliders"></i></span></a>
+    <a href="#2a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span></a>
+    <a href="#2a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span></a>
+    <a href="#2a" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(61,220,151,.14);color:#3ddc97;border:1px solid rgba(61,220,151,.3)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span></a>
+    <a href="#2a" style="margin-top:auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="rotate-ccw"></i></span></a>
+  </aside>
+
+  <div style="flex:1;min-width:0;padding:26px 30px;display:flex;flex-direction:column;gap:22px">
+    <div style="display:flex;align-items:center;gap:18px">
+      <span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:5px 9px;border-radius:6px">ASTA IN CORSO</span>
+      <span style="font-size:12px;color:#8a8f9c">Chiamata #5 · turno libero</span>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:22px;background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 18px">
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Budget</div><div style="font:700 18px 'JetBrains Mono',monospace;color:#f5c451">318</div></div>
+        <div style="width:1px;height:26px;background:rgba(255,255,255,.09)"></div>
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Slot</div><div style="font:700 18px 'JetBrains Mono',monospace">21</div></div>
+        <div style="width:1px;height:26px;background:rgba(255,255,255,.09)"></div>
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Medio/slot</div><div style="font:700 18px 'JetBrains Mono',monospace">15</div></div>
+      </div>
+      <button style="background:transparent;border:1px solid rgba(255,255,255,.1);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:10px 14px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="undo-2"></i></span>Annulla ultimo</button>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:22px">
+
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+          <div style="padding:22px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,.07)">
+            <div style="min-width:0">
+              <div style="display:flex;align-items:center;gap:10px"><h2 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">Lautaro Martínez</h2><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:3px 7px;border-radius:5px">WISHLIST</span></div>
+              <div style="font-size:12px;color:#8a8f9c;margin-top:4px">Inter · attaccante · titolare · rank #1 · FM prev. 8.8</div>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:26px;text-align:right">
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Valore</div><div style="font:700 26px 'JetBrains Mono',monospace">196</div></div>
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Range</div><div style="font:700 26px 'JetBrains Mono',monospace">172–224</div></div>
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#3ddc97;font-weight:700">Max bid</div><div style="font:700 26px 'JetBrains Mono',monospace;color:#3ddc97">210</div></div>
+            </div>
+          </div>
+          <div style="padding:14px 24px;display:flex;align-items:center;gap:12px;background:rgba(245,196,81,.06);border-bottom:1px solid rgba(255,255,255,.07)">
+            <span class="ic" style="width:15px;height:15px;color:#f5c451"><i data-lucide="triangle-alert"></i></span>
+            <span style="font-size:12px;font-weight:700;color:#f5c451">Sostenibilità: Attenzione</span>
+            <span style="font-size:12px;color:#8a8f9c">fattibile, ma restringe le prossime chiamate</span>
+          </div>
+          <div style="padding:20px 24px;display:flex;align-items:flex-end;gap:14px;background:#0d1014">
+            <div style="position:relative;flex:1">
+              <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:12px"><i data-lucide="search"></i></span>
+              <input placeholder="Cambia giocatore chiamato…" style="width:100%;box-sizing:border-box;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px 11px 36px;color:#edeef2;font-family:inherit;font-size:13px"/>
+            </div>
+            <select style="background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option><option>Dinamo Barella</option></select>
+            <input value="210" style="width:84px;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px;text-align:center;color:#edeef2;font:700 15px 'JetBrains Mono',monospace"/>
+            <button style="background:#edeef2;color:#0a0b0f;font:800 14px Manrope,sans-serif;padding:12px 26px;border:0;border-radius:10px;cursor:pointer">Assegna</button>
+          </div>
+        </div>
+
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+          <div style="padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07)">
+            <span class="ic" style="width:16px;height:16px;color:#3ddc97"><i data-lucide="users"></i></span>
+            <span style="font-size:13px;font-weight:700">La mia rosa</span>
+            <span style="font:700 10px 'JetBrains Mono',monospace;color:#8a8f9c;background:rgba(255,255,255,.06);padding:3px 8px;border-radius:99px">4 / 25</span>
+            <div style="margin-left:auto;display:flex;align-items:center;gap:20px">
+              <div style="text-align:right"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Spesi</div><div style="font:700 16px 'JetBrains Mono',monospace">182</div></div>
+              <div style="text-align:right"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Residui</div><div style="font:700 16px 'JetBrains Mono',monospace;color:#f5c451">318</div></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+            <div style="padding:16px 18px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:700 10px 'JetBrains Mono',monospace;color:#f5c451">P · 1/3</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">41 FM</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#edeef2;font-weight:600">Sommer</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">41</span></div>
+              <div style="font-size:11px;color:#5d6270">2 slot liberi</div>
+            </div>
+            <div style="padding:16px 18px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97">D · 1/8</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">74 FM</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#edeef2;font-weight:600">Dimarco</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">74</span></div>
+              <div style="font-size:11px;color:#5d6270">7 slot liberi</div>
+            </div>
+            <div style="padding:16px 18px;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5bc8ff">C · 1/8</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">52 FM</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#edeef2;font-weight:600">Barella</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">52</span></div>
+              <div style="font-size:11px;color:#5d6270">7 slot liberi</div>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b">A · 1/6</span><span style="font:600 11px 'JetBrains Mono',monospace;color:#8a8f9c">15 FM</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#edeef2;font-weight:600">Kean</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">15</span></div>
+              <div style="font-size:11px;color:#5d6270">5 slot liberi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:18px">
+          <div>
+            <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:12px;font-weight:700">Attaccanti rimasti</span><span style="font:700 10px 'JetBrains Mono',monospace;color:#ff6b6b;border:1px solid rgba(255,107,107,.35);padding:2px 6px;border-radius:5px">RUOLO A</span></div>
+            <div style="font-size:11px;color:#8a8f9c;margin-top:3px">fasce TOP e BUONO ancora libere · max bid consigliato</div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:.1em">TOP</span><span style="font-size:11px;color:#5d6270">3 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Dušan Vlahović</div><div style="font-size:11px;color:#8a8f9c">Juventus</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#3ddc97">168</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Ademola Lookman</div><div style="font-size:11px;color:#8a8f9c">Atalanta</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#3ddc97">151</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Marcus Thuram</div><div style="font-size:11px;color:#8a8f9c">Inter</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#3ddc97">148</span></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font:700 10px 'JetBrains Mono',monospace;color:#f5c451;letter-spacing:.1em">BUONO</span><span style="font-size:11px;color:#5d6270">5 liberi</span><span style="flex:1;height:1px;background:rgba(255,255,255,.07)"></span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Artem Dovbyk</div><div style="font-size:11px;color:#8a8f9c">Roma</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#f5c451">118</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Paulo Dybala</div><div style="font-size:11px;color:#8a8f9c">Roma</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#f5c451">104</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Álvaro Morata</div><div style="font-size:11px;color:#8a8f9c">Milan</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#f5c451">92</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Duván Zapata</div><div style="font-size:11px;color:#8a8f9c">Torino</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#f5c451">78</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px"><div><div style="font-weight:600">Valentin Castellanos</div><div style="font-size:11px;color:#8a8f9c">Lazio</div></div><span style="font:700 14px 'JetBrains Mono',monospace;color:#f5c451">74</span></div>
+          </div>
+        </div>
+
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:13px">
+          <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Crediti rivali</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Atletico Van Goof</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#3ddc97">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Speranza FC</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#3ddc97">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Real Madrink</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#3ddc97"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#3ddc97">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Dinamo Barella</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:93%;height:100%;border-radius:99px;background:#f5c451"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#f5c451">467</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">AS Birra</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:88%;height:100%;border-radius:99px;background:#f5c451"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#f5c451">438</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">AC Picchia</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:81%;height:100%;border-radius:99px;background:#ff6b6b"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#ff6b6b">404</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;padding-top:9px;border-top:1px solid rgba(255,255,255,.07)"><span style="flex:1;color:#edeef2;font-weight:700">Tu</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:64%;height:100%;border-radius:99px;background:#ff6b6b"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#ff6b6b">318</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «applica <a class="dv-oid" href="#2a">2a</a> a tutte e 5 le schermate» · «fammi vedere <a class="dv-oid" href="#2a">2a</a> in versione mobile» · «rendi la rosa espandibile con tutti i 25 slot»</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Console Live — tre direzioni con pannello laterale (dark admin)</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a"><div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Rail &amp; KPI — sidebar con etichette, fascia KPI, colonna destra rivali</div>
+<div class="dv-card" style="width:1200px;display:flex;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:236px;flex:none;background:#0d0f14;border-right:1px solid rgba(255,255,255,.07);padding:20px 16px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:34px;height:34px;border-radius:10px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px">WR</div>
+      <div><div style="font-size:13px;font-weight:800;letter-spacing:-.01em">FantaWarRoom</div><div style="font-size:11px;color:#8a8f9c">Lega Fantacalcio 2026</div></div>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:2px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5d6270;font-weight:700;padding:0 10px 8px">Preparazione</div>
+      <a href="#1a" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span class="ic" style="width:16px;height:16px"><i data-lucide="settings"></i></span>Lega &amp; Regole</a>
+      <a href="#1a" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span class="ic" style="width:16px;height:16px"><i data-lucide="sliders"></i></span>Strategia</a>
+      <a href="#1a" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span class="ic" style="width:16px;height:16px"><i data-lucide="database"></i></span>Listone Serie A</a>
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5d6270;font-weight:700;padding:16px 10px 8px">Asta</div>
+      <a href="#1a" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span class="ic" style="width:16px;height:16px"><i data-lucide="users"></i></span>Squadre della Lega</a>
+      <a href="#1a" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:13px;font-weight:700;color:#07160f;background:#3ddc97;text-decoration:none"><span class="ic" style="width:16px;height:16px"><i data-lucide="shield-alert"></i></span>Console Live<span style="margin-left:auto;font:700 10px 'JetBrains Mono',monospace;background:rgba(0,0,0,.18);padding:2px 6px;border-radius:5px">LIVE</span></a>
+    </nav>
+    <div style="margin-top:auto;background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:11px;color:#8a8f9c;font-weight:600">FC Real Fantasia</div>
+      <div><span style="font:700 26px 'JetBrains Mono',monospace;color:#f5c451">318</span><span style="font-size:12px;color:#5d6270"> / 500 FM</span></div>
+      <div style="height:6px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden"><div style="width:63.6%;height:100%;background:#f5c451"></div></div>
+      <div style="display:flex;gap:12px;font:500 11px 'JetBrains Mono',monospace;color:#8a8f9c"><span>P 1/3</span><span>D 1/8</span><span>C 1/8</span><span>A 1/6</span></div>
+    </div>
+  </aside>
+
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column">
+    <header style="padding:18px 28px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:16px">
+      <div><h1 style="margin:0;font-size:18px;font-weight:800;letter-spacing:-.01em">Console Live</h1><div style="font-size:12px;color:#8a8f9c">Chiamata in corso · 4 giocatori aggiudicati</div></div>
+      <div style="margin-left:auto;position:relative;width:320px">
+        <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:11px"><i data-lucide="search"></i></span>
+        <input placeholder="Cerca giocatore chiamato…" style="width:100%;box-sizing:border-box;background:#12141a;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:10px 12px 10px 36px;color:#edeef2;font-family:inherit;font-size:13px"/>
+      </div>
+      <button style="background:#12141a;border:1px solid rgba(255,255,255,.09);color:#edeef2;font:600 12px Manrope,sans-serif;padding:9px 14px;border-radius:10px;display:flex;align-items:center;gap:7px;cursor:pointer"><span class="ic" style="width:14px;height:14px"><i data-lucide="undo-2"></i></span>Annulla ultimo</button>
+    </header>
+
+    <div style="padding:24px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:18px"><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Max Bid</div><div style="font:700 34px 'JetBrains Mono',monospace;color:#3ddc97;margin-top:6px">210</div><div style="font-size:11px;color:#5d6270">consigliato su Lautaro</div></div>
+      <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:18px"><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Valore</div><div style="font:700 34px 'JetBrains Mono',monospace;margin-top:6px">196</div><div style="font-size:11px;color:#5d6270">range 172–224</div></div>
+      <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:18px"><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Pressione ruolo A</div><div style="font:700 34px 'JetBrains Mono',monospace;color:#ff6b6b;margin-top:6px">2<span style="font-size:15px;color:#8a8f9c">/6</span></div><div style="font-size:11px;color:#ff6b6b">scarsità alta</div></div>
+      <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:18px"><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Sostenibilità</div><div style="font:700 22px Manrope,sans-serif;color:#f5c451;margin-top:12px">Attenzione</div><div style="font-size:11px;color:#5d6270">restringe le prossime chiamate</div></div>
+    </div>
+
+    <div style="padding:0 28px 28px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start">
+      <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;align-items:flex-start;gap:14px">
+          <div style="width:46px;height:46px;border-radius:12px;background:rgba(255,107,107,.12);color:#ff6b6b;display:flex;align-items:center;justify-content:center;font:700 16px 'JetBrains Mono',monospace">A</div>
+          <div style="min-width:0">
+            <div style="display:flex;align-items:center;gap:9px"><h2 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Lautaro Martínez</h2><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);background:rgba(61,220,151,.1);padding:3px 7px;border-radius:5px">WISHLIST</span></div>
+            <div style="font-size:12px;color:#8a8f9c;margin-top:3px">Inter · Rank #1 attaccanti · Titolare · FM prev. 8.8</div>
+          </div>
+          <div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#8a8f9c">Quotazione</div><div style="font:700 16px 'JetBrains Mono',monospace">42</div></div>
+        </div>
+
+        <div style="background:#0a0b0f;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:#8a8f9c;font-weight:600"><span>Range di mercato</span><span style="font-family:'JetBrains Mono',monospace">172 — 224 FM</span></div>
+          <div style="position:relative;height:10px;border-radius:99px;background:rgba(255,255,255,.06)">
+            <div style="position:absolute;left:22%;width:44%;top:0;bottom:0;background:rgba(61,220,151,.25);border-radius:99px"></div>
+            <div style="position:absolute;left:52%;top:-5px;width:3px;height:20px;border-radius:2px;background:#3ddc97"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font:500 11px 'JetBrains Mono',monospace;color:#5d6270"><span>0</span><span style="color:#3ddc97">Max Bid 210</span><span>400</span></div>
+        </div>
+
+        <div style="display:flex;align-items:flex-end;gap:14px;padding-top:4px;border-top:1px solid rgba(255,255,255,.07)">
+          <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:11px;color:#8a8f9c;font-weight:600">Squadra</label><select style="background:#0a0b0f;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:10px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option><option>Dinamo Barella</option></select></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:11px;color:#8a8f9c;font-weight:600">Prezzo</label>
+            <div style="display:flex;align-items:center;background:#0a0b0f;border:1px solid rgba(255,255,255,.09);border-radius:10px;overflow:hidden">
+              <button style="width:36px;height:40px;background:transparent;border:0;color:#8a8f9c;font-size:18px;cursor:pointer">−</button>
+              <input value="210" style="width:70px;background:transparent;border:0;text-align:center;color:#edeef2;font:700 15px 'JetBrains Mono',monospace"/>
+              <button style="width:36px;height:40px;background:transparent;border:0;color:#8a8f9c;font-size:18px;cursor:pointer">+</button>
+            </div>
+          </div>
+          <button style="margin-left:auto;background:#edeef2;color:#0a0b0f;font:800 14px Manrope,sans-serif;padding:12px 26px;border:0;border-radius:10px;cursor:pointer">Assegna</button>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:12px;font-weight:700">Crediti rivali</span><span style="font-size:11px;color:#8a8f9c">7 squadre</span></div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:#c9ccd4">AC Picchia</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">404</span></div><div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06)"><div style="width:81%;height:100%;border-radius:99px;background:#f5c451"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:#c9ccd4">Atletico Van Goof</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">500</span></div><div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06)"><div style="width:100%;height:100%;border-radius:99px;background:#f5c451"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:#c9ccd4">Dinamo Barella</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">467</span></div><div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06)"><div style="width:93%;height:100%;border-radius:99px;background:#f5c451"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:#c9ccd4">Speranza FC</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">500</span></div><div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06)"><div style="width:100%;height:100%;border-radius:99px;background:#f5c451"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:#c9ccd4">Real Madrink</span><span style="font-family:'JetBrains Mono',monospace;color:#f5c451">500</span></div><div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06)"><div style="width:100%;height:100%;border-radius:99px;background:#f5c451"></div></div></div>
+          </div>
+        </div>
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:12px;font-weight:700">Ultime aggiudicazioni</span><a href="#1a" style="font-size:11px;text-decoration:none">Tutte</a></div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.06)"><div><div style="color:#edeef2;font-weight:600">Çalhanoğlu</div><div style="font-size:11px;color:#8a8f9c">AC Picchia</div></div><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">96</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.06)"><div><div style="color:#edeef2;font-weight:600">Dimarco</div><div style="font-size:11px;color:#3ddc97">FC Real Fantasia</div></div><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">74</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:12px"><div><div style="color:#edeef2;font-weight:600">Sommer</div><div style="font-size:11px;color:#3ddc97">FC Real Fantasia</div></div><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">41</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="1b"><div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Bid Focus — rail icone, Max Bid gigante, pressione a segmenti</div>
+<div class="dv-card" style="width:1200px;display:flex;background:#0a0b0f;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:72px;flex:none;background:#0d0f14;border-right:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="width:36px;height:36px;border-radius:11px;background:#3ddc97;color:#07160f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-bottom:12px">WR</div>
+    <a href="#1b" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="settings"></i></span></a>
+    <a href="#1b" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="sliders"></i></span></a>
+    <a href="#1b" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="database"></i></span></a>
+    <a href="#1b" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="users"></i></span></a>
+    <a href="#1b" style="width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(61,220,151,.14);color:#3ddc97;border:1px solid rgba(61,220,151,.3)"><span class="ic" style="width:18px;height:18px"><i data-lucide="shield-alert"></i></span></a>
+    <a href="#1b" style="margin-top:auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8a8f9c"><span class="ic" style="width:18px;height:18px"><i data-lucide="rotate-ccw"></i></span></a>
+  </aside>
+
+  <div style="flex:1;min-width:0;padding:26px 30px;display:flex;flex-direction:column;gap:22px">
+    <div style="display:flex;align-items:center;gap:18px">
+      <div style="position:relative;flex:1;max-width:420px">
+        <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:13px;top:13px"><i data-lucide="search"></i></span>
+        <input placeholder="Chi è stato chiamato?" style="width:100%;box-sizing:border-box;background:#12141a;border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 14px 12px 38px;color:#edeef2;font-family:inherit;font-size:14px"/>
+      </div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:22px;background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 18px">
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Budget</div><div style="font:700 18px 'JetBrains Mono',monospace;color:#f5c451">318</div></div>
+        <div style="width:1px;height:26px;background:rgba(255,255,255,.09)"></div>
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Slot</div><div style="font:700 18px 'JetBrains Mono',monospace">21</div></div>
+        <div style="width:1px;height:26px;background:rgba(255,255,255,.09)"></div>
+        <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Medio/slot</div><div style="font:700 18px 'JetBrains Mono',monospace">15</div></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start">
+      <div style="background:linear-gradient(180deg,#151920,#101217);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <h2 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-.03em">Lautaro Martínez</h2>
+          <span style="font-size:13px;color:#8a8f9c">A · Inter</span>
+          <span style="margin-left:auto;font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:3px 8px;border-radius:99px">WISHLIST</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:26px">
+          <div>
+            <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Max bid</div>
+            <div style="font:700 84px/0.9 'JetBrains Mono',monospace;color:#3ddc97;letter-spacing:-.04em">210</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
+            <div><div style="font-size:11px;color:#8a8f9c;font-weight:600">Valore</div><div style="font:700 22px 'JetBrains Mono',monospace">196</div></div>
+            <div><div style="font-size:11px;color:#8a8f9c;font-weight:600">Range</div><div style="font:700 22px 'JetBrains Mono',monospace">172–224</div></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.25);border-radius:12px;padding:13px 16px">
+          <span class="ic" style="width:16px;height:16px;color:#f5c451"><i data-lucide="triangle-alert"></i></span>
+          <span style="font-size:13px;font-weight:700;color:#f5c451">Sostenibilità: Attenzione</span>
+          <span style="font-size:12px;color:#8a8f9c">fattibile, ma restringe le prossime chiamate</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:14px;padding-top:6px;border-top:1px solid rgba(255,255,255,.08)">
+          <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:11px;color:#8a8f9c;font-weight:600">Aggiudica a</label><select style="background:#0a0b0f;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option></select></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:11px;color:#8a8f9c;font-weight:600">Prezzo</label><input value="210" style="width:96px;background:#0a0b0f;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px;text-align:center;color:#edeef2;font:700 16px 'JetBrains Mono',monospace"/></div>
+          <button style="margin-left:auto;background:#3ddc97;color:#07160f;font:800 15px Manrope,sans-serif;padding:14px 30px;border:0;border-radius:12px;cursor:pointer">Assegna</button>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font-size:12px;font-weight:700">Pressione per ruolo</span><span style="font-size:11px;color:#8a8f9c">titolari di valore rimasti</span></div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:#c9ccd4;font-weight:600">Attaccanti</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#ff6b6b">2 / 6</span></div><div style="display:flex;gap:4px">
+              <div style="flex:1;height:8px;border-radius:3px;background:#ff6b6b"></div><div style="flex:1;height:8px;border-radius:3px;background:#ff6b6b"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:#c9ccd4;font-weight:600">Centrocampisti</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#f5c451">5 / 14</span></div><div style="display:flex;gap:4px">
+              <div style="flex:1;height:8px;border-radius:3px;background:#f5c451"></div><div style="flex:1;height:8px;border-radius:3px;background:#f5c451"></div><div style="flex:1;height:8px;border-radius:3px;background:#f5c451"></div><div style="flex:1;height:8px;border-radius:3px;background:#f5c451"></div><div style="flex:1;height:8px;border-radius:3px;background:#f5c451"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:#c9ccd4;font-weight:600">Difensori</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#3ddc97">11 / 15</span></div><div style="display:flex;gap:4px">
+              <div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span style="color:#c9ccd4;font-weight:600">Portieri</span><span style="font:700 12px 'JetBrains Mono',monospace;color:#3ddc97">4 / 7</span></div><div style="display:flex;gap:4px">
+              <div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:#3ddc97"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div><div style="flex:1;height:8px;border-radius:3px;background:rgba(255,255,255,.07)"></div></div></div>
+          </div>
+        </div>
+        <div style="background:#12141a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:12px;font-weight:700">Chi può superarti</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Atletico Van Goof</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#ff6b6b">500 · max 476</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Speranza FC</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#ff6b6b">500 · max 476</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Dinamo Barella</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">467 · max 444</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">AC Picchia</span><span style="font:700 13px 'JetBrains Mono',monospace;color:#f5c451">404 · max 382</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="1c"><div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Command Deck — sidebar con rosa, tre colonne, tabella liberi sempre visibile</div>
+<div class="dv-card" style="width:1240px;display:flex;background:#08090c;color:#edeef2;font-family:Manrope,sans-serif">
+  <aside style="width:250px;flex:none;background:#0c0e12;border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column">
+    <div style="padding:20px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px">
+      <div style="width:32px;height:32px;border-radius:9px;border:1px solid rgba(61,220,151,.4);color:#3ddc97;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">WR</div>
+      <div style="font-size:13px;font-weight:800">FantaWarRoom<span style="color:#3ddc97">.</span></div>
+      <span style="margin-left:auto;width:8px;height:8px;border-radius:99px;background:#3ddc97;box-shadow:0 0 0 3px rgba(61,220,151,.2)"></span>
+    </div>
+    <nav style="padding:14px 12px;display:flex;flex-direction:column;gap:2px;border-bottom:1px solid rgba(255,255,255,.07)">
+      <a href="#1c" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270">01</span>Lega &amp; Regole</a>
+      <a href="#1c" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270">02</span>Strategia</a>
+      <a href="#1c" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270">03</span>Listone</a>
+      <a href="#1c" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;font-size:13px;font-weight:600;color:#8a8f9c;text-decoration:none"><span style="font:700 10px 'JetBrains Mono',monospace;color:#5d6270">04</span>Squadre</a>
+      <a href="#1c" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;font-size:13px;font-weight:700;color:#edeef2;background:rgba(255,255,255,.06);border-left:2px solid #3ddc97;text-decoration:none"><span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97">05</span>Console Live</a>
+    </nav>
+    <div style="padding:18px 20px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid rgba(255,255,255,.07)">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5d6270;font-weight:700">La mia rosa · 4/25</div>
+      <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Sommer <span style="color:#5d6270">P</span></span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">41</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Dimarco <span style="color:#5d6270">D</span></span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">74</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Barella <span style="color:#5d6270">C</span></span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">52</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:#c9ccd4">Kean <span style="color:#5d6270">A</span></span><span style="font-family:'JetBrains Mono',monospace;color:#8a8f9c">15</span></div>
+    </div>
+    <div style="margin-top:auto;padding:20px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5d6270;font-weight:700">Budget residuo</div>
+      <div><span style="font:700 30px 'JetBrains Mono',monospace;color:#f5c451">318</span><span style="font-size:12px;color:#5d6270"> / 500</span></div>
+      <div style="font-size:11px;color:#8a8f9c">21 slot · 15 FM medi per slot</div>
+    </div>
+  </aside>
+
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column">
+    <header style="padding:16px 26px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:14px;background:#0b0d11">
+      <span style="font:700 10px 'JetBrains Mono',monospace;color:#3ddc97;border:1px solid rgba(61,220,151,.35);padding:4px 8px;border-radius:5px">ASTA IN CORSO</span>
+      <span style="font-size:12px;color:#8a8f9c">Chiamata #5 · turno libero</span>
+      <div style="margin-left:auto;display:flex;gap:10px">
+        <button style="background:transparent;border:1px solid rgba(255,255,255,.1);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:8px 13px;border-radius:9px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="undo-2"></i></span>Annulla</button>
+        <button style="background:transparent;border:1px solid rgba(255,255,255,.1);color:#c9ccd4;font:600 12px Manrope,sans-serif;padding:8px 13px;border-radius:9px;cursor:pointer;display:flex;align-items:center;gap:7px"><span class="ic" style="width:14px;height:14px"><i data-lucide="history"></i></span>History</button>
+      </div>
+    </header>
+
+    <div style="padding:24px 26px;display:grid;grid-template-columns:1fr 300px;gap:22px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+          <div style="padding:22px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,.07)">
+            <div style="min-width:0"><h2 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">Lautaro Martínez</h2><div style="font-size:12px;color:#8a8f9c;margin-top:4px">Inter · attaccante · titolare · rank #1 · FM prev. 8.8</div></div>
+            <div style="margin-left:auto;display:flex;gap:26px;text-align:right">
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Valore</div><div style="font:700 26px 'JetBrains Mono',monospace">196</div></div>
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Range</div><div style="font:700 26px 'JetBrains Mono',monospace">172–224</div></div>
+              <div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#3ddc97;font-weight:700">Max bid</div><div style="font:700 26px 'JetBrains Mono',monospace;color:#3ddc97">210</div></div>
+            </div>
+          </div>
+          <div style="padding:20px 24px;display:flex;align-items:flex-end;gap:14px;background:#0d1014">
+            <div style="position:relative;flex:1">
+              <span class="ic" style="width:16px;height:16px;color:#5d6270;position:absolute;left:12px;top:12px"><i data-lucide="search"></i></span>
+              <input placeholder="Cambia giocatore chiamato…" style="width:100%;box-sizing:border-box;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px 11px 36px;color:#edeef2;font-family:inherit;font-size:13px"/>
+            </div>
+            <select style="background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px 12px;color:#edeef2;font-family:inherit;font-size:13px"><option>FC Real Fantasia (io)</option><option>AC Picchia</option></select>
+            <input value="210" style="width:84px;background:#08090c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:11px;text-align:center;color:#edeef2;font:700 15px 'JetBrains Mono',monospace"/>
+            <button style="background:#edeef2;color:#0a0b0f;font:800 14px Manrope,sans-serif;padding:12px 24px;border:0;border-radius:10px;cursor:pointer">Assegna</button>
+          </div>
+        </div>
+
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden">
+          <div style="padding:16px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)">
+            <span style="font-size:13px;font-weight:700">Giocatori liberi</span>
+            <div style="display:flex;gap:6px;margin-left:14px">
+              <button style="padding:5px 11px;border-radius:8px;font:700 11px Manrope,sans-serif;background:rgba(255,255,255,.08);color:#edeef2;border:0;cursor:pointer">Tutti</button>
+              <button style="padding:5px 11px;border-radius:8px;font:700 11px Manrope,sans-serif;background:transparent;color:#8a8f9c;border:0;cursor:pointer">P</button>
+              <button style="padding:5px 11px;border-radius:8px;font:700 11px Manrope,sans-serif;background:transparent;color:#8a8f9c;border:0;cursor:pointer">D</button>
+              <button style="padding:5px 11px;border-radius:8px;font:700 11px Manrope,sans-serif;background:transparent;color:#8a8f9c;border:0;cursor:pointer">C</button>
+              <button style="padding:5px 11px;border-radius:8px;font:700 11px Manrope,sans-serif;background:transparent;color:#8a8f9c;border:0;cursor:pointer">A</button>
+            </div>
+            <span style="margin-left:auto;font-size:11px;color:#8a8f9c">ordinati per max bid</span>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:10px 20px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#5d6270;font-weight:700;border-bottom:1px solid rgba(255,255,255,.06)"><span>Giocatore</span><span style="text-align:right">Valore</span><span style="text-align:right">Max bid</span><span style="text-align:right">Pressione</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:13px 20px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.05)"><span><strong style="font-weight:600">Dušan Vlahović</strong> <span style="color:#5d6270;font-size:11px">A · Juventus</span></span><span style="text-align:right;font-family:'JetBrains Mono',monospace">158</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#3ddc97;font-weight:700">168</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#ff6b6b">2/6</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:13px 20px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.05)"><span><strong style="font-weight:600">Ademola Lookman</strong> <span style="color:#5d6270;font-size:11px">A · Atalanta</span></span><span style="text-align:right;font-family:'JetBrains Mono',monospace">142</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#3ddc97;font-weight:700">151</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#ff6b6b">2/6</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:13px 20px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.05)"><span><strong style="font-weight:600">Teun Koopmeiners</strong> <span style="color:#5d6270;font-size:11px">C · Juventus</span></span><span style="text-align:right;font-family:'JetBrains Mono',monospace">104</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#3ddc97;font-weight:700">112</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#f5c451">5/14</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:13px 20px;font-size:13px"><span><strong style="font-weight:600">Christian Pulisic</strong> <span style="color:#5d6270;font-size:11px">C · Milan</span></span><span style="text-align:right;font-family:'JetBrains Mono',monospace">99</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#3ddc97;font-weight:700">108</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;color:#f5c451">5/14</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px;align-items:center">
+          <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700;align-self:flex-start">Pressione ruolo A</div>
+          <div style="width:132px;height:132px;border-radius:99px;background:conic-gradient(#ff6b6b 0 33%,rgba(255,255,255,.07) 33% 100%);display:flex;align-items:center;justify-content:center">
+            <div style="width:104px;height:104px;border-radius:99px;background:#11141a;display:flex;flex-direction:column;align-items:center;justify-content:center">
+              <span style="font:700 30px 'JetBrains Mono',monospace;color:#ff6b6b">2</span>
+              <span style="font-size:11px;color:#8a8f9c">su 6 slot</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#ff6b6b;font-weight:700;text-align:center">Scarsità alta</div>
+          <div style="font-size:11px;color:#8a8f9c;text-align:center;text-wrap:pretty">Restano 2 attaccanti di fascia alta per 6 slot da titolare ancora liberi in lega.</div>
+        </div>
+        <div style="background:#11141a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:13px">
+          <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a8f9c;font-weight:700">Crediti rivali</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Van Goof</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#ff6b6b"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Speranza FC</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#ff6b6b"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Madrink</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:100%;height:100%;border-radius:99px;background:#f5c451"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right">500</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">Barella</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:93%;height:100%;border-radius:99px;background:#f5c451"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right">467</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px"><span style="flex:1;color:#c9ccd4">AC Picchia</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:81%;height:100%;border-radius:99px;background:#f5c451"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right">404</span></div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;padding-top:9px;border-top:1px solid rgba(255,255,255,.07)"><span style="flex:1;color:#3ddc97;font-weight:700">Tu</span><div style="width:80px;height:5px;border-radius:99px;background:rgba(255,255,255,.07)"><div style="width:64%;height:100%;border-radius:99px;background:#3ddc97"></div></div><span style="font:700 12px 'JetBrains Mono',monospace;width:34px;text-align:right;color:#3ddc97">318</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Prossimi passi: «vado con <a class="dv-oid" href="#1b">1b</a>, applicalo a tutte e 5 le schermate» · «fondi il pannello rivali di <a class="dv-oid" href="#1c">1c</a> in <a class="dv-oid" href="#1a">1a</a>» · «fammi vedere la versione mobile»</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { bid: 150, q: '', open: false, role: 'TUTTI', pid: 0, exp: { me: true } };
+  players() {
+    return [
+      { id:0, n:'Lautaro Martínez', t:'Inter', r:'A', rk:'#1', max:210, val:196, lo:172, hi:224 },
+      { id:1, n:'Vlahović', t:'Juventus', r:'A', rk:'#4', max:168, val:152, lo:134, hi:180 },
+      { id:2, n:'Lookman', t:'Atalanta', r:'A', rk:'#6', max:151, val:139, lo:120, hi:162 },
+      { id:3, n:'Thuram', t:'Inter', r:'A', rk:'#7', max:148, val:136, lo:118, hi:158 },
+      { id:4, n:'Dovbyk', t:'Roma', r:'A', rk:'#12', max:118, val:108, lo:92, hi:126 },
+      { id:5, n:'Retegui', t:'Atalanta', r:'A', rk:'#14', max:112, val:101, lo:86, hi:120 },
+      { id:6, n:'Pellegrini', t:'Roma', r:'C', rk:'#8', max:96, val:88, lo:74, hi:104 },
+      { id:7, n:'Pulisic', t:'Milan', r:'C', rk:'#2', max:142, val:131, lo:114, hi:152 },
+      { id:8, n:'Koopmeiners', t:'Juventus', r:'C', rk:'#9', max:104, val:95, lo:80, hi:112 },
+      { id:9, n:'Theo Hernández', t:'Milan', r:'D', rk:'#2', max:82, val:74, lo:62, hi:90 },
+      { id:10, n:'Buongiorno', t:'Napoli', r:'D', rk:'#5', max:64, val:58, lo:48, hi:72 },
+      { id:11, n:'Di Gregorio', t:'Juventus', r:'P', rk:'#4', max:28, val:24, lo:18, hi:32 }
+    ];
+  }
+  sold() {
+    return [
+      { id:100, n:'Çalhanoğlu', t:'Inter', r:'C', val:85, paid:96, to:'AC Picchia' },
+      { id:101, n:'Dimarco', t:'Inter', r:'D', val:78, paid:74, to:'FC Real Fantasia' },
+      { id:102, n:'Barella', t:'Inter', r:'C', val:46, paid:52, to:'FC Real Fantasia' },
+      { id:103, n:'Sommer', t:'Inter', r:'P', val:43, paid:41, to:'FC Real Fantasia' },
+      { id:104, n:'Cambiaso', t:'Juventus', r:'D', val:31, paid:34, to:'AS Birra' },
+      { id:105, n:'Bremer', t:'Juventus', r:'D', val:41, paid:33, to:'Dinamo Barella' },
+      { id:106, n:'Maignan', t:'Milan', r:'P', val:29, paid:28, to:'AS Birra' },
+      { id:107, n:'Bastoni', t:'Inter', r:'D', val:35, paid:32, to:'FC Real Fantasia' },
+      { id:108, n:'Man', t:'Parma', r:'C', val:28, paid:31, to:'FC Real Fantasia' },
+      { id:109, n:'Dumfries', t:'Inter', r:'D', val:18, paid:15, to:'FC Real Fantasia' },
+      { id:110, n:'Paz', t:'Como', r:'C', val:17, paid:15, to:'FC Real Fantasia' },
+      { id:111, n:'Kean', t:'Fiorentina', r:'A', val:19, paid:15, to:'FC Real Fantasia' }
+    ];
+  }
+  teams() {
+    return [
+      { id:'me', n:'FC Real Fantasia', cr:225, mine:true, r:[
+        { k:'P', has:1, tot:3, sp:41, bud:50, pl:'Sommer 41' },
+        { k:'D', has:3, tot:8, sp:121, bud:110, pl:'Dimarco 74 · Bastoni 32 · Dumfries 15' },
+        { k:'C', has:3, tot:8, sp:98, bud:140, pl:'Barella 52 · Man 31 · Paz 15' },
+        { k:'A', has:1, tot:6, sp:15, bud:200, pl:'Kean 15' } ] },
+      { id:'t1', n:'AC Picchia', cr:404, r:[
+        { k:'C', has:1, tot:8, sp:96, bud:120, pl:'Çalhanoğlu 96' } ] },
+      { id:'t2', n:'AS Birra', cr:438, r:[
+        { k:'P', has:1, tot:3, sp:28, bud:40, pl:'Maignan 28' },
+        { k:'D', has:1, tot:8, sp:34, bud:120, pl:'Cambiaso 34' } ] },
+      { id:'t3', n:'Dinamo Barella', cr:467, r:[
+        { k:'D', has:1, tot:8, sp:33, bud:130, pl:'Bremer 33' } ] },
+      { id:'t4', n:'Atletico Van Goof', cr:500, r:[] },
+      { id:'t5', n:'Speranza FC', cr:500, r:[] },
+      { id:'t6', n:'Real Madrink', cr:500, r:[] },
+      { id:'t7', n:'Bayer Leverkusen', cr:500, r:[] }
+    ];
+  }
+  renderVals() {
+    const budget = 225, slotsAfter = 16, cap = budget - slotsAfter, valore = 196;
+    const bid = Math.min(Math.max(1, Number(this.state.bid) || 1), 400);
+    const rest = budget - bid;
+    const medio = rest > 0 ? rest / slotsAfter : 0;
+    const over = bid > cap;
+    let lbl = 'Sostenibile', col = '#3ddc97';
+    if (medio < 8) { lbl = 'Rischio'; col = '#ff6b6b'; }
+    else if (medio < 12) { lbl = 'Attenzione'; col = '#f5c451'; }
+    if (over) { lbl = 'Oltre il tuo tetto'; col = '#ff6b6b'; }
+    const d = bid - valore;
+    const set = (v) => this.setState({ bid: Math.min(Math.max(1, v), 400) });
+    const all = this.players();
+    const sel = all.find(p => p.id === this.state.pid) || all[0];
+    const q = this.state.q.trim().toLowerCase();
+    const role = this.state.role;
+    const filtered = all.filter(p => (role === 'TUTTI' || p.r === role) && (!q || p.n.toLowerCase().includes(q) || p.t.toLowerCase().includes(q)));
+    const roleColor = { P:'#5bc8ff', D:'#3ddc97', C:'#f5c451', A:'#ff6b6b' };
+    const roles = ['TUTTI','P','D','C','A'].map(r => ({
+      key: r, label: r,
+      style: 'flex:1;height:30px;border-radius:8px;border:1px solid ' + (role === r ? 'rgba(61,220,151,.45)' : 'rgba(255,255,255,.1)') +
+             ';background:' + (role === r ? 'rgba(61,220,151,.14)' : 'transparent') +
+             ';color:' + (role === r ? '#3ddc97' : '#8a8f9c') + ';font:700 11px Manrope,sans-serif;cursor:pointer',
+      pick: () => this.setState({ role: r })
+    }));
+    const options = filtered.map(p => ({
+      key: p.id, name: p.n, team: p.t + ' · rank ' + p.rk, role: p.r, max: p.max,
+      roleStyle: "font:700 9px 'JetBrains Mono',monospace;width:20px;text-align:center;color:" + roleColor[p.r],
+      rowStyle: 'padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;background:' + (p.id === sel.id ? 'rgba(61,220,151,.07)' : 'transparent'),
+      pick: () => this.setState({ pid: p.id, open: false, q: '' })
+    }));
+    return {
+      bid, cap,
+      selName: sel.n, selMeta: sel.t + ' · rank ' + sel.rk + ' · titolare', selRole: sel.r,
+      selMax: sel.max, selVal: sel.val, selRange: sel.lo + '–' + sel.hi,
+      selRoleStyle: 'width:36px;height:36px;flex:none;border-radius:11px;display:flex;align-items:center;justify-content:center;font:700 14px \'JetBrains Mono\',monospace;color:' + roleColor[sel.r] + ';background:' + roleColor[sel.r] + '22',
+      pickerOpen: this.state.open,
+      query: this.state.q,
+      onQuery: (e) => this.setState({ q: e.target.value, open: true }),
+      openPicker: () => this.setState({ open: true }),
+      closePicker: () => this.setState({ open: false, q: '' }),
+      teamRows: this.teams().map(t => {
+        const open = !!this.state.exp[t.id];
+        const has = t.r.reduce((s, x) => s + x.has, 0);
+        const crCol = t.cr >= 480 ? '#3ddc97' : (t.cr >= 430 ? '#f5c451' : '#ff6b6b');
+        return {
+          key: t.id, name: t.n, slots: has + '/25', credits: t.cr, open,
+          toggle: () => this.setState(s => ({ exp: Object.assign({}, s.exp, { [t.id]: !s.exp[t.id] }) })),
+          headStyle: 'padding:13px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;background:' + (t.mine ? 'rgba(61,220,151,.06)' : 'transparent') + ';border-bottom:1px solid rgba(255,255,255,.06)',
+          nameStyle: 'flex:1;min-width:0;font-size:13px;font-weight:' + (t.mine ? '800' : '700') + ';color:' + (t.mine ? '#3ddc97' : '#edeef2'),
+          crStyle: "font:700 15px 'JetBrains Mono',monospace;color:" + (t.mine ? '#f5c451' : crCol),
+          chev: open ? 'chevron-up' : 'chevron-down',
+          empty: t.r.length === 0,
+          lines: t.r.map(x => ({
+            key: x.k, role: x.k, count: x.has + '/' + x.tot, spent: x.sp, players: x.pl,
+            roleStyle: "width:18px;flex:none;font:700 10px 'JetBrains Mono',monospace;color:" + roleColor[x.k],
+            barStyle: 'height:100%;border-radius:99px;width:' + Math.min(100, Math.round((x.sp / Math.max(1, x.bud)) * 100)) + '%;background:' + (x.sp > x.bud ? '#ff6b6b' : 'rgba(255,255,255,.35)'),
+            planned: !!t.mine,
+            budget: t.mine ? x.sp + '/' + x.bud : x.sp + ' cr'
+          }))
+        };
+      }),
+      listRows: filtered.map(p => ({
+        key: p.id, name: p.n, team: p.t + ' · rank ' + p.rk, role: p.r, right: p.max, sold: false, taken: '',
+        roleStyle: "font:700 9px 'JetBrains Mono',monospace;width:20px;text-align:center;color:" + roleColor[p.r],
+        rowStyle: 'padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;background:' + (p.id === sel.id ? 'rgba(61,220,151,.07)' : 'transparent'),
+        rightStyle: "font:700 15px 'JetBrains Mono',monospace;color:#3ddc97",
+        pick: () => this.setState({ pid: p.id, open: false, q: '' })
+      })).concat(this.sold().filter(p => (role === 'TUTTI' || p.r === role) && (!q || p.n.toLowerCase().includes(q) || p.t.toLowerCase().includes(q))).sort((a, b) => b.paid - a.paid).map(p => ({
+        key: p.id, name: p.n, team: p.t, role: p.r, right: p.paid, sold: true, taken: p.to,
+        roleStyle: "font:700 9px 'JetBrains Mono',monospace;width:20px;text-align:center;color:" + roleColor[p.r] + '80',
+        rowStyle: 'padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.05);opacity:.62',
+        rightStyle: "font:700 15px 'JetBrains Mono',monospace;color:#8a8f9c",
+        pick: null
+      }))),
+      listCount: filtered.length + ' liberi · ' + this.sold().length + ' aggiudicati',
+      roles, options, emptyList: options.length === 0,
+      restRole: sel.r,
+      restRoleStyle: "font:700 9px 'JetBrains Mono',monospace;color:" + roleColor[sel.r] + ";border:1px solid " + roleColor[sel.r] + "55;padding:2px 5px;border-radius:4px",
+      restTitle: { P:'Se lo perdi, restano i portieri', D:'Se lo perdi, restano i difensori', C:'Se lo perdi, restano i centrocampisti', A:'Se lo perdi, restano gli attaccanti' }[sel.r],
+      restCount: all.filter(p => p.r === sel.r && p.id !== sel.id).length + ' liberi · max bid',
+      restAll: { P:'Vedi tutti i portieri', D:'Vedi tutti i difensori', C:'Vedi tutti i centrocampisti', A:'Vedi tutti gli attaccanti' }[sel.r],
+      restList: all.filter(p => p.r === sel.r && p.id !== sel.id).sort((a, b) => b.max - a.max).map((p, i) => ({
+        key: p.id, name: p.n, team: p.t, val: 'val ' + p.val, max: p.max,
+        tier: i < 3 ? 'TOP' : 'BUO',
+        tierStyle: "font:700 9px 'JetBrains Mono',monospace;color:" + (i < 3 ? '#3ddc97' : '#f5c451') + ';border:1px solid ' + (i < 3 ? 'rgba(61,220,151,.3)' : 'rgba(245,196,81,.3)') + ';padding:2px 5px;border-radius:4px',
+        maxStyle: "font:700 15px 'JetBrains Mono',monospace;color:" + (i < 3 ? '#3ddc97' : '#f5c451'),
+        pick: () => this.setState({ pid: p.id, open: false, q: '' })
+      })),
+      countLabel: filtered.length + ' liberi',
+      restDopo: over ? 0 : rest,
+      medioDopo: over ? '—' : medio.toFixed(1),
+      sostLabel: lbl,
+      sostColor: col,
+      bidWidth: Math.min(100, (bid / 400) * 100) + '%',
+      deltaValore: (bid - sel.val === 0 ? 'in linea col valore' : (bid > sel.val ? '+' + (bid - sel.val) + ' sopra il valore' : (bid - sel.val) + ' sotto il valore')),
+      onBid: (e) => set(Number(e.target.value)),
+      dec5: () => set(bid - 5), dec1: () => set(bid - 1),
+      inc1: () => set(bid + 1), inc5: () => set(bid + 5),
+      toMax: () => set(cap)
+    };
+  }
+  componentDidMount() { this.paint(); }
+  componentDidUpdate() { this.paint(); }
+  paint() {
+    let tries = 0;
+    const go = () => {
+      if (window.lucide && window.lucide.createIcons) { try { window.lucide.createIcons(); } catch (e) {} }
+      else if (tries++ < 40) setTimeout(go, 150);
+    };
+    go();
+  }
+}
+</script>
+</body>
+</html>

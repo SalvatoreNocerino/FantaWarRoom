@@ -3,8 +3,7 @@ import { X } from 'lucide-react';
 import { ActiveTab } from './navItems';
 import { NavList } from './NavList';
 import { BudgetStat } from './BudgetStat';
-import { AuthBlock } from './AuthBlock';
-import { AppUser } from '../../lib/supabase';
+import { ResetDataButton } from './ResetDataButton';
 import { PlayerRole } from '../../types';
 
 interface Props {
@@ -18,10 +17,6 @@ interface Props {
   rosterSlots: Record<PlayerRole, number>;
   leagueName: string;
   onResetData: () => void;
-  currentUser: AppUser | null;
-  onLogin: () => void;
-  onLogout: () => void;
-  isCloudSyncing: boolean;
 }
 
 export const NavDrawer: React.FC<Props> = ({
@@ -35,10 +30,6 @@ export const NavDrawer: React.FC<Props> = ({
   rosterSlots,
   leagueName,
   onResetData,
-  currentUser,
-  onLogin,
-  onLogout,
-  isCloudSyncing,
 }) => {
   useEffect(() => {
     if (!open) return;
@@ -80,7 +71,7 @@ export const NavDrawer: React.FC<Props> = ({
 
         <div className="p-3 border-t border-border-soft space-y-3">
           <BudgetStat myCredits={myCredits} mySlotsNeeded={mySlotsNeeded} countMyRole={countMyRole} rosterSlots={rosterSlots} />
-          <AuthBlock currentUser={currentUser} onLogin={onLogin} onLogout={onLogout} isCloudSyncing={isCloudSyncing} onResetData={onResetData} />
+          <ResetDataButton onResetData={onResetData} />
           <div className="flex items-center justify-center gap-3 text-[10px] text-faint pt-1">
             <a href="/privacy.html" target="_blank" rel="noopener noreferrer" className="hover:text-muted">
               Privacy

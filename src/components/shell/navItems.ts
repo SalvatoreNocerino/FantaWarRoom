@@ -1,6 +1,6 @@
-import { LayoutDashboard, Database, ShieldAlert, Settings2, LucideIcon } from 'lucide-react';
+import { ShieldAlert, Settings2, LucideIcon } from 'lucide-react';
 
-export type ActiveTab = 'dashboard' | 'warroom' | 'database' | 'settings';
+export type ActiveTab = 'warroom' | 'settings';
 
 export interface NavItem {
   id: ActiveTab;
@@ -8,12 +8,10 @@ export interface NavItem {
   icon: LucideIcon;
 }
 
-// Ordine per frequenza d'uso reale, non per sequenza di setup: Dashboard e
-// Console Live sono l'uso quotidiano durante l'asta, Lega/Strategia sono
-// configurazione one-shot raggruppata sotto "Impostazioni" (vedi SettingsView).
+// MVP: solo le due schermate usate durante l'asta. Console Live è l'uso
+// principale (vedi App.tsx, apre lì di default); Impostazioni è la
+// configurazione one-shot di lega.
 export const NAV_ITEMS: NavItem[] = [
-  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'warroom', label: 'Console Live', icon: ShieldAlert },
-  { id: 'database', label: 'Listone Serie A', icon: Database },
   { id: 'settings', label: 'Impostazioni', icon: Settings2 },
 ];

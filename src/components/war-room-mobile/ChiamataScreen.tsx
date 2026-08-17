@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight, ArrowDownAZ, ArrowDown01 } from 'lucide-react';
+import { ChevronDown, ArrowDownAZ, ArrowDown01 } from 'lucide-react';
 import { Player, LeagueSettings, PlayerRole } from '../../types';
 import { PlayerPricing, MyTeamBudget } from '../../engine/types';
 import { TeamSummary } from '../../utils/fantaEngine';
@@ -22,8 +22,7 @@ interface Props {
   teamSummaries: TeamSummary[];
   selectedPlayerId: string | null;
   onSelectPlayer: (id: string | null) => void;
-  onAssignPlayer: (playerId: string, boughtByTeam: string, cost: number) => void;
-  onSeeAllRole: (role: PlayerRole) => void;
+  onAssignPlayer: (playerId: string, boughtByTeam: string, cost: number, engineSnapshot?: any) => void;
   /** true su desktop: niente tab bar sotto, la barra offerta sticky a bottom:0. */
   noBottomTabBar?: boolean;
   /** Lega condivisa: i membri seguono l'asta in sola lettura, solo l'admin assegna. */
@@ -41,7 +40,6 @@ export const ChiamataScreen: React.FC<Props> = ({
   selectedPlayerId,
   onSelectPlayer,
   onAssignPlayer,
-  onSeeAllRole,
   noBottomTabBar = false,
   readOnly = false,
 }) => {
@@ -117,8 +115,21 @@ export const ChiamataScreen: React.FC<Props> = ({
   const isOverBudget = bid > buyerResiduo;
 
   const handleAssign = () => {
-    if (!activePlayer || bid < 1 || isOverBudget) return;
-    onAssignPlayer(activePlayer.id, buyerTeam, bid);
+    if (!activePlayer || bid < 1 || isOverBudget || !activePricing) return;
+    const engineSnapshot = {
+      offertaMax: activePricing.offertaMax,
+      value: activePricing.value,
+      rangeMin: activePricing.rangeMin,
+      rangeMax: activePricing.rangeMax,
+      rankFvmRuolo: activePricing.rankFvmRuolo,
+      titolareORiserva: activePricing.titolareORiserva,
+      playerTier: activePlayer.tier,
+      playerFvm: activePlayer.fvm,
+      playerMv: activePlayer.mv,
+      playerFm: activePlayer.fm,
+      buyerRemainingBefore: buyerResiduo,
+    };
+    onAssignPlayer(activePlayer.id, buyerTeam, bid, engineSnapshot);
     onSelectPlayer(null);
     setQuery('');
   };
@@ -468,29 +479,6 @@ export const ChiamataScreen: React.FC<Props> = ({
               <div style={{ padding: 16, textAlign: 'center', fontSize: 12, color: COLORS.textWeak }}>
                 Nessun altro {ROLE_PLURAL[activePlayer.role]} libero.
               </div>
-            )}
-            {restAll.length > 0 && (
-              <button
-                type="button"
-                onClick={() => onSeeAllRole(activePlayer.role)}
-                style={{
-                  width: '100%',
-                  padding: '13px 14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: 6,
-                  background: 'transparent',
-                  border: 0,
-                  borderTop: restList.length > 0 ? `1px solid ${COLORS.borderDivider}` : 'none',
-                  color: COLORS.textSecondary,
-                  font: `700 12px ${FONT_UI}`,
-                  cursor: 'pointer',
-                }}
-              >
-                Vedi tutti {ROLE_ARTICLE[activePlayer.role]} {ROLE_PLURAL[activePlayer.role]}
-                <ChevronRight size={14} />
-              </button>
             )}
           </div>
         </div>

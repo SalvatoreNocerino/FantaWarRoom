@@ -102,6 +102,19 @@ export interface RosterPlayer {
   boughtByTeam: string;
   cost: number;
   timestamp: number;
+  engineSnapshot?: {
+    offertaMax: number;
+    value: number;
+    rangeMin: number;
+    rangeMax: number;
+    rankFvmRuolo: number;
+    titolareORiserva: string;
+    playerTier: number;
+    playerFvm?: number;
+    playerMv?: number;
+    playerFm?: number;
+    buyerRemainingBefore: number;
+  };
 }
 
 export interface AppData {

@@ -14,7 +14,6 @@
     "agente-ansa": "tsx Agente_Ansa/agente.ts"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.112.2",
     "@tailwindcss/vite": "^4.1.14",
     "@vercel/analytics": "^2.0.1",
     "@vitejs/plugin-react": "^5.0.4",

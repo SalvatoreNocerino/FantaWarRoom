@@ -99,3 +99,70 @@ describe('resetAppData', () => {
     expect(reloaded.league.name).toBe(DEFAULT_LEAGUE_SETTINGS.name);
   });
 });
+
+describe('engineSnapshot persistence', () => {
+  it('salva e ricarica un\'asta con engineSnapshot completo', () => {
+    const auctionWithSnapshot = {
+      league: DEFAULT_LEAGUE_SETTINGS,
+      strategy: DEFAULT_STRATEGY_SETTINGS,
+      importedListone: null,
+      customPlayers: [],
+      auctionHistory: [
+        {
+          id: 'bid_test_001',
+          playerId: 'player_1',
+          boughtByTeam: 'Squadra 1',
+          cost: 35,
+          timestamp: Date.now(),
+          engineSnapshot: {
+            offertaMax: 38,
+            value: 36,
+            rangeMin: 30,
+            rangeMax: 45,
+            rankFvmRuolo: 5,
+            titolareORiserva: 'Titolare',
+            playerTier: 2,
+            playerFvm: 150,
+            playerMv: 6.5,
+            playerFm: 6.2,
+            buyerRemainingBefore: 150,
+          },
+        },
+      ],
+    };
+
+    saveAppData(auctionWithSnapshot);
+    const reloaded = loadAppData();
+
+    expect(reloaded.auctionHistory).toHaveLength(1);
+    expect(reloaded.auctionHistory[0].engineSnapshot).toBeDefined();
+    expect(reloaded.auctionHistory[0].engineSnapshot?.offertaMax).toBe(38);
+    expect(reloaded.auctionHistory[0].engineSnapshot?.playerTier).toBe(2);
+    expect(reloaded.auctionHistory[0].cost).toBe(35);
+  });
+
+  it('gestisce correttamente aste senza engineSnapshot (retrocompatibilità)', () => {
+    const oldAuction = {
+      league: DEFAULT_LEAGUE_SETTINGS,
+      strategy: DEFAULT_STRATEGY_SETTINGS,
+      importedListone: null,
+      customPlayers: [],
+      auctionHistory: [
+        {
+          id: 'bid_old_001',
+          playerId: 'player_1',
+          boughtByTeam: 'Squadra 1',
+          cost: 35,
+          timestamp: Date.now(),
+        },
+      ],
+    };
+
+    saveAppData(oldAuction);
+    const reloaded = loadAppData();
+
+    expect(reloaded.auctionHistory).toHaveLength(1);
+    expect(reloaded.auctionHistory[0].engineSnapshot).toBeUndefined();
+    expect(reloaded.auctionHistory[0].cost).toBe(35);
+  });
+});

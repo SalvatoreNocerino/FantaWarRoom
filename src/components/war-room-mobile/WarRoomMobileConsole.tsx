@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from '../../types';
+import { Player, LeagueSettings, StrategySettings, RosterPlayer } from '../../types';
 import { useWarRoomEngine } from '../../engine/useWarRoomEngine';
 import { calculateTeamsSummary } from '../../utils/fantaEngine';
 import { COLORS, FONT_UI, FONT_MONO } from './tokens';
@@ -16,13 +16,10 @@ interface Props {
   auctionHistory: RosterPlayer[];
   selectedPlayerId: string | null;
   onSelectPlayer: (id: string | null) => void;
-  onAssignPlayer: (playerId: string, boughtByTeam: string, cost: number) => void;
+  onAssignPlayer: (playerId: string, boughtByTeam: string, cost: number, engineSnapshot?: any) => void;
   onUndoLastAssignment: () => void;
   onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
   onDeleteAssignment?: (assignmentId: string) => void;
-  onSeeAllRole: (role: PlayerRole) => void;
-  /** Lega condivisa: solo l'admin conduce l'asta, i membri seguono in sola
-   * lettura (vedi App.tsx isLeagueAdmin). Assente/false in modalità solo. */
   readOnly?: boolean;
 }
 
@@ -59,7 +56,6 @@ export const WarRoomMobileConsole: React.FC<Props> = ({
   onUndoLastAssignment,
   onUpdateAssignment,
   onDeleteAssignment,
-  onSeeAllRole,
   readOnly = false,
 }) => {
   const { myTeamName, pricingMap, myTeamBudget, availablePlayers } = useWarRoomEngine(allPlayers, league, strategy, auctionHistory);
@@ -82,7 +78,6 @@ export const WarRoomMobileConsole: React.FC<Props> = ({
     selectedPlayerId,
     onSelectPlayer,
     onAssignPlayer,
-    onSeeAllRole,
     readOnly,
   };
   const roseProps = { league, strategy, allPlayers, auctionHistory, teamSummaries, myTeamName };
