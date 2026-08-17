@@ -7,6 +7,7 @@ import { AppShell } from './components/shell/AppShell';
 import { ActiveTab } from './components/shell/navItems';
 import { DashboardView } from './components/DashboardView';
 import { SettingsView } from './components/SettingsView';
+import { FeedbackView } from './components/FeedbackView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
 import { WarRoomMobileConsole } from './components/war-room-mobile/WarRoomMobileConsole';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
@@ -74,7 +75,12 @@ export default function App() {
   // oltre FREE_ASSIGNMENT_LIMIT aggiudicazioni totali in Console Live, il
   // piano gratuito si ferma. isPremium arriva sola lettura da Supabase,
   // l'app non lo scrive mai (vedi supabase/migrations/003_add_premium_gate.sql).
+  // FREEMIUM_DISABLED tiene tutta questa infrastruttura intatta ma disattiva
+  // il gate: per ora l'app è gratuita per tutti. Per riattivare il limite,
+  // basta rimettere questo flag a false.
+  const FREEMIUM_DISABLED = true;
   const [isPremium, setIsPremium] = useState(false);
+  const effectivePremium = FREEMIUM_DISABLED || isPremium;
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const FREE_ASSIGNMENT_LIMIT = 5;
 
@@ -251,7 +257,7 @@ export default function App() {
   // Action Handlers
   const handleAssignPlayer = (playerId: string, boughtByTeam: string, cost: number) => {
     if (!isLeagueAdmin) return; // in lega condivisa solo l'admin conduce l'asta
-    if (!isPremium && appData.auctionHistory.length >= FREE_ASSIGNMENT_LIMIT) {
+    if (!effectivePremium && appData.auctionHistory.length >= FREE_ASSIGNMENT_LIMIT) {
       track('premium_upsell_shown');
       setShowUpgradeModal(true);
       return;
@@ -473,7 +479,7 @@ export default function App() {
             onGoToWarRoom={() => goToTab('warroom')}
             onGoToDatabase={() => goToTab('database')}
             onSelectForAuction={setSelectedAuctionPlayerId}
-            isPremium={isPremium}
+            isPremium={effectivePremium}
             freeAssignmentLimit={FREE_ASSIGNMENT_LIMIT}
           />
         )}
@@ -531,6 +537,8 @@ export default function App() {
             readOnly={!isLeagueAdmin}
           />
         )}
+
+        {activeTab === 'feedback' && <FeedbackView />}
       </main>
       </AppShell>
 
