@@ -6,6 +6,7 @@ import { TeamSummary } from '../../utils/fantaEngine';
 import { COLORS, FONT_MONO, FONT_UI, ROLE_COLORS, ROLE_ARTICLE, ROLE_PLURAL, formatDelta } from './tokens';
 import { RoleChips } from './RoleChips';
 import { PlayerAvatar } from '../ui';
+import { useNumberDraft } from '../../utils/useNumberDraft';
 
 // 6 (pad top) + 50 (bottone) + 14 (pad bottom) — vedi TabBar.tsx. Solo su
 // mobile: su desktop non c'è tab bar sotto, quindi l'offset è 0 (vedi
@@ -52,6 +53,7 @@ export const ChiamataScreen: React.FC<Props> = ({
   // che riordina solo il pannello "rimanenti nel ruolo" più sotto).
   const [pickerSort, setPickerSort] = useState<'valore' | 'alfabetico'>('valore');
   const [bid, setBid] = useState(1);
+  const bidDraft = useNumberDraft(bid, (n) => setBid(Math.min(400, Math.max(1, Math.round(n)))));
   const [buyerTeam, setBuyerTeam] = useState(myTeamName);
   // Ordinamento della lista "rimanenti nel ruolo" — solo desktop (vedi
   // noBottomTabBar più sotto), su mobile resta il default per valore.
@@ -575,11 +577,14 @@ export const ChiamataScreen: React.FC<Props> = ({
               −
             </button>
             <input
-              value={bid}
+              value={bidDraft.value}
               onChange={(e) => {
-                const n = parseInt(e.target.value.replace(/\D/g, ''), 10);
-                setBid(Number.isNaN(n) ? 1 : Math.min(400, Math.max(1, n)));
+                // Strip tutto ciò che non è cifra: la tastiera fisica può
+                // comunque digitare lettere/simboli nonostante inputMode.
+                const digits = e.target.value.replace(/\D/g, '');
+                bidDraft.onChange({ target: { value: digits } } as React.ChangeEvent<HTMLInputElement>);
               }}
+              onBlur={bidDraft.onBlur}
               inputMode="numeric"
               style={{
                 flex: 1,

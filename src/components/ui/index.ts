@@ -2,6 +2,7 @@ export { Card } from './Card';
 export { SectionHeader } from './SectionHeader';
 export { Field } from './Field';
 export { Input, Textarea, Select } from './Input';
+export { NumberInput } from './NumberInput';
 export { Checkbox } from './Checkbox';
 export { RadioCard } from './RadioCard';
 export { Button } from './Button';

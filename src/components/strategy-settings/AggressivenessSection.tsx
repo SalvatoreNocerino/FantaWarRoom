@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, SectionHeader, Slider } from '../ui';
+import { useNumberDraft } from '../../utils/useNumberDraft';
 
 interface AggressivenessSectionProps {
   aggressionScore: number;
@@ -7,6 +8,8 @@ interface AggressivenessSectionProps {
 }
 
 export const AggressivenessSection: React.FC<AggressivenessSectionProps> = ({ aggressionScore, onChange }) => {
+  const draft = useNumberDraft(aggressionScore, (n) => onChange(Math.max(0, Math.min(100, n))));
+
   return (
     <Card className="p-6 space-y-4">
       <SectionHeader
@@ -18,8 +21,9 @@ export const AggressivenessSection: React.FC<AggressivenessSectionProps> = ({ ag
               type="number"
               min={0}
               max={100}
-              value={aggressionScore}
-              onChange={(e) => onChange(Math.max(0, Math.min(100, Number(e.target.value))))}
+              value={draft.value}
+              onChange={draft.onChange}
+              onBlur={draft.onBlur}
               className="w-16 bg-field border border-border-strong rounded-lg px-2 py-1 text-center font-mono font-bold text-warning focus:border-accent focus:outline-none"
             />
             <span className="font-mono text-xl font-black text-warning">/ 100</span>

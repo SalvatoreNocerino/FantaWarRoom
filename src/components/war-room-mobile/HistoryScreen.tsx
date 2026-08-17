@@ -4,6 +4,7 @@ import { Player, RosterPlayer, LeagueSettings } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { COLORS, FONT_MONO, FONT_UI, ROLE_COLORS, deltaColor, formatSignedInt } from './tokens';
 import { ConfirmDialog } from '../ui';
+import { useNumberDraft } from '../../utils/useNumberDraft';
 
 interface Props {
   auctionHistory: RosterPlayer[];
@@ -31,6 +32,7 @@ export const HistoryScreen: React.FC<Props> = ({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTeam, setEditTeam] = useState('');
   const [editCost, setEditCost] = useState(1);
+  const editCostDraft = useNumberDraft(editCost, (n) => setEditCost(Math.max(1, n)));
   const [deletingItem, setDeletingItem] = useState<{ id: string; playerName: string } | null>(null);
 
   const rows = useMemo(
@@ -181,8 +183,9 @@ export const HistoryScreen: React.FC<Props> = ({
                 <input
                   type="number"
                   min={1}
-                  value={editCost}
-                  onChange={(e) => setEditCost(Math.max(1, Number(e.target.value)))}
+                  value={editCostDraft.value}
+                  onChange={editCostDraft.onChange}
+                  onBlur={editCostDraft.onBlur}
                   style={{
                     width: 60,
                     background: COLORS.bgInputDark,

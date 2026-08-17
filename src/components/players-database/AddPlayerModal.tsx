@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Player, PlayerRole } from '../../types';
-import { Modal, Field, Input, Select, Textarea, Button } from '../ui';
+import { Modal, Field, Input, NumberInput, Select, Textarea, Button } from '../ui';
 
 interface AddPlayerModalProps {
   onClose: () => void;
@@ -63,11 +63,11 @@ export const AddPlayerModal: React.FC<AddPlayerModalProps> = ({ onClose, onAddCu
 
         <div className="grid grid-cols-2 gap-3">
           <Field label="Quotazione Base (FM)">
-            <Input type="number" variant="mono" value={newPrice} onChange={(e) => setNewPrice(Number(e.target.value))} />
+            <NumberInput variant="mono" value={newPrice} onChange={setNewPrice} />
           </Field>
 
           <Field label="FM Prevista">
-            <Input type="number" step="0.1" variant="mono" value={newFantaAvg} onChange={(e) => setNewFantaAvg(Number(e.target.value))} />
+            <NumberInput step="0.1" variant="mono" value={newFantaAvg} onChange={setNewFantaAvg} />
           </Field>
         </div>
 

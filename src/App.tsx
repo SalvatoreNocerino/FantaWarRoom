@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { track } from '@vercel/analytics';
 import { AppData, Player, LeagueSettings, StrategySettings, RosterPlayer, PlayerRole } from './types';
 import { loadAppData, saveAppData, resetAppData } from './utils/storage';
@@ -41,6 +41,15 @@ interface SharedLeagueMeta {
 
 export default function App() {
   const [appData, setAppData] = useState<AppData>(() => loadAppData());
+  // Specchio sempre aggiornato di appData da leggere dentro closure async
+  // "vecchie" (es. il listener subscribeToAuth qui sotto, registrato una
+  // sola volta con deps [] all'avvio): appData lì dentro resterebbe
+  // congelato al valore del mount, facendo perdere i dati locali fatti
+  // prima del primo login cloud.
+  const appDataRef = useRef(appData);
+  useEffect(() => {
+    appDataRef.current = appData;
+  }, [appData]);
   // Apertura su Dashboard: risponde subito a "a che punto sono?" invece di
   // aprire su un form di configurazione (vedi Fase 1/2 redesign UI/UX).
   const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
@@ -129,8 +138,11 @@ export default function App() {
             }));
             setIsPremium(cloudData.isPremium ?? false);
           } else {
-            // First time cloud user: seed Supabase with current appData
-            await saveUserDataToSupabase(user.uid, appData);
+            // First time cloud user: seed Supabase with current appData.
+            // Legge da appDataRef (non dalla appData chiusa nella closure di
+            // questo effect, congelata al mount) così porta con sé i dati
+            // fatti in locale prima del primo login.
+            await saveUserDataToSupabase(user.uid, appDataRef.current);
           }
         } catch (e) {
           console.error('Error loading Supabase user data:', e);

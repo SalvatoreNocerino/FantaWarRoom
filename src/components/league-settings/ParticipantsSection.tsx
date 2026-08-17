@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LeagueSettings, TeamParticipant } from '../../types';
 import { Plus, Trash2, Pencil } from 'lucide-react';
-import { Card, SectionHeader, Input, Button } from '../ui';
+import { Card, SectionHeader, Input, NumberInput, Button } from '../ui';
 
 interface Props {
   formData: LeagueSettings;
@@ -87,11 +87,10 @@ export const ParticipantsSection: React.FC<Props> = ({ formData, setFormData }) 
 
         {!formData.equalInitialCredits && (
           <div className="w-24 shrink-0">
-            <Input
-              type="number"
+            <NumberInput
               placeholder="Budget"
               value={newTeamBudget}
-              onChange={(e) => setNewTeamBudget(Number(e.target.value))}
+              onChange={setNewTeamBudget}
               variant="money"
               className="rounded-xl"
             />
@@ -153,10 +152,9 @@ export const ParticipantsSection: React.FC<Props> = ({ formData, setFormData }) 
                 <div className="flex items-center gap-1">
                   <span className="text-muted text-[10px]">Crediti:</span>
                   <div className="w-16 shrink-0">
-                    <Input
-                      type="number"
+                    <NumberInput
                       value={team.initialBudget}
-                      onChange={(e) => handleUpdateParticipantBudget(idx, Number(e.target.value))}
+                      onChange={(n) => handleUpdateParticipantBudget(idx, n)}
                       variant="money"
                       className="rounded px-1.5 py-0.5"
                     />

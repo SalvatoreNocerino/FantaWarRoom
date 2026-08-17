@@ -37,9 +37,7 @@ export const Sidebar: React.FC<Props> = ({
 }) => (
   <aside className="hidden md:flex md:flex-col w-64 shrink-0 h-screen sticky top-0 bg-surface border-r border-border-soft">
     <div className="p-5 flex items-center gap-3 border-b border-border-soft">
-      <div className="w-9 h-9 rounded-xl bg-accent text-accent-ink flex items-center justify-center font-black text-sm shrink-0">
-        WR
-      </div>
+      <img src="/icon.png" alt="FantaWarRoom" className="w-9 h-9 rounded-xl shrink-0 object-cover" />
       <div className="min-w-0">
         <h1 className="font-extrabold text-sm text-ink flex items-center gap-1.5">
           <span>FantaWarRoom</span>

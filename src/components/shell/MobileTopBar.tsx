@@ -12,9 +12,7 @@ export const MobileTopBar: React.FC<Props> = ({ leagueName, myCredits, onOpenDra
     <button type="button" onClick={onOpenDrawer} className="p-1.5 -ml-1.5 text-ink" aria-label="Apri menu">
       <Menu className="w-5 h-5" />
     </button>
-    <div className="w-7 h-7 rounded-lg bg-accent text-accent-ink flex items-center justify-center font-black text-[10px] shrink-0">
-      WR
-    </div>
+    <img src="/icon.png" alt="FantaWarRoom" className="w-7 h-7 rounded-lg shrink-0 object-cover" />
     <div className="min-w-0 flex-1">
       <div className="text-xs font-bold text-ink truncate">{leagueName}</div>
     </div>

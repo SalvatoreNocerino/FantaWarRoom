@@ -1,6 +1,6 @@
 import React from 'react';
 import { LeagueSettings, PlayerRole } from '../../types';
-import { Card, SectionHeader, Input } from '../ui';
+import { Card, SectionHeader, NumberInput } from '../ui';
 
 interface Props {
   formData: LeagueSettings;
@@ -24,15 +24,14 @@ export const RosterSlotsSection: React.FC<Props> = ({ formData, setFormData }) =
         {ROLE_FIELDS.map(({ key, label, borderClass, textClass }) => (
           <Card key={key} variant="nested" className={`p-3 border ${borderClass}`}>
             <span className={`${textClass} font-bold block mb-1`}>{label}</span>
-            <Input
-              type="number"
+            <NumberInput
               min={1}
               variant="mono"
               value={formData.rosterSlots[key]}
-              onChange={(e) =>
+              onChange={(n) =>
                 setFormData({
                   ...formData,
-                  rosterSlots: { ...formData.rosterSlots, [key]: Number(e.target.value) },
+                  rosterSlots: { ...formData.rosterSlots, [key]: n },
                 })
               }
               className="font-bold py-1.5"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LeagueSettings } from '../../types';
-import { Card, SectionHeader, Field, Input, Checkbox } from '../ui';
+import { Card, SectionHeader, Field, Input, NumberInput, Checkbox } from '../ui';
 
 interface Props {
   formData: LeagueSettings;
@@ -78,11 +78,10 @@ export const GeneralInfoSection: React.FC<Props> = ({ formData, setFormData }) =
         </Field>
 
         <Field label="Budget Iniziale di Base (FM)">
-          <Input
-            type="number"
+          <NumberInput
             variant="money"
             value={formData.totalBudget}
-            onChange={(e) => setFormData({ ...formData, totalBudget: Number(e.target.value) })}
+            onChange={(totalBudget) => setFormData({ ...formData, totalBudget })}
             required
           />
         </Field>

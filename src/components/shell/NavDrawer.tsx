@@ -56,9 +56,7 @@ export const NavDrawer: React.FC<Props> = ({
       <div className="absolute inset-0 bg-page/80 backdrop-blur-sm" onClick={onClose} />
       <div className="relative w-72 max-w-[80vw] h-full bg-surface border-r border-border-soft flex flex-col">
         <div className="p-4 flex items-center gap-3 border-b border-border-soft">
-          <div className="w-8 h-8 rounded-lg bg-accent text-accent-ink flex items-center justify-center font-black text-xs shrink-0">
-            WR
-          </div>
+          <img src="/icon.png" alt="FantaWarRoom" className="w-8 h-8 rounded-lg shrink-0 object-cover" />
           <div className="min-w-0 flex-1">
             <h1 className="font-extrabold text-sm text-ink">FantaWarRoom</h1>
             <span className="text-xs text-muted block truncate">{leagueName}</span>

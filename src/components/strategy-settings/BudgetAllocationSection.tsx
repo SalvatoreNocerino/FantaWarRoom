@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { PlayerRole } from '../../types';
 import { RefreshCw } from 'lucide-react';
 import { Card, SectionHeader, Badge, Alert } from '../ui';
@@ -8,6 +8,33 @@ const roleLabel: Record<string, string> = {
   D: 'Difensori (D)',
   C: 'Centrocampisti (C)',
   A: 'Attaccanti (A)',
+};
+
+// Sotto-componente solo per poter tenere una draft di testo locale per riga
+// (le regole degli hook vietano un useState dentro il .map() del genitore).
+// Testuale + strip di tutto ciò che non è cifra: un <input type="number">
+// controllato lascerebbe comunque digitare "." (e con esso stati intermedi
+// tipo "8."); qui il punto non entra proprio nel valore. La draft evita che
+// cancellare la cifra faccia scattare subito lo 0 (vedi useNumberDraft).
+const PctInput: React.FC<{ pct: number; onChange: (pct: number) => void }> = ({ pct, onChange }) => {
+  const [draft, setDraft] = useState(String(pct));
+
+  useEffect(() => setDraft(String(pct)), [pct]);
+
+  return (
+    <input
+      type="text"
+      inputMode="numeric"
+      value={draft}
+      onChange={(e) => {
+        const digits = e.target.value.replace(/\D/g, '');
+        setDraft(digits);
+        if (digits !== '') onChange(Math.min(100, parseInt(digits, 10)));
+      }}
+      onBlur={() => setDraft(String(pct))}
+      className="w-full bg-field border border-border-strong rounded px-3 py-1.5 text-ink font-bold text-sm"
+    />
+  );
 };
 
 interface BudgetAllocationSectionProps {
@@ -64,20 +91,7 @@ export const BudgetAllocationSection: React.FC<BudgetAllocationSectionProps> = (
               </div>
 
               <div className="flex items-center gap-2 pt-1 font-mono">
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  value={pct}
-                  onChange={(e) => {
-                    // input testuale + strip di tutto ciò che non è cifra:
-                    // un <input type="number"> controllato lascia comunque
-                    // digitare "." (e con esso stati intermedi tipo "8."),
-                    // qui invece il punto non entra proprio nel valore.
-                    const digits = e.target.value.replace(/\D/g, '');
-                    onChangeRole(role, digits === '' ? 0 : Math.min(100, parseInt(digits, 10)));
-                  }}
-                  className="w-full bg-field border border-border-strong rounded px-3 py-1.5 text-ink font-bold text-sm"
-                />
+                <PctInput pct={pct} onChange={(n) => onChangeRole(role, n)} />
                 <span className="text-muted">%</span>
               </div>
             </div>
