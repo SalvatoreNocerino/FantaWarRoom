@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Player, RosterPlayer } from '../../types';
 import { PlayerPricing } from '../../engine/types';
-import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
+import { formatFairValueRange } from '../../utils/fantaEngine';
 import { Heart, Ban, Star, Info, Megaphone, ChevronUp, ChevronDown } from 'lucide-react';
 import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge, EmptyState, PlayerAvatar } from '../ui';
 import { SortKey } from '../PlayersDatabaseView';
@@ -12,7 +12,6 @@ interface PlayersTableProps {
   pricingMap: Map<string, PlayerPricing>;
   wishlistIds: string[];
   blacklistIds: string[];
-  totalBudget: number;
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
   onSelectPlayer: (p: Player) => void;
@@ -60,7 +59,6 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
   pricingMap,
   wishlistIds,
   blacklistIds,
-  totalBudget,
   onToggleWishlist,
   onToggleBlacklist,
   onSelectPlayer,
@@ -109,10 +107,10 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
             players.map((p) => {
               const isWish = wishlistIds.includes(p.id);
               const isBlack = blacklistIds.includes(p.id);
-              const fairValStr = calculateDynamicFairValueBracket(p, totalBudget);
               const assignment = assignmentByPlayerId.get(p.id);
               const isSold = !!assignment;
               const pricing = pricingMap.get(p.id);
+              const fairValStr = formatFairValueRange(p, pricing);
               const isSelected = selectedAuctionPlayerId === p.id;
 
               return (

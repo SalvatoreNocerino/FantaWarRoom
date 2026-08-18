@@ -1,6 +1,7 @@
 import React from 'react';
 import { Player } from '../../types';
-import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
+import { PlayerPricing } from '../../engine/types';
+import { formatFairValueRange } from '../../utils/fantaEngine';
 import { Star, Tag, BarChart3, TrendingUp, Heart, Ban } from 'lucide-react';
 import { Modal, RoleBadge, Badge, PlayerAvatar } from '../ui';
 
@@ -13,7 +14,7 @@ interface PlayerDetailModalProps {
   player: Player;
   wishlistIds: string[];
   blacklistIds: string[];
-  totalBudget: number;
+  pricing: PlayerPricing | undefined;
   onClose: () => void;
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
@@ -23,7 +24,7 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
   player,
   wishlistIds,
   blacklistIds,
-  totalBudget,
+  pricing,
   onClose,
   onToggleWishlist,
   onToggleBlacklist,
@@ -57,7 +58,7 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
             <span>Fair Value Consigliato:</span>
           </span>
           <Badge tone="info" variant="outline" className="px-2.5 py-1">
-            {calculateDynamicFairValueBracket(player, totalBudget)}
+            {formatFairValueRange(player, pricing)}
           </Badge>
         </div>
       </div>

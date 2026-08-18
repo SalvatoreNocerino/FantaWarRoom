@@ -17,7 +17,6 @@ interface PlayersDatabaseViewProps {
   auctionHistory: RosterPlayer[];
   wishlistIds: string[];
   blacklistIds: string[];
-  totalBudget?: number;
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
   onAddCustomPlayer: (player: Player) => void;
@@ -39,7 +38,6 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   auctionHistory,
   wishlistIds,
   blacklistIds,
-  totalBudget = 500,
   onToggleWishlist,
   onToggleBlacklist,
   onAddCustomPlayer,
@@ -145,7 +143,6 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         pricingMap={pricingMap}
         wishlistIds={wishlistIds}
         blacklistIds={blacklistIds}
-        totalBudget={totalBudget}
         onToggleWishlist={onToggleWishlist}
         onToggleBlacklist={onToggleBlacklist}
         onSelectPlayer={setSelectedPlayerModal}
@@ -161,7 +158,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
           player={selectedPlayerModal}
           wishlistIds={wishlistIds}
           blacklistIds={blacklistIds}
-          totalBudget={totalBudget}
+          pricing={pricingMap.get(selectedPlayerModal.id)}
           onClose={() => setSelectedPlayerModal(null)}
           onToggleWishlist={onToggleWishlist}
           onToggleBlacklist={onToggleBlacklist}

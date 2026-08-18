@@ -1,6 +1,25 @@
 import { describe, it, expect } from 'vitest';
-import { calculateTeamsSummary, calculateDynamicFairValueBracket } from '../src/utils/fantaEngine';
+import { calculateTeamsSummary, formatFairValueRange } from '../src/utils/fantaEngine';
 import { LeagueSettings, Player, RosterPlayer } from '../src/types';
+import { PlayerPricing } from '../src/engine/types';
+
+function makePricing(overrides: Partial<PlayerPricing> = {}): PlayerPricing {
+  return {
+    playerId: 'p1',
+    value: 150,
+    rangeMin: 120,
+    rangeMax: 180,
+    offertaConsigliata: 150,
+    offertaMax: 150,
+    fascia: 'Top',
+    rankFvmRuolo: 1,
+    titolareORiserva: 'Titolare',
+    isWhichlist: false,
+    urgenza: { level: 'verde', countRimasti: 0, denominatore: 0, label: '' },
+    sostenibilita: { level: null, label: '' },
+    ...overrides,
+  };
+}
 
 function makeLeague(overrides: Partial<LeagueSettings> = {}): LeagueSettings {
   return {
@@ -100,26 +119,23 @@ describe('calculateTeamsSummary', () => {
   });
 });
 
-describe('calculateDynamicFairValueBracket', () => {
-  it('scala una fascia esplicita in proporzione al budget della lega', () => {
+describe('formatFairValueRange', () => {
+  it('usa il range min/max del motore di pricing quando disponibile', () => {
     const player = makePlayer({ fairValueBracket: '100-200 FM' });
-    // budget 250 -> ratio 0.5
-    expect(calculateDynamicFairValueBracket(player, 250)).toBe('50-100 FM');
-    // budget 500 -> ratio 1 (nessuna variazione)
-    expect(calculateDynamicFairValueBracket(player, 500)).toBe('100-200 FM');
+    const pricing = makePricing({ rangeMin: 130, rangeMax: 210 });
+    // Il bracket statico del listone (100-200) viene ignorato: conta solo
+    // il range calcolato dal motore per il budget/lega reali.
+    expect(formatFairValueRange(player, pricing)).toBe('130-210 FM');
   });
 
-  it('usa una stima dinamica per ruolo quando manca la fascia esplicita', () => {
-    const attaccante = makePlayer({ role: 'A', basePrice: 10, fairValueBracket: undefined });
-    const difensore = makePlayer({ role: 'D', basePrice: 10, fairValueBracket: undefined });
+  it('usa il bracket statico del listone come fallback quando il motore non ha ancora prezzato il giocatore', () => {
+    const player = makePlayer({ fairValueBracket: '100-200 FM' });
+    expect(formatFairValueRange(player, undefined)).toBe('100-200 FM');
+  });
 
-    const rangeAttaccante = calculateDynamicFairValueBracket(attaccante, 500);
-    const rangeDifensore = calculateDynamicFairValueBracket(difensore, 500);
-
-    // Gli attaccanti hanno moltiplicatori più alti dei difensori a parità di quotazione base
-    const [minA] = rangeAttaccante.split('-').map((s) => parseInt(s, 10));
-    const [minD] = rangeDifensore.split('-').map((s) => parseInt(s, 10));
-    expect(minA).toBeGreaterThan(minD);
+  it('restituisce N/D se non c\'è né pricing né bracket statico', () => {
+    const player = makePlayer({ fairValueBracket: undefined });
+    expect(formatFairValueRange(player, undefined)).toBe('N/D');
   });
 });
 

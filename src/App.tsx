@@ -501,6 +501,7 @@ export default function App() {
             league={appData.league}
             strategy={appData.strategy}
             allPlayers={allPlayers}
+            auctionHistory={appData.auctionHistory}
             onSaveLeague={handleSaveLeague}
             onSaveStrategy={handleSaveStrategy}
             onImportPlayersList={handleImportPlayersList}
@@ -522,7 +523,6 @@ export default function App() {
             auctionHistory={appData.auctionHistory}
             wishlistIds={appData.strategy.wishlistIds}
             blacklistIds={appData.strategy.blacklistIds}
-            totalBudget={appData.league.totalBudget}
             onToggleWishlist={handleToggleWishlist}
             onToggleBlacklist={handleToggleBlacklist}
             onAddCustomPlayer={handleAddCustomPlayer}

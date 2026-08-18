@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LeagueSettings, StrategySettings, Player } from '../types';
+import { LeagueSettings, StrategySettings, Player, RosterPlayer } from '../types';
 import { Settings, Sliders } from 'lucide-react';
 import { LeagueSettingsView } from './LeagueSettingsView';
 import { StrategySettingsView } from './StrategySettingsView';
@@ -9,6 +9,7 @@ interface Props {
   league: LeagueSettings;
   strategy: StrategySettings;
   allPlayers: Player[];
+  auctionHistory: RosterPlayer[];
   onSaveLeague: (updatedLeague: LeagueSettings) => void;
   onSaveStrategy: (updatedStrategy: StrategySettings) => void;
   onImportPlayersList?: (customList: Player[]) => void;
@@ -35,6 +36,7 @@ export const SettingsView: React.FC<Props> = ({
   league,
   strategy,
   allPlayers,
+  auctionHistory,
   onSaveLeague,
   onSaveStrategy,
   onImportPlayersList,
@@ -104,7 +106,8 @@ export const SettingsView: React.FC<Props> = ({
         <StrategySettingsView
           strategy={strategy}
           allPlayers={allPlayers}
-          totalBudget={league.totalBudget}
+          league={league}
+          auctionHistory={auctionHistory}
           onSaveStrategy={onSaveStrategy}
         />
       )}

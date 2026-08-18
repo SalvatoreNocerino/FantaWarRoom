@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { StrategySettings, Player, PlayerRole } from '../types';
+import { StrategySettings, Player, PlayerRole, LeagueSettings, RosterPlayer } from '../types';
 import { Sliders, Save } from 'lucide-react';
+import { useWarRoomEngine } from '../engine/useWarRoomEngine';
 import { AggressivenessSection } from './strategy-settings/AggressivenessSection';
 import { BudgetAllocationSection } from './strategy-settings/BudgetAllocationSection';
 import { WishlistSection, WISHLIST_MAX } from './strategy-settings/WishlistSection';
@@ -9,7 +10,8 @@ import { PageHeader, Button, Alert, Card, SectionHeader } from './ui';
 interface StrategySettingsViewProps {
   strategy: StrategySettings;
   allPlayers: Player[];
-  totalBudget: number;
+  league: LeagueSettings;
+  auctionHistory: RosterPlayer[];
   onSaveStrategy: (updatedStrategy: StrategySettings) => void;
 }
 
@@ -18,11 +20,18 @@ interface StrategySettingsViewProps {
 export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
   strategy,
   allPlayers,
-  totalBudget,
+  league,
+  auctionHistory,
   onSaveStrategy,
 }) => {
   const [formData, setFormData] = useState<StrategySettings>({ ...strategy });
   const [saveSuccessMsg, setSaveSuccessMsg] = useState(false);
+
+  // Fair Value nella Wishlist usa lo stesso motore di pricing di Console
+  // Live/Listone (non un ricalcolo separato) — ricalcolato live sulla bozza
+  // di strategia (formData), così cambiare aggressività o split budget qui
+  // aggiorna subito i Fair Value mostrati sotto.
+  const { pricingMap } = useWarRoomEngine(allPlayers, league, formData, auctionHistory);
 
   const totalAllocationPct =
     formData.budgetAllocationPct.P +
@@ -94,7 +103,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
 
       <BudgetAllocationSection
         budgetAllocationPct={formData.budgetAllocationPct}
-        totalBudget={totalBudget}
+        totalBudget={league.totalBudget}
         onChangeRole={(role: PlayerRole, pct) =>
           setFormData({
             ...formData,
@@ -113,7 +122,7 @@ export const StrategySettingsView: React.FC<StrategySettingsViewProps> = ({
         <WishlistSection
           allPlayers={allPlayers}
           wishlistPlayers={wishlistPlayers}
-          totalBudget={totalBudget}
+          pricingMap={pricingMap}
           onAddPlayer={handleAddPlayerToWishlist}
           onRemovePlayer={handleRemoveFromWishlist}
         />

@@ -1,4 +1,5 @@
 import { Player, LeagueSettings, RosterPlayer } from '../types';
+import { PlayerPricing } from '../engine/types';
 
 export interface TeamSummary {
   teamName: string;
@@ -85,41 +86,30 @@ export function calculateTeamsSummary(
   });
 }
 
-export function calculateDynamicFairValueBracket(player: Player, totalBudget: number): string {
-  const budgetRatio = totalBudget / 500;
-
-  if (player.fairValueBracket) {
-    // Parse range e.g. "180-230 FM"
-    const match = player.fairValueBracket.match(/(\d+)\s*-\s*(\d+)/);
-    if (match) {
-      const min = Math.round(parseInt(match[1], 10) * budgetRatio);
-      const max = Math.round(parseInt(match[2], 10) * budgetRatio);
-      return `${min}-${max} FM`;
-    }
+/**
+ * Range Fair Value da mostrare in UI: usa il range min/max già calcolato dal
+ * motore di pricing reale (src/engine/pricingEngine.ts, stesso numero da cui
+ * arriva il Max Bid) per questo giocatore — niente riscalatura separata.
+ *
+ * In passato questo range veniva ricalcolato qui con un moltiplicatore
+ * lineare `totalBudget / 500` sul bracket statico del listone (FVM*0.85 -
+ * FVM*1.15): con leghe da 1000 crediti (lo standard di fantacalcio.it —
+ * l'FVM stesso è già tarato su una lega da 1000 crediti a squadra, vedi
+ * player.fvm) il moltiplicatore raddoppiava un numero già corretto, dando
+ * range assurdi (es. 630-850 FM per un giocatore che il motore vero
+ * prezzava intorno a 430). Il motore non ha questo problema perché il FVM
+ * è usato solo in proporzione (quota sul budget di ruolo), mai come cifra
+ * assoluta da moltiplicare per il budget totale.
+ *
+ * Se il motore non ha ancora prezzato questo giocatore (caso raro), usa il
+ * bracket statico del listone come fallback, senza inventare fattori di
+ * scala aggiuntivi.
+ */
+export function formatFairValueRange(player: Player, pricing: PlayerPricing | undefined): string {
+  if (pricing) {
+    return `${pricing.rangeMin}-${pricing.rangeMax} FM`;
   }
-
-  // Fallback dynamic calculation based on basePrice and role
-  const basePriceScaled = player.basePrice * budgetRatio;
-  let minMult = 2.5;
-  let maxMult = 4.0;
-
-  if (player.role === 'A') {
-    minMult = 3.5;
-    maxMult = 5.5;
-  } else if (player.role === 'C') {
-    minMult = 2.5;
-    maxMult = 4.0;
-  } else if (player.role === 'D') {
-    minMult = 2.0;
-    maxMult = 3.0;
-  } else if (player.role === 'P') {
-    minMult = 2.5;
-    maxMult = 3.5;
-  }
-
-  const min = Math.max(1, Math.round(basePriceScaled * minMult));
-  const max = Math.max(min + 1, Math.round(basePriceScaled * maxMult));
-  return `${min}-${max} FM`;
+  return player.fairValueBracket ?? 'N/D';
 }
 
 // La raccomandazione di prezzo live durante l'asta è ora calcolata dal

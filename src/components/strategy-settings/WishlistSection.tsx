@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Player, PlayerRole } from '../../types';
-import { calculateDynamicFairValueBracket } from '../../utils/fantaEngine';
+import { PlayerPricing } from '../../engine/types';
+import { formatFairValueRange } from '../../utils/fantaEngine';
 import { Heart, Trash2, Search, ChevronDown } from 'lucide-react';
 import { RoleBadge, EmptyState, RoleFilterChips, Input } from '../ui';
 
@@ -16,7 +17,7 @@ export const WISHLIST_MAX = 30;
 interface WishlistSectionProps {
   allPlayers: Player[];
   wishlistPlayers: Player[];
-  totalBudget: number;
+  pricingMap: Map<string, PlayerPricing>;
   onAddPlayer: (playerId: string) => void;
   onRemovePlayer: (playerId: string) => void;
 }
@@ -24,7 +25,7 @@ interface WishlistSectionProps {
 export const WishlistSection: React.FC<WishlistSectionProps> = ({
   allPlayers,
   wishlistPlayers,
-  totalBudget,
+  pricingMap,
   onAddPlayer,
   onRemovePlayer,
 }) => {
@@ -147,7 +148,7 @@ export const WishlistSection: React.FC<WishlistSectionProps> = ({
                         <div>
                           <strong className="text-ink block truncate">{p.name}</strong>
                           <span className="text-[11px] text-muted">
-                            {p.team} • FM: {p.expectedFantaAvg} • Fair Value: {calculateDynamicFairValueBracket(p, totalBudget)}
+                            {p.team} • FM: {p.expectedFantaAvg} • Fair Value: {formatFairValueRange(p, pricingMap.get(p.id))}
                           </span>
                         </div>
 
