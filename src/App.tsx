@@ -364,6 +364,18 @@ export default function App() {
     });
   };
 
+  const handleSetPlayerNote = (playerId: string, note: string) => {
+    setAppData((prev) => {
+      const updated = { ...prev.strategy.playerNotes };
+      if (note.trim()) updated[playerId] = note;
+      else delete updated[playerId];
+      return {
+        ...prev,
+        strategy: { ...prev.strategy, playerNotes: updated },
+      };
+    });
+  };
+
   const handleAddCustomPlayer = (newPlayer: Player) => {
     setAppData((prev) => ({
       ...prev,
@@ -526,6 +538,10 @@ export default function App() {
             onToggleWishlist={handleToggleWishlist}
             onToggleBlacklist={handleToggleBlacklist}
             onAddCustomPlayer={handleAddCustomPlayer}
+            onUpdateAssignment={handleUpdateAssignment}
+            onDeleteAssignment={handleDeleteAssignment}
+            onSetPlayerNote={handleSetPlayerNote}
+            readOnly={!isLeagueAdmin}
             selectedAuctionPlayerId={selectedAuctionPlayerId}
             onSelectForAuction={setSelectedAuctionPlayerId}
             roleFilter={databaseRoleFilter}

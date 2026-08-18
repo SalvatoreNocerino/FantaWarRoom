@@ -60,6 +60,7 @@ export const DEFAULT_STRATEGY_SETTINGS: StrategySettings = {
   },
   wishlistIds: [],
   blacklistIds: [],
+  playerNotes: {},
 };
 
 export function loadAppData(): AppData {

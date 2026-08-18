@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Player } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { formatFairValueRange } from '../../utils/fantaEngine';
-import { Star, Tag, BarChart3, TrendingUp, Heart, Ban } from 'lucide-react';
-import { Modal, RoleBadge, Badge, PlayerAvatar } from '../ui';
-
-// Placeholder scritto da utils/playersImport.ts per ogni giocatore di un
-// listone importato (preset Fantacalcio.it incluso): non è una nota reale,
-// quindi non va mostrata come se lo fosse — vedi audit UI/UX Fase 1.
-const GENERIC_IMPORT_NOTE = 'Caricato da listone importato';
+import { Star, Tag, BarChart3, TrendingUp, Heart, Ban, StickyNote } from 'lucide-react';
+import { Modal, RoleBadge, Badge, PlayerAvatar, Textarea } from '../ui';
 
 interface PlayerDetailModalProps {
   player: Player;
   wishlistIds: string[];
   blacklistIds: string[];
   pricing: PlayerPricing | undefined;
+  note: string;
+  onSetNote: (note: string) => void;
   onClose: () => void;
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
@@ -25,10 +22,15 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
   wishlistIds,
   blacklistIds,
   pricing,
+  note,
+  onSetNote,
   onClose,
   onToggleWishlist,
   onToggleBlacklist,
 }) => {
+  // Draft locale: salva solo su blur, non ad ogni tasto premuto (altrimenti
+  // ogni carattere digitato farebbe un giro di sync col cloud).
+  const [noteDraft, setNoteDraft] = useState(note);
   return (
     <Modal open onClose={onClose} maxWidth="max-w-lg">
       <div className="flex items-center gap-3 border-b border-border pb-4">
@@ -124,12 +126,21 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
         )}
       </div>
 
-      {player.notes && player.notes !== GENERIC_IMPORT_NOTE && (
-        <div className="bg-surface-2 p-3 rounded-xl border border-border text-xs space-y-1">
-          <span className="text-muted font-bold block">Note Tattiche & Consiglio:</span>
-          <p className="text-ink-soft italic">"{player.notes}"</p>
-        </div>
-      )}
+      <div className="bg-surface-2/80 p-3 rounded-xl border border-border space-y-2 text-xs">
+        <span className="text-ink-soft font-bold flex items-center gap-1.5">
+          <StickyNote className="w-4 h-4 text-muted" />
+          <span>Note Personali</span>
+        </span>
+        <Textarea
+          value={noteDraft}
+          onChange={(e) => setNoteDraft(e.target.value)}
+          onBlur={() => {
+            if (noteDraft !== note) onSetNote(noteDraft);
+          }}
+          rows={2}
+          placeholder="Scrivi qui le tue note su questo giocatore..."
+        />
+      </div>
 
       <div className="flex items-center gap-3 pt-2">
         <button

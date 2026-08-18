@@ -1,15 +1,17 @@
-import React, { useMemo } from 'react';
-import { Player, RosterPlayer } from '../../types';
+import React, { useMemo, useState } from 'react';
+import { Player, RosterPlayer, LeagueSettings } from '../../types';
 import { PlayerPricing } from '../../engine/types';
 import { formatFairValueRange } from '../../utils/fantaEngine';
-import { Heart, Ban, Star, Info, Megaphone, ChevronUp, ChevronDown } from 'lucide-react';
+import { Heart, Ban, Star, Info, Megaphone, Pencil, ChevronUp, ChevronDown } from 'lucide-react';
 import { TableWrap, Thead, Tbody, Tr, RoleBadge, Badge, EmptyState, PlayerAvatar } from '../ui';
+import { EditAssignmentModal } from './EditAssignmentModal';
 import { SortKey } from '../PlayersDatabaseView';
 
 interface PlayersTableProps {
   players: Player[];
   auctionHistory: RosterPlayer[];
   pricingMap: Map<string, PlayerPricing>;
+  league: LeagueSettings;
   wishlistIds: string[];
   blacklistIds: string[];
   onToggleWishlist: (id: string) => void;
@@ -17,6 +19,10 @@ interface PlayersTableProps {
   onSelectPlayer: (p: Player) => void;
   selectedAuctionPlayerId: string | null;
   onSelectForAuction: (id: string) => void;
+  onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
+  onDeleteAssignment?: (assignmentId: string) => void;
+  /** Lega condivisa: i membri vedono le assegnazioni ma non possono modificarle. */
+  readOnly?: boolean;
   sortKey: SortKey;
   sortDir: 'asc' | 'desc';
   onSort: (key: SortKey) => void;
@@ -57,6 +63,7 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
   players,
   auctionHistory,
   pricingMap,
+  league,
   wishlistIds,
   blacklistIds,
   onToggleWishlist,
@@ -64,10 +71,15 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
   onSelectPlayer,
   selectedAuctionPlayerId,
   onSelectForAuction,
+  onUpdateAssignment,
+  onDeleteAssignment,
+  readOnly = false,
   sortKey,
   sortDir,
   onSort,
 }) => {
+  const [editingPlayer, setEditingPlayer] = useState<Player | null>(null);
+
   const assignmentByPlayerId = useMemo(() => {
     const m = new Map<string, RosterPlayer>();
     for (const h of auctionHistory) m.set(h.playerId, h);
@@ -201,6 +213,18 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
                         </button>
                       )}
 
+                      {isSold && !readOnly && onUpdateAssignment && (
+                        <button
+                          type="button"
+                          onClick={() => setEditingPlayer(p)}
+                          title="Modifica Assegnazione"
+                          aria-label="Modifica Assegnazione"
+                          className="p-1.5 bg-field text-muted hover:text-accent border border-border rounded-lg text-xs transition-colors"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </button>
+                      )}
+
                       <button
                         type="button"
                         onClick={() => onToggleWishlist(p.id)}
@@ -245,6 +269,22 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
           )}
         </Tbody>
       </table>
+
+      {editingPlayer &&
+        (() => {
+          const assignment = assignmentByPlayerId.get(editingPlayer.id);
+          if (!assignment) return null;
+          return (
+            <EditAssignmentModal
+              player={editingPlayer}
+              assignment={assignment}
+              league={league}
+              onSave={(id, team, cost) => onUpdateAssignment?.(id, team, cost)}
+              onDelete={(id) => onDeleteAssignment?.(id)}
+              onClose={() => setEditingPlayer(null)}
+            />
+          );
+        })()}
     </TableWrap>
   );
 };

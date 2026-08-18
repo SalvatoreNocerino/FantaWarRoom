@@ -98,6 +98,8 @@ export interface StrategySettings {
   };
   wishlistIds: string[];
   blacklistIds: string[];
+  /** Note personali dell'utente per giocatore (playerId -> testo), private come wishlist/blacklist. */
+  playerNotes: Record<string, string>;
 }
 
 export interface RosterPlayer {

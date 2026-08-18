@@ -20,6 +20,11 @@ interface PlayersDatabaseViewProps {
   onToggleWishlist: (id: string) => void;
   onToggleBlacklist: (id: string) => void;
   onAddCustomPlayer: (player: Player) => void;
+  onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
+  onDeleteAssignment?: (assignmentId: string) => void;
+  onSetPlayerNote: (playerId: string, note: string) => void;
+  /** Lega condivisa: i membri vedono le assegnazioni ma non possono modificarle. */
+  readOnly?: boolean;
   /** Giocatore selezionato per la chiamata live, condiviso con Console Live. */
   selectedAuctionPlayerId: string | null;
   onSelectForAuction: (id: string) => void;
@@ -41,6 +46,10 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   onToggleWishlist,
   onToggleBlacklist,
   onAddCustomPlayer,
+  onUpdateAssignment,
+  onDeleteAssignment,
+  onSetPlayerNote,
+  readOnly = false,
   selectedAuctionPlayerId,
   onSelectForAuction,
   roleFilter,
@@ -141,6 +150,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         players={sortedPlayers}
         auctionHistory={auctionHistory}
         pricingMap={pricingMap}
+        league={league}
         wishlistIds={wishlistIds}
         blacklistIds={blacklistIds}
         onToggleWishlist={onToggleWishlist}
@@ -148,6 +158,9 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         onSelectPlayer={setSelectedPlayerModal}
         selectedAuctionPlayerId={selectedAuctionPlayerId}
         onSelectForAuction={onSelectForAuction}
+        onUpdateAssignment={onUpdateAssignment}
+        onDeleteAssignment={onDeleteAssignment}
+        readOnly={readOnly}
         sortKey={sortKey}
         sortDir={sortDir}
         onSort={handleSort}
@@ -155,10 +168,13 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
 
       {selectedPlayerModal && (
         <PlayerDetailModal
+          key={selectedPlayerModal.id}
           player={selectedPlayerModal}
           wishlistIds={wishlistIds}
           blacklistIds={blacklistIds}
           pricing={pricingMap.get(selectedPlayerModal.id)}
+          note={strategy.playerNotes[selectedPlayerModal.id] ?? ''}
+          onSetNote={(note) => onSetPlayerNote(selectedPlayerModal.id, note)}
           onClose={() => setSelectedPlayerModal(null)}
           onToggleWishlist={onToggleWishlist}
           onToggleBlacklist={onToggleBlacklist}
