@@ -7,6 +7,12 @@ export interface PlayerLastYearStats {
   assists: number;
   yellowCards: number;
   redCards: number;
+  /** Media voto stagione precedente, dove disponibile (fonte: fantacalcio.it). */
+  mv?: number;
+  /** Fantamedia stagione precedente, dove disponibile (fonte: fantacalcio.it). */
+  fm?: number;
+  /** Gol subiti stagione precedente — significativo solo per i portieri (ruolo P). */
+  goalsConceded?: number;
 }
 
 export interface Player {

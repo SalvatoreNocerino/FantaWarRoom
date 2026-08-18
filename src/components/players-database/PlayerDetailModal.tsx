@@ -69,16 +69,23 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
         </span>
 
         {player.lastYearStats ? (
-          <div className="grid grid-cols-4 gap-2 text-center font-mono pt-1 text-ink-soft">
+          <div className="grid grid-cols-3 gap-2 text-center font-mono pt-1 text-ink-soft">
             <div className="bg-surface p-2 rounded-lg border border-border">
               <span className="text-faint block text-[10px]">Presenze</span>
               <strong className="text-ink text-sm">{player.lastYearStats.appearances}</strong>
               <span className="text-faint block text-[9px]">({player.lastYearStats.starterAppearances} tit.)</span>
             </div>
-            <div className="bg-surface p-2 rounded-lg border border-border">
-              <span className="text-faint block text-[10px]">Gol</span>
-              <strong className="text-accent text-sm">{player.lastYearStats.goals}</strong>
-            </div>
+            {player.role === 'P' ? (
+              <div className="bg-surface p-2 rounded-lg border border-border">
+                <span className="text-faint block text-[10px]">Gol Subiti</span>
+                <strong className="text-negative text-sm">{player.lastYearStats.goalsConceded ?? '—'}</strong>
+              </div>
+            ) : (
+              <div className="bg-surface p-2 rounded-lg border border-border">
+                <span className="text-faint block text-[10px]">Gol</span>
+                <strong className="text-accent text-sm">{player.lastYearStats.goals}</strong>
+              </div>
+            )}
             <div className="bg-surface p-2 rounded-lg border border-border">
               <span className="text-faint block text-[10px]">Assist</span>
               <strong className="text-info text-sm">{player.lastYearStats.assists}</strong>
@@ -88,6 +95,14 @@ export const PlayerDetailModal: React.FC<PlayerDetailModalProps> = ({
               <strong className="text-warning text-sm">
                 {player.lastYearStats.yellowCards}🟨 {player.lastYearStats.redCards}🟥
               </strong>
+            </div>
+            <div className="bg-surface p-2 rounded-lg border border-border">
+              <span className="text-faint block text-[10px]">Media Voto</span>
+              <strong className="text-ink text-sm">{player.lastYearStats.mv?.toFixed(2) ?? '—'}</strong>
+            </div>
+            <div className="bg-surface p-2 rounded-lg border border-border">
+              <span className="text-faint block text-[10px]">Fantamedia</span>
+              <strong className="text-ink text-sm">{player.lastYearStats.fm?.toFixed(2) ?? '—'}</strong>
             </div>
           </div>
         ) : (

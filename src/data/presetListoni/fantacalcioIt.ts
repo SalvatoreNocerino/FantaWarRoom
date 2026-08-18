@@ -15,7 +15,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "315-425 FM",
-    "fvm": 370
+    "fvm": 370,
+    "presenze": 30,
+    "mv": 6.42,
+    "fm": 8.25,
+    "goals": 17,
+    "assists": 6
   },
   {
     "id": "fcit_5585",
@@ -28,7 +33,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "310-420 FM",
-    "fvm": 365
+    "fvm": 365,
+    "presenze": 18,
+    "mv": 6.72,
+    "fm": 8.97,
+    "goals": 14,
+    "assists": 2
   },
   {
     "id": "fcit_254",
@@ -41,7 +51,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "225-305 FM",
-    "fvm": 265
+    "fvm": 265,
+    "presenze": 35,
+    "mv": 6.6,
+    "fm": 7.64,
+    "goals": 7,
+    "assists": 17
   },
   {
     "id": "fcit_6875",
@@ -54,7 +69,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "213-288 FM",
-    "fvm": 250
+    "fvm": 250,
+    "presenze": 35,
+    "mv": 6.37,
+    "fm": 7.3,
+    "goals": 12,
+    "assists": 5
   },
   {
     "id": "fcit_4871",
@@ -67,7 +87,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "238-322 FM",
-    "fvm": 280
+    "fvm": 280,
+    "presenze": 29,
+    "mv": 6.43,
+    "fm": 7.95,
+    "goals": 13,
+    "assists": 6
   },
   {
     "id": "fcit_4777",
@@ -80,7 +105,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "204-276 FM",
-    "fvm": 240
+    "fvm": 240,
+    "presenze": 33,
+    "mv": 6.39,
+    "fm": 7.26,
+    "goals": 10,
+    "assists": 2
   },
   {
     "id": "fcit_6052",
@@ -93,7 +123,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "230-312 FM",
-    "fvm": 271
+    "fvm": 271,
+    "presenze": 33,
+    "mv": 6.21,
+    "fm": 7.44,
+    "goals": 12,
+    "assists": 5
   },
   {
     "id": "fcit_2194",
@@ -106,7 +141,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "196-265 FM",
-    "fvm": 230
+    "fvm": 230,
+    "presenze": 22,
+    "mv": 6.52,
+    "fm": 7.64,
+    "goals": 9,
+    "assists": 4
   },
   {
     "id": "fcit_6397",
@@ -132,7 +172,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "170-230 FM",
-    "fvm": 200
+    "fvm": 200,
+    "presenze": 34,
+    "mv": 6.06,
+    "fm": 6.76,
+    "goals": 10,
+    "assists": 1
   },
   {
     "id": "fcit_5951",
@@ -158,7 +203,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "170-230 FM",
-    "fvm": 200
+    "fvm": 200,
+    "presenze": 26,
+    "mv": 5.88,
+    "fm": 6.77,
+    "goals": 8,
+    "assists": 1
   },
   {
     "id": "fcit_2423",
@@ -171,7 +221,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "153-207 FM",
-    "fvm": 180
+    "fvm": 180,
+    "presenze": 27,
+    "mv": 6.15,
+    "fm": 7.07,
+    "goals": 8,
+    "assists": 4
   },
   {
     "id": "fcit_6434",
@@ -184,7 +239,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "163-221 FM",
-    "fvm": 192
+    "fvm": 192,
+    "presenze": 35,
+    "mv": 6.39,
+    "fm": 7.3,
+    "goals": 10,
+    "assists": 6
   },
   {
     "id": "fcit_2379",
@@ -197,7 +257,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "109-147 FM",
-    "fvm": 128
+    "fvm": 128,
+    "presenze": 29,
+    "mv": 6.33,
+    "fm": 6.98,
+    "goals": 6,
+    "assists": 4
   },
   {
     "id": "fcit_7017",
@@ -210,7 +275,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "133-181 FM",
-    "fvm": 157
+    "fvm": 157,
+    "presenze": 36,
+    "mv": 6.18,
+    "fm": 7.38,
+    "goals": 14,
+    "assists": 1
   },
   {
     "id": "fcit_2137",
@@ -223,7 +293,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "111-151 FM",
-    "fvm": 131
+    "fvm": 131,
+    "presenze": 22,
+    "mv": 6.18,
+    "fm": 7.55,
+    "goals": 10,
+    "assists": 1
   },
   {
     "id": "fcit_7126",
@@ -236,7 +311,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "87-117 FM",
-    "fvm": 102
+    "fvm": 102,
+    "presenze": 25,
+    "mv": 6.3,
+    "fm": 7.14,
+    "goals": 6,
+    "assists": 3
   },
   {
     "id": "fcit_5637",
@@ -249,7 +329,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "104-140 FM",
-    "fvm": 122
+    "fvm": 122,
+    "presenze": 30,
+    "mv": 6.32,
+    "fm": 7.37,
+    "goals": 10,
+    "assists": 4
   },
   {
     "id": "fcit_6435",
@@ -262,7 +347,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "81-109 FM",
-    "fvm": 95
+    "fvm": 95,
+    "presenze": 32,
+    "mv": 6.16,
+    "fm": 7.19,
+    "goals": 10,
+    "assists": 5
   },
   {
     "id": "fcit_5559",
@@ -275,7 +365,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "77-103 FM",
-    "fvm": 90
+    "fvm": 90,
+    "presenze": 35,
+    "mv": 6.34,
+    "fm": 6.91,
+    "goals": 6,
+    "assists": 4
   },
   {
     "id": "fcit_4510",
@@ -288,7 +383,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "102-138 FM",
-    "fvm": 120
+    "fvm": 120,
+    "presenze": 28,
+    "mv": 5.88,
+    "fm": 6.86,
+    "goals": 9,
+    "assists": 3
   },
   {
     "id": "fcit_5841",
@@ -301,7 +401,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "55-75 FM",
-    "fvm": 65
+    "fvm": 65,
+    "presenze": 38,
+    "mv": 6.26,
+    "fm": 5.45,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_531",
@@ -314,7 +419,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "98-132 FM",
-    "fvm": 115
+    "fvm": 115,
+    "presenze": 26,
+    "mv": 6.31,
+    "fm": 7.19,
+    "goals": 8,
+    "assists": 4
   },
   {
     "id": "fcit_2766",
@@ -327,7 +437,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "85-115 FM",
-    "fvm": 100
+    "fvm": 100,
+    "presenze": 31,
+    "mv": 6.26,
+    "fm": 6.77,
+    "goals": 5,
+    "assists": 5
   },
   {
     "id": "fcit_4998",
@@ -353,7 +468,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "90-122 FM",
-    "fvm": 106
+    "fvm": 106,
+    "presenze": 31,
+    "mv": 6.21,
+    "fm": 6.6,
+    "goals": 3,
+    "assists": 5
   },
   {
     "id": "fcit_6908",
@@ -366,7 +486,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "74-100 FM",
-    "fvm": 87
+    "fvm": 87,
+    "presenze": 32,
+    "mv": 6.36,
+    "fm": 6.88,
+    "goals": 5,
+    "assists": 3
   },
   {
     "id": "fcit_5116",
@@ -379,7 +504,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "54-72 FM",
-    "fvm": 63
+    "fvm": 63,
+    "presenze": 5,
+    "mv": 6,
+    "fm": 5.2,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_1870",
@@ -392,7 +522,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "68-92 FM",
-    "fvm": 80
+    "fvm": 80,
+    "presenze": 34,
+    "mv": 6.28,
+    "fm": 6.71,
+    "goals": 3,
+    "assists": 9
   },
   {
     "id": "fcit_4973",
@@ -405,7 +540,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "58-78 FM",
-    "fvm": 68
+    "fvm": 68,
+    "presenze": 34,
+    "mv": 6.13,
+    "fm": 6.68,
+    "goals": 5,
+    "assists": 6
   },
   {
     "id": "fcit_7181",
@@ -418,7 +558,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "71-95 FM",
-    "fvm": 83
+    "fvm": 83,
+    "presenze": 30,
+    "mv": 6.12,
+    "fm": 6.47,
+    "goals": 5,
+    "assists": 0
   },
   {
     "id": "fcit_4431",
@@ -431,7 +576,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "44-60 FM",
-    "fvm": 52
+    "fvm": 52,
+    "presenze": 37,
+    "mv": 6.36,
+    "fm": 5.58,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6675",
@@ -444,7 +594,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "62-84 FM",
-    "fvm": 73
+    "fvm": 73,
+    "presenze": 13,
+    "mv": 6,
+    "fm": 6.77,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_6966",
@@ -457,7 +612,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "48-64 FM",
-    "fvm": 56
+    "fvm": 56,
+    "presenze": 38,
+    "mv": 6.07,
+    "fm": 5.37,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_4159",
@@ -470,7 +630,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "47-63 FM",
-    "fvm": 55
+    "fvm": 55,
+    "presenze": 32,
+    "mv": 6.28,
+    "fm": 6.41,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7071",
@@ -483,7 +648,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "79-107 FM",
-    "fvm": 93
+    "fvm": 93,
+    "presenze": 31,
+    "mv": 6.26,
+    "fm": 7.02,
+    "goals": 7,
+    "assists": 3
   },
   {
     "id": "fcit_632",
@@ -496,7 +666,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "77-105 FM",
-    "fvm": 91
+    "fvm": 91,
+    "presenze": 26,
+    "mv": 5.88,
+    "fm": 5.96,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_2788",
@@ -509,7 +684,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "43-57 FM",
-    "fvm": 50
+    "fvm": 50,
+    "presenze": 26,
+    "mv": 6.33,
+    "fm": 6.81,
+    "goals": 4,
+    "assists": 3
   },
   {
     "id": "fcit_4312",
@@ -522,7 +702,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "43-57 FM",
-    "fvm": 50
+    "fvm": 50,
+    "presenze": 37,
+    "mv": 6.26,
+    "fm": 5.42,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2517",
@@ -535,7 +720,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "83-113 FM",
-    "fvm": 98
+    "fvm": 98,
+    "presenze": 17,
+    "mv": 6.26,
+    "fm": 7.24,
+    "goals": 5,
+    "assists": 2
   },
   {
     "id": "fcit_7023",
@@ -548,7 +738,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "51-69 FM",
-    "fvm": 60
+    "fvm": 60,
+    "presenze": 37,
+    "mv": 5.99,
+    "fm": 6.65,
+    "goals": 9,
+    "assists": 0
   },
   {
     "id": "fcit_2296",
@@ -561,7 +756,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "42-56 FM",
-    "fvm": 49
+    "fvm": 49,
+    "presenze": 36,
+    "mv": 6.25,
+    "fm": 6.51,
+    "goals": 4,
+    "assists": 2
   },
   {
     "id": "fcit_6060",
@@ -574,7 +774,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "75-101 FM",
-    "fvm": 88
+    "fvm": 88,
+    "presenze": 37,
+    "mv": 6.23,
+    "fm": 6.99,
+    "goals": 7,
+    "assists": 9
   },
   {
     "id": "fcit_2061",
@@ -587,7 +792,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "70-94 FM",
-    "fvm": 82
+    "fvm": 82,
+    "presenze": 32,
+    "mv": 6.08,
+    "fm": 7.09,
+    "goals": 11,
+    "assists": 0
   },
   {
     "id": "fcit_2120",
@@ -600,7 +810,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "37-51 FM",
-    "fvm": 44
+    "fvm": 44,
+    "presenze": 28,
+    "mv": 6.2,
+    "fm": 6.34,
+    "goals": 1,
+    "assists": 4
   },
   {
     "id": "fcit_5022",
@@ -613,7 +828,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "41-55 FM",
-    "fvm": 48
+    "fvm": 48,
+    "presenze": 34,
+    "mv": 6.24,
+    "fm": 6.62,
+    "goals": 5,
+    "assists": 0
   },
   {
     "id": "fcit_4409",
@@ -626,7 +846,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "40-54 FM",
-    "fvm": 47
+    "fvm": 47,
+    "presenze": 21,
+    "mv": 6.24,
+    "fm": 6.45,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7351",
@@ -639,7 +864,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "48-66 FM",
-    "fvm": 57
+    "fvm": 57,
+    "presenze": 13,
+    "mv": 6.35,
+    "fm": 7.23,
+    "goals": 4,
+    "assists": 0
   },
   {
     "id": "fcit_309",
@@ -652,7 +882,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "57-77 FM",
-    "fvm": 67
+    "fvm": 67,
+    "presenze": 21,
+    "mv": 6.26,
+    "fm": 6.74,
+    "goals": 2,
+    "assists": 7
   },
   {
     "id": "fcit_6572",
@@ -665,7 +900,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "69-93 FM",
-    "fvm": 81
+    "fvm": 81,
+    "presenze": 35,
+    "mv": 5.93,
+    "fm": 6.51,
+    "goals": 7,
+    "assists": 1
   },
   {
     "id": "fcit_5687",
@@ -678,7 +918,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "68-92 FM",
-    "fvm": 80
+    "fvm": 80,
+    "presenze": 37,
+    "mv": 6.03,
+    "fm": 6.66,
+    "goals": 8,
+    "assists": 3
   },
   {
     "id": "fcit_4371",
@@ -691,7 +936,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "53-71 FM",
-    "fvm": 62
+    "fvm": 62,
+    "presenze": 13,
+    "mv": 6.12,
+    "fm": 6.88,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_4463",
@@ -704,7 +954,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "34-46 FM",
-    "fvm": 40
+    "fvm": 40,
+    "presenze": 36,
+    "mv": 6.26,
+    "fm": 6.88,
+    "goals": 7,
+    "assists": 4
   },
   {
     "id": "fcit_2521",
@@ -717,7 +972,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "38-52 FM",
-    "fvm": 45
+    "fvm": 45,
+    "presenze": 37,
+    "mv": 6.24,
+    "fm": 5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5800",
@@ -730,7 +990,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "52-70 FM",
-    "fvm": 61
+    "fvm": 61,
+    "presenze": 32,
+    "mv": 5.88,
+    "fm": 6.34,
+    "goals": 5,
+    "assists": 3
   },
   {
     "id": "fcit_4976",
@@ -743,7 +1008,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "39-53 FM",
-    "fvm": 46
+    "fvm": 46,
+    "presenze": 37,
+    "mv": 6.14,
+    "fm": 6.35,
+    "goals": 2,
+    "assists": 4
   },
   {
     "id": "fcit_7314",
@@ -756,7 +1026,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "54-74 FM",
-    "fvm": 64
+    "fvm": 64,
+    "presenze": 17,
+    "mv": 6.06,
+    "fm": 6.56,
+    "goals": 3,
+    "assists": 2
   },
   {
     "id": "fcit_4728",
@@ -769,7 +1044,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 26,
+    "mv": 5.94,
+    "fm": 6.87,
+    "goals": 7,
+    "assists": 3
   },
   {
     "id": "fcit_4317",
@@ -782,7 +1062,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "37-51 FM",
-    "fvm": 44
+    "fvm": 44,
+    "presenze": 31,
+    "mv": 6.08,
+    "fm": 6.32,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_2038",
@@ -795,7 +1080,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "47-63 FM",
-    "fvm": 55
+    "fvm": 55,
+    "presenze": 34,
+    "mv": 5.88,
+    "fm": 6.62,
+    "goals": 9,
+    "assists": 3
   },
   {
     "id": "fcit_6956",
@@ -808,7 +1098,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "39-53 FM",
-    "fvm": 46
+    "fvm": 46,
+    "presenze": 34,
+    "mv": 6.18,
+    "fm": 6.4,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_7547",
@@ -834,7 +1129,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "38-52 FM",
-    "fvm": 45
+    "fvm": 45,
+    "presenze": 30,
+    "mv": 6.25,
+    "fm": 6.43,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_5119",
@@ -847,7 +1147,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "36-48 FM",
-    "fvm": 42
+    "fvm": 42,
+    "presenze": 21,
+    "mv": 5.93,
+    "fm": 6.29,
+    "goals": 2,
+    "assists": 2
   },
   {
     "id": "fcit_7129",
@@ -860,7 +1165,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 28,
+    "mv": 6.25,
+    "fm": 6.66,
+    "goals": 2,
+    "assists": 8
   },
   {
     "id": "fcit_2514",
@@ -899,7 +1209,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "51-69 FM",
-    "fvm": 60
+    "fvm": 60,
+    "presenze": 30,
+    "mv": 6.28,
+    "fm": 6.7,
+    "goals": 3,
+    "assists": 5
   },
   {
     "id": "fcit_5833",
@@ -912,7 +1227,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-36 FM",
-    "fvm": 31
+    "fvm": 31,
+    "presenze": 31,
+    "mv": 6.03,
+    "fm": 5.95,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2606",
@@ -925,7 +1245,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "43-57 FM",
-    "fvm": 50
+    "fvm": 50,
+    "presenze": 33,
+    "mv": 6.45,
+    "fm": 6.67,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_2816",
@@ -938,7 +1263,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "34-46 FM",
-    "fvm": 40
+    "fvm": 40,
+    "presenze": 26,
+    "mv": 6.08,
+    "fm": 6.33,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_5734",
@@ -951,7 +1281,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "45-61 FM",
-    "fvm": 53
+    "fvm": 53,
+    "presenze": 32,
+    "mv": 6.12,
+    "fm": 6.83,
+    "goals": 6,
+    "assists": 5
   },
   {
     "id": "fcit_7484",
@@ -1003,7 +1338,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "31-43 FM",
-    "fvm": 37
+    "fvm": 37,
+    "presenze": 28,
+    "mv": 6.2,
+    "fm": 6.59,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_6967",
@@ -1016,7 +1356,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "43-57 FM",
-    "fvm": 50
+    "fvm": 50,
+    "presenze": 16,
+    "mv": 6,
+    "fm": 6.38,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_5750",
@@ -1029,7 +1374,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "34-46 FM",
-    "fvm": 40
+    "fvm": 40,
+    "presenze": 30,
+    "mv": 6.13,
+    "fm": 6.52,
+    "goals": 5,
+    "assists": 0
   },
   {
     "id": "fcit_5823",
@@ -1042,7 +1392,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-35 FM",
-    "fvm": 30
+    "fvm": 30,
+    "presenze": 17,
+    "mv": 6.15,
+    "fm": 6.38,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_4923",
@@ -1055,7 +1410,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "54-72 FM",
-    "fvm": 63
+    "fvm": 63,
+    "presenze": 37,
+    "mv": 5.92,
+    "fm": 6.41,
+    "goals": 7,
+    "assists": 1
   },
   {
     "id": "fcit_6217",
@@ -1068,7 +1428,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "28-38 FM",
-    "fvm": 33
+    "fvm": 33,
+    "presenze": 23,
+    "mv": 6.22,
+    "fm": 6.65,
+    "goals": 3,
+    "assists": 2
   },
   {
     "id": "fcit_572",
@@ -1081,7 +1446,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "38-52 FM",
-    "fvm": 45
+    "fvm": 45,
+    "presenze": 11,
+    "mv": 6.23,
+    "fm": 5.18,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_4220",
@@ -1094,7 +1464,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "46-62 FM",
-    "fvm": 54
+    "fvm": 54,
+    "presenze": 18,
+    "mv": 6.17,
+    "fm": 6.86,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_6229",
@@ -1107,7 +1482,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "37-49 FM",
-    "fvm": 43
+    "fvm": 43,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5526",
@@ -1120,7 +1500,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "24-32 FM",
-    "fvm": 28
+    "fvm": 28,
+    "presenze": 24,
+    "mv": 6.06,
+    "fm": 6.44,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_133",
@@ -1133,7 +1518,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "31-43 FM",
-    "fvm": 37
+    "fvm": 37,
+    "presenze": 18,
+    "mv": 6.19,
+    "fm": 5.28,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6869",
@@ -1146,7 +1536,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 32,
+    "mv": 6.16,
+    "fm": 6.14,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_6151",
@@ -1159,7 +1554,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "32-44 FM",
-    "fvm": 38
+    "fvm": 38,
+    "presenze": 36,
+    "mv": 6.22,
+    "fm": 6.47,
+    "goals": 3,
+    "assists": 4
   },
   {
     "id": "fcit_5885",
@@ -1172,7 +1572,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-35 FM",
-    "fvm": 30
+    "fvm": 30,
+    "presenze": 36,
+    "mv": 5.99,
+    "fm": 6.03,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_152",
@@ -1185,7 +1590,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "35-47 FM",
-    "fvm": 41
+    "fvm": 41,
+    "presenze": 30,
+    "mv": 6.25,
+    "fm": 6.8,
+    "goals": 6,
+    "assists": 2
   },
   {
     "id": "fcit_5562",
@@ -1198,7 +1608,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "35-47 FM",
-    "fvm": 41
+    "fvm": 41,
+    "presenze": 34,
+    "mv": 6.1,
+    "fm": 6.4,
+    "goals": 3,
+    "assists": 2
   },
   {
     "id": "fcit_5672",
@@ -1211,7 +1626,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-36 FM",
-    "fvm": 31
+    "fvm": 31,
+    "presenze": 25,
+    "mv": 5.68,
+    "fm": 5.86,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_7313",
@@ -1224,7 +1644,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 7,
+    "mv": 5.64,
+    "fm": 5.64,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4892",
@@ -1237,7 +1662,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "37-49 FM",
-    "fvm": 43
+    "fvm": 43,
+    "presenze": 35,
+    "mv": 6.14,
+    "fm": 6.41,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_536",
@@ -1250,7 +1680,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "40-54 FM",
-    "fvm": 47
+    "fvm": 47,
+    "presenze": 33,
+    "mv": 6.09,
+    "fm": 6.36,
+    "goals": 2,
+    "assists": 5
   },
   {
     "id": "fcit_2531",
@@ -1263,7 +1698,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "38-52 FM",
-    "fvm": 45
+    "fvm": 45,
+    "presenze": 1,
+    "mv": 7,
+    "fm": 9.5,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_4807",
@@ -1276,7 +1716,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "22-30 FM",
-    "fvm": 26
+    "fvm": 26,
+    "presenze": 27,
+    "mv": 6.17,
+    "fm": 6.41,
+    "goals": 3,
+    "assists": 2
   },
   {
     "id": "fcit_5589",
@@ -1289,7 +1734,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "36-48 FM",
-    "fvm": 42
+    "fvm": 42,
+    "presenze": 29,
+    "mv": 6.26,
+    "fm": 6.53,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_5844",
@@ -1302,7 +1752,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "35-47 FM",
-    "fvm": 41
+    "fvm": 41,
+    "presenze": 31,
+    "mv": 6.15,
+    "fm": 6.48,
+    "goals": 4,
+    "assists": 3
   },
   {
     "id": "fcit_7347",
@@ -1315,7 +1770,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "33-45 FM",
-    "fvm": 39
+    "fvm": 39,
+    "presenze": 14,
+    "mv": 5.96,
+    "fm": 6.79,
+    "goals": 4,
+    "assists": 0
   },
   {
     "id": "fcit_5888",
@@ -1328,7 +1788,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "31-43 FM",
-    "fvm": 37
+    "fvm": 37,
+    "presenze": 32,
+    "mv": 5.97,
+    "fm": 6.45,
+    "goals": 6,
+    "assists": 0
   },
   {
     "id": "fcit_6684",
@@ -1341,7 +1806,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "35-47 FM",
-    "fvm": 41
+    "fvm": 41,
+    "presenze": 31,
+    "mv": 6.05,
+    "fm": 6.61,
+    "goals": 5,
+    "assists": 3
   },
   {
     "id": "fcit_530",
@@ -1354,7 +1824,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "24-32 FM",
-    "fvm": 28
+    "fvm": 28,
+    "presenze": 24,
+    "mv": 6.04,
+    "fm": 6.58,
+    "goals": 4,
+    "assists": 2
   },
   {
     "id": "fcit_7554",
@@ -1380,7 +1855,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 31,
+    "mv": 5.94,
+    "fm": 6.27,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_184",
@@ -1393,7 +1873,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "18-24 FM",
-    "fvm": 21
+    "fvm": 21,
+    "presenze": 24,
+    "mv": 6.04,
+    "fm": 6.56,
+    "goals": 4,
+    "assists": 2
   },
   {
     "id": "fcit_4360",
@@ -1406,7 +1891,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "23-31 FM",
-    "fvm": 27
+    "fvm": 27,
+    "presenze": 38,
+    "mv": 6.29,
+    "fm": 4.87,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_1933",
@@ -1419,7 +1909,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "24-32 FM",
-    "fvm": 28
+    "fvm": 28,
+    "presenze": 34,
+    "mv": 6.04,
+    "fm": 6.62,
+    "goals": 7,
+    "assists": 2
   },
   {
     "id": "fcit_6530",
@@ -1445,7 +1940,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "28-38 FM",
-    "fvm": 33
+    "fvm": 33,
+    "presenze": 36,
+    "mv": 6.08,
+    "fm": 6.14,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5876",
@@ -1458,7 +1958,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "34-46 FM",
-    "fvm": 40
+    "fvm": 40,
+    "presenze": 30,
+    "mv": 6.08,
+    "fm": 5.33,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5520",
@@ -1471,7 +1976,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "23-31 FM",
-    "fvm": 27
+    "fvm": 27,
+    "presenze": 36,
+    "mv": 5.81,
+    "fm": 5.99,
+    "goals": 3,
+    "assists": 4
   },
   {
     "id": "fcit_5544",
@@ -1484,7 +1994,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "34-46 FM",
-    "fvm": 40
+    "fvm": 40,
+    "presenze": 30,
+    "mv": 5.77,
+    "fm": 6.33,
+    "goals": 6,
+    "assists": 2
   },
   {
     "id": "fcit_6482",
@@ -1497,7 +2012,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-35 FM",
-    "fvm": 30
+    "fvm": 30,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5500",
@@ -1510,7 +2030,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "24-32 FM",
-    "fvm": 28
+    "fvm": 28,
+    "presenze": 28,
+    "mv": 5.93,
+    "fm": 6.29,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_6398",
@@ -1523,7 +2048,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 27,
+    "mv": 6.04,
+    "fm": 6.63,
+    "goals": 5,
+    "assists": 1
   },
   {
     "id": "fcit_5029",
@@ -1549,7 +2079,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "28-38 FM",
-    "fvm": 33
+    "fvm": 33,
+    "presenze": 14,
+    "mv": 5.71,
+    "fm": 5.93,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6717",
@@ -1562,7 +2097,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 35,
+    "mv": 6.19,
+    "fm": 6.63,
+    "goals": 6,
+    "assists": 0
   },
   {
     "id": "fcit_6646",
@@ -1575,7 +2115,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 32,
+    "mv": 5.98,
+    "fm": 6.64,
+    "goals": 6,
+    "assists": 3
   },
   {
     "id": "fcit_6462",
@@ -1588,7 +2133,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "25-33 FM",
-    "fvm": 29
+    "fvm": 29,
+    "presenze": 30,
+    "mv": 6.07,
+    "fm": 5.08,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_5641",
@@ -1614,7 +2164,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 28,
+    "mv": 5.91,
+    "fm": 5.86,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_554",
@@ -1627,7 +2182,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 35,
+    "mv": 6.06,
+    "fm": 6.3,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_6042",
@@ -1640,7 +2200,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 28,
+    "mv": 5.88,
+    "fm": 5.89,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_4734",
@@ -1653,7 +2218,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 31,
+    "mv": 6,
+    "fm": 6.1,
+    "goals": 1,
+    "assists": 3
   },
   {
     "id": "fcit_2765",
@@ -1666,7 +2236,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fvm": 22,
+    "presenze": 22,
+    "mv": 5.91,
+    "fm": 6.61,
+    "goals": 5,
+    "assists": 1
   },
   {
     "id": "fcit_4436",
@@ -1679,7 +2254,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 24,
+    "mv": 5.98,
+    "fm": 6.42,
+    "goals": 3,
+    "assists": 4
   },
   {
     "id": "fcit_6643",
@@ -1692,7 +2272,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 19,
+    "mv": 5.82,
+    "fm": 6.13,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_4210",
@@ -1705,7 +2290,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 26,
+    "mv": 6,
+    "fm": 6.17,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_5365",
@@ -1731,7 +2321,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fvm": 23,
+    "presenze": 1,
+    "mv": 5.5,
+    "fm": 5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4465",
@@ -1744,7 +2339,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fvm": 23,
+    "presenze": 33,
+    "mv": 6.03,
+    "fm": 6.23,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_6294",
@@ -1757,7 +2357,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 30,
+    "mv": 5.8,
+    "fm": 6.07,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_4359",
@@ -1770,7 +2375,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-36 FM",
-    "fvm": 31
+    "fvm": 31,
+    "presenze": 27,
+    "mv": 5.78,
+    "fm": 6.24,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_7332",
@@ -1783,7 +2393,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 16,
+    "mv": 6.06,
+    "fm": 4.78,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6814",
@@ -1796,7 +2411,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fvm": 22,
+    "presenze": 27,
+    "mv": 5.93,
+    "fm": 6.09,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_6164",
@@ -1809,7 +2429,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 31,
+    "mv": 5.95,
+    "fm": 6.39,
+    "goals": 5,
+    "assists": 1
   },
   {
     "id": "fcit_6274",
@@ -1822,7 +2447,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "31-43 FM",
-    "fvm": 37
+    "fvm": 37,
+    "presenze": 10,
+    "mv": 6.15,
+    "fm": 6.45,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7070",
@@ -1835,7 +2465,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "22-30 FM",
-    "fvm": 26
+    "fvm": 26,
+    "presenze": 28,
+    "mv": 6.07,
+    "fm": 6.27,
+    "goals": 2,
+    "assists": 2
   },
   {
     "id": "fcit_4657",
@@ -1848,7 +2483,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 32,
+    "mv": 6.17,
+    "fm": 6.27,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_827",
@@ -1861,7 +2501,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "27-37 FM",
-    "fvm": 32
+    "fvm": 32,
+    "presenze": 36,
+    "mv": 6.26,
+    "fm": 6.19,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_2134",
@@ -1874,7 +2519,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 38,
+    "mv": 6.41,
+    "fm": 5.22,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6496",
@@ -1887,7 +2537,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 31,
+    "mv": 5.97,
+    "fm": 6.05,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_5878",
@@ -1913,7 +2568,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "22-30 FM",
-    "fvm": 26
+    "fvm": 26,
+    "presenze": 21,
+    "mv": 5.98,
+    "fm": 6.17,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_1852",
@@ -1926,7 +2586,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 30,
+    "mv": 6.17,
+    "fm": 6.55,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_7223",
@@ -1939,7 +2604,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "29-39 FM",
-    "fvm": 34
+    "fvm": 34,
+    "presenze": 8,
+    "mv": 6.25,
+    "fm": 6.5,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6664",
@@ -1952,7 +2622,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "18-24 FM",
-    "fvm": 21
+    "fvm": 21,
+    "presenze": 35,
+    "mv": 5.91,
+    "fm": 6.01,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_5862",
@@ -1965,7 +2640,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 34,
+    "mv": 6.06,
+    "fm": 6.09,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_7529",
@@ -1991,7 +2671,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "25-33 FM",
-    "fvm": 29
+    "fvm": 29,
+    "presenze": 37,
+    "mv": 6.11,
+    "fm": 6.22,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_4994",
@@ -2004,7 +2689,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 27,
+    "mv": 6.02,
+    "fm": 6.24,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_6904",
@@ -2069,7 +2759,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 33,
+    "mv": 5.86,
+    "fm": 5.8,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4364",
@@ -2082,7 +2777,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 32,
+    "mv": 6.06,
+    "fm": 6.31,
+    "goals": 2,
+    "assists": 4
   },
   {
     "id": "fcit_5858",
@@ -2095,7 +2795,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 23,
+    "mv": 5.8,
+    "fm": 5.78,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5701",
@@ -2108,7 +2813,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 34,
+    "mv": 5.88,
+    "fm": 5.82,
+    "goals": 0,
+    "assists": 3
   },
   {
     "id": "fcit_6010",
@@ -2121,7 +2831,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 12,
+    "mv": 5.88,
+    "fm": 5.83,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7414",
@@ -2173,7 +2888,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 36,
+    "mv": 5.96,
+    "fm": 5.97,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5877",
@@ -2186,7 +2906,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "23-31 FM",
-    "fvm": 27
+    "fvm": 27,
+    "presenze": 28,
+    "mv": 6.12,
+    "fm": 6.16,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_2848",
@@ -2199,7 +2924,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "47-63 FM",
-    "fvm": 55
+    "fvm": 55,
+    "presenze": 14,
+    "mv": 5.89,
+    "fm": 5.89,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6669",
@@ -2212,7 +2942,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "18-24 FM",
-    "fvm": 21
+    "fvm": 21,
+    "presenze": 27,
+    "mv": 6.15,
+    "fm": 6.83,
+    "goals": 5,
+    "assists": 4
   },
   {
     "id": "fcit_6320",
@@ -2238,7 +2973,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-28 FM",
-    "fvm": 24
+    "fvm": 24,
+    "presenze": 32,
+    "mv": 6.03,
+    "fm": 5.92,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6989",
@@ -2251,7 +2991,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-20 FM",
-    "fvm": 17
+    "fvm": 17,
+    "presenze": 36,
+    "mv": 6,
+    "fm": 6.01,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7252",
@@ -2264,7 +3009,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 30,
+    "mv": 5.73,
+    "fm": 6.12,
+    "goals": 4,
+    "assists": 0
   },
   {
     "id": "fcit_4401",
@@ -2277,7 +3027,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 29,
+    "mv": 5.91,
+    "fm": 5.84,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4751",
@@ -2290,7 +3045,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 32,
+    "mv": 5.97,
+    "fm": 5.88,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_2741",
@@ -2316,7 +3076,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 32,
+    "mv": 5.89,
+    "fm": 5.88,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_4287",
@@ -2329,7 +3094,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 31,
+    "mv": 6.05,
+    "fm": 6.1,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7411",
@@ -2355,7 +3125,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 20,
+    "mv": 6.02,
+    "fm": 4.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6666",
@@ -2368,7 +3143,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "31-41 FM",
-    "fvm": 36
+    "fvm": 36,
+    "presenze": 32,
+    "mv": 6.17,
+    "fm": 6.48,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_4236",
@@ -2381,7 +3161,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 32,
+    "mv": 6.08,
+    "fm": 4.77,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6672",
@@ -2394,7 +3179,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 35,
+    "mv": 5.94,
+    "fm": 5.9,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5735",
@@ -2407,7 +3197,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fvm": 23,
+    "presenze": 21,
+    "mv": 6.14,
+    "fm": 6.52,
+    "goals": 2,
+    "assists": 4
   },
   {
     "id": "fcit_6642",
@@ -2420,7 +3215,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 35,
+    "mv": 5.84,
+    "fm": 5.91,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_5010",
@@ -2433,7 +3233,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 24,
+    "mv": 5.92,
+    "fm": 5.9,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_6218",
@@ -2446,7 +3251,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "23-31 FM",
-    "fvm": 27
+    "fvm": 27,
+    "presenze": 18,
+    "mv": 5.78,
+    "fm": 5.92,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_608",
@@ -2459,7 +3269,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 23,
+    "mv": 5.83,
+    "fm": 6.13,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_6485",
@@ -2472,7 +3287,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 28,
+    "mv": 5.98,
+    "fm": 6.23,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_6783",
@@ -2511,7 +3331,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 21,
+    "mv": 5.79,
+    "fm": 5.69,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4887",
@@ -2524,7 +3349,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 22,
+    "mv": 5.82,
+    "fm": 5.82,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7219",
@@ -2537,7 +3367,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-20 FM",
-    "fvm": 17
+    "fvm": 17,
+    "presenze": 22,
+    "mv": 6.09,
+    "fm": 6.16,
+    "goals": 0,
+    "assists": 3
   },
   {
     "id": "fcit_5422",
@@ -2550,7 +3385,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "18-24 FM",
-    "fvm": 21
+    "fvm": 21,
+    "presenze": 31,
+    "mv": 6.1,
+    "fm": 6.4,
+    "goals": 2,
+    "assists": 5
   },
   {
     "id": "fcit_5918",
@@ -2563,7 +3403,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 21,
+    "mv": 6,
+    "fm": 6.24,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_7212",
@@ -2576,7 +3421,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 25,
+    "mv": 5.84,
+    "fm": 5.8,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4433",
@@ -2589,7 +3439,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 28,
+    "mv": 5.86,
+    "fm": 5.89,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_5298",
@@ -2602,7 +3457,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 23,
+    "mv": 5.83,
+    "fm": 6.17,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_4870",
@@ -2615,7 +3475,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 38,
+    "mv": 5.83,
+    "fm": 5.88,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_4260",
@@ -2654,7 +3519,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 26,
+    "mv": 6.06,
+    "fm": 6.23,
+    "goals": 1,
+    "assists": 3
   },
   {
     "id": "fcit_5036",
@@ -2667,7 +3537,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 28,
+    "mv": 6.11,
+    "fm": 6.41,
+    "goals": 2,
+    "assists": 4
   },
   {
     "id": "fcit_6678",
@@ -2680,7 +3555,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fvm": 22,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7294",
@@ -2745,7 +3625,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 31,
+    "mv": 5.87,
+    "fm": 5.84,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6020",
@@ -2758,7 +3643,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 35,
+    "mv": 5.84,
+    "fm": 5.91,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_4177",
@@ -2771,7 +3661,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 1,
+    "mv": 6.5,
+    "fm": 6.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_218",
@@ -2784,7 +3679,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 9,
+    "mv": 6.11,
+    "fm": 5.11,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5761",
@@ -2797,7 +3697,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 12,
+    "mv": 5.96,
+    "fm": 5.96,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2832",
@@ -2810,7 +3715,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fvm": 25,
+    "presenze": 13,
+    "mv": 6.19,
+    "fm": 7.15,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_5620",
@@ -2823,7 +3733,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-20 FM",
-    "fvm": 17
+    "fvm": 17,
+    "presenze": 22,
+    "mv": 5.91,
+    "fm": 5.8,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2188",
@@ -2836,7 +3751,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 33,
+    "mv": 5.86,
+    "fm": 5.97,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_4459",
@@ -2849,7 +3769,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 11,
+    "mv": 5.73,
+    "fm": 5.64,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6556",
@@ -2862,7 +3787,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-20 FM",
-    "fvm": 17
+    "fvm": 17,
+    "presenze": 23,
+    "mv": 6.02,
+    "fm": 6.5,
+    "goals": 4,
+    "assists": 2
   },
   {
     "id": "fcit_4502",
@@ -2875,7 +3805,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 37,
+    "mv": 5.95,
+    "fm": 5.99,
+    "goals": 0,
+    "assists": 3
   },
   {
     "id": "fcit_5504",
@@ -2888,7 +3823,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 33,
+    "mv": 6.05,
+    "fm": 6.29,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_6549",
@@ -2901,7 +3841,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 37,
+    "mv": 5.8,
+    "fm": 5.85,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_4856",
@@ -2914,7 +3859,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 1,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7008",
@@ -2927,7 +3877,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 15,
+    "mv": 5.5,
+    "fm": 5.53,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7485",
@@ -2953,7 +3908,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 23,
+    "mv": 5.8,
+    "fm": 5.8,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6202",
@@ -2966,7 +3926,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 22,
+    "mv": 5.93,
+    "fm": 6.16,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_6831",
@@ -2979,7 +3944,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fvm": 22,
+    "presenze": 16,
+    "mv": 6.19,
+    "fm": 6.84,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_6663",
@@ -2992,7 +3962,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 31,
+    "mv": 5.92,
+    "fm": 5.92,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_4349",
@@ -3005,7 +3980,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 23,
+    "mv": 5.89,
+    "fm": 6.02,
+    "goals": 0,
+    "assists": 4
   },
   {
     "id": "fcit_6495",
@@ -3018,7 +3998,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 24,
+    "mv": 5.75,
+    "fm": 5.75,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5555",
@@ -3031,7 +4016,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 26,
+    "mv": 5.88,
+    "fm": 5.87,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_6680",
@@ -3044,7 +4034,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 36,
+    "mv": 5.96,
+    "fm": 5.96,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6248",
@@ -3070,7 +4065,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 18,
+    "mv": 5.83,
+    "fm": 5.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5674",
@@ -3083,7 +4083,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 23,
+    "mv": 6.09,
+    "fm": 6.43,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_7329",
@@ -3096,7 +4101,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 16,
+    "mv": 6.06,
+    "fm": 6.41,
+    "goals": 1,
+    "assists": 3
   },
   {
     "id": "fcit_2640",
@@ -3109,7 +4119,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 17,
+    "mv": 6.03,
+    "fm": 5.94,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4896",
@@ -3122,7 +4137,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fvm": 22,
+    "presenze": 18,
+    "mv": 5.94,
+    "fm": 6.31,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_7068",
@@ -3135,7 +4155,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 18,
+    "mv": 5.94,
+    "fm": 5.86,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5678",
@@ -3148,7 +4173,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 16,
+    "mv": 6.09,
+    "fm": 6.44,
+    "goals": 1,
+    "assists": 4
   },
   {
     "id": "fcit_7528",
@@ -3187,7 +4217,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 22,
+    "mv": 5.77,
+    "fm": 5.68,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7311",
@@ -3213,7 +4248,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 11,
+    "mv": 6.05,
+    "fm": 6.55,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_6893",
@@ -3226,7 +4266,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 29,
+    "mv": 6.12,
+    "fm": 6.52,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_7412",
@@ -3252,7 +4297,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 12,
+    "mv": 5.96,
+    "fm": 6.54,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_5449",
@@ -3265,7 +4315,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 23,
+    "mv": 6.02,
+    "fm": 5.98,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_7469",
@@ -3304,7 +4359,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 29,
+    "mv": 5.76,
+    "fm": 5.79,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_2593",
@@ -3317,7 +4377,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 29,
+    "mv": 5.97,
+    "fm": 6.1,
+    "goals": 1,
+    "assists": 5
   },
   {
     "id": "fcit_7409",
@@ -3356,7 +4421,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "16-22 FM",
-    "fvm": 19
+    "fvm": 19,
+    "presenze": 28,
+    "mv": 6.21,
+    "fm": 6.59,
+    "goals": 4,
+    "assists": 1
   },
   {
     "id": "fcit_6766",
@@ -3369,7 +4439,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 35,
+    "mv": 6.01,
+    "fm": 6.07,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_5685",
@@ -3382,7 +4457,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 29,
+    "mv": 5.64,
+    "fm": 5.55,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4817",
@@ -3408,7 +4488,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 21,
+    "mv": 5.69,
+    "fm": 5.83,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6632",
@@ -3421,7 +4506,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 21,
+    "mv": 5.83,
+    "fm": 5.64,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6990",
@@ -3434,7 +4524,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 36,
+    "mv": 5.82,
+    "fm": 5.69,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6015",
@@ -3447,7 +4542,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 12,
+    "mv": 6.17,
+    "fm": 6.92,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_7318",
@@ -3460,7 +4560,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 16,
+    "mv": 5.97,
+    "fm": 6.41,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_4686",
@@ -3473,7 +4578,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "20-26 FM",
-    "fvm": 23
+    "fvm": 23,
+    "presenze": 33,
+    "mv": 5.85,
+    "fm": 6.06,
+    "goals": 2,
+    "assists": 3
   },
   {
     "id": "fcit_6519",
@@ -3486,7 +4596,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "17-23 FM",
-    "fvm": 20
+    "fvm": 20,
+    "presenze": 18,
+    "mv": 5.67,
+    "fm": 5.64,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_4485",
@@ -3525,7 +4640,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 27,
+    "mv": 6.2,
+    "fm": 5.65,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5840",
@@ -3538,7 +4658,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 22,
+    "mv": 5.75,
+    "fm": 5.68,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6898",
@@ -3551,7 +4676,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 36,
+    "mv": 6.01,
+    "fm": 6.06,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_6984",
@@ -3564,7 +4694,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 15,
+    "mv": 5.7,
+    "fm": 5.63,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7213",
@@ -3577,7 +4712,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6986",
@@ -3590,7 +4730,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 19,
+    "mv": 6.16,
+    "fm": 6.5,
+    "goals": 1,
+    "assists": 4
   },
   {
     "id": "fcit_6190",
@@ -3603,7 +4748,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-20 FM",
-    "fvm": 17
+    "fvm": 17,
+    "presenze": 22,
+    "mv": 6.09,
+    "fm": 6.48,
+    "goals": 2,
+    "assists": 4
   },
   {
     "id": "fcit_2528",
@@ -3616,7 +4766,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 34,
+    "mv": 5.96,
+    "fm": 5.96,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_6677",
@@ -3629,7 +4784,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fvm": 16,
+    "presenze": 4,
+    "mv": 6.12,
+    "fm": 6.88,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7036",
@@ -3642,7 +4802,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 3,
+    "mv": 6.17,
+    "fm": 6.17,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6426",
@@ -3655,7 +4820,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 28,
+    "mv": 5.84,
+    "fm": 5.96,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_7060",
@@ -3681,7 +4851,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 27,
+    "mv": 5.87,
+    "fm": 5.81,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7198",
@@ -3694,7 +4869,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "13-17 FM",
-    "fvm": 15
+    "fvm": 15,
+    "presenze": 30,
+    "mv": 5.88,
+    "fm": 5.95,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6890",
@@ -3746,7 +4926,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 24,
+    "mv": 5.65,
+    "fm": 5.62,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6994",
@@ -3798,7 +4983,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 2,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_22",
@@ -3811,7 +5001,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 34,
+    "mv": 5.97,
+    "fm": 6,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_6054",
@@ -3824,7 +5019,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 28,
+    "mv": 5.93,
+    "fm": 6.12,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_4461",
@@ -3837,7 +5037,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 25,
+    "mv": 5.9,
+    "fm": 5.98,
+    "goals": 0,
+    "assists": 3
   },
   {
     "id": "fcit_6424",
@@ -3850,7 +5055,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 32,
+    "mv": 5.88,
+    "fm": 5.88,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6243",
@@ -3863,7 +5073,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 26,
+    "mv": 5.92,
+    "fm": 6.46,
+    "goals": 5,
+    "assists": 1
   },
   {
     "id": "fcit_7374",
@@ -3876,7 +5091,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 8,
+    "mv": 5.94,
+    "fm": 6.62,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7014",
@@ -3889,7 +5109,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 25,
+    "mv": 5.96,
+    "fm": 5.84,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_313",
@@ -3902,7 +5127,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 17,
+    "mv": 5.5,
+    "fm": 5.21,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5603",
@@ -3915,7 +5145,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 35,
+    "mv": 5.84,
+    "fm": 5.67,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6206",
@@ -3928,7 +5163,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 22,
+    "mv": 5.8,
+    "fm": 6.05,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_6415",
@@ -4019,7 +5259,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 9,
+    "mv": 5.72,
+    "fm": 5.67,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7453",
@@ -4045,7 +5290,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "11-15 FM",
-    "fvm": 13
+    "fvm": 13,
+    "presenze": 27,
+    "mv": 5.89,
+    "fm": 6.06,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_5831",
@@ -4058,7 +5308,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 16,
+    "mv": 5.94,
+    "fm": 6.22,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_4911",
@@ -4071,7 +5326,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_333",
@@ -4084,7 +5344,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 27,
+    "mv": 6.07,
+    "fm": 6.41,
+    "goals": 3,
+    "assists": 3
   },
   {
     "id": "fcit_7240",
@@ -4097,7 +5362,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 19,
+    "mv": 5.68,
+    "fm": 5.76,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7322",
@@ -4110,7 +5380,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 13,
+    "mv": 5.69,
+    "fm": 5.65,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5453",
@@ -4123,7 +5398,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 28,
+    "mv": 6,
+    "fm": 6.18,
+    "goals": 1,
+    "assists": 3
   },
   {
     "id": "fcit_7203",
@@ -4136,7 +5416,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 12,
+    "mv": 5.71,
+    "fm": 5.79,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_4199",
@@ -4149,7 +5434,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 21,
+    "mv": 6.1,
+    "fm": 6.52,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_2115",
@@ -4201,7 +5491,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 26,
+    "mv": 6.04,
+    "fm": 6.21,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7162",
@@ -4214,7 +5509,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 31,
+    "mv": 6,
+    "fm": 6.45,
+    "goals": 3,
+    "assists": 6
   },
   {
     "id": "fcit_5307",
@@ -4227,7 +5527,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 27,
+    "mv": 5.96,
+    "fm": 5.83,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6207",
@@ -4240,7 +5545,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "12-16 FM",
-    "fvm": 14
+    "fvm": 14,
+    "presenze": 9,
+    "mv": 5.94,
+    "fm": 6.06,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6631",
@@ -4253,7 +5563,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 21,
+    "mv": 5.98,
+    "fm": 5.95,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6271",
@@ -4266,7 +5581,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fvm": 18,
+    "presenze": 21,
+    "mv": 5.98,
+    "fm": 6.1,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_4374",
@@ -4279,7 +5599,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 34,
+    "mv": 5.81,
+    "fm": 5.74,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_5851",
@@ -4292,7 +5617,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 27,
+    "mv": 5.85,
+    "fm": 5.76,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7526",
@@ -4331,7 +5661,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 17,
+    "mv": 5.82,
+    "fm": 6,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_6827",
@@ -4344,7 +5679,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 10,
+    "mv": 5.8,
+    "fm": 6.15,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_7349",
@@ -4357,7 +5697,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 7,
+    "mv": 5.71,
+    "fm": 5.79,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_4263",
@@ -4370,7 +5715,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 28,
+    "mv": 5.98,
+    "fm": 6.18,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_5820",
@@ -4383,7 +5733,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 25,
+    "mv": 5.86,
+    "fm": 5.84,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_5527",
@@ -4396,7 +5751,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 19,
+    "mv": 6.05,
+    "fm": 6.29,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_7312",
@@ -4409,7 +5769,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 5,
+    "mv": 5.8,
+    "fm": 5.8,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7272",
@@ -4422,7 +5787,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 13,
+    "mv": 5.77,
+    "fm": 5.92,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7538",
@@ -4487,7 +5857,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 16,
+    "mv": 5.94,
+    "fm": 6.09,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6024",
@@ -4500,7 +5875,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 18,
+    "mv": 5.69,
+    "fm": 5.78,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5498",
@@ -4513,7 +5893,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "5-7 FM",
-    "fvm": 6
+    "fvm": 6,
+    "presenze": 10,
+    "mv": 5.65,
+    "fm": 5.65,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6895",
@@ -4526,7 +5911,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 12,
+    "mv": 5.83,
+    "fm": 6.04,
+    "goals": 0,
+    "assists": 3
   },
   {
     "id": "fcit_7268",
@@ -4539,7 +5929,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 16,
+    "mv": 5.62,
+    "fm": 5.72,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7125",
@@ -4552,7 +5947,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 17,
+    "mv": 5.82,
+    "fm": 6.09,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_1871",
@@ -4565,7 +5965,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 20,
+    "mv": 5.98,
+    "fm": 5.95,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7128",
@@ -4578,7 +5983,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 14,
+    "mv": 5.96,
+    "fm": 6.25,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_4378",
@@ -4591,7 +6001,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 31,
+    "mv": 5.85,
+    "fm": 5.79,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7175",
@@ -4604,7 +6019,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 14,
+    "mv": 5.79,
+    "fm": 6,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_4947",
@@ -4617,7 +6037,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 18,
+    "mv": 5.97,
+    "fm": 6.31,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_7540",
@@ -4669,7 +6094,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 1,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4970",
@@ -4682,7 +6112,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 19,
+    "mv": 6.18,
+    "fm": 6.68,
+    "goals": 3,
+    "assists": 1
   },
   {
     "id": "fcit_6503",
@@ -4708,7 +6143,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 15,
+    "mv": 5.97,
+    "fm": 6.2,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_6822",
@@ -4721,7 +6161,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 25,
+    "mv": 5.96,
+    "fm": 6.28,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_7012",
@@ -4734,7 +6179,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 23,
+    "mv": 5.91,
+    "fm": 5.85,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7131",
@@ -4747,7 +6197,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 23,
+    "mv": 5.72,
+    "fm": 5.72,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7001",
@@ -4760,7 +6215,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 17,
+    "mv": 5.82,
+    "fm": 6.09,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_5739",
@@ -4773,7 +6233,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 24,
+    "mv": 5.75,
+    "fm": 5.9,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_7211",
@@ -4786,7 +6251,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 17,
+    "mv": 5.94,
+    "fm": 6.32,
+    "goals": 2,
+    "assists": 2
   },
   {
     "id": "fcit_5273",
@@ -4799,7 +6269,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 14,
+    "mv": 5.64,
+    "fm": 5.71,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_7238",
@@ -4812,7 +6287,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 1,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4925",
@@ -4864,7 +6344,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "8-10 FM",
-    "fvm": 9
+    "fvm": 9,
+    "presenze": 13,
+    "mv": 6.08,
+    "fm": 6.27,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7120",
@@ -4877,7 +6362,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 14,
+    "mv": 6.04,
+    "fm": 6.32,
+    "goals": 1,
+    "assists": 2
   },
   {
     "id": "fcit_6215",
@@ -4890,7 +6380,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 9,
+    "mv": 5.72,
+    "fm": 6,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7235",
@@ -4903,7 +6398,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 21,
+    "mv": 5.79,
+    "fm": 5.71,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7255",
@@ -4916,7 +6416,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fvm": 10,
+    "presenze": 28,
+    "mv": 5.75,
+    "fm": 5.7,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_7209",
@@ -4929,7 +6434,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 30,
+    "mv": 5.85,
+    "fm": 5.95,
+    "goals": 1,
+    "assists": 1
   },
   {
     "id": "fcit_7536",
@@ -4955,7 +6465,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-13 FM",
-    "fvm": 11
+    "fvm": 11,
+    "presenze": 8,
+    "mv": 6,
+    "fm": 6.88,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_4772",
@@ -4968,7 +6483,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 6,
+    "mv": 5.83,
+    "fm": 5.67,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6985",
@@ -4981,7 +6501,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 8,
+    "mv": 5.69,
+    "fm": 5.56,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7183",
@@ -4994,7 +6519,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 11,
+    "mv": 5.77,
+    "fm": 5.64,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7208",
@@ -5007,7 +6537,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fvm": 12,
+    "presenze": 19,
+    "mv": 5.92,
+    "fm": 5.95,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_6892",
@@ -5046,7 +6581,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5872",
@@ -5059,7 +6599,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fvm": 7,
+    "presenze": 4,
+    "mv": 5.62,
+    "fm": 5.62,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6618",
@@ -5072,7 +6617,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7326",
@@ -5085,7 +6635,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 6,
+    "mv": 5.5,
+    "fm": 5.33,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7483",
@@ -5111,7 +6666,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6896",
@@ -5124,7 +6684,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 14,
+    "mv": 5.96,
+    "fm": 5.96,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6815",
@@ -5137,7 +6702,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 24,
+    "mv": 5.92,
+    "fm": 6.15,
+    "goals": 2,
+    "assists": 1
   },
   {
     "id": "fcit_7463",
@@ -5176,7 +6746,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 10,
+    "mv": 5.6,
+    "fm": 5.35,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7413",
@@ -5202,7 +6777,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 13,
+    "mv": 5.81,
+    "fm": 5.65,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6917",
@@ -5215,7 +6795,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 21,
+    "mv": 5.98,
+    "fm": 5.9,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6980",
@@ -5228,7 +6813,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "5-7 FM",
-    "fvm": 6
+    "fvm": 6,
+    "presenze": 7,
+    "mv": 5.86,
+    "fm": 5.86,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2814",
@@ -5241,7 +6831,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 27,
+    "mv": 6.26,
+    "fm": 5.35,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2263",
@@ -5254,7 +6849,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "7-9 FM",
-    "fvm": 8
+    "fvm": 8,
+    "presenze": 17,
+    "mv": 5.79,
+    "fm": 5.74,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2728",
@@ -5267,7 +6867,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 24,
+    "mv": 5.85,
+    "fm": 5.81,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6883",
@@ -5280,7 +6885,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 5,
+    "mv": 5.8,
+    "fm": 5.7,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5457",
@@ -5293,7 +6903,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 21,
+    "mv": 5.69,
+    "fm": 5.71,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7525",
@@ -5319,7 +6934,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "5-7 FM",
-    "fvm": 6
+    "fvm": 6,
+    "presenze": 16,
+    "mv": 5.94,
+    "fm": 6.09,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_5880",
@@ -5371,7 +6991,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 21,
+    "mv": 5.79,
+    "fm": 5.81,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_6219",
@@ -5384,7 +7009,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 2,
+    "mv": 5.75,
+    "fm": 5.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6246",
@@ -5397,7 +7027,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 21,
+    "mv": 5.93,
+    "fm": 5.9,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_252",
@@ -5410,7 +7045,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 11,
+    "mv": 5.59,
+    "fm": 5.59,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6925",
@@ -5423,7 +7063,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 4,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5994",
@@ -5436,7 +7081,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 16,
+    "mv": 5.75,
+    "fm": 5.72,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_7418",
@@ -5462,7 +7112,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 21,
+    "mv": 5.88,
+    "fm": 6.24,
+    "goals": 3,
+    "assists": 0
   },
   {
     "id": "fcit_7478",
@@ -5527,7 +7182,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4",
@@ -5540,7 +7200,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 1,
+    "mv": 5.5,
+    "fm": 4.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7533",
@@ -5566,7 +7231,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 4,
+    "mv": 6.12,
+    "fm": 5.62,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_487",
@@ -5579,7 +7249,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 10,
+    "mv": 6.05,
+    "fm": 5.95,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4929",
@@ -5592,7 +7267,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6650",
@@ -5605,7 +7285,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7346",
@@ -5618,7 +7303,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7165",
@@ -5631,7 +7321,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 4,
+    "mv": 5.75,
+    "fm": 5.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7338",
@@ -5644,7 +7339,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 2,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7317",
@@ -5657,7 +7357,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fvm": 2,
+    "presenze": 3,
+    "mv": 5.67,
+    "fm": 5.67,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7301",
@@ -5670,7 +7375,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2809",
@@ -5683,7 +7393,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_418",
@@ -5696,7 +7411,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7407",
@@ -5722,7 +7442,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7027",
@@ -5735,7 +7460,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6403",
@@ -5748,7 +7478,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 1,
+    "mv": 7.5,
+    "fm": 6.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_158",
@@ -5761,7 +7496,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7466",
@@ -5865,7 +7605,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 2,
+    "mv": 5.75,
+    "fm": 3.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6569",
@@ -5891,7 +7636,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fvm": 2,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6244",
@@ -5917,7 +7667,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 1,
+    "mv": 6,
+    "fm": 5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_1930",
@@ -5930,7 +7685,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_294",
@@ -5943,7 +7703,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 8,
+    "mv": 5.69,
+    "fm": 5.56,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6039",
@@ -5956,7 +7721,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 9,
+    "mv": 5.94,
+    "fm": 6.56,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_7337",
@@ -5969,7 +7739,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 9,
+    "mv": 6,
+    "fm": 5.17,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7534",
@@ -5995,7 +7770,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 10,
+    "mv": 5.85,
+    "fm": 5.75,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6191",
@@ -6008,7 +7788,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 11,
+    "mv": 5.77,
+    "fm": 5.82,
+    "goals": 0,
+    "assists": 2
   },
   {
     "id": "fcit_7345",
@@ -6021,7 +7806,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "4-6 FM",
-    "fvm": 5
+    "fvm": 5,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2401",
@@ -6034,7 +7824,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6523",
@@ -6047,7 +7842,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7164",
@@ -6060,7 +7860,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 1,
+    "mv": 5,
+    "fm": 5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7182",
@@ -6073,7 +7878,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 9,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7248",
@@ -6086,7 +7896,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 1,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6410",
@@ -6099,7 +7914,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fvm": 2,
+    "presenze": 11,
+    "mv": 5.77,
+    "fm": 5.73,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7319",
@@ -6112,7 +7932,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 2,
+    "mv": 5.5,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_2815",
@@ -6125,7 +7950,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 2,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6813",
@@ -6138,7 +7968,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6682",
@@ -6203,7 +8038,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6809",
@@ -6216,7 +8056,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 11,
+    "mv": 5.73,
+    "fm": 5.73,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_5481",
@@ -6229,7 +8074,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 9,
+    "mv": 5.94,
+    "fm": 5.94,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6662",
@@ -6242,7 +8092,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 17,
+    "mv": 6.18,
+    "fm": 5.09,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7202",
@@ -6255,7 +8110,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 11,
+    "mv": 5.59,
+    "fm": 5.36,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6149",
@@ -6268,7 +8128,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 2,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7276",
@@ -6281,7 +8146,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 1,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7048",
@@ -6307,7 +8177,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7260",
@@ -6320,7 +8195,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fvm": 2,
+    "presenze": 9,
+    "mv": 5.94,
+    "fm": 5.78,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6981",
@@ -6333,7 +8213,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 7,
+    "mv": 5.93,
+    "fm": 6.36,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_4518",
@@ -6346,7 +8231,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_4867",
@@ -6359,7 +8249,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 6,
+    "mv": 6.17,
+    "fm": 5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6189",
@@ -6372,7 +8267,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fvm": 2,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7156",
@@ -6385,7 +8285,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7157",
@@ -6398,7 +8303,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 5,
+    "mv": 6,
+    "fm": 6.5,
+    "goals": 1,
+    "assists": 0
   },
   {
     "id": "fcit_7158",
@@ -6411,7 +8321,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 6,
+    "mv": 5.58,
+    "fm": 5.5,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7457",
@@ -6437,7 +8352,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 29,
+    "mv": 6.09,
+    "fm": 4.52,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7363",
@@ -6450,7 +8370,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5007",
@@ -6463,7 +8388,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 8,
+    "mv": 6,
+    "fm": 5.88,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6889",
@@ -6476,7 +8406,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 9,
+    "mv": 5.78,
+    "fm": 5.72,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_543",
@@ -6489,7 +8424,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 2,
+    "mv": 6.25,
+    "fm": 5.25,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_5707",
@@ -6515,7 +8455,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 3,
+    "mv": 5.83,
+    "fm": 5.67,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_6021",
@@ -6554,7 +8499,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-5 FM",
-    "fvm": 4
+    "fvm": 4,
+    "presenze": 10,
+    "mv": 5.75,
+    "fm": 5.7,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7161",
@@ -6567,7 +8517,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
-    "fvm": 3
+    "fvm": 3,
+    "presenze": 12,
+    "mv": 5.75,
+    "fm": 5.83,
+    "goals": 0,
+    "assists": 1
   },
   {
     "id": "fcit_6671",
@@ -6684,7 +8639,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7557",
@@ -6723,7 +8683,12 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
-    "fvm": 1
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   },
   {
     "id": "fcit_7561",

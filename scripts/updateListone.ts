@@ -13,12 +13,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Player, PlayerRole } from '../src/types';
+import { Player, PlayerLastYearStats, PlayerRole } from '../src/types';
 import { FANTACALCIO_IT_LISTONE as OLD_LISTONE } from '../src/data/presetListoni/fantacalcioIt';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const QUOTAZIONI_URL = 'https://www.fantacalcio.it/quotazioni-fantacalcio';
+const STATISTICHE_BASE_URL = 'https://www.fantacalcio.it/statistiche-serie-a';
 const OUTPUT_PATH = path.join(ROOT, 'src/data/presetListoni/fantacalcioIt.ts');
 const ENRICHMENT_PATH = path.join(ROOT, 'src/data/presetListoni/arricchimento.json');
 // Sotto questa soglia il parsing viene considerato fallito (pagina cambiata,
@@ -33,6 +34,21 @@ interface ScrapedRow {
   role: PlayerRole;
   price: number;
   fvm: number | null;
+}
+
+// Statistiche stagione precedente (presenze, media voto, fantamedia, gol,
+// gol subiti, assist, cartellini), lette dalla pagina pubblica
+// statistiche-serie-a — stessa fonte ufficiale delle quotazioni, non
+// affidata alla ricerca web di Agente_Ansa.
+interface StatsRow {
+  presenze: number | null;
+  mv: number | null;
+  fm: number | null;
+  goals: number | null;
+  goalsConceded: number | null;
+  assists: number | null;
+  yellowCards: number | null;
+  redCards: number | null;
 }
 
 function normalizeIdentity(name: string, team: string): string {
@@ -79,12 +95,72 @@ function toNumber(raw: string): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
-async function fetchQuotazioniHtml(): Promise<string> {
-  const res = await fetch(QUOTAZIONI_URL, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; FantaWarRoomBot/1.0; +https://fantawarroom.vercel.app)' },
-  });
-  if (!res.ok) throw new Error(`Fetch quotazioni fallita: HTTP ${res.status}`);
+const USER_AGENT = 'Mozilla/5.0 (compatible; FantaWarRoomBot/1.0; +https://fantawarroom.vercel.app)';
+
+async function fetchHtml(url: string): Promise<string> {
+  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
+  if (!res.ok) throw new Error(`Fetch fallita per ${url}: HTTP ${res.status}`);
   return res.text();
+}
+
+async function fetchQuotazioniHtml(): Promise<string> {
+  return fetchHtml(QUOTAZIONI_URL);
+}
+
+// Legge la stagione corrente ("2026/27") dal <select id="season"> della
+// pagina quotazioni, per calcolare "l'anno scorso" senza doverlo
+// aggiornare a mano ogni estate.
+function parseCurrentSeason(quotazioniHtml: string): string {
+  const m = quotazioniHtml.match(/<option value="(\d{4}\/\d{2})" selected>/);
+  if (!m) throw new Error('Impossibile determinare la stagione corrente dalla pagina quotazioni.');
+  return m[1];
+}
+
+function previousSeason(season: string): string {
+  const [startStr, endStr] = season.split('/');
+  const start = parseInt(startStr, 10) - 1;
+  const end = parseInt(endStr, 10) - 1;
+  return `${start}/${String(end).padStart(2, '0')}`;
+}
+
+async function fetchStatisticheHtml(season: string): Promise<string> {
+  const segment = season.replace('/', '-'); // "2025/26" -> "2025-26"
+  return fetchHtml(`${STATISTICHE_BASE_URL}/${segment}`);
+}
+
+// Stessa struttura a righe <tr class="player-row"> della pagina quotazioni,
+// con colonne diverse (PV/MV/FM/Gol/GS/Ass/Amm/Esp invece di prezzo/FVM) e
+// un segmento stagione in più nell'URL del profilo
+// (".../<slug>/<id>/2025-26"). L'id numerico è lo stesso spazio id usato
+// nelle quotazioni, quindi le due tabelle si uniscono per fcId.
+function parseStatsRows(html: string): Map<string, StatsRow> {
+  const byFcId = new Map<string, StatsRow>();
+  const blocks = html.match(/<tr class="player-row"[\s\S]*?<\/tr>/g) ?? [];
+
+  for (const block of blocks) {
+    const linkMatch = block.match(
+      /href="https:\/\/www\.fantacalcio\.it\/serie-a\/squadre\/[a-z0-9-]+\/[^"/]+\/(\d+)\/\d{4}-\d{2}"/
+    );
+    if (!linkMatch) continue;
+
+    const cell = (key: string) => {
+      const m = block.match(new RegExp(`data-col-key="${key}">\\s*([\\d.,]+)`));
+      return m ? toNumber(m[1]) : null;
+    };
+
+    byFcId.set(linkMatch[1], {
+      presenze: cell('pg'),
+      mv: cell('mv'),
+      fm: cell('mfv'),
+      goals: cell('gol'),
+      goalsConceded: cell('gs'),
+      assists: cell('ass'),
+      yellowCards: cell('amm'),
+      redCards: cell('esp'),
+    });
+  }
+
+  return byFcId;
 }
 
 // La tabella "Classic" è renderizzata lato server dentro <tr class="player-row">,
@@ -170,6 +246,8 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const htmlFileIdx = args.indexOf('--html-file');
   const htmlFile = htmlFileIdx !== -1 ? args[htmlFileIdx + 1] : null;
+  const statsHtmlFileIdx = args.indexOf('--stats-html-file');
+  const statsHtmlFile = statsHtmlFileIdx !== -1 ? args[statsHtmlFileIdx + 1] : null;
 
   const html = htmlFile ? fs.readFileSync(htmlFile, 'utf-8') : await fetchQuotazioniHtml();
   const { rows, skipped } = parseRows(html);
@@ -183,24 +261,53 @@ async function main() {
     );
   }
 
+  // Statistiche stagione precedente (media voto, fantamedia, presenze, gol,
+  // gol subiti, assist, cartellini) — fonte secondaria: se il fetch/parsing
+  // fallisce non blocchiamo l'aggiornamento di prezzi/FVM per questo, il
+  // listone resta comunque valido solo senza queste informazioni extra.
+  let statsByFcId = new Map<string, StatsRow>();
+  try {
+    const currentSeason = parseCurrentSeason(html);
+    const lastSeason = previousSeason(currentSeason);
+    const statsHtml = statsHtmlFile ? fs.readFileSync(statsHtmlFile, 'utf-8') : await fetchStatisticheHtml(lastSeason);
+    statsByFcId = parseStatsRows(statsHtml);
+    console.log(`[updateListone] Statistiche ${lastSeason}: ${statsByFcId.size} giocatori trovati.`);
+  } catch (err) {
+    console.warn(
+      '[updateListone] Statistiche anno scorso non disponibili, proseguo senza:',
+      err instanceof Error ? err.message : err
+    );
+  }
+
   // Id stabile = fcit_<id numerico fantacalcio.it>, letto dall'URL del
   // profilo di ogni giocatore: a differenza degli id "imp_..." generati
   // dall'import manuale (timestamp + random), questo resta identico da un
   // giorno all'altro, così l'arricchimento (Agente_Ansa) sotto non deve
   // essere ri-migrato ad ogni run dopo il primo.
-  const players: Player[] = rows.map((r) => ({
-    id: `fcit_${r.fcId}`,
-    name: r.name,
-    role: r.role,
-    team: r.team,
-    basePrice: r.price,
-    expectedFantaAvg: 6.5, // sovrascritto da assignTiers
-    expectedGoalsAssists: 'N/A',
-    tier: 3, // sovrascritto da assignTiers
-    notes: 'Aggiornato automaticamente da fantacalcio.it',
-    fairValueBracket: buildFairValueBracket(r.price, r.fvm),
-    fvm: r.fvm ?? undefined,
-  }));
+  const players: Player[] = rows.map((r) => {
+    const stats = statsByFcId.get(r.fcId);
+    return {
+      id: `fcit_${r.fcId}`,
+      name: r.name,
+      role: r.role,
+      team: r.team,
+      basePrice: r.price,
+      expectedFantaAvg: 6.5, // sovrascritto da assignTiers
+      expectedGoalsAssists: 'N/A',
+      tier: 3, // sovrascritto da assignTiers
+      notes: 'Aggiornato automaticamente da fantacalcio.it',
+      fairValueBracket: buildFairValueBracket(r.price, r.fvm),
+      fvm: r.fvm ?? undefined,
+      // Campi letti dal motore di pricing deterministico (vedi
+      // src/engine/pricingEngine.ts, ramo storico) — senza questi il
+      // motore applica sempre il ramo "nessuno storico" per ogni giocatore.
+      presenze: stats?.presenze ?? undefined,
+      mv: stats?.mv ?? undefined,
+      fm: stats?.fm ?? undefined,
+      goals: stats?.goals ?? undefined,
+      assists: stats?.assists ?? undefined,
+    };
+  });
 
   assignTiers(players);
 
@@ -222,16 +329,50 @@ async function main() {
     // Nessun arricchimento pregresso: prima esecuzione o file assente, va bene.
   }
 
-  const newEnrichment: Record<string, unknown> = {};
+  interface EnrichmentEntry {
+    lastYearStats?: PlayerLastYearStats;
+    aiForecast?: string;
+  }
+
+  const newEnrichment: Record<string, EnrichmentEntry> = {};
   let migrated = 0;
   for (const p of players) {
     const oldId = oldIdByIdentity.get(normalizeIdentity(p.name, p.team));
     if (oldId && oldEnrichment[oldId]) {
-      newEnrichment[p.id] = oldEnrichment[oldId];
+      newEnrichment[p.id] = oldEnrichment[oldId] as EnrichmentEntry;
       migrated++;
     }
   }
   console.log(`[updateListone] Arricchimento migrato per ${migrated}/${players.length} giocatori.`);
+
+  // Sovrascrive/completa lastYearStats con i numeri ufficiali appena
+  // scaricati (più affidabili della ricerca web di Agente_Ansa per i campi
+  // che la pagina statistiche copre). L'unico campo che la pagina non dà è
+  // starterAppearances (presenze da titolare): quello, se già presente da
+  // una migrazione Agente_Ansa, resta com'è.
+  let statsApplied = 0;
+  for (const p of players) {
+    const stats = statsByFcId.get(p.id.replace('fcit_', ''));
+    if (!stats) continue;
+
+    const prevLastYear = newEnrichment[p.id]?.lastYearStats;
+    newEnrichment[p.id] = {
+      ...newEnrichment[p.id],
+      lastYearStats: {
+        appearances: stats.presenze ?? prevLastYear?.appearances ?? 0,
+        starterAppearances: prevLastYear?.starterAppearances ?? 0,
+        goals: stats.goals ?? prevLastYear?.goals ?? 0,
+        assists: stats.assists ?? prevLastYear?.assists ?? 0,
+        yellowCards: stats.yellowCards ?? prevLastYear?.yellowCards ?? 0,
+        redCards: stats.redCards ?? prevLastYear?.redCards ?? 0,
+        mv: stats.mv ?? prevLastYear?.mv,
+        fm: stats.fm ?? prevLastYear?.fm,
+        goalsConceded: p.role === 'P' ? stats.goalsConceded ?? prevLastYear?.goalsConceded : undefined,
+      },
+    };
+    statsApplied++;
+  }
+  console.log(`[updateListone] Statistiche ufficiali applicate a ${statsApplied}/${players.length} giocatori.`);
 
   if (dryRun) {
     console.log(`[updateListone] Dry run: nessun file scritto.`);

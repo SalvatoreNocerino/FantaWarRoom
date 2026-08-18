@@ -164,11 +164,24 @@ export const PlayersTable: React.FC<PlayersTableProps> = ({
 
                   <td className="p-3 text-center hidden md:table-cell text-muted font-mono text-[11px]">
                     {p.lastYearStats ? (
-                      <span>
-                        {p.lastYearStats.appearances}p ({p.lastYearStats.starterAppearances}t) •{' '}
-                        <strong className="text-accent">{p.lastYearStats.goals}g</strong> •{' '}
-                        <strong className="text-info">{p.lastYearStats.assists}a</strong>
-                      </span>
+                      <div className="space-y-0.5">
+                        <div>
+                          {p.lastYearStats.appearances}p ({p.lastYearStats.starterAppearances}t) •{' '}
+                          {p.role === 'P' ? (
+                            <strong className="text-negative">{p.lastYearStats.goalsConceded ?? '—'}gs</strong>
+                          ) : (
+                            <strong className="text-accent">{p.lastYearStats.goals}g</strong>
+                          )}{' '}
+                          • <strong className="text-info">{p.lastYearStats.assists}a</strong>
+                        </div>
+                        {(p.lastYearStats.mv !== undefined || p.lastYearStats.fm !== undefined) && (
+                          <div className="text-faint text-[10px]">
+                            {p.lastYearStats.mv !== undefined && <span>mv {p.lastYearStats.mv.toFixed(2)}</span>}
+                            {p.lastYearStats.mv !== undefined && p.lastYearStats.fm !== undefined && ' · '}
+                            {p.lastYearStats.fm !== undefined && <span>fm {p.lastYearStats.fm.toFixed(2)}</span>}
+                          </div>
+                        )}
+                      </div>
                     ) : (
                       <span className="text-faint italic">N/D</span>
                     )}
