@@ -143,3 +143,28 @@ export interface LeagueMembership {
   strategy: StrategySettings;
 }
 
+// --- Probabili formazioni 2026/27 (sezione statica editoriale, non legata
+// all'asta) — vedi src/data/probableFormations.ts e ProbableFormationsView.
+export interface FormationBallottaggio {
+  ruolo: string; // es. "Esterno destro"
+  candidati: string[];
+  nota: string;
+}
+
+export interface FormationNewSigning {
+  nome: string;
+  provenienza: string;
+  commento: string; // previsione sull'impatto fantacalcistico
+}
+
+export interface TeamProbableFormation {
+  team: string; // deve combaciare con Player.team
+  allenatore: string;
+  modulo: string; // es. "3-5-2"
+  titolari: { nome: string; ruolo: string }[]; // 11 giocatori, ruolo es. "POR", "DC", "TS", "TD", "CC", "T", "P.to", "SP", "ATT"
+  panchina: string[];
+  ballottaggi: FormationBallottaggio[];
+  nuoviAcquisti: FormationNewSigning[];
+  commentoGenerale: string; // previsione complessiva sulla squadra
+}
+

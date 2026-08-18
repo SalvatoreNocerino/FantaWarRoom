@@ -9,6 +9,7 @@ import { DashboardView } from './components/DashboardView';
 import { SettingsView } from './components/SettingsView';
 import { FeedbackView } from './components/FeedbackView';
 import { PlayersDatabaseView } from './components/PlayersDatabaseView';
+import { ProbableFormationsView } from './components/ProbableFormationsView';
 import { WarRoomMobileConsole } from './components/war-room-mobile/WarRoomMobileConsole';
 import { PwaInstallBanner } from './components/PwaInstallBanner';
 import { UpgradeModal } from './components/UpgradeModal';
@@ -565,6 +566,8 @@ export default function App() {
             readOnly={!isLeagueAdmin}
           />
         )}
+
+        {activeTab === 'formations' && <ProbableFormationsView />}
 
         {activeTab === 'feedback' && <FeedbackView />}
       </main>

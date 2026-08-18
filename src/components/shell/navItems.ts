@@ -1,6 +1,6 @@
-import { LayoutDashboard, Database, ShieldAlert, Settings2, MessageSquareHeart, LucideIcon } from 'lucide-react';
+import { LayoutDashboard, Database, ShieldAlert, Settings2, MessageSquareHeart, ClipboardList, LucideIcon } from 'lucide-react';
 
-export type ActiveTab = 'dashboard' | 'warroom' | 'database' | 'settings' | 'feedback';
+export type ActiveTab = 'dashboard' | 'warroom' | 'database' | 'formations' | 'settings' | 'feedback';
 
 export interface NavItem {
   id: ActiveTab;
@@ -16,6 +16,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'warroom', label: 'Console Live', icon: ShieldAlert },
   { id: 'database', label: 'Listone Serie A', icon: Database },
+  { id: 'formations', label: 'Probabili Formazioni', icon: ClipboardList },
   { id: 'settings', label: 'Impostazioni', icon: Settings2 },
   { id: 'feedback', label: 'Feedback', icon: MessageSquareHeart },
 ];
