@@ -161,8 +161,8 @@ export interface TeamProbableFormation {
   team: string; // deve combaciare con Player.team
   allenatore: string;
   modulo: string; // es. "3-5-2"
-  titolari: { nome: string; ruolo: string }[]; // 11 giocatori, ruolo es. "POR", "DC", "TS", "TD", "CC", "T", "P.to", "SP", "ATT"
-  panchina: string[];
+  titolari: { nome: string; ruolo: PlayerRole }[]; // 11 giocatori, ruolo P/D/C/A come nel listone
+  panchina: { nome: string; ruolo: PlayerRole }[];
   ballottaggi: FormationBallottaggio[];
   nuoviAcquisti: FormationNewSigning[];
   commentoGenerale: string; // previsione complessiva sulla squadra
