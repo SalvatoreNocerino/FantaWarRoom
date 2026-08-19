@@ -22,6 +22,10 @@ export const TabBar: React.FC<Props> = ({ active, onChange }) => (
       bottom: 0,
       zIndex: 10,
       padding: '6px 10px 14px',
+      // 14px basta su schermi senza notch/home-indicator; su iPhone con
+      // safe-area (richiede viewport-fit=cover in index.html) il tab più
+      // esterno finirebbe sotto la barra dei gesti di sistema senza questo.
+      paddingBottom: 'max(14px, env(safe-area-inset-bottom))',
       background: COLORS.bgNested,
       borderTop: `1px solid ${COLORS.borderDivider}`,
       display: 'grid',

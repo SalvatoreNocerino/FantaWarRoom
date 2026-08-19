@@ -230,17 +230,23 @@ export const HistoryScreen: React.FC<Props> = ({
                     style={{
                       display: 'flex',
                       alignItems: 'center',
+                      justifyContent: 'center',
                       gap: 4,
+                      // min 40x40: correggere un'offerta a metà asta è un'azione
+                      // rischiosa da sbagliare per un tap impreciso su un target
+                      // troppo piccolo (salverebbe il prezzo sulla squadra sbagliata).
+                      minWidth: 40,
+                      minHeight: 40,
                       background: COLORS.accent,
                       color: COLORS.accentOn,
                       border: 0,
                       borderRadius: 8,
-                      padding: '6px 8px',
+                      padding: '8px 10px',
                       font: `700 11px ${FONT_UI}`,
                       cursor: 'pointer',
                     }}
                   >
-                    <Save size={13} />
+                    <Save size={16} />
                   </button>
                   <button
                     type="button"
@@ -248,15 +254,18 @@ export const HistoryScreen: React.FC<Props> = ({
                     style={{
                       display: 'flex',
                       alignItems: 'center',
+                      justifyContent: 'center',
+                      minWidth: 40,
+                      minHeight: 40,
                       background: COLORS.bgNested,
                       color: COLORS.textSecondary,
                       border: `1px solid ${COLORS.borderInput}`,
                       borderRadius: 8,
-                      padding: '6px 8px',
+                      padding: '8px 10px',
                       cursor: 'pointer',
                     }}
                   >
-                    <X size={13} />
+                    <X size={16} />
                   </button>
                 </div>
               </div>

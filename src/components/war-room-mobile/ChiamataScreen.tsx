@@ -506,6 +506,10 @@ export const ChiamataScreen: React.FC<Props> = ({
             position: 'sticky',
             bottom: noBottomTabBar ? 0 : MOBILE_TAB_BAR_HEIGHT,
             padding: '14px 16px',
+            // Solo quando questa barra è l'elemento più in basso sullo schermo
+            // (noBottomTabBar) serve il margine per notch/home-indicator —
+            // altrimenti sta sopra la TabBar, che gestisce già la safe-area.
+            paddingBottom: noBottomTabBar ? 'max(14px, env(safe-area-inset-bottom))' : 14,
             background: COLORS.bgNested,
             borderTop: `1px solid ${COLORS.borderInput}`,
             textAlign: 'center',
@@ -523,6 +527,7 @@ export const ChiamataScreen: React.FC<Props> = ({
           position: 'sticky',
           bottom: noBottomTabBar ? 0 : MOBILE_TAB_BAR_HEIGHT,
           padding: '10px 16px 12px',
+          paddingBottom: noBottomTabBar ? 'max(12px, env(safe-area-inset-bottom))' : 12,
           background: COLORS.bgNested,
           borderTop: `1px solid ${COLORS.borderInput}`,
           display: 'flex',
