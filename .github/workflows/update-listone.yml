@@ -1,0 +1,49 @@
+name: Aggiorna listone fantacalcio.it
+
+# Rigenera src/data/presetListoni/fantacalcioIt.ts (quotazioni + statistiche
+# stagione precedente) dalla pagina pubblica di fantacalcio.it e lo committa
+# su main, ogni giorno. Deve restare "silenzioso" per l'utente finale: gli id
+# generati da scripts/updateListone.ts sono stabili (fcit_<id fantacalcio.it>),
+# quindi wishlist/blacklist/note dei giocatori (salvate come liste di id)
+# restano agganciate automaticamente — un giocatore uscito dal listone
+# semplicemente smette di comparire, senza errori.
+on:
+  schedule:
+    - cron: '0 5 * * *' # ogni giorno alle 05:00 UTC (06:00/07:00 in Italia a seconda dell'ora legale)
+  workflow_dispatch: {} # permette anche un run manuale da GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  update-listone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Scarica e rigenera il listone
+        run: npx tsx scripts/updateListone.ts
+
+      - name: Verifica che il progetto sia ancora sano
+        run: |
+          npm run lint
+          npm run test:unit
+
+      - name: Commit e push se ci sono cambiamenti
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/presetListoni/fantacalcioIt.ts src/data/presetListoni/arricchimento.json; then
+            echo "Nessuna variazione nel listone, niente da committare."
+            exit 0
+          fi
+          git add src/data/presetListoni/fantacalcioIt.ts src/data/presetListoni/arricchimento.json
+          git commit -m "Aggiorna listone fantacalcio.it $(date -u +%Y-%m-%d)"
+          git push
