@@ -101,4 +101,34 @@ describe('parsePlayersFileContent — dispatch per estensione file', () => {
   it('un JSON che non è un array lancia PlayersImportError', () => {
     expect(() => parsePlayersFileContent('{"non":"un array"}', 'listone.json')).toThrow();
   });
+
+  it('un export grezzo (id numerico, "qtA" invece di basePrice) viene sanitizzato come CSV/XLSX', () => {
+    // Forma reale del listone fantacalcio.it: niente basePrice/tier/expectedFantaAvg,
+    // id numerico invece che stringa. Prima del fix, questo bypassava ogni
+    // validazione e produceva giocatori con basePrice undefined.
+    const json = JSON.stringify([
+      { id: 5841, role: 'P', name: 'Svilar', team: 'Roma', qtA: 18, qtI: 18, fvm: 65 },
+      { id: 4159, role: 'D', name: 'Akanji', team: 'Inter', qtA: 16, qtI: 16, fvm: 55 },
+    ]);
+    const players = parsePlayersFileContent(json, 'listone_grezzo.json');
+
+    expect(players.length).toBe(2);
+    const svilar = players.find((p) => p.name === 'Svilar')!;
+    expect(svilar).toBeDefined();
+    expect(svilar.role).toBe('P');
+    expect(svilar.basePrice).toBe(18); // letto da "qtA" via alias, non da un campo "basePrice" inesistente
+    expect(svilar.fvm).toBe(65);
+    expect(typeof svilar.id).toBe('string'); // id sempre rigenerato, mai il numero grezzo della fonte
+    expect(Number.isFinite(svilar.tier)).toBe(true); // assegnato da assignTiersByRole, non undefined
+  });
+
+  it('righe con nome vuoto vengono scartate invece di produrre giocatori corrotti', () => {
+    const json = JSON.stringify([
+      { id: 1, role: 'A', name: '', team: 'Milan', qtA: 10 }, // nome vuoto: va scartata
+      { id: 2, role: 'A', name: 'Leao', team: 'Milan', qtA: 30 },
+    ]);
+    const players = parsePlayersFileContent(json, 'listone.json');
+    expect(players.length).toBe(1);
+    expect(players[0].name).toBe('Leao');
+  });
 });

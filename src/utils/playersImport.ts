@@ -23,7 +23,7 @@ const FIELD_ALIASES: Record<string, string[]> = {
   role: ['ruolo', 'r', 'role'],
   name: ['calciatore', 'nome', 'giocatore', 'name', 'player'],
   team: ['squadra', 'team', 'club'],
-  price: ['quotazione', 'qta', 'prezzo', 'price'],
+  price: ['quotazione', 'qta', 'prezzo', 'price', 'baseprice'],
   fairValue: ['fvm', 'fairvalue'],
   // Colonne di storico stagione precedente — presenti solo in alcuni export
   // (es. fantacalcio.it "statistiche"). Se assenti, il motore di pricing
@@ -195,10 +195,52 @@ export function parsePlayersFileContent(text: string, filename: string): Player[
     if (!Array.isArray(parsed)) {
       throw new PlayersImportError('Il file JSON deve contenere un array di giocatori.');
     }
-    return assignTiersByRole(parsed as Player[]);
+    return parsePlayersJson(parsed);
   }
 
   return parsePlayersCsv(text);
+}
+
+// Un JSON caricato dall'utente non è affidabile quanto un oggetto Player
+// costruito internamente: può avere id mancanti/duplicati, ruoli in formato
+// diverso (es. Mantra), prezzi come stringa, o nomi di campo completamente
+// diversi (es. export grezzo di fantacalcio.it con "qtA" invece di
+// "basePrice"). Instrada quindi ogni riga per lo stesso builder/sanitizer
+// usato da CSV e XLSX, invece di fidarsi della forma dell'oggetto as-is.
+function parsePlayersJson(parsed: unknown[]): Player[] {
+  if (parsed.length === 0) return [];
+
+  const sample = parsed[0];
+  if (typeof sample !== 'object' || sample === null) {
+    throw new PlayersImportError('Il file JSON deve contenere un array di oggetti giocatore.');
+  }
+
+  const keys = Object.keys(sample as Record<string, unknown>);
+  const cols = resolveColumns(keys);
+  if (cols.name === -1 || cols.role === -1) {
+    throw new PlayersImportError('Il file JSON non contiene campi "nome"/"ruolo" riconoscibili.');
+  }
+
+  const imported: Player[] = [];
+
+  parsed.forEach((raw, i) => {
+    if (typeof raw !== 'object' || raw === null) return;
+    const obj = raw as Record<string, unknown>;
+    const get = (idx: number) => (idx !== -1 ? obj[keys[idx]] : undefined);
+
+    const name = cols.name !== -1 ? String(get(cols.name) ?? '').trim() : '';
+    if (!name || name.length <= 1) return;
+
+    const role = toRole(get(cols.role) ?? 'A');
+    const team = (cols.team !== -1 ? String(get(cols.team) ?? '').trim() : '') || 'Serie A';
+    const price = toNumber(get(cols.price)) ?? 1;
+    const fvm = cols.fairValue !== -1 ? toNumber(get(cols.fairValue)) : null;
+    const historical = readHistoricalStats(cols, get);
+
+    imported.push(buildPlayer(i, name, role, team, price, fvm, historical));
+  });
+
+  return assignTiersByRole(imported);
 }
 
 export function parsePlayersCsv(text: string): Player[] {
