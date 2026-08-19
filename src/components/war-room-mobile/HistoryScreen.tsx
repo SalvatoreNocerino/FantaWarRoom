@@ -29,6 +29,7 @@ export const HistoryScreen: React.FC<Props> = ({
   readOnly = false,
 }) => {
   const [search, setSearch] = useState('');
+  const [teamFilter, setTeamFilter] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTeam, setEditTeam] = useState('');
   const [editCost, setEditCost] = useState(1);
@@ -45,8 +46,9 @@ export const HistoryScreen: React.FC<Props> = ({
           const q = search.trim().toLowerCase();
           if (!q) return true;
           return player.name.toLowerCase().includes(q) || h.boughtByTeam.toLowerCase().includes(q);
-        }),
-    [auctionHistory, allPlayers, search]
+        })
+        .filter(({ h }) => !teamFilter || h.boughtByTeam === teamFilter),
+    [auctionHistory, allPlayers, search, teamFilter]
   );
 
   const count = auctionHistory.length;
@@ -90,8 +92,8 @@ export const HistoryScreen: React.FC<Props> = ({
         </div>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-        <div style={{ position: 'relative', flex: 1 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+        <div style={{ position: 'relative', flex: '1 1 140px' }}>
           <span style={{ position: 'absolute', left: 10, top: 9, color: COLORS.textWeak, display: 'flex' }}>
             <Search size={14} />
           </span>
@@ -112,6 +114,30 @@ export const HistoryScreen: React.FC<Props> = ({
             }}
           />
         </div>
+        <select
+          value={teamFilter}
+          onChange={(e) => setTeamFilter(e.target.value)}
+          style={{
+            flex: 'none',
+            height: 34,
+            boxSizing: 'border-box',
+            background: COLORS.bgInputLight,
+            border: `1px solid ${COLORS.borderInput}`,
+            borderRadius: 10,
+            padding: '0 8px',
+            color: teamFilter ? COLORS.textPrimary : COLORS.textWeak,
+            fontFamily: FONT_UI,
+            fontSize: 12,
+            fontWeight: 600,
+          }}
+        >
+          <option value="">Tutte le squadre</option>
+          {league.participants.map((team) => (
+            <option key={team.name} value={team.name}>
+              {team.name} {team.isMyTeam ? '(tua)' : ''}
+            </option>
+          ))}
+        </select>
         {!readOnly && auctionHistory.length > 0 && (
           <button
             type="button"
