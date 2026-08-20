@@ -1354,6 +1354,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 41
   },
   {
+    "id": "fcit_6372",
+    "name": "Moreira",
+    "role": "C",
+    "team": "Milan",
+    "basePrice": 12,
+    "expectedFantaAvg": 7.2,
+    "expectedGoalsAssists": "N/A",
+    "tier": 1,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "44-60 FM",
+    "fvm": 52
+  },
+  {
     "id": "fcit_6844",
     "name": "Rowe",
     "role": "C",
@@ -1979,9 +1992,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "P",
     "team": "Juventus",
     "basePrice": 9,
-    "expectedFantaAvg": 6.6,
+    "expectedFantaAvg": 7.2,
     "expectedGoalsAssists": "N/A",
-    "tier": 2,
+    "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
     "fvm": 10,
@@ -8785,5 +8798,31 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fm": 4.94,
     "goals": 0,
     "assists": 1
+  },
+  {
+    "id": "fcit_7553",
+    "name": "Omar Fayed",
+    "role": "D",
+    "team": "Frosinone",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
+  },
+  {
+    "id": "fcit_4468",
+    "name": "Bleve",
+    "role": "P",
+    "team": "Lecce",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
   }
 ];
