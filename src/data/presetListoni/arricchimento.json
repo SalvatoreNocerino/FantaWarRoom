@@ -5233,5 +5233,17 @@
       "fm": 4.94,
       "goalsConceded": 54
     }
+  },
+  "fcit_7146": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 4,
+      "redCards": 1,
+      "mv": 5.82,
+      "fm": 5.82
+    }
   }
 }
