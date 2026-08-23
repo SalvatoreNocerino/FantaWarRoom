@@ -59,15 +59,24 @@ export const logoutUser = async () => {
   }
 };
 
-export const subscribeToAuth = (callback: (user: AppUser | null) => void) => {
+// Eventi che rappresentano un vero (ri)aggancio della sessione, in cui ha
+// senso ricaricare i dati da Supabase. 'TOKEN_REFRESHED' (e simili) vanno
+// esclusi deliberatamente: Supabase li emette periodicamente — anche solo
+// per un tab/telefono che torna in foreground — e non sono un nuovo login;
+// vedi il commento in App.tsx su dove questo distingue per evitare di
+// sovrascrivere dati locali più recenti (es. assegnazioni in un'asta live)
+// con uno snapshot cloud non ancora aggiornato.
+export type AuthReloadEvent = 'INITIAL_SESSION' | 'SIGNED_IN';
+
+export const subscribeToAuth = (callback: (user: AppUser | null, event: string) => void) => {
   // Notifica subito lo stato corrente (utile al primo mount, come faceva
   // onAuthStateChanged di Firebase), poi resta in ascolto dei cambi.
   supabase.auth.getSession().then(({ data }) => {
-    callback(mapSupabaseUserToAppUser(data.session?.user));
+    callback(mapSupabaseUserToAppUser(data.session?.user), 'INITIAL_SESSION' satisfies AuthReloadEvent);
   });
 
-  const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-    callback(mapSupabaseUserToAppUser(session?.user));
+  const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+    callback(mapSupabaseUserToAppUser(session?.user), event);
   });
 
   return () => listener.subscription.unsubscribe();

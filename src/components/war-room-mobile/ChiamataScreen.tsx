@@ -66,7 +66,16 @@ export const ChiamataScreen: React.FC<Props> = ({
     [availablePlayers, pricingMap]
   );
 
-  const fallbackPlayerId = sortedAvailable[0]?.id ?? null;
+  // Quando non c'è una selezione esplicita, il fallback deve rispettare il
+  // filtro di ruolo attivo — altrimenti dopo ogni assegnazione (che azzera
+  // selectedPlayerId) si torna sempre al giocatore col valore più alto in
+  // assoluto su tutti i ruoli, invece di restare nel ruolo che si stava
+  // chiamando (es. sui portieri, saltava sempre al miglior attaccante).
+  const fallbackPool = useMemo(
+    () => (roleFilter === 'ALL' ? sortedAvailable : sortedAvailable.filter((p) => p.role === roleFilter)),
+    [sortedAvailable, roleFilter]
+  );
+  const fallbackPlayerId = fallbackPool[0]?.id ?? sortedAvailable[0]?.id ?? null;
   const effectiveId = selectedPlayerId ?? fallbackPlayerId;
   const activePlayer = useMemo(() => allPlayers.find((p) => p.id === effectiveId) || null, [allPlayers, effectiveId]);
   const activePricing = activePlayer ? pricingMap.get(activePlayer.id) ?? null : null;

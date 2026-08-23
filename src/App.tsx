@@ -96,9 +96,19 @@ export default function App() {
 
   // Subscribe to Supabase Auth changes
   useEffect(() => {
-    const unsubscribe = subscribeToAuth(async (user) => {
+    const unsubscribe = subscribeToAuth(async (user, event) => {
       setCurrentUser(user);
-      if (user) {
+      // Supabase emette eventi di auth anche senza un vero nuovo login (es.
+      // TOKEN_REFRESHED periodico, o quando il telefono torna in foreground
+      // durante un'asta live). Ricaricare qui i dati da Supabase in quei casi
+      // sovrascriverebbe auctionHistory locale con l'ultimo snapshot salvato
+      // sul server, che può essere più vecchio delle assegnazioni appena
+      // fatte se il save asincrono (vedi l'effect di salvataggio più sotto)
+      // non ha ancora fatto in tempo a propagarle — facendole sparire dalla
+      // console live senza nessun errore visibile. Ricarichiamo solo su un
+      // aggancio vero della sessione (login o mount con sessione già valida).
+      const isRealSessionStart = event === 'INITIAL_SESSION' || event === 'SIGNED_IN';
+      if (user && isRealSessionStart) {
         setIsCloudSyncing(true);
         try {
           // Prima controlla se l'utente è già membro di una lega condivisa
@@ -277,7 +287,11 @@ export default function App() {
     }
 
     const newBid: RosterPlayer = {
-      id: `bid_${Date.now()}`,
+      // Suffisso random oltre al timestamp: due assegnazioni ravvicinate
+      // durante un'asta live veloce possono capitare nello stesso millisecondo,
+      // e un id duplicato romperebbe le key React in HistoryScreen e qualunque
+      // operazione per-id (annulla/modifica/elimina) su entrambe le voci.
+      id: `bid_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
       playerId,
       boughtByTeam,
       cost,
