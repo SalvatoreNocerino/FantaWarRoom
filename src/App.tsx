@@ -336,6 +336,28 @@ export default function App() {
     }));
   };
 
+  // Sostituisce l'intero storico asta con quello letto da un file di rose
+  // reali (Listone Serie A > Importa Risultati Asta) — pensato per
+  // riconciliare il listone quando l'asta è stata condotta interamente o in
+  // parte fuori dall'app, o per correggere assegnazioni perse/sbagliate.
+  // A differenza di handleAssignPlayer non è additivo: il file è la fonte di
+  // verità, quindi rimpiazza tutto (la UI chiede conferma prima di chiamarlo).
+  const handleImportAuctionResults = (assignments: { playerId: string; boughtByTeam: string; cost: number }[]) => {
+    if (!isLeagueAdmin) return;
+    const newHistory: RosterPlayer[] = assignments.map((a, i) => ({
+      id: `bid_${Date.now()}_${i}_${Math.random().toString(36).slice(2, 8)}`,
+      playerId: a.playerId,
+      boughtByTeam: a.boughtByTeam,
+      cost: a.cost,
+      timestamp: Date.now(),
+    }));
+    track('auction_results_imported', { count: newHistory.length });
+    setAppData((prev) => ({
+      ...prev,
+      auctionHistory: newHistory,
+    }));
+  };
+
   const handleSaveLeague = (updatedLeague: LeagueSettings) => {
     if (!isLeagueAdmin) return;
     track('league_settings_saved');
@@ -555,6 +577,7 @@ export default function App() {
             onAddCustomPlayer={handleAddCustomPlayer}
             onUpdateAssignment={handleUpdateAssignment}
             onDeleteAssignment={handleDeleteAssignment}
+            onImportAuctionResults={handleImportAuctionResults}
             onSetPlayerNote={handleSetPlayerNote}
             readOnly={!isLeagueAdmin}
             selectedAuctionPlayerId={selectedAuctionPlayerId}

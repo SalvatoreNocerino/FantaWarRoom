@@ -88,7 +88,7 @@ function toRole(raw: unknown): PlayerRole {
   return 'A';
 }
 
-function toNumber(raw: unknown): number | null {
+export function toNumber(raw: unknown): number | null {
   if (raw === null || raw === undefined || raw === '') return null;
   const n = typeof raw === 'number' ? raw : parseFloat(String(raw).replace(',', '.'));
   return Number.isFinite(n) ? n : null;

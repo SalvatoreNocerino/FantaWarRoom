@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { Player, PlayerRole, LeagueSettings, StrategySettings, RosterPlayer } from '../types';
-import { Database, Plus } from 'lucide-react';
+import { Database, Plus, Upload } from 'lucide-react';
 import { useWarRoomEngine } from '../engine/useWarRoomEngine';
 import { PlayersFilterBar } from './players-database/PlayersFilterBar';
 import { PlayersTable } from './players-database/PlayersTable';
 import { PlayerDetailModal } from './players-database/PlayerDetailModal';
 import { AddPlayerModal } from './players-database/AddPlayerModal';
+import { ImportAuctionResultsModal } from './players-database/ImportAuctionResultsModal';
 import { PageHeader, Button } from './ui';
 
 export type SortKey = 'name' | 'team' | 'basePrice' | 'maxBid' | null;
@@ -22,6 +23,8 @@ interface PlayersDatabaseViewProps {
   onAddCustomPlayer: (player: Player) => void;
   onUpdateAssignment?: (assignmentId: string, boughtByTeam: string, cost: number) => void;
   onDeleteAssignment?: (assignmentId: string) => void;
+  /** Sostituisce l'intero storico asta con quello letto da un file di rose reali. */
+  onImportAuctionResults?: (assignments: { playerId: string; boughtByTeam: string; cost: number }[]) => void;
   onSetPlayerNote: (playerId: string, note: string) => void;
   /** Lega condivisa: i membri vedono le assegnazioni ma non possono modificarle. */
   readOnly?: boolean;
@@ -48,6 +51,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   onAddCustomPlayer,
   onUpdateAssignment,
   onDeleteAssignment,
+  onImportAuctionResults,
   onSetPlayerNote,
   readOnly = false,
   selectedAuctionPlayerId,
@@ -58,6 +62,7 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
   const [search, setSearch] = useState('');
   const [teamFilter, setTeamFilter] = useState<string>('ALL');
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showImportResultsModal, setShowImportResultsModal] = useState(false);
   const [selectedPlayerModal, setSelectedPlayerModal] = useState<Player | null>(null);
   const [sortKey, setSortKey] = useState<SortKey>(null);
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
@@ -129,10 +134,18 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
         title={`Listone Serie A (${allPlayers.length} Giocatori)`}
         subtitle="Listone completo, aggiornato live con l'andamento dell'asta: max bid per i liberi, prezzo pagato per gli aggiudicati. Clicca su un calciatore per la scheda di dettaglio."
         action={
-          <Button onClick={() => setShowAddModal(true)}>
-            <Plus className="w-4 h-4" />
-            <span>Aggiungi Nuovo Giocatore</span>
-          </Button>
+          <div className="flex flex-wrap gap-2 justify-end">
+            {!readOnly && (
+              <Button variant="ghost" onClick={() => setShowImportResultsModal(true)}>
+                <Upload className="w-4 h-4" />
+                <span>Importa Risultati Asta</span>
+              </Button>
+            )}
+            <Button onClick={() => setShowAddModal(true)}>
+              <Plus className="w-4 h-4" />
+              <span>Aggiungi Nuovo Giocatore</span>
+            </Button>
+          </div>
         }
       />
 
@@ -182,6 +195,15 @@ export const PlayersDatabaseView: React.FC<PlayersDatabaseViewProps> = ({
       )}
 
       {showAddModal && <AddPlayerModal onClose={() => setShowAddModal(false)} onAddCustomPlayer={onAddCustomPlayer} />}
+
+      {showImportResultsModal && onImportAuctionResults && (
+        <ImportAuctionResultsModal
+          allPlayers={allPlayers}
+          league={league}
+          onClose={() => setShowImportResultsModal(false)}
+          onConfirm={onImportAuctionResults}
+        />
+      )}
     </div>
   );
 };
