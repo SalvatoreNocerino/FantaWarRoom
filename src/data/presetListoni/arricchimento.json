@@ -2411,6 +2411,18 @@
     },
     "aiForecast": "Nuovo acquisto estivo per la mediana di De Rossi, Sow garantisce esperienza internazionale e titolarita; buon profilo low-cost da rotazione per completare il reparto al fantacalcio."
   },
+  "fcit_4479": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 3,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 5.8,
+      "fm": 5.96
+    }
+  },
   "fcit_6916": {
     "lastYearStats": {
       "appearances": 21,
@@ -5280,18 +5292,6 @@
       "mv": 6.2,
       "fm": 4.94,
       "goalsConceded": 54
-    }
-  },
-  "fcit_4479": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 3,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 5.8,
-      "fm": 5.96
     }
   }
 }
