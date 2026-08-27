@@ -752,19 +752,6 @@
     },
     "aiForecast": "Perno della retro"
   },
-  "fcit_2038": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 32,
-      "goals": 9,
-      "assists": 3,
-      "yellowCards": 2,
-      "redCards": 1,
-      "mv": 5.88,
-      "fm": 6.62
-    },
-    "aiForecast": "Centravanti titolare e punto di riferimento offensivo: garantisce continuità di voto e una dote di 8-10 gol, ottimo terzo slot per l'attacco al fantacalcio."
-  },
   "fcit_5687": {
     "lastYearStats": {
       "appearances": 37,
@@ -5182,18 +5169,6 @@
       "goalsConceded": 0
     }
   },
-  "fcit_5007": {
-    "lastYearStats": {
-      "appearances": 8,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 5.88
-    }
-  },
   "fcit_6889": {
     "lastYearStats": {
       "appearances": 9,
@@ -5292,6 +5267,30 @@
       "mv": 6.2,
       "fm": 4.94,
       "goalsConceded": 54
+    }
+  },
+  "fcit_2038": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 0,
+      "goals": 9,
+      "assists": 3,
+      "yellowCards": 2,
+      "redCards": 1,
+      "mv": 5.88,
+      "fm": 6.62
+    }
+  },
+  "fcit_5007": {
+    "lastYearStats": {
+      "appearances": 8,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 5.88
     }
   }
 }
