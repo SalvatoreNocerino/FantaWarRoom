@@ -752,6 +752,18 @@
     },
     "aiForecast": "Perno della retro"
   },
+  "fcit_2038": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 0,
+      "goals": 9,
+      "assists": 3,
+      "yellowCards": 2,
+      "redCards": 1,
+      "mv": 5.88,
+      "fm": 6.62
+    }
+  },
   "fcit_5687": {
     "lastYearStats": {
       "appearances": 37,
@@ -3560,18 +3572,6 @@
       "fm": 5.67
     }
   },
-  "fcit_6206": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.8,
-      "fm": 6.05
-    }
-  },
   "fcit_6506": {
     "lastYearStats": {
       "appearances": 1,
@@ -5169,6 +5169,18 @@
       "goalsConceded": 0
     }
   },
+  "fcit_5007": {
+    "lastYearStats": {
+      "appearances": 8,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 5.88
+    }
+  },
   "fcit_6889": {
     "lastYearStats": {
       "appearances": 9,
@@ -5269,28 +5281,28 @@
       "goalsConceded": 54
     }
   },
-  "fcit_2038": {
+  "fcit_6145": {
     "lastYearStats": {
-      "appearances": 34,
+      "appearances": 17,
       "starterAppearances": 0,
-      "goals": 9,
-      "assists": 3,
+      "goals": 1,
+      "assists": 1,
       "yellowCards": 2,
-      "redCards": 1,
-      "mv": 5.88,
-      "fm": 6.62
+      "redCards": 0,
+      "mv": 5.82,
+      "fm": 6
     }
   },
-  "fcit_5007": {
+  "fcit_6206": {
     "lastYearStats": {
-      "appearances": 8,
+      "appearances": 22,
       "starterAppearances": 0,
-      "goals": 0,
+      "goals": 2,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "mv": 6,
-      "fm": 5.88
+      "mv": 5.8,
+      "fm": 6.05
     }
   }
 }
