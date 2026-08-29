@@ -2032,8 +2032,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "23-31 FM",
-    "fvm": 27
+    "fairValueBracket": "20-26 FM",
+    "fvm": 23
   },
   {
     "id": "fcit_5514",
@@ -2238,8 +2238,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "28-38 FM",
-    "fvm": 33,
+    "fairValueBracket": "26-35 FM",
+    "fvm": 30,
     "presenze": 14,
     "mv": 5.71,
     "fm": 5.93,
@@ -2294,6 +2294,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-35 FM",
     "fvm": 30
+  },
+  {
+    "id": "fcit_7612",
+    "name": "Bobcek",
+    "role": "A",
+    "team": "Frosinone",
+    "basePrice": 9,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "32-44 FM",
+    "fvm": 38
   },
   {
     "id": "fcit_6046",
@@ -2678,8 +2691,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "21-29 FM",
-    "fvm": 25
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
     "id": "fcit_5427",
@@ -3073,8 +3086,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "19-25 FM",
-    "fvm": 22
+    "fairValueBracket": "13-17 FM",
+    "fvm": 15
   },
   {
     "id": "fcit_5791",
@@ -4132,8 +4145,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "14-18 FM",
-    "fvm": 16,
+    "fairValueBracket": "10-14 FM",
+    "fvm": 12,
     "presenze": 23,
     "mv": 5.8,
     "fm": 5.8,
@@ -4343,8 +4356,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "13-17 FM",
-    "fvm": 15,
+    "fairValueBracket": "12-16 FM",
+    "fvm": 14,
     "presenze": 30,
     "mv": 5.82,
     "fm": 5.82,
@@ -4874,8 +4887,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "15-21 FM",
-    "fvm": 18
+    "fairValueBracket": "9-12 FM",
+    "fvm": 10
   },
   {
     "id": "fcit_7523",
@@ -4887,8 +4900,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fairValueBracket": "17-23 FM",
+    "fvm": 20
   },
   {
     "id": "fcit_2170",
@@ -5609,8 +5622,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "14-18 FM",
-    "fvm": 16
+    "fairValueBracket": "14-20 FM",
+    "fvm": 17
   },
   {
     "id": "fcit_7537",
@@ -5841,8 +5854,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "10-14 FM",
-    "fvm": 12
+    "fairValueBracket": "9-13 FM",
+    "fvm": 11
   },
   {
     "id": "fcit_5838",
@@ -5861,14 +5874,14 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "id": "fcit_6252",
     "name": "Folorunsho",
     "role": "C",
-    "team": "Napoli",
+    "team": "Monza",
     "basePrice": 4,
     "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "4-6 FM",
-    "fvm": 5,
+    "fairValueBracket": "14-20 FM",
+    "fvm": 17,
     "presenze": 26,
     "mv": 6.04,
     "fm": 6.21,
@@ -6261,8 +6274,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "9-12 FM",
-    "fvm": 10
+    "fairValueBracket": "4-6 FM",
+    "fvm": 5
   },
   {
     "id": "fcit_4375",
@@ -6720,8 +6733,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "8-10 FM",
-    "fvm": 9,
+    "fairValueBracket": "12-16 FM",
+    "fvm": 14,
     "presenze": 1,
     "mv": 6,
     "fm": 6,
@@ -6751,8 +6764,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "6-8 FM",
-    "fvm": 7
+    "fairValueBracket": "3-5 FM",
+    "fvm": 4
   },
   {
     "id": "fcit_5131",
@@ -9090,6 +9103,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 1
   },
   {
+    "id": "fcit_7396",
+    "name": "Macchioni",
+    "role": "D",
+    "team": "Sassuolo",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
+  },
+  {
     "id": "fcit_7574",
     "name": "Foe Ondoa",
     "role": "C",
@@ -9112,8 +9138,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "2-2 FM",
-    "fvm": 2
+    "fairValueBracket": "10-14 FM",
+    "fvm": 12
   },
   {
     "id": "fcit_7599",

@@ -3428,6 +3428,18 @@
       "fm": 5.96
     }
   },
+  "fcit_6145": {
+    "lastYearStats": {
+      "appearances": 17,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.82,
+      "fm": 6
+    }
+  },
   "fcit_22": {
     "lastYearStats": {
       "appearances": 34,
@@ -3572,6 +3584,18 @@
       "fm": 5.67
     }
   },
+  "fcit_6206": {
+    "lastYearStats": {
+      "appearances": 22,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.8,
+      "fm": 6.05
+    }
+  },
   "fcit_6506": {
     "lastYearStats": {
       "appearances": 1,
@@ -3702,18 +3726,6 @@
       "redCards": 0,
       "mv": 6.1,
       "fm": 6.52
-    }
-  },
-  "fcit_6252": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.21
     }
   },
   "fcit_7162": {
@@ -5281,28 +5293,16 @@
       "goalsConceded": 54
     }
   },
-  "fcit_6145": {
+  "fcit_6252": {
     "lastYearStats": {
-      "appearances": 17,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.82,
-      "fm": 6
-    }
-  },
-  "fcit_6206": {
-    "lastYearStats": {
-      "appearances": 22,
+      "appearances": 26,
       "starterAppearances": 0,
       "goals": 2,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 5.8,
-      "fm": 6.05
+      "mv": 6.04,
+      "fm": 6.21
     }
   }
 }
