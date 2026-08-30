@@ -674,19 +674,6 @@
     },
     "aiForecast": "Acquistato dalla Roma per altern"
   },
-  "fcit_4463": {
-    "lastYearStats": {
-      "appearances": 36,
-      "starterAppearances": 34,
-      "goals": 7,
-      "assists": 4,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.88
-    },
-    "aiForecast": "Riscattato dall'Inter e punto fermo nell'attacco di Pisacane: ottima garanzia di titolarità e bonus regolari, ideale come 3° slot per completare il vostro reparto."
-  },
   "fcit_5800": {
     "lastYearStats": {
       "appearances": 32,
@@ -3704,18 +3691,6 @@
       "fm": 5.71
     }
   },
-  "fcit_5453": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 3,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6.18
-    }
-  },
   "fcit_4199": {
     "lastYearStats": {
       "appearances": 21,
@@ -3726,6 +3701,18 @@
       "redCards": 0,
       "mv": 6.1,
       "fm": 6.52
+    }
+  },
+  "fcit_6252": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.04,
+      "fm": 6.21
     }
   },
   "fcit_7162": {
@@ -5293,16 +5280,40 @@
       "goalsConceded": 54
     }
   },
-  "fcit_6252": {
+  "fcit_4463": {
     "lastYearStats": {
-      "appearances": 26,
+      "appearances": 36,
       "starterAppearances": 0,
-      "goals": 2,
+      "goals": 7,
+      "assists": 4,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.88
+    }
+  },
+  "fcit_4179": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
       "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 0,
+      "fm": 0
+    }
+  },
+  "fcit_5453": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 3,
       "yellowCards": 3,
       "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.21
+      "mv": 6,
+      "fm": 6.18
     }
   }
 }
