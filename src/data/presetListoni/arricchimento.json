@@ -674,6 +674,18 @@
     },
     "aiForecast": "Acquistato dalla Roma per altern"
   },
+  "fcit_4463": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 0,
+      "goals": 7,
+      "assists": 4,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.88
+    }
+  },
   "fcit_5800": {
     "lastYearStats": {
       "appearances": 32,
@@ -1093,6 +1105,18 @@
       "fm": 0
     },
     "aiForecast": "Arriva a Parma per ril"
+  },
+  "fcit_4179": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 0,
+      "fm": 0
+    }
   },
   "fcit_5526": {
     "lastYearStats": {
@@ -3343,18 +3367,6 @@
       "fm": 5.96
     }
   },
-  "fcit_6827": {
-    "lastYearStats": {
-      "appearances": 10,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.8,
-      "fm": 6.15
-    }
-  },
   "fcit_7198": {
     "lastYearStats": {
       "appearances": 30,
@@ -3424,18 +3436,6 @@
       "yellowCards": 2,
       "redCards": 0,
       "mv": 5.82,
-      "fm": 6
-    }
-  },
-  "fcit_22": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 2,
-      "yellowCards": 6,
-      "redCards": 1,
-      "mv": 5.97,
       "fm": 6
     }
   },
@@ -3689,6 +3689,18 @@
       "redCards": 1,
       "mv": 5.64,
       "fm": 5.71
+    }
+  },
+  "fcit_5453": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 3,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 6.18
     }
   },
   "fcit_4199": {
@@ -4337,18 +4349,6 @@
       "redCards": 0,
       "mv": 0,
       "fm": 0
-    }
-  },
-  "fcit_6896": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.96,
-      "fm": 5.96
     }
   },
   "fcit_6815": {
@@ -5044,18 +5044,6 @@
       "goalsConceded": 0
     }
   },
-  "fcit_7260": {
-    "lastYearStats": {
-      "appearances": 9,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 5.94,
-      "fm": 5.78
-    }
-  },
   "fcit_6981": {
     "lastYearStats": {
       "appearances": 7,
@@ -5280,40 +5268,64 @@
       "goalsConceded": 54
     }
   },
-  "fcit_4463": {
+  "fcit_6827": {
     "lastYearStats": {
-      "appearances": 36,
+      "appearances": 10,
       "starterAppearances": 0,
-      "goals": 7,
-      "assists": 4,
-      "yellowCards": 6,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.88
+      "mv": 5.8,
+      "fm": 6.15
     }
   },
-  "fcit_4179": {
+  "fcit_22": {
     "lastYearStats": {
-      "appearances": 0,
+      "appearances": 34,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 2,
+      "yellowCards": 6,
+      "redCards": 1,
+      "mv": 5.97,
+      "fm": 6
+    }
+  },
+  "fcit_6896": {
+    "lastYearStats": {
+      "appearances": 14,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.96,
+      "fm": 5.96
+    }
+  },
+  "fcit_7260": {
+    "lastYearStats": {
+      "appearances": 9,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 5.94,
+      "fm": 5.78
+    }
+  },
+  "fcit_6826": {
+    "lastYearStats": {
+      "appearances": 1,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "mv": 0,
-      "fm": 0
-    }
-  },
-  "fcit_5453": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 3,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6.18
+      "mv": 5,
+      "fm": 5
     }
   }
 }
