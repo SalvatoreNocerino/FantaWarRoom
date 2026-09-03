@@ -3756,6 +3756,24 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 25
   },
   {
+    "id": "fcit_795",
+    "name": "El Shaarawy",
+    "role": "C",
+    "team": "Genoa",
+    "basePrice": 7,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "21-29 FM",
+    "fvm": 25,
+    "presenze": 18,
+    "mv": 6.14,
+    "fm": 6.33,
+    "goals": 1,
+    "assists": 2
+  },
+  {
     "id": "fcit_2640",
     "name": "Kolasinac",
     "role": "D",
@@ -3980,9 +3998,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "C",
     "team": "Como",
     "basePrice": 5,
-    "expectedFantaAvg": 6.6,
+    "expectedFantaAvg": 6.1,
     "expectedGoalsAssists": "N/A",
-    "tier": 2,
+    "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "26-35 FM",
     "fvm": 30
@@ -8104,6 +8122,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 5
   },
   {
+    "id": "fcit_7627",
+    "name": "Enem",
+    "role": "A",
+    "team": "Bologna",
+    "basePrice": 2,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "3-5 FM",
+    "fvm": 4
+  },
+  {
     "id": "fcit_2297",
     "name": "Rossi F.",
     "role": "P",
@@ -9674,5 +9705,18 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "3-3 FM",
     "fvm": 3
+  },
+  {
+    "id": "fcit_7626",
+    "name": "Pompei",
+    "role": "P",
+    "team": "Atalanta",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
   }
 ];
