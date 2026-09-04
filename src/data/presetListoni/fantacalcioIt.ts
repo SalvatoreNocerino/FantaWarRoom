@@ -5391,6 +5391,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 12
   },
   {
+    "id": "fcit_2169",
+    "name": "Rodriguez R.",
+    "role": "D",
+    "team": "Torino",
+    "basePrice": 5,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "10-14 FM",
+    "fvm": 12
+  },
+  {
     "id": "fcit_5578",
     "name": "Kossounou",
     "role": "D",
@@ -6680,6 +6693,24 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fm": 6.26,
     "goals": 4,
     "assists": 1
+  },
+  {
+    "id": "fcit_6047",
+    "name": "Ehizibue",
+    "role": "D",
+    "team": "Genoa",
+    "basePrice": 4,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "9-12 FM",
+    "fvm": 10,
+    "presenze": 26,
+    "mv": 5.83,
+    "fm": 5.96,
+    "goals": 2,
+    "assists": 0
   },
   {
     "id": "fcit_6024",
