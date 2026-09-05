@@ -4047,6 +4047,18 @@
       "fm": 6.26
     }
   },
+  "fcit_6047": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.83,
+      "fm": 5.96
+    }
+  },
   "fcit_6024": {
     "lastYearStats": {
       "appearances": 18,
@@ -5406,18 +5418,6 @@
       "redCards": 0,
       "mv": 5,
       "fm": 5
-    }
-  },
-  "fcit_6047": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.83,
-      "fm": 5.96
     }
   }
 }
