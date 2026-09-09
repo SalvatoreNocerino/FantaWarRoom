@@ -4770,6 +4770,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fvm": 19
   },
   {
+    "id": "fcit_6319",
+    "name": "Leite",
+    "role": "D",
+    "team": "Lazio",
+    "basePrice": 6,
+    "expectedFantaAvg": 6.6,
+    "expectedGoalsAssists": "N/A",
+    "tier": 2,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "12-16 FM",
+    "fvm": 14
+  },
+  {
     "id": "fcit_4887",
     "name": "Bellanova",
     "role": "D",
