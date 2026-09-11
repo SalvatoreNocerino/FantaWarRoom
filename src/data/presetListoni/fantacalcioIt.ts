@@ -9775,5 +9775,18 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
     "fvm": 1
+  },
+  {
+    "id": "fcit_7629",
+    "name": "Libra",
+    "role": "C",
+    "team": "Bologna",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
   }
 ];
