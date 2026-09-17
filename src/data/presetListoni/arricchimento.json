@@ -5419,5 +5419,17 @@
       "mv": 5,
       "fm": 5
     }
+  },
+  "fcit_5850": {
+    "lastYearStats": {
+      "appearances": 10,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.75,
+      "fm": 5.75
+    }
   }
 }

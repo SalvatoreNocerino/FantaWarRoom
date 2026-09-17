@@ -529,8 +529,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "88-118 FM",
-    "fvm": 103,
+    "fairValueBracket": "82-112 FM",
+    "fvm": 97,
     "presenze": 17,
     "mv": 6.26,
     "fm": 7.24,
@@ -974,8 +974,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "33-45 FM",
-    "fvm": 39
+    "fairValueBracket": "60-81 FM",
+    "fvm": 70
   },
   {
     "id": "fcit_5694",
@@ -3755,9 +3755,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "C",
     "team": "Sassuolo",
     "basePrice": 5,
-    "expectedFantaAvg": 6.1,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 3,
+    "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "14-18 FM",
     "fvm": 16,
@@ -9788,5 +9788,23 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
     "fvm": 1
+  },
+  {
+    "id": "fcit_5850",
+    "name": "Lovric",
+    "role": "C",
+    "team": "Udinese",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1,
+    "presenze": 10,
+    "mv": 5.75,
+    "fm": 5.75,
+    "goals": 0,
+    "assists": 1
   }
 ];
