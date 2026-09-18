@@ -1480,9 +1480,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "A",
     "team": "Frosinone",
     "basePrice": 7,
-    "expectedFantaAvg": 6.1,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 3,
+    "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "51-69 FM",
     "fvm": 60
@@ -9806,5 +9806,18 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fm": 5.75,
     "goals": 0,
     "assists": 1
+  },
+  {
+    "id": "fcit_7647",
+    "name": "Esteban",
+    "role": "A",
+    "team": "Lecce",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
   }
 ];
