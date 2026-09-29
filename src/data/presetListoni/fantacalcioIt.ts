@@ -2460,9 +2460,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "P",
     "team": "Juventus",
     "basePrice": 9,
-    "expectedFantaAvg": 6.6,
+    "expectedFantaAvg": 7.2,
     "expectedGoalsAssists": "N/A",
-    "tier": 2,
+    "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "9-12 FM",
     "fvm": 10,
@@ -8297,9 +8297,9 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "role": "P",
     "team": "Fiorentina",
     "basePrice": 1,
-    "expectedFantaAvg": 6.1,
+    "expectedFantaAvg": 6.6,
     "expectedGoalsAssists": "N/A",
-    "tier": 3,
+    "tier": 2,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
     "fvm": 1,
@@ -9832,5 +9832,18 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "fm": 5.75,
     "goals": 0,
     "assists": 1
+  },
+  {
+    "id": "fcit_283",
+    "name": "Neto",
+    "role": "P",
+    "team": "Juventus",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
   }
 ];
