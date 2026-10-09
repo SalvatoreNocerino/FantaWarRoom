@@ -7435,6 +7435,24 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "assists": 1
   },
   {
+    "id": "fcit_2525",
+    "name": "Darmian",
+    "role": "D",
+    "team": "Bologna",
+    "basePrice": 3,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "6-8 FM",
+    "fvm": 7,
+    "presenze": 5,
+    "mv": 6,
+    "fm": 6,
+    "goals": 0,
+    "assists": 0
+  },
+  {
     "id": "fcit_5498",
     "name": "Casale",
     "role": "D",

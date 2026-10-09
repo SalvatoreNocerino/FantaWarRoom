@@ -5431,5 +5431,17 @@
       "mv": 5.75,
       "fm": 5.75
     }
+  },
+  "fcit_2525": {
+    "lastYearStats": {
+      "appearances": 5,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 6
+    }
   }
 }
