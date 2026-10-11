@@ -9852,6 +9852,19 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "assists": 1
   },
   {
+    "id": "fcit_7608",
+    "name": "Wiafe",
+    "role": "C",
+    "team": "Genoa",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1
+  },
+  {
     "id": "fcit_7633",
     "name": "Obric",
     "role": "D",
@@ -9876,5 +9889,23 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "notes": "Aggiornato automaticamente da fantacalcio.it",
     "fairValueBracket": "1-1 FM",
     "fvm": 1
+  },
+  {
+    "id": "fcit_6125",
+    "name": "Vasquez D.",
+    "role": "P",
+    "team": "Roma",
+    "basePrice": 1,
+    "expectedFantaAvg": 6.1,
+    "expectedGoalsAssists": "N/A",
+    "tier": 3,
+    "notes": "Aggiornato automaticamente da fantacalcio.it",
+    "fairValueBracket": "1-1 FM",
+    "fvm": 1,
+    "presenze": 0,
+    "mv": 0,
+    "fm": 0,
+    "goals": 0,
+    "assists": 0
   }
 ];
