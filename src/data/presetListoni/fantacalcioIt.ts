@@ -176,8 +176,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "170-230 FM",
-    "fvm": 200,
+    "fairValueBracket": "162-218 FM",
+    "fvm": 190,
     "presenze": 33,
     "mv": 6.21,
     "fm": 7.44,
@@ -346,8 +346,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 1,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "149-201 FM",
-    "fvm": 175
+    "fairValueBracket": "153-207 FM",
+    "fvm": 180
   },
   {
     "id": "fcit_7523",
@@ -359,8 +359,8 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
     "expectedGoalsAssists": "N/A",
     "tier": 3,
     "notes": "Aggiornato automaticamente da fantacalcio.it",
-    "fairValueBracket": "119-161 FM",
-    "fvm": 140
+    "fairValueBracket": "145-195 FM",
+    "fvm": 170
   },
   {
     "id": "fcit_7078",
