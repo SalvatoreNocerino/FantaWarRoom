@@ -51,19 +51,6 @@
     },
     "aiForecast": "Top di reparto e fulcro del Como di Fabregas: garantisce titolarità, bonus pesanti e ottimi voti. Da acquistare come 1° slot a centrocampo a cifre importanti."
   },
-  "fcit_2194": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 20,
-      "goals": 9,
-      "assists": 4,
-      "yellowCards": 7,
-      "redCards": 0,
-      "mv": 6.52,
-      "fm": 7.64
-    },
-    "aiForecast": "Regista e rigorista principe dell'Inter, garantisce bonus pesanti e ottima media voto: resta un top assoluto da primo slot a centrocampo per il fantacalcio."
-  },
   "fcit_2379": {
     "lastYearStats": {
       "appearances": 29,
@@ -76,6 +63,19 @@
       "fm": 6.98
     },
     "aiForecast": "Perno intoccabile della mediana del Milan, garantisce titolarità e ottimi bonus pesanti da secondo/terzo slot alto: profilo affidabile su cui puntare forte all'asta."
+  },
+  "fcit_2423": {
+    "lastYearStats": {
+      "appearances": 27,
+      "starterAppearances": 0,
+      "goals": 8,
+      "assists": 4,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6.15,
+      "fm": 7.07
+    },
+    "aiForecast": "Top di reparto al fantacalcio: titolarità garantita, bonus pesanti tra gol e assist e rigorista designato nel Milan. Da acquistare come primo slot di centrocampo."
   },
   "fcit_7017": {
     "lastYearStats": {
@@ -90,18 +90,18 @@
     },
     "aiForecast": "Punto di riferimento offensivo di"
   },
-  "fcit_2423": {
+  "fcit_2194": {
     "lastYearStats": {
-      "appearances": 27,
-      "starterAppearances": 0,
-      "goals": 8,
+      "appearances": 22,
+      "starterAppearances": 20,
+      "goals": 9,
       "assists": 4,
-      "yellowCards": 0,
+      "yellowCards": 7,
       "redCards": 0,
-      "mv": 6.15,
-      "fm": 7.07
+      "mv": 6.52,
+      "fm": 7.64
     },
-    "aiForecast": "Top di reparto al fantacalcio: titolarità garantita, bonus pesanti tra gol e assist e rigorista designato nel Milan. Da acquistare come primo slot di centrocampo."
+    "aiForecast": "Regista e rigorista principe dell'Inter, garantisce bonus pesanti e ottima media voto: resta un top assoluto da primo slot a centrocampo per il fantacalcio."
   },
   "fcit_6435": {
     "lastYearStats": {
@@ -129,18 +129,18 @@
     },
     "aiForecast": "Punto fermo dell'attacco del Napoli dopo il riscatto: garantisce titolarità e doppia cifra, da trattare come 1°/2° slot alto per l'asta 2026/27."
   },
-  "fcit_254": {
+  "fcit_2517": {
     "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 0,
-      "goals": 7,
-      "assists": 17,
-      "yellowCards": 3,
+      "appearances": 17,
+      "starterAppearances": 13,
+      "goals": 5,
+      "assists": 2,
+      "yellowCards": 1,
       "redCards": 0,
-      "mv": 6.6,
-      "fm": 7.64
+      "mv": 6.26,
+      "fm": 7.24
     },
-    "aiForecast": "Top di reparto assoluto al fantacalcio: titolare inamovibile a tutta fascia, garanzia costante di bonus tra gol, assist e piazzati. Da prendere assolutamente come"
+    "aiForecast": "Resta a Napoli con Allegri: top per qualità e piazzati ma occhio alla tenuta fisica e al turnover, da prendere come primo-secondo slot a prezzo ragionato."
   },
   "fcit_7126": {
     "lastYearStats": {
@@ -155,6 +155,19 @@
     },
     "aiForecast": "Ottimo secondo/terzo slot a centrocampo: tanta qualità ed estro sulla trequarti di Fabregas, garantisce titolarità e bonus costanti sia con i gol che con gli assist. [1.1.5, 1.1."
   },
+  "fcit_254": {
+    "lastYearStats": {
+      "appearances": 35,
+      "starterAppearances": 0,
+      "goals": 7,
+      "assists": 17,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.6,
+      "fm": 7.64
+    },
+    "aiForecast": "Top di reparto assoluto al fantacalcio: titolare inamovibile a tutta fascia, garanzia costante di bonus tra gol, assist e piazzati. Da prendere assolutamente come"
+  },
   "fcit_632": {
     "lastYearStats": {
       "appearances": 26,
@@ -167,45 +180,6 @@
       "fm": 5.96
     },
     "aiForecast": "Capitano e punto fermo della Lazio di Gattuso, cerca riscatto dopo una stagione opaca: all asta resta un secondo/terzo slot di centrocampo con bonus nei piedi."
-  },
-  "fcit_2517": {
-    "lastYearStats": {
-      "appearances": 17,
-      "starterAppearances": 13,
-      "goals": 5,
-      "assists": 2,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.26,
-      "fm": 7.24
-    },
-    "aiForecast": "Resta a Napoli con Allegri: top per qualità e piazzati ma occhio alla tenuta fisica e al turnover, da prendere come primo-secondo slot a prezzo ragionato."
-  },
-  "fcit_4777": {
-    "lastYearStats": {
-      "appearances": 33,
-      "starterAppearances": 0,
-      "goals": 10,
-      "assists": 2,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.39,
-      "fm": 7.26
-    },
-    "aiForecast": "Top di reparto assoluto con ottimo vizio del gol e tempi di inserimento perfetti, punto fermo del centrocppo partenopeo e garanzia di bonus pesante all'asta fantacalcio."
-  },
-  "fcit_5734": {
-    "lastYearStats": {
-      "appearances": 32,
-      "starterAppearances": 28,
-      "goals": 6,
-      "assists": 5,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.12,
-      "fm": 6.83
-    },
-    "aiForecast": "Titolare affidabile sulla trequarti giallorossa: garantisce minutaggio e un buon mix di gol e assist, ottimo secondo/terzo slot per l'attacco all'asta fantacalcio."
   },
   "fcit_7472": {
     "lastYearStats": {
@@ -231,6 +205,83 @@
     },
     "aiForecast": "Giovane in forte ascesa e fresco di rinnovo, parte come prima alternativa offensiva: ottimo colpo da rotazione e quarto slot che garantisce buon minutaggio e diversi bonus a voto."
   },
+  "fcit_5734": {
+    "lastYearStats": {
+      "appearances": 32,
+      "starterAppearances": 28,
+      "goals": 6,
+      "assists": 5,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.12,
+      "fm": 6.83
+    },
+    "aiForecast": "Titolare affidabile sulla trequarti giallorossa: garantisce minutaggio e un buon mix di gol e assist, ottimo secondo/terzo slot per l'attacco all'asta fantacalcio."
+  },
+  "fcit_2167": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 26,
+      "goals": 10,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.06,
+      "fm": 6.76
+    },
+    "aiForecast": "Rigorista e punto fermo dell'attacco rossoblù, garantisce costanza di rendimento e doppia cifra di gol: all'asta del fantacalcio resta un primo slot assoluto di centrocampo."
+  },
+  "fcit_4777": {
+    "lastYearStats": {
+      "appearances": 33,
+      "starterAppearances": 0,
+      "goals": 10,
+      "assists": 2,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.39,
+      "fm": 7.26
+    },
+    "aiForecast": "Top di reparto assoluto con ottimo vizio del gol e tempi di inserimento perfetti, punto fermo del centrocppo partenopeo e garanzia di bonus pesante all'asta fantacalcio."
+  },
+  "fcit_4463": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 0,
+      "goals": 7,
+      "assists": 4,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.88
+    }
+  },
+  "fcit_2788": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 25,
+      "goals": 4,
+      "assists": 3,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 6.33,
+      "fm": 6.81
+    },
+    "aiForecast": "Pilastro insostituibile della retroguardia bianconera: garantisce ottimi voti e pericolosità sui piazzati, confermandosi un top di reparto e primo slot assoluto all'asta."
+  },
+  "fcit_6398": {
+    "lastYearStats": {
+      "appearances": 27,
+      "starterAppearances": 18,
+      "goals": 5,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6.04,
+      "fm": 6.63
+    },
+    "aiForecast": "Esterno offensivo di buona rotazione: se listato centrocampista è un ottimo 4°-5° slot per garantire presenze e qualche bonus sporadico a cifre contenute."
+  },
   "fcit_6397": {
     "lastYearStats": {
       "appearances": 0,
@@ -252,31 +303,6 @@
       "redCards": 0
     },
     "aiForecast": "Nuovo arrivo in prestito dal Real Madrid, porta grande classe sulla trequarti di Grosso: scommessa di lusso all'asta estiva, ottimo jolly d'attacco da ruotare a centrocampo."
-  },
-  "fcit_2167": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 26,
-      "goals": 10,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.06,
-      "fm": 6.76
-    },
-    "aiForecast": "Rigorista e punto fermo dell'attacco rossoblù, garantisce costanza di rendimento e doppia cifra di gol: all'asta del fantacalcio resta un primo slot assoluto di centrocampo."
-  },
-  "fcit_4463": {
-    "lastYearStats": {
-      "appearances": 36,
-      "starterAppearances": 0,
-      "goals": 7,
-      "assists": 4,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.88
-    }
   },
   "fcit_6869": {
     "lastYearStats": {
@@ -314,97 +340,6 @@
       "fm": 6.71
     },
     "aiForecast": "Perno intoccabile della mediana nerazzurra: garantisce voti eccellenti, titolarità fissa e continuità di bonus leggeri. Va acquistato come primo slot a centrocampo a circa il 7-8% del budget."
-  },
-  "fcit_2788": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 25,
-      "goals": 4,
-      "assists": 3,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 6.33,
-      "fm": 6.81
-    },
-    "aiForecast": "Pilastro insostituibile della retroguardia bianconera: garantisce ottimi voti e pericolosità sui piazzati, confermandosi un top di reparto e primo slot assoluto all'asta."
-  },
-  "fcit_5951": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Tornato alla Juventus a titolo definitivo: parte dietro nelle gerarchie dell attacco ma e un jolly prezioso a gara in corso da prendere come 4 slot a prezzo contenuto."
-  },
-  "fcit_6398": {
-    "lastYearStats": {
-      "appearances": 27,
-      "starterAppearances": 18,
-      "goals": 5,
-      "assists": 1,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.63
-    },
-    "aiForecast": "Esterno offensivo di buona rotazione: se listato centrocampista è un ottimo 4°-5° slot per garantire presenze e qualche bonus sporadico a cifre contenute."
-  },
-  "fcit_4510": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 0,
-      "goals": 9,
-      "assists": 3,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.88,
-      "fm": 6.86
-    },
-    "aiForecast": "Top di reparto imprescindibile: garantisce bonus pesanti, titolarità fissa e ottimi voti, da acquistare come primo slot all'asta."
-  },
-  "fcit_7181": {
-    "aiForecast": "Laterale a tutta fascia con propensione al bonus offensivo; titolare di fascia della Roma da prendere come ottimo terzo slot per la difesa al fanta.",
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 0,
-      "goals": 5,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 2,
-      "mv": 6.12,
-      "fm": 6.47
-    }
-  },
-  "fcit_2061": {
-    "lastYearStats": {
-      "appearances": 32,
-      "starterAppearances": 0,
-      "goals": 11,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.08,
-      "fm": 7.09
-    },
-    "aiForecast": "Perno dell attacco del nuovo Torino di Abate, Simeone parte titolare indiscusso ed e un ottimo 2 o 3 slot per il fanta garantendo buona continuita e puntando alla doppia cifra."
-  },
-  "fcit_7551": {
-    "aiForecast": "Nuovo acquisto e titolare designato sulla trequarti del Frosinone: ottima visione di gioco, batte i piazzati ed è una scommessa low-cost molto intrigante da bonus per completare il centrocampo all'asta."
-  },
-  "fcit_2097": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 0,
-      "goals": 8,
-      "assists": 1,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 5.88,
-      "fm": 6.77
-    }
   },
   "fcit_152": {
     "lastYearStats": {
@@ -444,19 +379,31 @@
       "fm": 6.5
     }
   },
-  "fcit_5841": {
+  "fcit_4510": {
     "lastYearStats": {
-      "appearances": 38,
-      "starterAppearances": 38,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
+      "appearances": 28,
+      "starterAppearances": 0,
+      "goals": 9,
+      "assists": 3,
+      "yellowCards": 5,
       "redCards": 0,
-      "mv": 6.26,
-      "fm": 5.45,
-      "goalsConceded": 31
+      "mv": 5.88,
+      "fm": 6.86
     },
-    "aiForecast": "Titolare inamovibile e certezza assoluta tra i pali della Roma: top di reparto all'asta, garantisce ottima media voto e molti clean sheet."
+    "aiForecast": "Top di reparto imprescindibile: garantisce bonus pesanti, titolarità fissa e ottimi voti, da acquistare come primo slot all'asta."
+  },
+  "fcit_7181": {
+    "aiForecast": "Laterale a tutta fascia con propensione al bonus offensivo; titolare di fascia della Roma da prendere come ottimo terzo slot per la difesa al fanta.",
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 0,
+      "goals": 5,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 2,
+      "mv": 6.12,
+      "fm": 6.47
+    }
   },
   "fcit_6646": {
     "lastYearStats": {
@@ -471,18 +418,21 @@
     },
     "aiForecast": "Attaccante mobile di raccordo utile per completare il reparto: garantisce presenze costanti e buoni voti, ma con bonus moderati (6-8 gol). Ottimo 3°-4° slot a costi contenuti."
   },
-  "fcit_6684": {
+  "fcit_2061": {
     "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 27,
-      "goals": 5,
-      "assists": 3,
+      "appearances": 32,
+      "starterAppearances": 0,
+      "goals": 11,
+      "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "mv": 6.05,
-      "fm": 6.61
+      "mv": 6.08,
+      "fm": 7.09
     },
-    "aiForecast": "Titolare affidabile e incursore pericoloso: ottimo per completare il centrocampo, garantisce voti costanti e qualche bonus pesante."
+    "aiForecast": "Perno dell attacco del nuovo Torino di Abate, Simeone parte titolare indiscusso ed e un ottimo 2 o 3 slot per il fanta garantendo buona continuita e puntando alla doppia cifra."
+  },
+  "fcit_7551": {
+    "aiForecast": "Nuovo acquisto e titolare designato sulla trequarti del Frosinone: ottima visione di gioco, batte i piazzati ed è una scommessa low-cost molto intrigante da bonus per completare il centrocampo all'asta."
   },
   "fcit_4896": {
     "lastYearStats": {
@@ -522,19 +472,6 @@
     },
     "aiForecast": "Jolly offensivo di qualità ed esperienza nel Bologna: ottimo 4°-5° slot di centrocampo, garantisce presenze a voto, bonus sporadici e piazzati."
   },
-  "fcit_5559": {
-    "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 31,
-      "goals": 6,
-      "assists": 4,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 6.34,
-      "fm": 6.91
-    },
-    "aiForecast": "Capitano e punto fermo del"
-  },
   "fcit_6530": {
     "lastYearStats": {
       "appearances": 0,
@@ -545,6 +482,17 @@
       "redCards": 0
     },
     "aiForecast": "Protagonista della promozione con 15"
+  },
+  "fcit_5951": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Tornato alla Juventus a titolo definitivo: parte dietro nelle gerarchie dell attacco ma e un jolly prezioso a gara in corso da prendere come 4 slot a prezzo contenuto."
   },
   "fcit_6482": {
     "lastYearStats": {
@@ -560,18 +508,6 @@
     },
     "aiForecast": "Secondo di Provedel alla Lazio, affidabile quando chiamato in causa ma con pochissimo spazio se il titolare è integro. Da prendere all'asta esclusivamente in coppia con il primo portiere per completare il reparto."
   },
-  "fcit_5620": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.91,
-      "fm": 5.8
-    }
-  },
   "fcit_536": {
     "lastYearStats": {
       "appearances": 33,
@@ -585,6 +521,107 @@
     },
     "aiForecast": "Titolare affidabile sulla fascia destra e prezioso rifinitore da 3° slot a centrocampo, con ottima regolarità di voto anche se meno esplosivo in zona gol."
   },
+  "fcit_6684": {
+    "lastYearStats": {
+      "appearances": 31,
+      "starterAppearances": 27,
+      "goals": 5,
+      "assists": 3,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.05,
+      "fm": 6.61
+    },
+    "aiForecast": "Titolare affidabile e incursore pericoloso: ottimo per completare il centrocampo, garantisce voti costanti e qualche bonus pesante."
+  },
+  "fcit_6531": {
+    "lastYearStats": {
+      "appearances": 1,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.5,
+      "fm": 5
+    },
+    "aiForecast": "Terzino di grande spinta arrivato in prestito dal Bournemouth: si giocherà il posto sulle fasce viola garantendo dinamismo e propensione offensiva, ma occhio ai cartellini; ottimo come scommessa da ultimi slot."
+  },
+  "fcit_2097": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 0,
+      "goals": 8,
+      "assists": 1,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 5.88,
+      "fm": 6.77
+    }
+  },
+  "fcit_5877": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 18,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.12,
+      "fm": 6.16
+    },
+    "aiForecast": "Jolly prezioso sia come braccetto che come vice-Dimarco: ottimo 4°-5° slot per completare il reparto, assicura regolarità di voto ma bonus limitati."
+  },
+  "fcit_2848": {
+    "lastYearStats": {
+      "appearances": 14,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5.89,
+      "fm": 5.89
+    }
+  },
+  "fcit_5620": {
+    "lastYearStats": {
+      "appearances": 22,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.91,
+      "fm": 5.8
+    }
+  },
+  "fcit_5833": {
+    "lastYearStats": {
+      "appearances": 31,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 3,
+      "redCards": 1,
+      "mv": 6.03,
+      "fm": 5.95
+    },
+    "aiForecast": "Passato al Milan per fare il titolare con Amorim, è un centrale affidabile da modificatore ma occhio ai malus e ai lievi problemi fisici."
+  },
+  "fcit_7023": {
+    "lastYearStats": {
+      "appearances": 37,
+      "starterAppearances": 34,
+      "goals": 9,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.99,
+      "fm": 6.65
+    },
+    "aiForecast": "Nuovo centravanti titolare della Fiorentina dopo l'ottima annata a Parma: profilo fisico e da bonus aerei, ottimo terzo slot per completare il tridente d'attacco con discreta regolarità."
+  },
   "fcit_309": {
     "lastYearStats": {
       "appearances": 21,
@@ -597,19 +634,6 @@
       "fm": 6.74
     },
     "aiForecast": "Top di reparto ma fragile: non strapagarlo come primo slot assoluto, gestiscilo con copertura titolare affidabile."
-  },
-  "fcit_6572": {
-    "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 26,
-      "goals": 7,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 5.93,
-      "fm": 6.51
-    },
-    "aiForecast": "Acquistato dalla Roma per altern"
   },
   "fcit_531": {
     "lastYearStats": {
@@ -637,6 +661,130 @@
     },
     "aiForecast": "Titolare inamovibile e uomo assist del Sassuolo, ideale come 3° slot d'attacco: garantisce titolarità e bonus costanti."
   },
+  "fcit_5298": {
+    "lastYearStats": {
+      "appearances": 23,
+      "starterAppearances": 0,
+      "goals": 3,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 1,
+      "mv": 5.83,
+      "fm": 6.17
+    }
+  },
+  "fcit_7414": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Nuovo acquisto del Como di Fabregas: terzino sinistro di spinta dal grande potenziale, si giocherà il posto ed è un'ottima scommessa low cost per completare il reparto. <Doc id=\"1.1.3\" /> <Doc id=\"1.2."
+  },
+  "fcit_5559": {
+    "lastYearStats": {
+      "appearances": 35,
+      "starterAppearances": 31,
+      "goals": 6,
+      "assists": 4,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 6.34,
+      "fm": 6.91
+    },
+    "aiForecast": "Capitano e punto fermo del"
+  },
+  "fcit_4970": {
+    "lastYearStats": {
+      "appearances": 19,
+      "starterAppearances": 0,
+      "goals": 3,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.18,
+      "fm": 6.68
+    }
+  },
+  "fcit_6274": {
+    "lastYearStats": {
+      "appearances": 10,
+      "starterAppearances": 4,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.15,
+      "fm": 6.45
+    },
+    "aiForecast": "Riserva nelle rotazioni di centrocampo dell'Inter con minutaggio ridotto, profilo da ultimo slot a 1 credito per completare il reparto senza troppe pretese di bonus regolari."
+  },
+  "fcit_5841": {
+    "lastYearStats": {
+      "appearances": 38,
+      "starterAppearances": 38,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 5.45,
+      "goalsConceded": 31
+    },
+    "aiForecast": "Titolare inamovibile e certezza assoluta tra i pali della Roma: top di reparto all'asta, garantisce ottima media voto e molti clean sheet."
+  },
+  "fcit_4807": {
+    "lastYearStats": {
+      "appearances": 27,
+      "starterAppearances": 25,
+      "goals": 3,
+      "assists": 2,
+      "yellowCards": 9,
+      "redCards": 0,
+      "mv": 6.17,
+      "fm": 6.41
+    },
+    "aiForecast": "Titolare affidabile nella retroguardia giallorossa e pericoloso sui piazzati, occhio ai troppi cartellini: ottimo profilo da quarto o quinto slot low cost."
+  },
+  "fcit_6572": {
+    "lastYearStats": {
+      "appearances": 35,
+      "starterAppearances": 26,
+      "goals": 7,
+      "assists": 1,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 5.93,
+      "fm": 6.51
+    },
+    "aiForecast": "Acquistato dalla Roma per altern"
+  },
+  "fcit_2038": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 0,
+      "goals": 9,
+      "assists": 3,
+      "yellowCards": 2,
+      "redCards": 1,
+      "mv": 5.88,
+      "fm": 6.62
+    }
+  },
+  "fcit_4998": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Nel 3-4-2-1 di Gasperini agirà da quinto di spinta titolare a destra: profilo ideale per bonus tra assist e inserimenti, ottimo 2° slot all'asta."
+  },
   "fcit_5995": {
     "lastYearStats": {
       "appearances": 31,
@@ -663,129 +811,29 @@
     },
     "aiForecast": "Centravanti di riferimento per Sarri: ha superato i problemi fisici ed è un 1°/2° slot da doppia cifra certa con potenziale da 15+ gol, da acquistare come perno d'attacco con ottima copertura al fantacalcio."
   },
-  "fcit_6531": {
+  "fcit_4436": {
     "lastYearStats": {
-      "appearances": 1,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.5,
-      "fm": 5
-    },
-    "aiForecast": "Terzino di grande spinta arrivato in prestito dal Bournemouth: si giocherà il posto sulle fasce viola garantendo dinamismo e propensione offensiva, ma occhio ai cartellini; ottimo come scommessa da ultimi slot."
-  },
-  "fcit_5877": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 18,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.12,
-      "fm": 6.16
-    },
-    "aiForecast": "Jolly prezioso sia come braccetto che come vice-Dimarco: ottimo 4°-5° slot per completare il reparto, assicura regolarità di voto ma bonus limitati."
-  },
-  "fcit_6274": {
-    "lastYearStats": {
-      "appearances": 10,
-      "starterAppearances": 4,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.15,
-      "fm": 6.45
-    },
-    "aiForecast": "Riserva nelle rotazioni di centrocampo dell'Inter con minutaggio ridotto, profilo da ultimo slot a 1 credito per completare il reparto senza troppe pretese di bonus regolari."
-  },
-  "fcit_2848": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 5.89,
-      "fm": 5.89
-    }
-  },
-  "fcit_6434": {
-    "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 33,
-      "goals": 10,
-      "assists": 6,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.39,
-      "fm": 7.3
-    },
-    "aiForecast": "Perno inamovibile dell'attacco bianconero: garanzia di titolarità, bonus continui e voti alti, è un top di reparto da primo slot per l'asta."
-  },
-  "fcit_5833": {
-    "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
+      "appearances": 24,
+      "starterAppearances": 17,
+      "goals": 3,
+      "assists": 4,
       "yellowCards": 3,
       "redCards": 1,
-      "mv": 6.03,
-      "fm": 5.95
+      "mv": 5.98,
+      "fm": 6.42
     },
-    "aiForecast": "Passato al Milan per fare il titolare con Amorim, è un centrale affidabile da modificatore ma occhio ai malus e ai lievi problemi fisici."
+    "aiForecast": "Esterno d attacco con ottimo minutaggio ma poca freddezza sotto porta: perfetto per l asta come 4°-5° slot a centrocampo per garantire presenze continue e bonus sporadici."
   },
-  "fcit_2038": {
+  "fcit_7374": {
     "lastYearStats": {
-      "appearances": 34,
+      "appearances": 8,
       "starterAppearances": 0,
-      "goals": 9,
-      "assists": 3,
-      "yellowCards": 2,
-      "redCards": 1,
-      "mv": 5.88,
-      "fm": 6.62
-    }
-  },
-  "fcit_5637": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 27,
-      "goals": 10,
-      "assists": 4,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 6.32,
-      "fm": 7.37
-    },
-    "aiForecast": "Rinnovato fino al 2031 e confermato centravanti titolare dell'Udinese dopo la doppia cifra: è un ottimo secondo o terzo slot per l'attacco, ideale per chi cerca titolarità garantita e continuità nei bonus."
-  },
-  "fcit_4998": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
+      "goals": 2,
       "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Nel 3-4-2-1 di Gasperini agirà da quinto di spinta titolare a destra: profilo ideale per bonus tra assist e inserimenti, ottimo 2° slot all'asta."
-  },
-  "fcit_5298": {
-    "lastYearStats": {
-      "appearances": 23,
-      "starterAppearances": 0,
-      "goals": 3,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 1,
-      "mv": 5.83,
-      "fm": 6.17
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.94,
+      "fm": 6.62
     }
   },
   "fcit_6966": {
@@ -802,41 +850,6 @@
     },
     "aiForecast": "Titolare inamovibile e reduce da un'ottima stagione con 19 clean sheet, è una certezza assoluta all'asta per il modificatore di difesa."
   },
-  "fcit_7414": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Nuovo acquisto del Como di Fabregas: terzino sinistro di spinta dal grande potenziale, si giocherà il posto ed è un'ottima scommessa low cost per completare il reparto. <Doc id=\"1.1.3\" /> <Doc id=\"1.2."
-  },
-  "fcit_1933": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 0,
-      "goals": 7,
-      "assists": 2,
-      "yellowCards": 7,
-      "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.62
-    }
-  },
-  "fcit_4970": {
-    "lastYearStats": {
-      "appearances": 19,
-      "starterAppearances": 0,
-      "goals": 3,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.18,
-      "fm": 6.68
-    }
-  },
   "fcit_6217": {
     "lastYearStats": {
       "appearances": 23,
@@ -849,82 +862,6 @@
       "fm": 6.65
     },
     "aiForecast": "Sempre più centrale nelle rotazioni difensive dell'Inter, garantisce buona continuità e vizietto del gol sui calci piazzati: un ottimo 3° slot all'asta per completare il reparto difensivo."
-  },
-  "fcit_6884": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 27,
-      "goals": 3,
-      "assists": 5,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.28,
-      "fm": 6.7
-    },
-    "aiForecast": "Esterno d'attacco listato centrocampista: titolare e garanzia di bonus leggeri (assist e dribbling), perfetto come 2°-3° slot a cifre contenute per non risentire del turnover juventino."
-  },
-  "fcit_7023": {
-    "lastYearStats": {
-      "appearances": 37,
-      "starterAppearances": 34,
-      "goals": 9,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.99,
-      "fm": 6.65
-    },
-    "aiForecast": "Nuovo centravanti titolare della Fiorentina dopo l'ottima annata a Parma: profilo fisico e da bonus aerei, ottimo terzo slot per completare il tridente d'attacco con discreta regolarità."
-  },
-  "fcit_5555": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 2,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.88,
-      "fm": 5.87
-    }
-  },
-  "fcit_7374": {
-    "lastYearStats": {
-      "appearances": 8,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.94,
-      "fm": 6.62
-    }
-  },
-  "fcit_6967": {
-    "lastYearStats": {
-      "appearances": 16,
-      "starterAppearances": 13,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6.38
-    },
-    "aiForecast": "Esterno rapido e di grande talento, al fantacalcio resta una scommessa da ultimi slot: garantisce buon minutaggio con Fabregas ma deve migliorare la concretezza sotto porta."
-  },
-  "fcit_7070": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 21,
-      "goals": 2,
-      "assists": 2,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 6.07,
-      "fm": 6.27
-    },
-    "aiForecast": "Centrocampista duttile e prezioso nelle rotazioni dell'Inter: ottimo come 5°-6° slot a pochi crediti, garantisce minutaggio regolare, sufficienze costanti e qualche sporadico bonus da inserimento [1.1.5, 1.1.6, 2.2.2, 3"
   },
   "fcit_5761": {
     "lastYearStats": {
@@ -949,6 +886,32 @@
     },
     "aiForecast": "Nuovo acquisto estivo dal Salisburgo, giovane talento di grande prospettiva ma parte dietro nelle gerarchie: scommessa da ultimi slot all'asta con potenziale a gara in corso."
   },
+  "fcit_6884": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 27,
+      "goals": 3,
+      "assists": 5,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.28,
+      "fm": 6.7
+    },
+    "aiForecast": "Esterno d'attacco listato centrocampista: titolare e garanzia di bonus leggeri (assist e dribbling), perfetto come 2°-3° slot a cifre contenute per non risentire del turnover juventino."
+  },
+  "fcit_6434": {
+    "lastYearStats": {
+      "appearances": 35,
+      "starterAppearances": 33,
+      "goals": 10,
+      "assists": 6,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.39,
+      "fm": 7.3
+    },
+    "aiForecast": "Perno inamovibile dell'attacco bianconero: garanzia di titolarità, bonus continui e voti alti, è un top di reparto da primo slot per l'asta."
+  },
   "fcit_4312": {
     "lastYearStats": {
       "appearances": 37,
@@ -962,6 +925,133 @@
       "goalsConceded": 35
     },
     "aiForecast": "Top di reparto indiscusso e leader del Milan, garantisce voti eccellenti e rigori parati: profilo di prima fascia da acquistare all'asta per blindare la porta."
+  },
+  "fcit_5589": {
+    "lastYearStats": {
+      "appearances": 29,
+      "starterAppearances": 28,
+      "goals": 2,
+      "assists": 3,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.53
+    },
+    "aiForecast": "Titolare inamovibile nella mediana giallorossa, garantisce ottima media voto e costanza di rendimento, ma ha bonus limitati: profilo ideale come terzo o quarto slot di centrocampo."
+  },
+  "fcit_6190": {
+    "lastYearStats": {
+      "appearances": 22,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 4,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.09,
+      "fm": 6.48
+    }
+  },
+  "fcit_5555": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 2,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.88,
+      "fm": 5.87
+    }
+  },
+  "fcit_5637": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 27,
+      "goals": 10,
+      "assists": 4,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 6.32,
+      "fm": 7.37
+    },
+    "aiForecast": "Rinnovato fino al 2031 e confermato centravanti titolare dell'Udinese dopo la doppia cifra: è un ottimo secondo o terzo slot per l'attacco, ideale per chi cerca titolarità garantita e continuità nei bonus."
+  },
+  "fcit_6821": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 0,
+      "fm": 0
+    }
+  },
+  "fcit_5422": {
+    "lastYearStats": {
+      "appearances": 31,
+      "starterAppearances": 24,
+      "goals": 2,
+      "assists": 5,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.1,
+      "fm": 6.4
+    },
+    "aiForecast": "Jolly prezioso per duttilità sulle fasce nerazzurre; garantisce buon minutaggio e qualche bonus leggero, ideale come 5°-6° slot a centrocampo da ruotare in base al calendario."
+  },
+  "fcit_4360": {
+    "lastYearStats": {
+      "appearances": 38,
+      "starterAppearances": 38,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.29,
+      "fm": 4.87,
+      "goalsConceded": 53
+    },
+    "aiForecast": "Titolare inamovibile dei sardi e profilo interessante per il modificatore difesa: subisce qualche gol di troppo ma garantisce rendimento costante. Ottimo secondo slot da incrociare bene all'asta."
+  },
+  "fcit_6967": {
+    "lastYearStats": {
+      "appearances": 16,
+      "starterAppearances": 13,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 6.38
+    },
+    "aiForecast": "Esterno rapido e di grande talento, al fantacalcio resta una scommessa da ultimi slot: garantisce buon minutaggio con Fabregas ma deve migliorare la concretezza sotto porta."
+  },
+  "fcit_1933": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 0,
+      "goals": 7,
+      "assists": 2,
+      "yellowCards": 7,
+      "redCards": 0,
+      "mv": 6.04,
+      "fm": 6.62
+    }
+  },
+  "fcit_6669": {
+    "lastYearStats": {
+      "appearances": 27,
+      "starterAppearances": 10,
+      "goals": 5,
+      "assists": 4,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.15,
+      "fm": 6.83
+    },
+    "aiForecast": "Prima alternativa d'attacco e co-titolare con Chivu: ottimo 3° o 4° slot al fantacalcio, garantisce voto con continuità e bonus pesanti anche a gara in corso [1.2.3, 1.2.6,"
   },
   "fcit_2606": {
     "lastYearStats": {
@@ -989,67 +1079,29 @@
     },
     "aiForecast": "Ai margini del progetto col cambio in panchina e sul mercato: evitatelo all'asta finché non trova collocazione certa."
   },
-  "fcit_4287": {
+  "fcit_779": {
     "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 29,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.05,
-      "fm": 6.1
-    },
-    "aiForecast": "Regista intoccabile del Napoli e certezza di rendimento: pochi bonus e rari malus, perfetto come regolarista da 5-6 slot per completare la mediana a costi contenuti."
-  },
-  "fcit_4807": {
-    "lastYearStats": {
-      "appearances": 27,
-      "starterAppearances": 25,
-      "goals": 3,
-      "assists": 2,
-      "yellowCards": 9,
-      "redCards": 0,
-      "mv": 6.17,
-      "fm": 6.41
-    },
-    "aiForecast": "Titolare affidabile nella retroguardia giallorossa e pericoloso sui piazzati, occhio ai troppi cartellini: ottimo profilo da quarto o quinto slot low cost."
-  },
-  "fcit_2296": {
-    "lastYearStats": {
-      "appearances": 36,
+      "appearances": 37,
       "starterAppearances": 36,
-      "goals": 4,
-      "assists": 2,
-      "yellowCards": 9,
-      "redCards": 0,
-      "mv": 6.25,
-      "fm": 6.51
-    },
-    "aiForecast": "Pilastro della difesa giallorossa e pericoloso sui piazzati: ottimo 2°-3° slot al fantacalcio, titolarità certa e bonus aerei, ma occhio ai consueti cartellini."
-  },
-  "fcit_6190": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 0,
       "goals": 2,
-      "assists": 4,
-      "yellowCards": 3,
+      "assists": 1,
+      "yellowCards": 6,
       "redCards": 0,
-      "mv": 6.09,
-      "fm": 6.48
-    }
+      "mv": 6.11,
+      "fm": 6.22
+    },
+    "aiForecast": "Pilastro e leader della Roma con titolarità quasi assoluta: porta pochissimi bonus ma garantisce presenze costanti e rendimento affidabile, perfetto come 5°-6° slot a basso costo."
   },
-  "fcit_6821": {
+  "fcit_6827": {
     "lastYearStats": {
-      "appearances": 0,
+      "appearances": 10,
       "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "mv": 0,
-      "fm": 0
+      "mv": 5.8,
+      "fm": 6.15
     }
   },
   "fcit_7484": {
@@ -1062,6 +1114,18 @@
       "redCards": 0
     },
     "aiForecast": "Acquisto record e nuovo centravanti titolare del Venezia: attaccante fisico e generoso, ottimo 3°-4° slot d'attacco all'asta per garantire"
+  },
+  "fcit_7220": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.1,
+      "fm": 6.21
+    }
   },
   "fcit_4431": {
     "lastYearStats": {
@@ -1090,19 +1154,6 @@
     },
     "aiForecast": "Con l'arrivo di Sarri all'Atalanta può rilanciarsi da mezzala di qualità: ottimo colpo da 3°/4° slot per bonus e voti, anche se inizialmente soggetto a rotazioni."
   },
-  "fcit_5422": {
-    "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 24,
-      "goals": 2,
-      "assists": 5,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.1,
-      "fm": 6.4
-    },
-    "aiForecast": "Jolly prezioso per duttilità sulle fasce nerazzurre; garantisce buon minutaggio e qualche bonus leggero, ideale come 5°-6° slot a centrocampo da ruotare in base al calendario."
-  },
   "fcit_4371": {
     "lastYearStats": {
       "appearances": 13,
@@ -1115,33 +1166,6 @@
       "fm": 6.88
     },
     "aiForecast": "Ottimo jolly offensivo nell'Atalanta: garantisce presenze, voti positivi e bonus sporadici tra rotazioni e maglie da titolare, ideale come 4° slot d'attacco a prezzo contenuto."
-  },
-  "fcit_4436": {
-    "lastYearStats": {
-      "appearances": 24,
-      "starterAppearances": 17,
-      "goals": 3,
-      "assists": 4,
-      "yellowCards": 3,
-      "redCards": 1,
-      "mv": 5.98,
-      "fm": 6.42
-    },
-    "aiForecast": "Esterno d attacco con ottimo minutaggio ma poca freddezza sotto porta: perfetto per l asta come 4°-5° slot a centrocampo per garantire presenze continue e bonus sporadici."
-  },
-  "fcit_4360": {
-    "lastYearStats": {
-      "appearances": 38,
-      "starterAppearances": 38,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.29,
-      "fm": 4.87,
-      "goalsConceded": 53
-    },
-    "aiForecast": "Titolare inamovibile dei sardi e profilo interessante per il modificatore difesa: subisce qualche gol di troppo ma garantisce rendimento costante. Ottimo secondo slot da incrociare bene all'asta."
   },
   "fcit_5036": {
     "lastYearStats": {
@@ -1156,31 +1180,44 @@
     },
     "aiForecast": "Perno della manovra di Fàbregas con ottima visione di gioco e doti da rifinitore: garantisce voto costante e assist, ideale come 4° o 5° slot a cifre contenute per completare il reparto."
   },
-  "fcit_4159": {
+  "fcit_5823": {
     "lastYearStats": {
-      "appearances": 32,
-      "starterAppearances": 31,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 6.28,
-      "fm": 6.41
-    },
-    "aiForecast": "Pilastro affidabilissimo della retro"
-  },
-  "fcit_6669": {
-    "lastYearStats": {
-      "appearances": 27,
-      "starterAppearances": 10,
-      "goals": 5,
-      "assists": 4,
-      "yellowCards": 1,
+      "appearances": 17,
+      "starterAppearances": 5,
+      "goals": 1,
+      "assists": 2,
+      "yellowCards": 2,
       "redCards": 0,
       "mv": 6.15,
-      "fm": 6.83
+      "fm": 6.38
     },
-    "aiForecast": "Prima alternativa d'attacco e co-titolare con Chivu: ottimo 3° o 4° slot al fantacalcio, garantisce voto con continuità e bonus pesanti anche a gara in corso [1.2.3, 1.2.6,"
+    "aiForecast": "Confermato al Genoa e fedelissimo di De Rossi, agirà da trequartista: ottimo 4° slot al fantacalcio, atteso a un salto di qualità sui bonus se la tenuta fisica regge."
+  },
+  "fcit_2120": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 28,
+      "goals": 1,
+      "assists": 4,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 6.2,
+      "fm": 6.34
+    },
+    "aiForecast": "Perno intoccabile della difesa dell'Inter e top di reparto: garanzia di ottimi voti per il modificatore e assist ricorrenti, da prendere come primo slot difensivo all'asta senza esitazioni."
+  },
+  "fcit_7070": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 21,
+      "goals": 2,
+      "assists": 2,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 6.07,
+      "fm": 6.27
+    },
+    "aiForecast": "Centrocampista duttile e prezioso nelle rotazioni dell'Inter: ottimo come 5°-6° slot a pochi crediti, garantisce minutaggio regolare, sufficienze costanti e qualche sporadico bonus da inserimento [1.1.5, 1.1.6, 2.2.2, 3"
   },
   "fcit_4973": {
     "lastYearStats": {
@@ -1195,6 +1232,30 @@
     },
     "aiForecast": "Centrocampista duttile e con buon vizio"
   },
+  "fcit_5685": {
+    "lastYearStats": {
+      "appearances": 29,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.64,
+      "fm": 5.55
+    }
+  },
+  "fcit_6629": {
+    "lastYearStats": {
+      "appearances": 21,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5.69,
+      "fm": 5.83
+    }
+  },
   "fcit_6989": {
     "lastYearStats": {
       "appearances": 36,
@@ -1207,6 +1268,18 @@
       "fm": 6.01
     },
     "aiForecast": "Perno della difesa salentina e pericoloso sui piazzati, è un titolare affidabile ma occhio a cartellini e sirene di mercato estive."
+  },
+  "fcit_5504": {
+    "lastYearStats": {
+      "appearances": 33,
+      "starterAppearances": 0,
+      "goals": 3,
+      "assists": 1,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 6.05,
+      "fm": 6.29
+    }
   },
   "fcit_4409": {
     "lastYearStats": {
@@ -1221,44 +1294,56 @@
     },
     "aiForecast": "Perno centrale affidabile ed esperto nella difesa del Napoli: titolare certo, garantisce buona media voto e pericolosità aerea sui piazzati. Ottimo 2°-3° slot low-cost all'asta."
   },
-  "fcit_2816": {
+  "fcit_4287": {
     "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 26,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 1,
+      "appearances": 31,
+      "starterAppearances": 29,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 6.08,
-      "fm": 6.33
+      "mv": 6.05,
+      "fm": 6.1
     },
-    "aiForecast": "Capitano e punto fermo della fascia destra, garantisce titolarità assoluta, ottima media voto e qualche bonus; profilo affidabile da 2° o 3° slot in difesa."
+    "aiForecast": "Regista intoccabile del Napoli e certezza di rendimento: pochi bonus e rari malus, perfetto come regolarista da 5-6 slot per completare la mediana a costi contenuti."
   },
-  "fcit_779": {
+  "fcit_7120": {
     "lastYearStats": {
-      "appearances": 37,
-      "starterAppearances": 36,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.11,
-      "fm": 6.22
-    },
-    "aiForecast": "Pilastro e leader della Roma con titolarità quasi assoluta: porta pochissimi bonus ma garantisce presenze costanti e rendimento affidabile, perfetto come 5°-6° slot a basso costo."
-  },
-  "fcit_5589": {
-    "lastYearStats": {
-      "appearances": 29,
-      "starterAppearances": 28,
-      "goals": 2,
-      "assists": 3,
+      "appearances": 14,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 2,
       "yellowCards": 2,
       "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.53
+      "mv": 6.04,
+      "fm": 6.32
+    }
+  },
+  "fcit_2296": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 36,
+      "goals": 4,
+      "assists": 2,
+      "yellowCards": 9,
+      "redCards": 0,
+      "mv": 6.25,
+      "fm": 6.51
     },
-    "aiForecast": "Titolare inamovibile nella mediana giallorossa, garantisce ottima media voto e costanza di rendimento, ma ha bonus limitati: profilo ideale come terzo o quarto slot di centrocampo."
+    "aiForecast": "Pilastro della difesa giallorossa e pericoloso sui piazzati: ottimo 2°-3° slot al fantacalcio, titolarità certa e bonus aerei, ma occhio ai consueti cartellini."
+  },
+  "fcit_4317": {
+    "lastYearStats": {
+      "appearances": 31,
+      "starterAppearances": 31,
+      "goals": 3,
+      "assists": 1,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 6.08,
+      "fm": 6.32
+    },
+    "aiForecast": "Perno della retro"
   },
   "fcit_2528": {
     "lastYearStats": {
@@ -1284,30 +1369,17 @@
       "fm": 6.88
     }
   },
-  "fcit_6827": {
+  "fcit_7349": {
     "lastYearStats": {
-      "appearances": 10,
+      "appearances": 7,
       "starterAppearances": 0,
-      "goals": 1,
+      "goals": 0,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "mv": 5.8,
-      "fm": 6.15
+      "mv": 5.71,
+      "fm": 5.79
     }
-  },
-  "fcit_2766": {
-    "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 28,
-      "goals": 5,
-      "assists": 5,
-      "yellowCards": 8,
-      "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.77
-    },
-    "aiForecast": "Riscattato e al centro del progetto tecnico friulano, è un 2°-3° slot d'attacco listato centrocampista da bonus costante con buona titolarità ma qualche malus di troppo."
   },
   "fcit_4179": {
     "lastYearStats": {
@@ -1321,55 +1393,56 @@
       "fm": 0
     }
   },
-  "fcit_7220": {
+  "fcit_133": {
     "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.1,
-      "fm": 6.21
-    }
-  },
-  "fcit_5792": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 26,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.25,
-      "fm": 6.43
-    },
-    "aiForecast": "Perno della mediana nerazzurra fresco di rinnovo: titolare affidabile e dal rendimento costante, perfetto per completare il reparto garantendo sufficienze e qualche bonus."
-  },
-  "fcit_2120": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 28,
-      "goals": 1,
-      "assists": 4,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 6.2,
-      "fm": 6.34
-    },
-    "aiForecast": "Perno intoccabile della difesa dell'Inter e top di reparto: garanzia di ottimi voti per il modificatore e assist ricorrenti, da prendere come primo slot difensivo all'asta senza esitazioni."
-  },
-  "fcit_5685": {
-    "lastYearStats": {
-      "appearances": 29,
-      "starterAppearances": 0,
+      "appearances": 18,
+      "starterAppearances": 18,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 5,
+      "yellowCards": 1,
+      "redCards": 1,
+      "mv": 6.19,
+      "fm": 5.28,
+      "goalsConceded": 15
+    },
+    "aiForecast": "Portiere titolare affidabile ma soggetto a rotazioni con Ravaglia per gli impegni europei; all'asta è da acquistare rigorosamente in coppia."
+  },
+  "fcit_4870": {
+    "lastYearStats": {
+      "appearances": 38,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 4,
       "redCards": 0,
-      "mv": 5.64,
-      "fm": 5.55
+      "mv": 5.83,
+      "fm": 5.88
     }
+  },
+  "fcit_6020": {
+    "lastYearStats": {
+      "appearances": 35,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 1,
+      "mv": 5.84,
+      "fm": 5.91
+    }
+  },
+  "fcit_4159": {
+    "lastYearStats": {
+      "appearances": 32,
+      "starterAppearances": 31,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 6.28,
+      "fm": 6.41
+    },
+    "aiForecast": "Pilastro affidabilissimo della retro"
   },
   "fcit_6191": {
     "lastYearStats": {
@@ -1381,18 +1454,6 @@
       "redCards": 1,
       "mv": 5.77,
       "fm": 5.82
-    }
-  },
-  "fcit_6629": {
-    "lastYearStats": {
-      "appearances": 21,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 5.69,
-      "fm": 5.83
     }
   },
   "fcit_5500": {
@@ -1408,18 +1469,6 @@
     },
     "aiForecast": "Buon elemento da rotazione offensiva, listato centrocampista garantisce bonus sporadici e buon minutaggio: ottimo da 5°-6° slot a prezzo contenuto."
   },
-  "fcit_5504": {
-    "lastYearStats": {
-      "appearances": 33,
-      "starterAppearances": 0,
-      "goals": 3,
-      "assists": 1,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 6.05,
-      "fm": 6.29
-    }
-  },
   "fcit_5022": {
     "lastYearStats": {
       "appearances": 34,
@@ -1432,6 +1481,19 @@
       "fm": 6.62
     },
     "aiForecast": "Perno titolare della difesa rossonera e letale sui piazzati aerei: profilo da primo o secondo slot difensivo, ottimo per il modificatore e garanzia"
+  },
+  "fcit_2816": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 26,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.08,
+      "fm": 6.33
+    },
+    "aiForecast": "Capitano e punto fermo della fascia destra, garantisce titolarità assoluta, ottima media voto e qualche bonus; profilo affidabile da 2° o 3° slot in difesa."
   },
   "fcit_5131": {
     "lastYearStats": {
@@ -1457,31 +1519,6 @@
       "fm": 6.5
     },
     "aiForecast": "Jolly offensivo in crescita nelle rotazioni del Napoli, ideale come scommessa a pochi crediti per gli ultimi slot a centrocampo ma non garantisce titolarità fissa."
-  },
-  "fcit_4317": {
-    "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 31,
-      "goals": 3,
-      "assists": 1,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 6.08,
-      "fm": 6.32
-    },
-    "aiForecast": "Perno della retro"
-  },
-  "fcit_5851": {
-    "lastYearStats": {
-      "appearances": 27,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.85,
-      "fm": 5.76
-    }
   },
   "fcit_7036": {
     "lastYearStats": {
@@ -1521,17 +1558,55 @@
     },
     "aiForecast": "Perno della trequarti granata e rigorista affidabile, garantisce titolarità e bonus costanti: ottimo 2°-3° slot di centrocampo."
   },
-  "fcit_7349": {
+  "fcit_2766": {
     "lastYearStats": {
-      "appearances": 7,
+      "appearances": 31,
+      "starterAppearances": 28,
+      "goals": 5,
+      "assists": 5,
+      "yellowCards": 8,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.77
+    },
+    "aiForecast": "Riscattato e al centro del progetto tecnico friulano, è un 2°-3° slot d'attacco listato centrocampista da bonus costante con buona titolarità ma qualche malus di troppo."
+  },
+  "fcit_6618": {
+    "lastYearStats": {
+      "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
+      "assists": 0,
+      "yellowCards": 0,
       "redCards": 0,
-      "mv": 5.71,
-      "fm": 5.79
+      "mv": 0,
+      "fm": 0
     }
+  },
+  "fcit_795": {
+    "lastYearStats": {
+      "appearances": 18,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 2,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 6.14,
+      "fm": 6.33
+    }
+  },
+  "fcit_5792": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 26,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.25,
+      "fm": 6.43
+    },
+    "aiForecast": "Perno della mediana nerazzurra fresco di rinnovo: titolare affidabile e dal rendimento costante, perfetto per completare il reparto garantendo sufficienze e qualche bonus."
   },
   "fcit_4364": {
     "lastYearStats": {
@@ -1546,19 +1621,17 @@
     },
     "aiForecast": "Passato all'Atalanta: ottima alternativa di qualità per Sarri, garantisce presenze e bonus sporadici, ideale come 5°-6° slot a prezzo contenuto."
   },
-  "fcit_133": {
+  "fcit_5498": {
     "lastYearStats": {
-      "appearances": 18,
-      "starterAppearances": 18,
+      "appearances": 10,
+      "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 1,
-      "redCards": 1,
-      "mv": 6.19,
-      "fm": 5.28,
-      "goalsConceded": 15
-    },
-    "aiForecast": "Portiere titolare affidabile ma soggetto a rotazioni con Ravaglia per gli impegni europei; all'asta è da acquistare rigorosamente in coppia."
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5.65,
+      "fm": 5.65
+    }
   },
   "fcit_5858": {
     "lastYearStats": {
@@ -1599,19 +1672,6 @@
     },
     "aiForecast": "Perno intoccabile della mediana del Como, garantisce titolarita e rendimento costante con qualche bonus sporadico: ideale come 4"
   },
-  "fcit_6908": {
-    "lastYearStats": {
-      "appearances": 32,
-      "starterAppearances": 29,
-      "goals": 5,
-      "assists": 3,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.36,
-      "fm": 6.88
-    },
-    "aiForecast": "Passato alla Fiorentina dopo un'ottima annata a Udine: mezzala di inserimento e fisicità, ottimo 4°-5° slot con buon minutaggio e bonus in canna."
-  },
   "fcit_5800": {
     "lastYearStats": {
       "appearances": 32,
@@ -1650,18 +1710,19 @@
       "fm": 5.9
     }
   },
-  "fcit_5823": {
+  "fcit_5116": {
     "lastYearStats": {
-      "appearances": 17,
+      "appearances": 5,
       "starterAppearances": 5,
-      "goals": 1,
-      "assists": 2,
-      "yellowCards": 2,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
       "redCards": 0,
-      "mv": 6.15,
-      "fm": 6.38
+      "mv": 6,
+      "fm": 5.2,
+      "goalsConceded": 4
     },
-    "aiForecast": "Confermato al Genoa e fedelissimo di De Rossi, agirà da trequartista: ottimo 4° slot al fantacalcio, atteso a un salto di qualità sui bonus se la tenuta fisica regge."
+    "aiForecast": "Secondo portiere affidabile ma chiuso da Sommer, da acquistare solo in coppia con lo svizzero per completare il blocco Inter a cifre contenute."
   },
   "fcit_4976": {
     "lastYearStats": {
@@ -1675,6 +1736,18 @@
       "fm": 6.35
     },
     "aiForecast": "Titolare inamovibile della difesa bianconera e duttile sia da centrale che terzino: ottimo 3°/4° slot per mod difesa, garantisce continuità e bonus saltuari."
+  },
+  "fcit_7131": {
+    "lastYearStats": {
+      "appearances": 23,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.72,
+      "fm": 5.72
+    }
   },
   "fcit_5672": {
     "aiForecast": "Riscattato ma reduce da una stagione deludente e con forte concorrenza: da trattare come scommessa low-cost da ultimi slot a prezzo di saldo.",
@@ -1726,32 +1799,6 @@
       "fm": 5.5
     }
   },
-  "fcit_572": {
-    "lastYearStats": {
-      "appearances": 11,
-      "starterAppearances": 11,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.23,
-      "fm": 5.18,
-      "goalsConceded": 12
-    },
-    "aiForecast": "In costante ballottaggio dopo un"
-  },
-  "fcit_7120": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 2,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.32
-    }
-  },
   "fcit_2531": {
     "lastYearStats": {
       "appearances": 1,
@@ -1764,40 +1811,78 @@
       "fm": 9.5
     }
   },
-  "fcit_795": {
+  "fcit_5851": {
     "lastYearStats": {
-      "appearances": 18,
+      "appearances": 27,
       "starterAppearances": 0,
-      "goals": 1,
-      "assists": 2,
-      "yellowCards": 4,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 5,
       "redCards": 0,
-      "mv": 6.14,
-      "fm": 6.33
+      "mv": 5.85,
+      "fm": 5.76
     }
   },
-  "fcit_5498": {
+  "fcit_6495": {
     "lastYearStats": {
-      "appearances": 10,
+      "appearances": 24,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.75,
+      "fm": 5.75
+    }
+  },
+  "fcit_6537": {
+    "lastYearStats": {
+      "appearances": 6,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.75,
+      "fm": 5.58
+    }
+  },
+  "fcit_6678": {
+    "lastYearStats": {
+      "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "mv": 5.65,
-      "fm": 5.65
-    }
+      "mv": 0,
+      "fm": 0
+    },
+    "aiForecast": "Nuovo acquisto di grande prospettiva per Fabregas ma chiuso sulla trequarti: scommessa da ultimissimi slot a 1 credito o da leghe numerose."
   },
-  "fcit_4870": {
+  "fcit_6908": {
     "lastYearStats": {
-      "appearances": 38,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 4,
+      "appearances": 32,
+      "starterAppearances": 29,
+      "goals": 5,
+      "assists": 3,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 5.83,
-      "fm": 5.88
+      "mv": 6.36,
+      "fm": 6.88
+    },
+    "aiForecast": "Passato alla Fiorentina dopo un'ottima annata a Udine: mezzala di inserimento e fisicità, ottimo 4°-5° slot con buon minutaggio e bonus in canna."
+  },
+  "fcit_6206": {
+    "lastYearStats": {
+      "appearances": 22,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.8,
+      "fm": 6.05
     }
   },
   "fcit_4359": {
@@ -1813,45 +1898,6 @@
     },
     "aiForecast": "Passato al Bologna per rilanciarsi, si alternerà al centro dell'attacco: profilo da 4°-5° slot all'asta, buon rinforzo da ruotare nelle partite casalinghe."
   },
-  "fcit_5750": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 30,
-      "goals": 5,
-      "assists": 0,
-      "yellowCards": 7,
-      "redCards": 0,
-      "mv": 6.13,
-      "fm": 6.52
-    },
-    "aiForecast": "Perno della retroguardia del Genoa e letale sui piazzati, è un titolare affidabile da modificatore e da 3°-4° slot per la tua difesa."
-  },
-  "fcit_6020": {
-    "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 1,
-      "mv": 5.84,
-      "fm": 5.91
-    }
-  },
-  "fcit_5116": {
-    "lastYearStats": {
-      "appearances": 5,
-      "starterAppearances": 5,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 5.2,
-      "goalsConceded": 4
-    },
-    "aiForecast": "Secondo portiere affidabile ma chiuso da Sommer, da acquistare solo in coppia con lo svizzero per completare il blocco Inter a cifre contenute."
-  },
   "fcit_5876": {
     "lastYearStats": {
       "appearances": 30,
@@ -1866,16 +1912,16 @@
     },
     "aiForecast": "Titolare indiscusso della porta bianconera: profilo di prima fascia per l'asta e garanzia di affidabilità tra i pali con ottima propensione ai clean sheet."
   },
-  "fcit_5831": {
+  "fcit_4911": {
     "lastYearStats": {
-      "appearances": 16,
+      "appearances": 0,
       "starterAppearances": 0,
-      "goals": 2,
+      "goals": 0,
       "assists": 0,
-      "yellowCards": 3,
+      "yellowCards": 0,
       "redCards": 0,
-      "mv": 5.94,
-      "fm": 6.22
+      "mv": 0,
+      "fm": 0
     }
   },
   "fcit_7012": {
@@ -1890,18 +1936,6 @@
       "fm": 5.85
     }
   },
-  "fcit_7131": {
-    "lastYearStats": {
-      "appearances": 23,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.72,
-      "fm": 5.72
-    }
-  },
   "fcit_7313": {
     "lastYearStats": {
       "appearances": 7,
@@ -1914,18 +1948,6 @@
       "fm": 5.64
     },
     "aiForecast": "Chiuso nelle gerarchie offensive e al centro di voci di mercato, rischia scarso minutaggio: valutatelo solo come scommessa low-cost da ultimissimo slot a 1 credito se dovesse rimanere."
-  },
-  "fcit_7238": {
-    "lastYearStats": {
-      "appearances": 1,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6
-    }
   },
   "fcit_6593": {
     "lastYearStats": {
@@ -1950,6 +1972,33 @@
     },
     "aiForecast": "Rientrato al Monza dopo l'annata in B, resta un centrocampista offensivo di grande qualità tecnica: scommessa low-cost da 4°-5° slot, garantisce titolarità e bonus sporadici sui piazzati."
   },
+  "fcit_572": {
+    "lastYearStats": {
+      "appearances": 11,
+      "starterAppearances": 11,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.23,
+      "fm": 5.18,
+      "goalsConceded": 12
+    },
+    "aiForecast": "In costante ballottaggio dopo un"
+  },
+  "fcit_2170": {
+    "lastYearStats": {
+      "appearances": 27,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6.2,
+      "fm": 5.65,
+      "goalsConceded": 24
+    }
+  },
   "fcit_4220": {
     "aiForecast": "Perno della mediana partenopea, garantisce titolarità e ottima fisicità: da prendere all'asta come regolarista di livello per completare il centrocampo, con potenziale inserimento a bonus sporadico.",
     "lastYearStats": {
@@ -1963,56 +2012,16 @@
       "fm": 6.86
     }
   },
-  "fcit_7351": {
+  "fcit_7411": {
     "lastYearStats": {
-      "appearances": 13,
-      "starterAppearances": 9,
-      "goals": 4,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.35,
-      "fm": 7.23
-    },
-    "aiForecast": "Riscattato dal Napoli, è un'ala dinamica e spacca-"
-  },
-  "fcit_5862": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 29,
-      "goals": 0,
-      "assists": 2,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.06,
-      "fm": 6.09
-    },
-    "aiForecast": "Titolare affidabile sulla corsia mancina del Parma: garantisce regolarità di voto e qualche assist ma ha scarso appeal da bonus pesante; ottimo come 5°-6° slot di copertura a pochi crediti."
-  },
-  "fcit_6631": {
-    "lastYearStats": {
-      "appearances": 21,
+      "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.98,
-      "fm": 5.95
-    }
-  },
-  "fcit_5735": {
-    "lastYearStats": {
-      "appearances": 21,
-      "starterAppearances": 11,
-      "goals": 2,
-      "assists": 4,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 6.14,
-      "fm": 6.52
+      "yellowCards": 0,
+      "redCards": 0
     },
-    "aiForecast": "Jolly offensivo di talento ma discontinuo: da prendere come scommessa a pochi crediti per gli ultimi slot, utile da ruotare nelle gare casalinghe abbordabili."
+    "aiForecast": "Nuovo acquisto del Parma ma parte dietro nelle gerarchie come vice di Suzuki: non ha senso all asta se non in coppia con il titolare a 1 credito."
   },
   "fcit_6642": {
     "lastYearStats": {
@@ -2027,31 +2036,6 @@
     },
     "aiForecast": "Titolare inamovibile della difesa granata, garantisce continuità di rendimento e pochissimi malus: ottimo profilo low cost da 4° o 5° slot per completare il reparto."
   },
-  "fcit_6495": {
-    "lastYearStats": {
-      "appearances": 24,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.75,
-      "fm": 5.75
-    }
-  },
-  "fcit_6680": {
-    "lastYearStats": {
-      "appearances": 36,
-      "starterAppearances": 36,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 5.96,
-      "fm": 5.96
-    },
-    "aiForecast": "Titolare inamovibile e capitano dell'Udinese, garantisce voto sicuro quasi a ogni turno ma porta pochissimi bonus: perfetto come regolarista da ultimi slot a 1 credito per completare il reparto senza svenarsi."
-  },
   "fcit_6727": {
     "lastYearStats": {
       "appearances": 0,
@@ -2062,30 +2046,6 @@
       "redCards": 0
     },
     "aiForecast": "Nu"
-  },
-  "fcit_6618": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 0,
-      "fm": 0
-    }
-  },
-  "fcit_6537": {
-    "lastYearStats": {
-      "appearances": 6,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.75,
-      "fm": 5.58
-    }
   },
   "fcit_5336": {
     "lastYearStats": {
@@ -2136,19 +2096,6 @@
       "fm": 6.23
     }
   },
-  "fcit_6678": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 0,
-      "fm": 0
-    },
-    "aiForecast": "Nuovo acquisto di grande prospettiva per Fabregas ma chiuso sulla trequarti: scommessa da ultimissimi slot a 1 credito o da leghe numerose."
-  },
   "fcit_4465": {
     "lastYearStats": {
       "appearances": 33,
@@ -2162,17 +2109,18 @@
     },
     "aiForecast": "Regista di qualità nella Fiorentina di Grosso, garantisce continuità di voto e qualche bonus leggero: buon 4°-5° slot a costi contenuti."
   },
-  "fcit_6206": {
+  "fcit_5750": {
     "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 0,
-      "goals": 2,
+      "appearances": 30,
+      "starterAppearances": 30,
+      "goals": 5,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 7,
       "redCards": 0,
-      "mv": 5.8,
-      "fm": 6.05
-    }
+      "mv": 6.13,
+      "fm": 6.52
+    },
+    "aiForecast": "Perno della retroguardia del Genoa e letale sui piazzati, è un titolare affidabile da modificatore e da 3°-4° slot per la tua difesa."
   },
   "fcit_6814": {
     "lastYearStats": {
@@ -2200,16 +2148,16 @@
     },
     "aiForecast": "Titolare inamovibile e certezza di rendimento a centrocampo, garantisce voti costanti e recuperi palla ma pochissimi bonus pesanti: ottimo per completare il reparto a basso costo."
   },
-  "fcit_4911": {
+  "fcit_5831": {
     "lastYearStats": {
-      "appearances": 0,
+      "appearances": 16,
       "starterAppearances": 0,
-      "goals": 0,
+      "goals": 2,
       "assists": 0,
-      "yellowCards": 0,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 0,
-      "fm": 0
+      "mv": 5.94,
+      "fm": 6.22
     }
   },
   "fcit_2832": {
@@ -2261,30 +2209,28 @@
       "fm": 5.99
     }
   },
-  "fcit_4751": {
+  "fcit_5295": {
     "lastYearStats": {
-      "appearances": 32,
-      "starterAppearances": 31,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 6,
-      "redCards": 1,
-      "mv": 5.97,
-      "fm": 5.88
-    },
-    "aiForecast": "Perno difensivo del Milan e titolare affidabile: garantisce regolarità di voto e buon rendimento al fantacalcio, ma occhio ai cartellini. Ottimo profilo per completare il reparto come secondo o terzo slot difensivo."
+      "appearances": 16,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.94,
+      "fm": 6.09
+    }
   },
-  "fcit_2170": {
+  "fcit_7238": {
     "lastYearStats": {
-      "appearances": 27,
+      "appearances": 1,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "mv": 6.2,
-      "fm": 5.65,
-      "goalsConceded": 24
+      "mv": 6,
+      "fm": 6
     }
   },
   "fcit_5427": {
@@ -2299,16 +2245,31 @@
       "fm": 6.17
     }
   },
-  "fcit_7411": {
+  "fcit_7351": {
     "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
+      "appearances": 13,
+      "starterAppearances": 9,
+      "goals": 4,
       "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.35,
+      "fm": 7.23
     },
-    "aiForecast": "Nuovo acquisto del Parma ma parte dietro nelle gerarchie come vice di Suzuki: non ha senso all asta se non in coppia con il titolare a 1 credito."
+    "aiForecast": "Riscattato dal Napoli, è un'ala dinamica e spacca-"
+  },
+  "fcit_5862": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 29,
+      "goals": 0,
+      "assists": 2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.06,
+      "fm": 6.09
+    },
+    "aiForecast": "Titolare affidabile sulla corsia mancina del Parma: garantisce regolarità di voto e qualche assist ma ha scarso appeal da bonus pesante; ottimo come 5°-6° slot di copertura a pochi crediti."
   },
   "fcit_610": {
     "lastYearStats": {
@@ -2321,6 +2282,18 @@
       "mv": 0,
       "fm": 0,
       "goalsConceded": 0
+    }
+  },
+  "fcit_6631": {
+    "lastYearStats": {
+      "appearances": 21,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.98,
+      "fm": 5.95
     }
   },
   "fcit_5844": {
@@ -2336,6 +2309,19 @@
     },
     "aiForecast": "Titolare cardine e incursore prezioso nel centrocampo del Sassuolo: garantisce ottimo minutaggio, inserimenti e bonus leggeri, ma occhio ai troppi cartellini gialli. Da 4°-5° slot in leghe a 8-10."
   },
+  "fcit_5735": {
+    "lastYearStats": {
+      "appearances": 21,
+      "starterAppearances": 11,
+      "goals": 2,
+      "assists": 4,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 6.14,
+      "fm": 6.52
+    },
+    "aiForecast": "Jolly offensivo di talento ma discontinuo: da prendere come scommessa a pochi crediti per gli ultimi slot, utile da ruotare nelle gare casalinghe abbordabili."
+  },
   "fcit_6956": {
     "lastYearStats": {
       "appearances": 34,
@@ -2349,6 +2335,19 @@
     },
     "aiForecast": "Perno della difesa friulana e abile di testa sui piazzati, garantisce titolarità quasi assoluta e ottima media voto: da acquistare all'asta come secondo o terzo slot difensivo per il vostro modificatore."
   },
+  "fcit_6680": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 36,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 5.96,
+      "fm": 5.96
+    },
+    "aiForecast": "Titolare inamovibile e capitano dell'Udinese, garantisce voto sicuro quasi a ogni turno ma porta pochissimi bonus: perfetto come regolarista da ultimi slot a 1 credito per completare il reparto senza svenarsi."
+  },
   "fcit_7198": {
     "lastYearStats": {
       "appearances": 30,
@@ -2361,21 +2360,21 @@
       "fm": 5.95
     }
   },
+  "fcit_5674": {
+    "lastYearStats": {
+      "appearances": 23,
+      "starterAppearances": 23,
+      "goals": 2,
+      "assists": 3,
+      "yellowCards": 0,
+      "redCards": 1,
+      "mv": 6.09,
+      "fm": 6.43
+    },
+    "aiForecast": "Passato al Venezia per fare il titolare fisso e leader della mediana: profilo low-cost da ultimi slot, garantisce presenze, qualche bonus sporadico e calci piazzati."
+  },
   "fcit_6904": {
     "aiForecast": "Fresco di promozione da protagonista in B col Venezia, è un profilo tecnico e dinamico da scommessa low-cost per gli ultimi slot dell'attacco, utile per portare bonus leggeri a basso prezzo."
-  },
-  "fcit_6229": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 0,
-      "fm": 0
-    },
-    "aiForecast": "Arriva a Parma per ril"
   },
   "fcit_5641": {
     "lastYearStats": {
@@ -2462,19 +2461,6 @@
     },
     "aiForecast": "Alternativa affidabile per le corsie esterne del Bologna; profilo low-cost da ultimi slot per completare il reparto difensivo e garantire un discreto numero di presenze a voto."
   },
-  "fcit_4210": {
-    "lastYearStats": {
-      "appearances": 26,
-      "starterAppearances": 26,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 1,
-      "mv": 6,
-      "fm": 6.17
-    },
-    "aiForecast": "Leader difensivo del Cagliari e pericoloso sui piazzati ma soggetto a cartellini e stop fisici: ottimo per gli ultimi slot a basso costo."
-  },
   "fcit_7274": {
     "lastYearStats": {
       "appearances": 22,
@@ -2500,6 +2486,18 @@
     },
     "aiForecast": "Esterno offensivo di grande estro e assistman prezioso nel Como di Fabregas: ottimo 3-4° slot di centrocampo al fantacalcio, garantisce tanti voti e bonus leggeri."
   },
+  "fcit_7175": {
+    "lastYearStats": {
+      "appearances": 14,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.79,
+      "fm": 6
+    }
+  },
   "fcit_6294": {
     "lastYearStats": {
       "appearances": 30,
@@ -2512,19 +2510,6 @@
       "fm": 6.07
     },
     "aiForecast": "Centrocampista di struttura e titolare affidabile per Vanoli: garantisce presenze costanti e qualche inserimento a rete, ottimo da 5°-6° slot a basso costo."
-  },
-  "fcit_5514": {
-    "lastYearStats": {
-      "appearances": 36,
-      "starterAppearances": 36,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.08,
-      "fm": 6.14
-    },
-    "aiForecast": "Capitano e pilastro inamovibile della difesa del Genoa, offre titolarità certa ed eccellente rendimento costante; ottimo regolarista low-cost per completare il reparto da 3°-4° slot."
   },
   "fcit_4923": {
     "lastYearStats": {
@@ -2539,17 +2524,6 @@
     },
     "aiForecast": "Riscattato e confermato titolare al Genoa: garantisce continuità di voto e un bottino da 7-10 gol, ottimo 3°-4° slot per il vostro attacco."
   },
-  "fcit_2514": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Nuovo acquisto e perno difensivo di spessore internazionale: ottima opzione da modificatore per titolarità ed esperienza, ma occhio alla gestione fisica e alle rotazioni europee. Prendetelo come 2°/3° slot."
-  },
   "fcit_2529": {
     "lastYearStats": {
       "appearances": 28,
@@ -2561,19 +2535,6 @@
       "mv": 6.21,
       "fm": 6.59
     }
-  },
-  "fcit_827": {
-    "lastYearStats": {
-      "appearances": 36,
-      "starterAppearances": 36,
-      "goals": 1,
-      "assists": 2,
-      "yellowCards": 9,
-      "redCards": 0,
-      "mv": 6.26,
-      "fm": 6.19
-    },
-    "aiForecast": "Perno della mediana bianconera, garantisce titolarità quasi assoluta e sufficienze costanti ma pochissimi bonus pesanti e rischio cartellini; ideale come 5-6° slot low cost a centrocampo per completare il reparto."
   },
   "fcit_6320": {
     "lastYearStats": {
@@ -2598,6 +2559,19 @@
       "fm": 5.71
     }
   },
+  "fcit_4751": {
+    "lastYearStats": {
+      "appearances": 32,
+      "starterAppearances": 31,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 6,
+      "redCards": 1,
+      "mv": 5.97,
+      "fm": 5.88
+    },
+    "aiForecast": "Perno difensivo del Milan e titolare affidabile: garantisce regolarità di voto e buon rendimento al fantacalcio, ma occhio ai cartellini. Ottimo profilo per completare il reparto come secondo o terzo slot difensivo."
+  },
   "fcit_5739": {
     "lastYearStats": {
       "appearances": 24,
@@ -2609,31 +2583,6 @@
       "mv": 5.75,
       "fm": 5.9
     }
-  },
-  "fcit_5295": {
-    "lastYearStats": {
-      "appearances": 16,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.94,
-      "fm": 6.09
-    }
-  },
-  "fcit_1852": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 22,
-      "goals": 3,
-      "assists": 3,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 6.17,
-      "fm": 6.55
-    },
-    "aiForecast": "Rinnovato fino al 2028, resta prezioso per duttilità e bonus ma alternandosi a sinistra: buon 4°/5° slot difensivo da pochi crediti."
   },
   "fcit_6641": {
     "lastYearStats": {
@@ -2649,18 +2598,6 @@
     },
     "aiForecast": "Portiere titolare affidabile e dai buoni voti, ma occhio alle voci di mercato e ai gol subiti: ottimo come secondo slot da alternare tramite la griglia portieri."
   },
-  "fcit_6207": {
-    "lastYearStats": {
-      "appearances": 9,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 5.94,
-      "fm": 6.06
-    }
-  },
   "fcit_5010": {
     "lastYearStats": {
       "appearances": 24,
@@ -2674,30 +2611,30 @@
     },
     "aiForecast": "Centrale affidabile per completare il reparto a 1 credito: garantisce discreta titolarità e buoni voti ma occhio a qualche infortunio e ai cartellini."
   },
-  "fcit_6462": {
-    "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 30,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 1,
-      "mv": 6.07,
-      "fm": 5.08,
-      "goalsConceded": 32
-    },
-    "aiForecast": "Titolare indiscusso dell'Udinese e profilo affidabile per il modificatore di difesa: ideale da acquistare a cifre contenute per completare una solida alternanza casalinga nella griglia portieri."
-  },
-  "fcit_7547": {
+  "fcit_6229": {
     "lastYearStats": {
       "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
-      "redCards": 0
+      "redCards": 0,
+      "mv": 0,
+      "fm": 0
     },
-    "aiForecast": "Nuovo arrivo a Cagliari dal Nizza: scommessa da ultimi slot al fantacalcio, parte dietro nelle gerarchie ma da monitorare a pochi crediti."
+    "aiForecast": "Arriva a Parma per ril"
+  },
+  "fcit_2640": {
+    "lastYearStats": {
+      "appearances": 17,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.03,
+      "fm": 5.94
+    }
   },
   "fcit_6916": {
     "lastYearStats": {
@@ -2709,18 +2646,6 @@
       "redCards": 1,
       "mv": 5.79,
       "fm": 5.69
-    }
-  },
-  "fcit_4887": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.82,
-      "fm": 5.82
     }
   },
   "fcit_6042": {
@@ -2745,6 +2670,45 @@
       "redCards": 0,
       "mv": 6.2,
       "fm": 6.59
+    }
+  },
+  "fcit_2765": {
+    "lastYearStats": {
+      "appearances": 22,
+      "starterAppearances": 16,
+      "goals": 5,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.91,
+      "fm": 6.61
+    },
+    "aiForecast": "Jolly offensivo duttile del Bologna che garantisce buon minutaggio e qualche bonus pesante; ottimo da 4°-5° slot a costi contenuti."
+  },
+  "fcit_4210": {
+    "lastYearStats": {
+      "appearances": 26,
+      "starterAppearances": 26,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 3,
+      "redCards": 1,
+      "mv": 6,
+      "fm": 6.17
+    },
+    "aiForecast": "Leader difensivo del Cagliari e pericoloso sui piazzati ma soggetto a cartellini e stop fisici: ottimo per gli ultimi slot a basso costo."
+  },
+  "fcit_7301": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 0,
+      "fm": 0,
+      "goalsConceded": 0
     }
   },
   "fcit_6815": {
@@ -2773,17 +2737,6 @@
     },
     "aiForecast": "Titolare inamovibile e leader della Fiorentina: portiere affidabile per il modificatore grazie a ottimi voti, da prendere come prima scelta o in alternanza."
   },
-  "fcit_5365": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Arrivato in prestito dal Tottenham per guidare la retroguardia viola: ottimo profilo da modificatore e titolare fisso da 3°-4° slot a costi moderati."
-  },
   "fcit_5603": {
     "lastYearStats": {
       "appearances": 35,
@@ -2794,18 +2747,6 @@
       "redCards": 0,
       "mv": 5.84,
       "fm": 5.67
-    }
-  },
-  "fcit_7175": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.79,
-      "fm": 6
     }
   },
   "fcit_6506": {
@@ -2819,6 +2760,30 @@
       "mv": 5.5,
       "fm": 5.5
     }
+  },
+  "fcit_5514": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 36,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.08,
+      "fm": 6.14
+    },
+    "aiForecast": "Capitano e pilastro inamovibile della difesa del Genoa, offre titolarità certa ed eccellente rendimento costante; ottimo regolarista low-cost per completare il reparto da 3°-4° slot."
+  },
+  "fcit_2514": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Nuovo acquisto e perno difensivo di spessore internazionale: ottima opzione da modificatore per titolarità ed esperienza, ma occhio alla gestione fisica e alle rotazioni europee. Prendetelo come 2°/3° slot."
   },
   "fcit_218": {
     "lastYearStats": {
@@ -2846,6 +2811,19 @@
     },
     "aiForecast": "Passato alla Juventus, garantisce duttilità e affidabilità nelle rotazioni: titolarità non scontata e pochi bonus, utile come regolarista low-cost per completare il reparto difensivo."
   },
+  "fcit_827": {
+    "lastYearStats": {
+      "appearances": 36,
+      "starterAppearances": 36,
+      "goals": 1,
+      "assists": 2,
+      "yellowCards": 9,
+      "redCards": 0,
+      "mv": 6.26,
+      "fm": 6.19
+    },
+    "aiForecast": "Perno della mediana bianconera, garantisce titolarità quasi assoluta e sufficienze costanti ma pochissimi bonus pesanti e rischio cartellini; ideale come 5-6° slot low cost a centrocampo per completare il reparto."
+  },
   "fcit_460": {
     "lastYearStats": {
       "appearances": 32,
@@ -2859,17 +2837,19 @@
     },
     "aiForecast": "Leader difensivo e titolare fisso della retroguardia laziale: profilo affidabile da voto costante, ideale come 3°-4° slot per completare il reparto ma con bonus quasi nulli."
   },
-  "fcit_7240": {
+  "fcit_2134": {
     "lastYearStats": {
-      "appearances": 19,
-      "starterAppearances": 0,
-      "goals": 1,
+      "appearances": 38,
+      "starterAppearances": 38,
+      "goals": 0,
       "assists": 0,
-      "yellowCards": 3,
+      "yellowCards": 2,
       "redCards": 0,
-      "mv": 5.68,
-      "fm": 5.76
-    }
+      "mv": 6.41,
+      "fm": 5.22,
+      "goalsConceded": 50
+    },
+    "aiForecast": "Titolare inamovibile ed eccellente pararigori; ottimo portiere low-cost da alternare tramite griglia, garanzia di rendimento per il modificatore."
   },
   "fcit_7203": {
     "lastYearStats": {
@@ -2895,6 +2875,31 @@
       "fm": 5.53
     }
   },
+  "fcit_1852": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 22,
+      "goals": 3,
+      "assists": 3,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.17,
+      "fm": 6.55
+    },
+    "aiForecast": "Rinnovato fino al 2028, resta prezioso per duttilità e bonus ma alternandosi a sinistra: buon 4°/5° slot difensivo da pochi crediti."
+  },
+  "fcit_5481": {
+    "lastYearStats": {
+      "appearances": 9,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 1,
+      "mv": 5.94,
+      "fm": 5.94
+    }
+  },
   "fcit_6663": {
     "lastYearStats": {
       "appearances": 31,
@@ -2907,18 +2912,6 @@
       "fm": 5.92
     },
     "aiForecast": "Titolare inamovibile nella difesa ducale: garantisce minutaggio pieno e affidabilità, ideale come 5°-6° slot low-cost a pochi crediti per completare il reparto ma senza aspettarsi troppi bonus."
-  },
-  "fcit_7235": {
-    "lastYearStats": {
-      "appearances": 21,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 2,
-      "mv": 5.79,
-      "fm": 5.71
-    }
   },
   "fcit_6664": {
     "lastYearStats": {
@@ -2945,6 +2938,18 @@
       "fm": 6.06
     }
   },
+  "fcit_6207": {
+    "lastYearStats": {
+      "appearances": 9,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5.94,
+      "fm": 6.06
+    }
+  },
   "fcit_6170": {
     "lastYearStats": {
       "appearances": 27,
@@ -2955,6 +2960,32 @@
       "redCards": 0,
       "mv": 5.87,
       "fm": 5.81
+    }
+  },
+  "fcit_6462": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 30,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 1,
+      "mv": 6.07,
+      "fm": 5.08,
+      "goalsConceded": 32
+    },
+    "aiForecast": "Titolare indiscusso dell'Udinese e profilo affidabile per il modificatore di difesa: ideale da acquistare a cifre contenute per completare una solida alternanza casalinga nella griglia portieri."
+  },
+  "fcit_6925": {
+    "lastYearStats": {
+      "appearances": 4,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5.5,
+      "fm": 5.5
     }
   },
   "fcit_7272": {
@@ -2969,18 +3000,16 @@
       "fm": 5.92
     }
   },
-  "fcit_530": {
+  "fcit_7547": {
     "lastYearStats": {
-      "appearances": 24,
-      "starterAppearances": 20,
-      "goals": 4,
-      "assists": 2,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.04,
-      "fm": 6.58
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
     },
-    "aiForecast": "Rinnovato con la Roma ma al via ai box per problemi fisici: resta tiratore di piazzati e leader tecnico, ottimo come 3° o 4° slot a prezzi contenuti."
+    "aiForecast": "Nuovo arrivo a Cagliari dal Nizza: scommessa da ultimi slot al fantacalcio, parte dietro nelle gerarchie ma da monitorare a pochi crediti."
   },
   "fcit_7154": {
     "lastYearStats": {
@@ -2994,16 +3023,16 @@
       "fm": 0
     }
   },
-  "fcit_2640": {
+  "fcit_4887": {
     "lastYearStats": {
-      "appearances": 17,
+      "appearances": 22,
       "starterAppearances": 0,
       "goals": 0,
-      "assists": 0,
-      "yellowCards": 3,
+      "assists": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "mv": 6.03,
-      "fm": 5.94
+      "mv": 5.82,
+      "fm": 5.82
     }
   },
   "fcit_554": {
@@ -3044,31 +3073,6 @@
       "fm": 5.33
     }
   },
-  "fcit_5678": {
-    "lastYearStats": {
-      "appearances": 16,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 4,
-      "yellowCards": 1,
-      "redCards": 1,
-      "mv": 6.09,
-      "fm": 6.44
-    }
-  },
-  "fcit_2765": {
-    "lastYearStats": {
-      "appearances": 22,
-      "starterAppearances": 16,
-      "goals": 5,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.91,
-      "fm": 6.61
-    },
-    "aiForecast": "Jolly offensivo duttile del Bologna che garantisce buon minutaggio e qualche bonus pesante; ottimo da 4°-5° slot a costi contenuti."
-  },
   "fcit_6895": {
     "lastYearStats": {
       "appearances": 12,
@@ -3106,43 +3110,28 @@
     },
     "aiForecast": "Titolare affidabile nella difesa del Cagliari: garantisce continuità e qualche assist da fermo, ma i troppi cartellini ne limitano l'appeal. Ottimo come 6°-7° slot low-cost per completare il reparto."
   },
-  "fcit_6010": {
+  "fcit_1871": {
     "lastYearStats": {
-      "appearances": 12,
+      "appearances": 20,
       "starterAppearances": 0,
       "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
+      "assists": 1,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 5.88,
-      "fm": 5.83
-    },
-    "aiForecast": "Passato in prestito al Cagliari per rilanciarsi dopo l'annata opaca a Firenze: da prendere come scommessa low-cost per gli ultimi slot a centrocampo, garantirà minutaggio e inserimenti offensivi."
+      "mv": 5.98,
+      "fm": 5.95
+    }
   },
-  "fcit_7301": {
+  "fcit_5365": {
     "lastYearStats": {
       "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
-      "redCards": 0,
-      "mv": 0,
-      "fm": 0,
-      "goalsConceded": 0
-    }
-  },
-  "fcit_7127": {
-    "lastYearStats": {
-      "appearances": 12,
-      "starterAppearances": 0,
-      "goals": 3,
-      "assists": 0,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 5.96,
-      "fm": 6.54
-    }
+      "redCards": 0
+    },
+    "aiForecast": "Arrivato in prestito dal Tottenham per guidare la retroguardia viola: ottimo profilo da modificatore e titolare fisso da 3°-4° slot a costi moderati."
   },
   "fcit_5885": {
     "lastYearStats": {
@@ -3242,19 +3231,6 @@
     },
     "aiForecast": "Titolare inamovibile e jolly duttile della Juventus: garantisce continuità di rendimento e bonus costanti, ottimo profilo da secondo slot per completare la difesa."
   },
-  "fcit_5562": {
-    "lastYearStats": {
-      "appearances": 34,
-      "starterAppearances": 30,
-      "goals": 3,
-      "assists": 2,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 6.1,
-      "fm": 6.4
-    },
-    "aiForecast": "Perno della mediana bianconera e titolare quasi inamovibile: garantisce ottimi voti, fisicità e qualche bonus sporadico, profilo ideale come terzo o quarto slot per dare solidità al reparto."
-  },
   "fcit_4459": {
     "lastYearStats": {
       "appearances": 11,
@@ -3267,19 +3243,17 @@
       "fm": 5.64
     }
   },
-  "fcit_2134": {
+  "fcit_7240": {
     "lastYearStats": {
-      "appearances": 38,
-      "starterAppearances": 38,
-      "goals": 0,
+      "appearances": 19,
+      "starterAppearances": 0,
+      "goals": 1,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 6.41,
-      "fm": 5.22,
-      "goalsConceded": 50
-    },
-    "aiForecast": "Titolare inamovibile ed eccellente pararigori; ottimo portiere low-cost da alternare tramite griglia, garanzia di rendimento per il modificatore."
+      "mv": 5.68,
+      "fm": 5.76
+    }
   },
   "fcit_7248": {
     "lastYearStats": {
@@ -3292,32 +3266,6 @@
       "mv": 5.5,
       "fm": 5.5
     }
-  },
-  "fcit_6496": {
-    "lastYearStats": {
-      "appearances": 31,
-      "starterAppearances": 27,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 5.97,
-      "fm": 6.05
-    },
-    "aiForecast": "Ormai stabilmente nelle rotazioni della fascia sinistra rossonera: ottimo titolare low-cost da alternare in base al calendario, garantisce buon minutaggio e qualche bonus sporadico ma senza svenarsi."
-  },
-  "fcit_2155": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 5.71,
-      "fm": 5.93
-    },
-    "aiForecast": "Punta esperta e centrale nel Monza dopo il prestito, garantisce minutaggio ma poco appeal da bonus pesanti: profilo low"
   },
   "fcit_5840": {
     "lastYearStats": {
@@ -3356,6 +3304,18 @@
       "goalsConceded": 18
     }
   },
+  "fcit_7235": {
+    "lastYearStats": {
+      "appearances": 21,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 2,
+      "mv": 5.79,
+      "fm": 5.71
+    }
+  },
   "fcit_6984": {
     "lastYearStats": {
       "appearances": 15,
@@ -3367,29 +3327,6 @@
       "mv": 5.7,
       "fm": 5.63
     }
-  },
-  "fcit_7342": {
-    "lastYearStats": {
-      "appearances": 8,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6.88
-    }
-  },
-  "fcit_7529": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
-    },
-    "aiForecast": "Nuovo acquisto estivo della Roma dal Wolfsburg: centrale/braccetto fisico e abile di testa, ottimo 4-5° slot da modificatore con potenziale da titolare fisso."
   },
   "fcit_6426": {
     "lastYearStats": {
@@ -3416,18 +3353,6 @@
     },
     "aiForecast": "Pilastro del centrocampo granata con spiccato vizio del bonus pesante per via dei suoi inserimenti aerei: ottimo 3° o 4° slot al fantacalcio per portare 5-7 gol garantiti."
   },
-  "fcit_6925": {
-    "lastYearStats": {
-      "appearances": 4,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 5.5,
-      "fm": 5.5
-    }
-  },
   "fcit_4994": {
     "lastYearStats": {
       "appearances": 27,
@@ -3452,19 +3377,6 @@
     },
     "aiForecast": "Nuovo acquisto dall'Athletic Bilbao: duttile tra mediana e trequarti, parte come scommessa da ultimi slot a 1 credito in attesa di capire il suo minutaggio nelle gerarchie di Runjaic."
   },
-  "fcit_5674": {
-    "lastYearStats": {
-      "appearances": 23,
-      "starterAppearances": 23,
-      "goals": 2,
-      "assists": 3,
-      "yellowCards": 0,
-      "redCards": 1,
-      "mv": 6.09,
-      "fm": 6.43
-    },
-    "aiForecast": "Passato al Venezia per fare il titolare fisso e leader della mediana: profilo low-cost da ultimi slot, garantisce presenze, qualche bonus sporadico e calci piazzati."
-  },
   "fcit_5319": {
     "lastYearStats": {
       "appearances": 24,
@@ -3477,16 +3389,18 @@
       "fm": 5.62
     }
   },
-  "fcit_5946": {
+  "fcit_530": {
     "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0
+      "appearances": 24,
+      "starterAppearances": 20,
+      "goals": 4,
+      "assists": 2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.04,
+      "fm": 6.58
     },
-    "aiForecast": "Nuovo acquisto estivo per la mediana di De Rossi, Sow garantisce esperienza internazionale e titolarita; buon profilo low-cost da rotazione per completare il reparto al fantacalcio."
+    "aiForecast": "Rinnovato con la Roma ma al via ai box per problemi fisici: resta tiratore di piazzati e leader tecnico, ottimo come 3° o 4° slot a prezzi contenuti."
   },
   "fcit_7069": {
     "lastYearStats": {
@@ -3536,19 +3450,6 @@
       "fm": 6
     }
   },
-  "fcit_6046": {
-    "lastYearStats": {
-      "appearances": 28,
-      "starterAppearances": 20,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 5,
-      "redCards": 0,
-      "mv": 5.91,
-      "fm": 5.86
-    },
-    "aiForecast": "Centrale di riferimento della difesa atalantina: ottimo per il modificatore grazie alla sua affidabilità fisica e voti solidi, ma occhio al turnover per le coppe e ai cartellini."
-  },
   "fcit_7219": {
     "lastYearStats": {
       "appearances": 22,
@@ -3573,6 +3474,18 @@
       "fm": 5.8
     }
   },
+  "fcit_5678": {
+    "lastYearStats": {
+      "appearances": 16,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 4,
+      "yellowCards": 1,
+      "redCards": 1,
+      "mv": 6.09,
+      "fm": 6.44
+    }
+  },
   "fcit_4461": {
     "lastYearStats": {
       "appearances": 25,
@@ -3583,18 +3496,6 @@
       "redCards": 0,
       "mv": 5.9,
       "fm": 5.98
-    }
-  },
-  "fcit_1871": {
-    "lastYearStats": {
-      "appearances": 20,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 5.98,
-      "fm": 5.95
     }
   },
   "fcit_6424": {
@@ -3609,6 +3510,19 @@
       "fm": 5.88
     }
   },
+  "fcit_6010": {
+    "lastYearStats": {
+      "appearances": 12,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.88,
+      "fm": 5.83
+    },
+    "aiForecast": "Passato in prestito al Cagliari per rilanciarsi dopo l'annata opaca a Firenze: da prendere come scommessa low-cost per gli ultimi slot a centrocampo, garantirà minutaggio e inserimenti offensivi."
+  },
   "fcit_6243": {
     "lastYearStats": {
       "appearances": 26,
@@ -3619,6 +3533,30 @@
       "redCards": 0,
       "mv": 5.92,
       "fm": 6.46
+    }
+  },
+  "fcit_7014": {
+    "lastYearStats": {
+      "appearances": 25,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 8,
+      "redCards": 0,
+      "mv": 5.96,
+      "fm": 5.84
+    }
+  },
+  "fcit_7127": {
+    "lastYearStats": {
+      "appearances": 12,
+      "starterAppearances": 0,
+      "goals": 3,
+      "assists": 0,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 5.96,
+      "fm": 6.54
     }
   },
   "fcit_313": {
@@ -3669,18 +3607,6 @@
       "goalsConceded": 27
     }
   },
-  "fcit_4177": {
-    "lastYearStats": {
-      "appearances": 1,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6.5,
-      "fm": 6.5
-    }
-  },
   "fcit_5301": {
     "lastYearStats": {
       "appearances": 27,
@@ -3704,6 +3630,19 @@
       "mv": 5.94,
       "fm": 6.56
     }
+  },
+  "fcit_5562": {
+    "lastYearStats": {
+      "appearances": 34,
+      "starterAppearances": 30,
+      "goals": 3,
+      "assists": 2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 6.1,
+      "fm": 6.4
+    },
+    "aiForecast": "Perno della mediana bianconera e titolare quasi inamovibile: garantisce ottimi voti, fisicità e qualche bonus sporadico, profilo ideale come terzo o quarto slot per dare solidità al reparto."
   },
   "fcit_6632": {
     "lastYearStats": {
@@ -3753,18 +3692,18 @@
     },
     "aiForecast": "Nuovo acquisto del Lecce per l'attacco: profilo fisico e veloce ma da rodare in Serie A, prendetelo come scommessa low cost da ultimi slot per completare il reparto."
   },
-  "fcit_7252": {
+  "fcit_6496": {
     "lastYearStats": {
-      "appearances": 30,
-      "starterAppearances": 20,
-      "goals": 4,
+      "appearances": 31,
+      "starterAppearances": 27,
+      "goals": 2,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 3,
       "redCards": 0,
-      "mv": 5.73,
-      "fm": 6.12
+      "mv": 5.97,
+      "fm": 6.05
     },
-    "aiForecast": "Punta fisica di rotazione nel Lecce: garantisce presenze e qualche bonus sporadico, ideale come ultimo slot low cost da copertura."
+    "aiForecast": "Ormai stabilmente nelle rotazioni della fascia sinistra rossonera: ottimo titolare low-cost da alternare in base al calendario, garantisce buon minutaggio e qualche bonus sporadico ma senza svenarsi."
   },
   "fcit_4686": {
     "lastYearStats": {
@@ -3790,30 +3729,18 @@
       "fm": 6.52
     }
   },
-  "fcit_5481": {
+  "fcit_2155": {
     "lastYearStats": {
-      "appearances": 9,
+      "appearances": 14,
       "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
+      "goals": 1,
+      "assists": 0,
       "yellowCards": 0,
-      "redCards": 1,
-      "mv": 5.94,
-      "fm": 5.94
-    }
-  },
-  "fcit_6831": {
-    "lastYearStats": {
-      "appearances": 16,
-      "starterAppearances": 10,
-      "goals": 3,
-      "assists": 3,
-      "yellowCards": 3,
       "redCards": 0,
-      "mv": 6.19,
-      "fm": 6.84
+      "mv": 5.71,
+      "fm": 5.93
     },
-    "aiForecast": "Jolly offensivo di grande qualita ma condizionato da infortuni e ballottaggi: ideale come 3°-4° slot, spacca-partite letale con bonus improvvisi anche a gara in corso."
+    "aiForecast": "Punta esperta e centrale nel Monza dopo il prestito, garantisce minutaggio ma poco appeal da bonus pesanti: profilo low"
   },
   "fcit_6215": {
     "lastYearStats": {
@@ -3864,17 +3791,28 @@
       "fm": 0
     }
   },
-  "fcit_6986": {
+  "fcit_7342": {
     "lastYearStats": {
-      "appearances": 19,
+      "appearances": 8,
       "starterAppearances": 0,
-      "goals": 1,
-      "assists": 4,
-      "yellowCards": 1,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 0,
       "redCards": 0,
-      "mv": 6.16,
-      "fm": 6.5
+      "mv": 6,
+      "fm": 6.88
     }
+  },
+  "fcit_7529": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Nuovo acquisto estivo della Roma dal Wolfsburg: centrale/braccetto fisico e abile di testa, ottimo 4-5° slot da modificatore con potenziale da titolare fisso."
   },
   "fcit_6271": {
     "lastYearStats": {
@@ -3926,19 +3864,6 @@
       "fm": 5.88
     }
   },
-  "fcit_6218": {
-    "lastYearStats": {
-      "appearances": 18,
-      "starterAppearances": 0,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "mv": 5.78,
-      "fm": 5.92
-    },
-    "aiForecast": "Passato al Torino per rilanciarsi dopo l'annata opaca a Parma; listato centrocampista è una scommessa low-cost da ultimi slot d'asta ma parte indietro nelle gerarchie sulla trequarti."
-  },
   "fcit_5994": {
     "lastYearStats": {
       "appearances": 16,
@@ -3949,18 +3874,6 @@
       "redCards": 0,
       "mv": 5.75,
       "fm": 5.72
-    }
-  },
-  "fcit_7208": {
-    "lastYearStats": {
-      "appearances": 19,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 2,
-      "yellowCards": 4,
-      "redCards": 0,
-      "mv": 5.92,
-      "fm": 5.95
     }
   },
   "fcit_5872": {
@@ -3986,6 +3899,17 @@
     },
     "aiForecast": "Nuovo acquisto estivo dallo Sparta Praga: centravanti fisico e mobile, da prendere a pochi crediti come scommessa da ultimi slot per completare l'attacco arancioneroverde."
   },
+  "fcit_5946": {
+    "lastYearStats": {
+      "appearances": 0,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    "aiForecast": "Nuovo acquisto estivo per la mediana di De Rossi, Sow garantisce esperienza internazionale e titolarita; buon profilo low-cost da rotazione per completare il reparto al fantacalcio."
+  },
   "fcit_7329": {
     "lastYearStats": {
       "appearances": 16,
@@ -3997,6 +3921,31 @@
       "mv": 6.06,
       "fm": 6.41
     }
+  },
+  "fcit_6826": {
+    "lastYearStats": {
+      "appearances": 1,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 5,
+      "fm": 5
+    }
+  },
+  "fcit_6046": {
+    "lastYearStats": {
+      "appearances": 28,
+      "starterAppearances": 20,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 5,
+      "redCards": 0,
+      "mv": 5.91,
+      "fm": 5.86
+    },
+    "aiForecast": "Centrale di riferimento della difesa atalantina: ottimo per il modificatore grazie alla sua affidabilità fisica e voti solidi, ma occhio al turnover per le coppe e ai cartellini."
   },
   "fcit_7068": {
     "lastYearStats": {
@@ -4022,30 +3971,6 @@
       "fm": 6.12
     }
   },
-  "fcit_6640": {
-    "lastYearStats": {
-      "appearances": 11,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 0,
-      "mv": 6.05,
-      "fm": 6.55
-    }
-  },
-  "fcit_7014": {
-    "lastYearStats": {
-      "appearances": 25,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 8,
-      "redCards": 0,
-      "mv": 5.96,
-      "fm": 5.84
-    }
-  },
   "fcit_7128": {
     "lastYearStats": {
       "appearances": 14,
@@ -4056,6 +3981,18 @@
       "redCards": 0,
       "mv": 5.96,
       "fm": 6.25
+    }
+  },
+  "fcit_4177": {
+    "lastYearStats": {
+      "appearances": 1,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6.5,
+      "fm": 6.5
     }
   },
   "fcit_6766": {
@@ -4118,6 +4055,19 @@
       "mv": 5.97,
       "fm": 6.41
     }
+  },
+  "fcit_7252": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 20,
+      "goals": 4,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.73,
+      "fm": 6.12
+    },
+    "aiForecast": "Punta fisica di rotazione nel Lecce: garantisce presenze e qualche bonus sporadico, ideale come ultimo slot low cost da copertura."
   },
   "fcit_4401": {
     "lastYearStats": {
@@ -4215,17 +4165,18 @@
       "fm": 6.21
     }
   },
-  "fcit_7202": {
+  "fcit_6831": {
     "lastYearStats": {
-      "appearances": 11,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
+      "appearances": 16,
+      "starterAppearances": 10,
+      "goals": 3,
+      "assists": 3,
       "yellowCards": 3,
-      "redCards": 1,
-      "mv": 5.59,
-      "fm": 5.36
-    }
+      "redCards": 0,
+      "mv": 6.19,
+      "fm": 6.84
+    },
+    "aiForecast": "Jolly offensivo di grande qualita ma condizionato da infortuni e ballottaggi: ideale come 3°-4° slot, spacca-partite letale con bonus improvvisi anche a gara in corso."
   },
   "fcit_7138": {
     "lastYearStats": {
@@ -4249,6 +4200,18 @@
       "redCards": 0,
       "mv": 5.85,
       "fm": 5.95
+    }
+  },
+  "fcit_6986": {
+    "lastYearStats": {
+      "appearances": 19,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 4,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 6.16,
+      "fm": 6.5
     }
   },
   "fcit_4772": {
@@ -4314,6 +4277,19 @@
       "fm": 6
     }
   },
+  "fcit_6218": {
+    "lastYearStats": {
+      "appearances": 18,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "mv": 5.78,
+      "fm": 5.92
+    },
+    "aiForecast": "Passato al Torino per rilanciarsi dopo l'annata opaca a Parma; listato centrocampista è una scommessa low-cost da ultimi slot d'asta ma parte indietro nelle gerarchie sulla trequarti."
+  },
   "fcit_608": {
     "lastYearStats": {
       "appearances": 23,
@@ -4374,6 +4350,30 @@
       "redCards": 0,
       "mv": 6.05,
       "fm": 6.29
+    }
+  },
+  "fcit_7208": {
+    "lastYearStats": {
+      "appearances": 19,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 2,
+      "yellowCards": 4,
+      "redCards": 0,
+      "mv": 5.92,
+      "fm": 5.95
+    }
+  },
+  "fcit_7146": {
+    "lastYearStats": {
+      "appearances": 30,
+      "starterAppearances": 0,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 4,
+      "redCards": 1,
+      "mv": 5.82,
+      "fm": 5.82
     }
   },
   "fcit_6145": {
@@ -4473,6 +4473,18 @@
       "fm": 5.75
     }
   },
+  "fcit_6640": {
+    "lastYearStats": {
+      "appearances": 11,
+      "starterAppearances": 0,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 3,
+      "redCards": 0,
+      "mv": 6.05,
+      "fm": 6.55
+    }
+  },
   "fcit_7317": {
     "lastYearStats": {
       "appearances": 3,
@@ -4483,6 +4495,18 @@
       "redCards": 0,
       "mv": 5.67,
       "fm": 5.67
+    }
+  },
+  "fcit_6896": {
+    "lastYearStats": {
+      "appearances": 14,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.96,
+      "fm": 5.96
     }
   },
   "fcit_4378": {
@@ -4557,6 +4581,18 @@
       "fm": 5.64
     }
   },
+  "fcit_7202": {
+    "lastYearStats": {
+      "appearances": 11,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 3,
+      "redCards": 1,
+      "mv": 5.59,
+      "fm": 5.36
+    }
+  },
   "fcit_5307": {
     "lastYearStats": {
       "appearances": 27,
@@ -4567,18 +4603,6 @@
       "redCards": 0,
       "mv": 5.96,
       "fm": 5.83
-    }
-  },
-  "fcit_6149": {
-    "lastYearStats": {
-      "appearances": 2,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 6,
-      "fm": 6
     }
   },
   "fcit_7276": {
@@ -4603,18 +4627,6 @@
       "redCards": 0,
       "mv": 5.89,
       "fm": 6.02
-    }
-  },
-  "fcit_6985": {
-    "lastYearStats": {
-      "appearances": 8,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.69,
-      "fm": 5.56
     }
   },
   "fcit_7183": {
@@ -4677,28 +4689,29 @@
       "fm": 5.75
     }
   },
-  "fcit_7146": {
+  "fcit_5812": {
     "lastYearStats": {
-      "appearances": 30,
+      "appearances": 35,
       "starterAppearances": 0,
-      "goals": 1,
+      "goals": 2,
       "assists": 0,
-      "yellowCards": 4,
-      "redCards": 1,
-      "mv": 5.82,
-      "fm": 5.82
+      "yellowCards": 6,
+      "redCards": 0,
+      "mv": 5.86,
+      "fm": 5.83
     }
   },
-  "fcit_6826": {
+  "fcit_6125": {
     "lastYearStats": {
-      "appearances": 1,
+      "appearances": 0,
       "starterAppearances": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "mv": 5,
-      "fm": 5
+      "mv": 0,
+      "fm": 0,
+      "goalsConceded": 0
     }
   },
   "fcit_2297": {
@@ -4812,18 +4825,6 @@
       "redCards": 0,
       "mv": 0,
       "fm": 0
-    }
-  },
-  "fcit_6896": {
-    "lastYearStats": {
-      "appearances": 14,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "mv": 5.96,
-      "fm": 5.96
     }
   },
   "fcit_7357": {
@@ -5161,6 +5162,18 @@
       "fm": 5.73
     }
   },
+  "fcit_6149": {
+    "lastYearStats": {
+      "appearances": 2,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "mv": 6,
+      "fm": 6
+    }
+  },
   "fcit_7260": {
     "lastYearStats": {
       "appearances": 9,
@@ -5208,6 +5221,18 @@
       "redCards": 0,
       "mv": 5.81,
       "fm": 5.74
+    }
+  },
+  "fcit_6985": {
+    "lastYearStats": {
+      "appearances": 8,
+      "starterAppearances": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "mv": 5.69,
+      "fm": 5.56
     }
   },
   "fcit_6189": {
@@ -5408,18 +5433,6 @@
       "goalsConceded": 54
     }
   },
-  "fcit_5812": {
-    "lastYearStats": {
-      "appearances": 35,
-      "starterAppearances": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 6,
-      "redCards": 0,
-      "mv": 5.86,
-      "fm": 5.83
-    }
-  },
   "fcit_801": {
     "lastYearStats": {
       "appearances": 29,
@@ -5442,19 +5455,6 @@
       "redCards": 0,
       "mv": 5.75,
       "fm": 5.75
-    }
-  },
-  "fcit_6125": {
-    "lastYearStats": {
-      "appearances": 0,
-      "starterAppearances": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "mv": 0,
-      "fm": 0,
-      "goalsConceded": 0
     }
   }
 }
