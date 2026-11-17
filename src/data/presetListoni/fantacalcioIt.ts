@@ -2080,7 +2080,7 @@ export const FANTACALCIO_IT_LISTONE: Player[] = [
   },
   {
     "id": "fcit_4317",
-    "name": "N'Dicka",
+    "name": "Ndicka",
     "role": "D",
     "team": "Roma",
     "basePrice": 13,
